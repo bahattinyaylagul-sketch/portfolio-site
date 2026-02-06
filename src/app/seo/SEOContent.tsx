@@ -120,6 +120,7 @@ const services = [
 
 export default function SEOContent() {
     const [activeSection, setActiveSection] = useState("what-is-seo");
+    const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -154,7 +155,7 @@ export default function SEOContent() {
         <article className="pt-24 pb-20">
             {/* Hero Section */}
             <header className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-background py-16 mb-12">
-                <div className="max-w-6xl mx-auto px-6">
+                <div className="max-w-6xl mx-auto px-4 md:px-6">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                         <div className="max-w-2xl">
                             <div className="flex items-center gap-2 mb-4">
@@ -171,9 +172,9 @@ export default function SEOContent() {
                                 Arama motorlarında organik görünürlüğünüzü artırmak için teknik ve içerik odaklı stratejiler geliştirilmektedir.
                             </p>
                         </div>
-                        <div className="flex gap-6">
+                        <div className="grid grid-cols-2 gap-4 w-full lg:w-auto mt-8 lg:mt-0">
                             <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                                <span className="text-3xl font-bold text-gray-900 block">10+</span>
+                                <span className="text-3xl font-bold text-gray-900 block">12+</span>
                                 <span className="text-sm text-gray-500">Yıl Deneyim</span>
                             </div>
                             <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
@@ -186,8 +187,8 @@ export default function SEOContent() {
             </header>
 
             {/* Main Content Grid */}
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="grid lg:grid-cols-[280px_1fr] gap-12">
+            <div className="max-w-6xl mx-auto px-4 md:px-6">
+                <div className="flex flex-col lg:grid lg:grid-cols-[280px_1fr] gap-12">
                     {/* Left Sidebar: TOC */}
                     <aside className="hidden lg:block">
                         <div className="sticky top-28">
@@ -205,8 +206,16 @@ export default function SEOContent() {
                                                     : "text-gray-600 hover:bg-gray-100"
                                                     }`}
                                                 onClick={(e) => {
-                                                    e.preventDefault();
-                                                    document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                    const element = document.getElementById(item.id);
+                                                    if (element) {
+                                                        const headerOffset = 100;
+                                                        const elementPosition = element.getBoundingClientRect().top;
+                                                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                                        window.scrollTo({
+                                                            top: offsetPosition,
+                                                            behavior: "smooth"
+                                                        });
+                                                    }
                                                     setActiveSection(item.id);
                                                 }}
                                             >
@@ -236,11 +245,62 @@ export default function SEOContent() {
                     {/* Content Column */}
                     <main>
                         <div className="space-y-12">
+                            {/* Mobile TOC */}
+                            <div className="lg:hidden border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm mb-8">
+                                <button
+                                    onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+                                    className="w-full flex items-center justify-between p-4 bg-gray-50 text-left transition-colors hover:bg-gray-100"
+                                >
+                                    <span className="font-bold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wider">
+                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                                        </svg>
+                                        İçindekiler
+                                    </span>
+                                    <svg
+                                        className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isMobileTocOpen ? "rotate-180" : ""}`}
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileTocOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+                                    <nav className="p-4 border-t border-gray-100 bg-white">
+                                        <ul className="space-y-3">
+                                            {tableOfContents.map((item) => (
+                                                <li key={item.id}>
+                                                    <a
+                                                        href={`#${item.id}`}
+                                                        onClick={(e) => {
+                                                            const element = document.getElementById(item.id);
+                                                            if (element) {
+                                                                const headerOffset = 100;
+                                                                const elementPosition = element.getBoundingClientRect().top;
+                                                                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                                                window.scrollTo({
+                                                                    top: offsetPosition,
+                                                                    behavior: "smooth"
+                                                                });
+                                                            }
+                                                            setIsMobileTocOpen(false);
+                                                            setActiveSection(item.id);
+                                                        }}
+                                                        className={`block text-sm transition-colors ${activeSection === item.id ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"}`}
+                                                    >
+                                                        {item.title}
+                                                    </a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                             {passages.map((passage, index) => (
                                 <section
                                     key={passage.id}
                                     id={passage.id}
-                                    className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+                                    className="scroll-mt-32 p-5 md:p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
                                     aria-labelledby={`${passage.id}-heading`}
                                 >
                                     <div className="flex items-center gap-4 mb-6">
@@ -292,7 +352,7 @@ export default function SEOContent() {
                             {/* NEW SECTION: SEO Performansı Nasıl Ölçülür? */}
                             <section
                                 id="seo-performance"
-                                className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+                                className="scroll-mt-32 p-5 md:p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
                                 aria-labelledby="seo-performance-heading"
                             >
                                 <div className="flex items-center gap-4 mb-6">
@@ -578,7 +638,7 @@ export default function SEOContent() {
                                             <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
                                                 <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                             </Link>
-                                            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">Senior SEO & GEO Architect</span>
+                                            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                         </div>
                                         <div className="flex items-center gap-4 justify-center md:justify-start">
                                             <Link href="/hakkimda" className="text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-200 hover:decoration-gray-900 transition-all">

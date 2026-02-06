@@ -18,6 +18,7 @@ interface ArticleContentProps {
 
 export default function ArticleContent({ post, headings, contentWithIds, nextPost }: ArticleContentProps) {
     const [activeSection, setActiveSection] = useState(headings.length > 0 ? headings[0].id : "");
+    const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -65,7 +66,7 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                 <span className="text-gray-600 font-bold">{post.title}</span>
             </nav>
 
-            <div className="grid lg:grid-cols-[280px_1fr] gap-12 items-start relative">
+            <div className="flex flex-col lg:grid lg:grid-cols-[280px_1fr] gap-12 items-start relative">
                 {/* Left Sidebar: TOC Only - Sticky */}
                 <aside className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar">
                     <div>
@@ -85,8 +86,16 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                                         : "text-gray-600 border-transparent hover:text-blue-700 hover:border-blue-300"
                                         }`}
                                     onClick={(e) => {
-                                        e.preventDefault();
-                                        document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });
+                                        const element = document.getElementById(heading.id);
+                                        if (element) {
+                                            const headerOffset = 100;
+                                            const elementPosition = element.getBoundingClientRect().top;
+                                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                            window.scrollTo({
+                                                top: offsetPosition,
+                                                behavior: "smooth"
+                                            });
+                                        }
                                         setActiveSection(heading.id);
                                     }}
                                 >
@@ -100,6 +109,61 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
 
                 {/* Main Content Column */}
                 <article className="min-w-0">
+
+                    {/* Mobile TOC */}
+                    {headings.length > 0 && (
+                        <div className="lg:hidden border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm mb-8">
+                            <button
+                                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+                                className="w-full flex items-center justify-between p-4 bg-gray-50 text-left transition-colors hover:bg-gray-100"
+                            >
+                                <span className="font-bold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wider">
+                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                                    </svg>
+                                    İçindekiler
+                                </span>
+                                <svg
+                                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isMobileTocOpen ? "rotate-180" : ""}`}
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileTocOpen ? "max-h-[60vh] overflow-y-auto opacity-100" : "max-h-0 opacity-0"}`}>
+                                <nav className="p-4 border-t border-gray-100 bg-white">
+                                    <ul className="space-y-3">
+                                        {headings.map((heading) => (
+                                            <li key={heading.id}>
+                                                <a
+                                                    href={`#${heading.id}`}
+                                                    onClick={(e) => {
+                                                        e.preventDefault();
+                                                        const element = document.getElementById(heading.id);
+                                                        if (element) {
+                                                            const headerOffset = 100;
+                                                            const elementPosition = element.getBoundingClientRect().top;
+                                                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                                                            window.scrollTo({
+                                                                top: offsetPosition,
+                                                                behavior: "smooth"
+                                                            });
+                                                        }
+                                                        setIsMobileTocOpen(false);
+                                                        setActiveSection(heading.id);
+                                                    }}
+                                                    className={`block text-sm transition-colors ${activeSection === heading.id ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"}`}
+                                                >
+                                                    {heading.text}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    )}
 
                     {/* Lead Description */}
                     <p className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600">
@@ -130,7 +194,8 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                         prose-p:font-sans prose-p:text-gray-700 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-8
                         prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 prose-ul:space-y-3
                         prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
-                        prose-img:rounded-2xl prose-img:shadow-lg
+                        prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
+                        prose-img:rounded-2xl prose-img:shadow-lg prose-img:w-full prose-img:h-auto prose-img:block
                         prose-strong:font-bold prose-strong:text-gray-900
                         prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
                         mb-16"

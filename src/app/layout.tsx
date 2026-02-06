@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -12,6 +13,7 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
   variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,6 +42,15 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
+        <noscript>
+          <style>{`
+            [style*="opacity: 0"], [style*="opacity:0"] { 
+              opacity: 1 !important; 
+              transform: none !important;
+              pointer-events: auto !important;
+            }
+          `}</style>
+        </noscript>
         {children}
       </body>
     </html>

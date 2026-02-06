@@ -14,7 +14,7 @@ export default function Home() {
         "@id": "https://bahattinyaylagul.com/#person",
         "name": "Bahattin Yaylagül",
         "url": "https://bahattinyaylagul.com",
-        "jobTitle": "Senior SEO & GEO Architect",
+        "jobTitle": "SEO Consultant",
         "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
         "sameAs": [
           "https://linkedin.com/in/bahattin-yaylagul",

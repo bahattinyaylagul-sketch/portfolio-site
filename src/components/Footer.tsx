@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 
@@ -35,15 +33,7 @@ export default function Footer() {
                         >
                             BY.
                         </Link>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            SEO & GEO Danışmanı. Dijital görünürlüğünüzü artırıyorum.
-                        </p>
-                        <a
-                            href="mailto:bahattinyaylagul@gmail.com"
-                            className="text-sm text-gray-300 hover:text-white transition-colors"
-                        >
-                            bahattinyaylagul@gmail.com
-                        </a>
+
                     </div>
 
                     {/* Services */}

@@ -237,12 +237,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                         </div>
 
                         {/* 3D Illustration */}
-                        <div className="relative hidden lg:block h-[500px] w-full">
+                        <div className="relative w-full h-[220px] lg:h-[500px] lg:aspect-auto mt-8 lg:mt-0 overflow-hidden">
                             <Image
                                 src={assets.image}
                                 alt={`${post.title} 3D Illustration`}
                                 fill
-                                className="object-contain drop-shadow-2xl"
+                                className="object-cover lg:object-contain drop-shadow-2xl"
                                 priority
                             />
                         </div>

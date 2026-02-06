@@ -1,10 +1,7 @@
-"use strict";
-"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import FadeIn from './FadeIn';
 
 const latestPosts = [
     {
@@ -53,40 +50,35 @@ export default function BlogPreview() {
 
                 <div className="grid lg:grid-cols-2 gap-8">
                     {latestPosts.map((post, idx) => (
-                        <motion.article
-                            key={post.slug}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: idx * 0.2 }}
-                            viewport={{ once: true }}
-                            className="group relative cursor-pointer"
-                        >
-                            <Link href={`/icgoruler/${post.slug}`}>
-                                <div className="relative aspect-[16/9] rounded-3xl overflow-hidden mb-8 border border-gray-100 shadow-sm">
-                                    <Image
-                                        src={post.image}
-                                        alt={post.title}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </div>
-
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-4 text-sm font-medium">
-                                        <span className="text-blue-600 uppercase tracking-widest">{post.category}</span>
-                                        <span className="text-gray-300">•</span>
-                                        <span className="text-gray-500">{post.date}</span>
+                        <FadeIn key={post.slug} delay={idx * 0.2} className="h-full">
+                            <article className="group relative cursor-pointer h-full">
+                                <Link href={`/icgoruler/${post.slug}`} className="block h-full">
+                                    <div className="relative aspect-[16/9] rounded-3xl overflow-hidden mb-8 border border-gray-100 shadow-sm">
+                                        <Image
+                                            src={post.image}
+                                            alt={post.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight group-hover:text-gray-600 transition-colors">
-                                        {post.title}
-                                    </h3>
-                                    <p className="text-gray-600 leading-relaxed line-clamp-2">
-                                        {post.excerpt}
-                                    </p>
-                                </div>
-                            </Link>
-                        </motion.article>
+
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-4 text-sm font-medium">
+                                            <span className="text-blue-600 uppercase tracking-widest">{post.category}</span>
+                                            <span className="text-gray-300">•</span>
+                                            <span className="text-gray-500">{post.date}</span>
+                                        </div>
+                                        <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight group-hover:text-gray-600 transition-colors">
+                                            {post.title}
+                                        </h3>
+                                        <p className="text-gray-600 leading-relaxed line-clamp-2">
+                                            {post.excerpt}
+                                        </p>
+                                    </div>
+                                </Link>
+                            </article>
+                        </FadeIn>
                     ))}
                 </div>
             </div>

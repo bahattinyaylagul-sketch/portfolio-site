@@ -177,7 +177,7 @@ export default function GEOContent() {
                                         <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
                                             <li><strong>Nedir:</strong> İçeriğin AI modelleri tarafından anlaşılması, sentezlenmesi ve alıntılanabilir hale getirilmesidir.</li>
                                             <li><strong>Hedef:</strong> Tavsiye edilen kaynak olmak.</li>
-                                            <li><strong>Odak:</strong> Topical authority ve sentezlenmiş cevap içinde yer alma.</li>
+                                            <li><strong>Odak:</strong> <span className="font-semibold text-blue-600">AI Strateji</span> ve Topical authority inşası.</li>
                                         </ul>
                                     </div>
 
@@ -244,7 +244,7 @@ export default function GEOContent() {
                                     <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
                                         <h3 className="font-bold text-gray-900 mb-3">RAG Sistemleri</h3>
                                         <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                                            Modelin cevap üretmeden önce kaynaklardan bilgi çekmesidir.
+                                            Modelin cevap üretmeden önce kaynaklardan bilgi çekmesidir (RAG Mimarisi).
                                         </p>
                                         <p className="text-xs text-indigo-700 font-semibold bg-indigo-50 inline-block px-2 py-1 rounded">
                                             Amaç: Retrieval aşamasında markanın seçilmesi.
@@ -419,7 +419,7 @@ export default function GEOContent() {
                                             <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
                                                 <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                             </Link>
-                                            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">Senior SEO & GEO Architect</span>
+                                            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                         </div>
                                         <div className="flex items-center gap-4 justify-center md:justify-start">
                                             <Link href="/hakkimda" className="text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-200 hover:decoration-gray-900 transition-all">

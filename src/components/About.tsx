@@ -28,8 +28,8 @@ export default function About() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="sticky top-32 flex flex-col items-center justify-center p-8 h-fit"
+                        viewport={{ once: true, amount: 0.1 }}
+                        className="relative lg:sticky top-32 flex flex-col items-center justify-center p-8 h-fit"
                     >
                         <div className="relative">
                             {/* Decorative Circle Background */}
