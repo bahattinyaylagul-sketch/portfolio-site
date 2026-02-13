@@ -39,6 +39,12 @@ export default function Contact() {
                             bahattinyaylagul@gmail.com
                         </a>
                         <a
+                            href="tel:+905346019770"
+                            className="px-8 py-3 border border-gray-300 text-foreground text-sm font-medium rounded-full hover:border-foreground transition-colors hover:bg-white"
+                        >
+                            0534 601 97 70
+                        </a>
+                        <a
                             href="https://www.linkedin.com/in/bahattin-yaylagul/"
                             target="_blank"
                             rel="noopener noreferrer"
