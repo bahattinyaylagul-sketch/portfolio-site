@@ -5,8 +5,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "AI Hafızasında Marka Mention Etkisi | Bahattin Yaylagül",
-    description: "Marka isminin link olmadan geçmesi (mention), AI modellerinin hafızasını ve güven skorunu %40 oranında nasıl artırır?",
+    title: "AI ve Marka Mention Etkisi – Bahattin Yaylagül",
+    description: "Marka isminin link olmadan geçmesi (Brand Mentions) AI modellerini nasıl etkiler? Güven skoru ve GEO başarısı üzerine derinlemesine bir analiz.",
+    alternates: {
+        canonical: "/icgoruler/ai-marka-mention-etkisi",
+    },
 };
 
 const headings = [
@@ -173,6 +176,34 @@ export default function BlogPost() {
                                 Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> sinyalini vererek markayı potansiyel cevap havuzunda tutar.
                             </p>
 
+                            {/* Infographic: 40% Stat */}
+                            <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-100 not-prose">
+                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">AI Hafızasında Kalma Süresi</h4>
+                                <div className="space-y-6">
+                                    <div>
+                                        <div className="flex justify-between text-sm font-medium text-gray-500 mb-2">
+                                            <span>Mention Olmayan Markalar</span>
+                                            <span className="text-xs bg-gray-200 px-2 py-1 rounded">Standart Süre</span>
+                                        </div>
+                                        <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
+                                            <div className="h-full bg-gray-400 w-[60%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between text-sm font-bold text-gray-900 mb-2">
+                                            <span>Mention Edilen Markalar</span>
+                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded border border-blue-200">%40 Daha Uzun</span>
+                                        </div>
+                                        <div className="h-3 w-full bg-blue-100 rounded-full overflow-hidden">
+                                            <div className="h-full bg-blue-600 w-full shadow-[0_0_10px_rgba(37,99,235,0.4)] animate-pulse"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="text-xs text-gray-400 mt-4 italic">
+                                    * Mention'lar, markanın tekrar hatırlanma (resurface) sıklığını ve süresini doğrudan artırır.
+                                </p>
+                            </div>
+
                             <h2 id="algisal-guven">2. Algısal Güven (Perceptual Trust) Oluşturur</h2>
                             <p>
                                 AI Search dünyasında iki tür güven vardır:
@@ -185,6 +216,54 @@ export default function BlogPost() {
                                 Mention, AI'ın markayı tanımasını sağlar. Link verilmese bile, AI bu veriyi işler ve markayı bir "varlık" (entity) olarak hafızasına kazır. Bu durum, <strong>GEO (Generative Engine Optimization)</strong> sürecinin ilk ve en temel adımıdır.
                             </p>
 
+                            {/* Infographic: Comparison Cards */}
+                            <div className="grid md:grid-cols-2 gap-4 my-10 not-prose">
+                                <div className="p-6 rounded-xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 shadow-sm">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="p-2 bg-gray-100 rounded-lg text-gray-600">
+                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                            </svg>
+                                        </div>
+                                        <h4 className="font-bold text-gray-900">Backlink (Link)</h4>
+                                    </div>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        Teknik bir referanstır. Otoriteyi doğrudan aktarır ve sıralama sinyali olarak nettir.
+                                    </p>
+                                    <ul className="space-y-2">
+                                        <li className="flex items-center gap-2 text-xs font-semibold text-gray-500 bg-gray-50 p-2 rounded">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>Teknik Güven
+                                        </li>
+                                        <li className="flex items-center gap-2 text-xs font-semibold text-gray-500 bg-gray-50 p-2 rounded">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>PageRank Aktarımı
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="p-6 rounded-xl bg-gradient-to-b from-blue-50 to-white border border-blue-100 shadow-sm relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl -mr-8 -mt-8"></div>
+                                    <div className="flex items-center gap-3 mb-4 relative z-10">
+                                        <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
+                                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                                            </svg>
+                                        </div>
+                                        <h4 className="font-bold text-blue-900">Brand Mention</h4>
+                                    </div>
+                                    <p className="text-sm text-blue-800/80 mb-4 leading-relaxed relative z-10">
+                                        Algısal bir güvendir. AI'ın markayı tanımasını ve "Entity" olarak kaydetmesini sağlar.
+                                    </p>
+                                    <ul className="space-y-2 relative z-10">
+                                        <li className="flex items-center gap-2 text-xs font-semibold text-blue-700 bg-blue-50/50 p-2 rounded">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Algısal Güven
+                                        </li>
+                                        <li className="flex items-center gap-2 text-xs font-semibold text-blue-700 bg-blue-50/50 p-2 rounded">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>Entity Oluşumu
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                             <h2 id="semantik-oy">3. Semantik Oy (Semantic Vote) Olarak İşlenir</h2>
                             <p>
                                 Özellikle haber siteleri, Reddit, forumlar veya sektörel portallarda markanızdan bahsedilmesi, AI modelleri tarafından bir "semantik oy" olarak yorumlanır.
@@ -192,6 +271,55 @@ export default function BlogPost() {
                             <p>
                                 AI, bu mention'ları toplar ve markanızı ilgili konu başlığında <strong>(Topic Authority)</strong> yetkin bir figür olarak sınıflandırır. Bu sayede, gelecekteki sorgularda sizi kaynak (citation) olarak gösterme ihtimali artar.
                             </p>
+
+                            {/* Infographic: AI Authority Cycle */}
+                            <div className="my-14 p-8 bg-gray-900 rounded-2xl text-white not-prose relative overflow-hidden">
+                                {/* Background Effects */}
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
+                                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none"></div>
+
+                                <h4 className="text-center font-bold mb-12 text-lg tracking-wide">AI Otorite Döngüsü</h4>
+
+                                <div className="relative">
+                                    {/* Connecting Line (Desktop) */}
+                                    <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-emerald-500/30 -z-10"></div>
+
+                                    <div className="grid md:grid-cols-3 gap-8">
+                                        {/* Step 1 */}
+                                        <div className="relative flex flex-col items-center text-center group">
+                                            <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300">
+                                                <span className="font-mono text-blue-400 font-bold text-xl">1</span>
+                                            </div>
+                                            <h5 className="font-bold text-base mb-2">Mention</h5>
+                                            <p className="text-xs text-gray-400 leading-relaxed px-4">
+                                                İçerik içinde markanızdan bahsedilir
+                                            </p>
+                                        </div>
+
+                                        {/* Step 2 */}
+                                        <div className="relative flex flex-col items-center text-center group">
+                                            <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-purple-500/50 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-300">
+                                                <span className="font-mono text-purple-400 font-bold text-xl">2</span>
+                                            </div>
+                                            <h5 className="font-bold text-base mb-2">Semantic Vote</h5>
+                                            <p className="text-xs text-gray-400 leading-relaxed px-4">
+                                                AI, bağlamı ve güvenilirliği analiz eder
+                                            </p>
+                                        </div>
+
+                                        {/* Step 3 */}
+                                        <div className="relative flex flex-col items-center text-center group">
+                                            <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all duration-300">
+                                                <span className="font-mono text-emerald-400 font-bold text-xl">3</span>
+                                            </div>
+                                            <h5 className="font-bold text-base mb-2">Entity Memory</h5>
+                                            <p className="text-xs text-gray-400 leading-relaxed px-4">
+                                                Marka "güvenilir kaynak" olarak hafızaya alınır
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <h2 id="isim-tutarliligi">4. İsim Tutarlılığı Hafızayı Güçlendirir</h2>
                             <p>
