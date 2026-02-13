@@ -266,28 +266,44 @@ export default function BlogPost() {
                             <div className="my-8 not-prose">
                                 <div className="flex flex-col md:flex-row gap-4 items-center justify-between p-6 bg-blue-50/50 rounded-xl border border-blue-100">
                                     <div className="flex flex-col items-center text-center max-w-[120px]">
-                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">🔍</div>
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-blue-100 mb-2 text-blue-600">
+                                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                            </svg>
+                                        </div>
                                         <span className="text-xs font-bold text-blue-900">Sorgu (Prompt)</span>
                                     </div>
                                     <div className="hidden md:block h-px w-full bg-blue-200 relative">
                                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
                                     </div>
                                     <div className="flex flex-col items-center text-center max-w-[120px]">
-                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">📂</div>
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-blue-100 mb-2 text-blue-600">
+                                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                                            </svg>
+                                        </div>
                                         <span className="text-xs font-bold text-blue-900">Retrieval (Geri Çağırma)</span>
                                     </div>
                                     <div className="hidden md:block h-px w-full bg-blue-200 relative">
                                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
                                     </div>
                                     <div className="flex flex-col items-center text-center max-w-[120px]">
-                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">🤖</div>
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-blue-100 mb-2 text-blue-600">
+                                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
                                         <span className="text-xs font-bold text-blue-900">LLM Sentezi</span>
                                     </div>
                                     <div className="hidden md:block h-px w-full bg-blue-200 relative">
                                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
                                     </div>
                                     <div className="flex flex-col items-center text-center max-w-[120px]">
-                                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shadow-sm text-2xl border border-green-200 mb-2">✅</div>
+                                        <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center shadow-sm border border-green-200 mb-2 text-green-600">
+                                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
                                         <span className="text-xs font-bold text-green-700">Final Cevap</span>
                                     </div>
                                 </div>
