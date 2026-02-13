@@ -218,27 +218,80 @@ export default function BlogPost() {
                                 GEO'yu anlamak için, arama motorlarının ve LLM'lerin arka planda nasıl çalıştığını bilmek gerekir. Klasik anahtar kelime eşleşmesi yerini Semantik Arama ve Vektör teknolojilerine bırakmıştır.
                             </p>
 
-                            <div className="my-10 relative h-[300px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 not-prose">
-                                <Image
-                                    src="/images/geo-concept.png"
-                                    alt="Yapay zeka veri işleme ve yapılandırma süreci"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-
                             <h3>Vektör Depoları (Vector Stores) ve Embeddings</h3>
                             <p>
                                 AI, kelimeleri metin olarak değil, sayısal kavramlar (embeddings) olarak görür. "Kedi" ve "Yavru kedi" kelimeleri, anlamsal düzlemde birbirine "Kedi" ve "Araba" kelimelerinden daha yakındır.
                             </p>
+
+                            {/* Infographic: Semantic Distance */}
+                            <div className="my-8 p-8 bg-gray-50 rounded-2xl border border-gray-100 not-prose">
+                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 text-center">Anlamsal Mesafe (Semantic Distance)</h4>
+                                <div className="relative h-48 w-full bg-white rounded-xl border border-dashed border-gray-200 overflow-hidden">
+                                    {/* Grid Lines */}
+                                    <div className="absolute inset-0 grid grid-cols-6 grid-rows-4 opacity-10">
+                                        {[...Array(24)].map((_, i) => <div key={i} className="border-r border-b border-gray-400"></div>)}
+                                    </div>
+
+                                    {/* Nodes */}
+                                    <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+                                        <div className="w-3 h-3 bg-blue-500 rounded-full ring-4 ring-blue-100 group-hover:ring-blue-200 transition-all"></div>
+                                        <span className="text-xs font-bold text-gray-700 mt-2 bg-white px-2 py-1 rounded shadow-sm">Kedi</span>
+                                    </div>
+
+                                    <div className="absolute top-[35%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+                                        <div className="w-3 h-3 bg-blue-500 rounded-full ring-4 ring-blue-100 group-hover:ring-blue-200 transition-all"></div>
+                                        <span className="text-xs font-bold text-gray-700 mt-2 bg-white px-2 py-1 rounded shadow-sm">Yavru Kedi</span>
+                                        {/* Connection Line */}
+                                        <div className="absolute -top-6 -left-8 w-16 h-px bg-blue-500/30 -rotate-12 pointer-events-none"></div>
+                                    </div>
+
+                                    <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 flex flex-col items-center group cursor-pointer">
+                                        <div className="w-3 h-3 bg-red-400 rounded-full ring-4 ring-red-100 group-hover:ring-red-200 transition-all"></div>
+                                        <span className="text-xs font-bold text-gray-700 mt-2 bg-white px-2 py-1 rounded shadow-sm">Araba</span>
+                                    </div>
+                                </div>
+                                <p className="text-center text-xs text-gray-400 mt-3 italic">Konusal olarak yakın kelimeler (Embedding Space) birbirine kümelenir.</p>
+                            </div>
+
                             <ul>
                                 <li><strong>Önemi:</strong> İçeriğinizin, kullanıcı sorgusuyla anlamsal (semantik) olarak eşleşmesi için bu düzlemde yakın olması gerekir. Bu, anahtar kelime tekrarı yerine bağlamsal bütünlük gerektirir.</li>
                             </ul>
 
                             <h3>RAG (Retrieval-Augmented Generation)</h3>
                             <p>
-                                Modellerin (ChatGPT, Claude vb.) güncel bilgiye erişmek için dış veritabanlarını veya interneti tarayıp, bulduğu bilgiyi kendi dil yeteneğiyle sentezlemesi yöntemidir. GEO stratejisi, markanızın bu "Retrieval" (geri çağırma) aşamasında modelin önüne çıkmasını sağlamaktır.
+                                Modellerin (ChatGPT, Claude vb.) güncel bilgiye erişmek için dış veritabanlarını veya interneti tarayıp, bulduğu bilgiyi kendi dil yeteneğiyle sentezlemesi yöntemidir.
                             </p>
+
+                            {/* Infographic: RAG Workflow */}
+                            <div className="my-8 not-prose">
+                                <div className="flex flex-col md:flex-row gap-4 items-center justify-between p-6 bg-blue-50/50 rounded-xl border border-blue-100">
+                                    <div className="flex flex-col items-center text-center max-w-[120px]">
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">🔍</div>
+                                        <span className="text-xs font-bold text-blue-900">Sorgu (Prompt)</span>
+                                    </div>
+                                    <div className="hidden md:block h-px w-full bg-blue-200 relative">
+                                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
+                                    </div>
+                                    <div className="flex flex-col items-center text-center max-w-[120px]">
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">📂</div>
+                                        <span className="text-xs font-bold text-blue-900">Retrieval (Geri Çağırma)</span>
+                                    </div>
+                                    <div className="hidden md:block h-px w-full bg-blue-200 relative">
+                                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
+                                    </div>
+                                    <div className="flex flex-col items-center text-center max-w-[120px]">
+                                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-2xl border border-blue-100 mb-2">🤖</div>
+                                        <span className="text-xs font-bold text-blue-900">LLM Sentezi</span>
+                                    </div>
+                                    <div className="hidden md:block h-px w-full bg-blue-200 relative">
+                                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-blue-200 rotate-45"></div>
+                                    </div>
+                                    <div className="flex flex-col items-center text-center max-w-[120px]">
+                                        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center shadow-sm text-2xl border border-green-200 mb-2">✅</div>
+                                        <span className="text-xs font-bold text-green-700">Final Cevap</span>
+                                    </div>
+                                </div>
+                            </div>
 
                             <h3>Learning to Rank (LTR - Sıralama Öğrenmesi)</h3>
                             <p>
@@ -258,67 +311,78 @@ export default function BlogPost() {
                                 Aşağıdaki faktörler, AI Search Authority dökümanları ve C-Level rehberlerinden derlenmiştir. Bu faktörler, bir içeriğin AI tarafından "cevap" olarak seçilme olasılığını (Probability) belirler.
                             </p>
 
-                            <div className="space-y-8 my-8">
-                                <section>
-                                    <h4 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">A - Authority (Otorite & İtibar)</h4>
-                                    <p>AI modelleri, eğitim verilerinde "güvenilir" olarak etiketlenmiş kaynaklara öncelik verir.</p>
-                                    <ul className="text-sm bg-gray-50 p-4 rounded-lg list-none pl-0">
-                                        <li className="mb-2"><strong>Gerçek:</strong> Lorelight analizlerine göre, AI sonuçlarında en çok görünen markalar; otoriter yayınlarda bahsedilen ve sektörde gerçek bir itibarı olanlardır.</li>
-                                        <li><strong>Aksiyon:</strong> Sadece site içi SEO yetmez; sektördeki güvenilir kaynaklarda (haber siteleri, akademik yayınlar) markanızın adının geçmesi (mention) şarttır.</li>
-                                    </ul>
-                                </section>
+                            {/* Infographic Grid: GEO Factors */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10 not-prose">
+                                {/* Factor A */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">A</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Authority (İtibar)</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        AI, eğitim verisindeki "güvenilir" kaynakları önceliklendirir.
+                                    </p>
+                                    <div className="text-xs bg-blue-50 text-blue-700 p-3 rounded-lg font-medium">
+                                        🚀 Lorelight Verisi: Otoriter yayınlarda mention şarttır.
+                                    </div>
+                                </div>
 
-                                <section>
-                                    <h4 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">B - BLUF (Bottom Line Up Front)</h4>
-                                    <p>Cevabın en başta verilmesi prensibidir. AI modelleri netliği sever. Cevabı metnin sonuna saklamayın.</p>
-                                    <ul className="text-sm bg-gray-50 p-4 rounded-lg list-none pl-0">
-                                        <li><strong>Uygulama:</strong> Sayfanın en üstüne sorunun net cevabını yazın, ardından detaylara inin.</li>
-                                    </ul>
-                                </section>
+                                {/* Factor B */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">B</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">BLUF Prensibi</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        "Bottom Line Up Front". AI modelleri netliği sever.
+                                    </p>
+                                    <div className="text-xs bg-green-50 text-green-700 p-3 rounded-lg font-medium">
+                                        💡 İpucu: Cevabı ilk 100 kelimede net verin.
+                                    </div>
+                                </div>
 
-                                <section>
-                                    <h4 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">C - Citation vs. Mention (Atıf ve Bahsetme)</h4>
-                                    <ul className="list-none pl-0 space-y-2">
-                                        <li><strong>Citation:</strong> Linkli kaynak gösterme. Doğrudan güven sinyalidir.</li>
-                                        <li><strong>Mention:</strong> Marka adının metin içinde geçmesi. "Mention edilen markaların %40 daha uzun süre AI cevaplarında kaldığı" tespit edilmiştir.</li>
-                                        <li className="bg-blue-50 p-2 rounded text-blue-800 text-sm"><strong>Strateji:</strong> Marka isminizi tekil, net ve tutarlı kullanın.</li>
-                                    </ul>
-                                </section>
+                                {/* Factor C */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">C</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Citation & Mention</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        Linkli atıf (Citation) ve metin içi geçiş (Mention) dengesi.
+                                    </p>
+                                    <div className="text-xs bg-purple-50 text-purple-700 p-3 rounded-lg font-medium">
+                                        📊 Veri: Mention alan markalar %40 daha kalıcı.
+                                    </div>
+                                </div>
 
-                                <section>
-                                    <h4 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">D - Data & Tables (Veri ve Tablolar)</h4>
-                                    <p>AI, bilgiyi yapılandırılmış formatlarda (tablo, liste) daha kolay işler (parse eder).</p>
-                                    <ul className="text-sm bg-gray-50 p-4 rounded-lg list-none pl-0">
-                                        <li className="mb-2"><strong>Zorunluluk:</strong> İçeriğe mutlaka karşılaştırma tablosu ekleyin.</li>
-                                        <li><strong>Etkisi:</strong> Modellerin bilgiyi sentezlemesini kolaylaştırır ve alıntılanma şansını artırır.</li>
-                                    </ul>
-                                </section>
+                                {/* Factor D */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">D</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Data (Veri ve Tablo)</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        AI, yapılandırılmış veriyi (Structured Data) kolay işler.
+                                    </p>
+                                    <div className="text-xs bg-yellow-50 text-yellow-700 p-3 rounded-lg font-medium">
+                                        ⚠️ Zorunlu: Mutlaka karşılaştırma tablosu ekleyin.
+                                    </div>
+                                </div>
 
-                                <section>
-                                    <h4 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">E - Edge Cases (Uç Durum Senaryoları)</h4>
-                                    <p>AI, genel bilgiyi zaten bilir (training data). Sizin değeriniz, modelin bilmediği spesifik senaryolardır.</p>
-                                    <ul className="text-sm bg-gray-50 p-4 rounded-lg list-none pl-0">
-                                        <li><strong>Uygulama:</strong> "Eğer X olursa ne yapılır?", "Ama şu durumda Y yöntemi uygulanmalıdır" gibi senaryo (if/else) yapıları kurun.</li>
-                                    </ul>
-                                </section>
+                                {/* Factor E */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">E</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Edge Cases</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        Genel bilgi yerine spesifik, uç senaryolara odaklanın.
+                                    </p>
+                                    <div className="text-xs bg-gray-50 text-gray-700 p-3 rounded-lg font-medium">
+                                        ❓ Örnek: "Eğer X olursa, Y yapılmalıdır."
+                                    </div>
+                                </div>
 
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <section>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">F - Freshness (Güncellik)</h4>
-                                        <p className="text-sm text-gray-600">Bir içeriğin AI tarafından tekrar tekrar "hatırlanması" (Resurface Rate) önemlidir. Volatilite (dalgalanma) normaldir. Bugün varsınız, yarın yoksunuz. Amaç, tekrar görünme olasılığını artırmaktır.</p>
-                                    </section>
-                                    <section>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">H - Human Expertise</h4>
-                                        <p className="text-sm text-gray-600">"GEO için özel bir hile yoktur, iyi pazarlama ve gerçek içerik vardır." Kural: "Bu bilgiyi ChatGPT kendi başına uydurabilir mi?" sorusuna "Hayır" diyebileceğiniz, operasyonel ve gerçek tecrübe içeren bilgiler ekleyin.</p>
-                                    </section>
-                                    <section>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">I - Information Gain</h4>
-                                        <p className="text-sm text-gray-600">İnternetteki diğer 10 makalenin aynısını yazmak AI için değersizdir. Aksiyon: Yeni bir veri, orijinal bir araştırma veya benzersiz bir bakış açısı sunun.</p>
-                                    </section>
-                                    <section>
-                                        <h4 className="text-lg font-bold text-gray-900 mb-2">P - Probability Distribution</h4>
-                                        <p className="text-sm text-gray-600">Klasik SEO'da "1. sıra" hedeflenirken, GEO'da "seçilme olasılığı" yönetilir. KPI: Başarı metriği "Kaç farklı senaryoda markamız seçiliyor?" sorusudur.</p>
-                                    </section>
+                                {/* Factor F */}
+                                <div className="p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-md transition-shadow">
+                                    <div className="text-3xl font-black text-gray-100 mb-2">F</div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Freshness</h4>
+                                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                                        AI hafızasında "Resurface" (tekrar görünme) oranı kritiktir.
+                                    </p>
+                                    <div className="text-xs bg-red-50 text-red-700 p-3 rounded-lg font-medium">
+                                        📈 Hedef: Düzenli içerik ile volatiliteyi yönetin.
+                                    </div>
                                 </div>
                             </div>
 
