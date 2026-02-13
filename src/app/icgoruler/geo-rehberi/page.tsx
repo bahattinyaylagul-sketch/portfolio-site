@@ -16,7 +16,7 @@ const headings = [
     { id: "temel-kavramlar", text: '1. Temel Kavramlar ve Yeni Arama Katmanları' },
     { id: "teknik-altyapi", text: '2. GEO’nun Teknik Altyapısı (Machine Learning & NLP)' },
     { id: "geo-faktorleri", text: '3. A\'dan Z\'ye GEO Sıralama Faktörleri' },
-    { id: "uygulama-plani", text: '4. 1500 Kelimelik İçerik İçin Uygulama Planı' },
+    { id: "uygulama-plani", text: '4. İçerik İçin Uygulama Planı' },
     { id: "sonuc", text: 'Sonuç: GEO = İyi Pazarlama' },
 ];
 
@@ -322,7 +322,7 @@ export default function BlogPost() {
                                 </div>
                             </div>
 
-                            <h2 id="uygulama-plani">4. 1500 Kelimelik İçerik İçin Uygulama Planı (Checklist)</h2>
+                            <h2 id="uygulama-plani">4. İçerik İçin Uygulama Planı (Checklist)</h2>
                             <p>
                                 Bu dökümanlara dayanarak, GEO uyumlu bir içerik oluştururken izlemeniz gereken 10 adım:
                             </p>
