@@ -13,10 +13,12 @@ export const metadata: Metadata = {
 };
 
 const headings = [
-    { id: "yeniden-gorunme", text: '1. "Yeniden Görünme" Süresini %40 Artırır' },
-    { id: "algisal-guven", text: '2. Algısal Güven (Perceptual Trust) Oluşturur' },
-    { id: "semantik-oy", text: '3. Semantik Oy (Semantic Vote) Olarak İşlenir' },
-    { id: "isim-tutarliligi", text: '4. İsim Tutarlılığı Hafızayı Güçlendirir' },
+    { id: "yeniden-gorunme", text: '1. "Yeniden Görünme" (Resurface) Potansiyeli Artar' },
+    { id: "algisal-guven", text: '2. Entity Güveni ve Knowledge Graph' },
+    { id: "semantik-oy", text: '3. Semantik Yakınlık (Semantic Proximity)' },
+    { id: "isim-tutarliligi", text: '4. İsim Tutarlılığı ve Disambiguation' },
+    { id: "veri-sistem", text: 'Veri & Sistem Dayanakları' },
+    { id: "geo-aksiyon", text: 'Uygulanabilir GEO Aksiyonları' },
 ];
 
 export default function BlogPost() {
@@ -168,31 +170,31 @@ export default function BlogPost() {
                                 Kaynaklara göre, marka isminin mention olarak geçmesinin AI hafızasındaki 4 temel etkisi şunlardır:
                             </p>
 
-                            <h2 id="yeniden-gorunme">1. "Yeniden Görünme" Süresini %40 Artırır</h2>
+                            <h2 id="yeniden-gorunme">1. "Yeniden Görünme" (Resurface) Potansiyeli Artar</h2>
                             <p>
-                                AI modelleri için en kritik etki, markanın hafızada kalma süresidir. Araştırmalara göre, AI tarafından "Mention" edilen markalar, hiç bahsedilmeyenlere göre <strong>%40 daha uzun süre</strong> arama sonuçlarında (cevap setlerinde) tekrar tekrar görünmeye (resurface) devam eder.
+                                AI modelleri (LLM'ler), öğrendikleri verileri bir tür sıkıştırılmış hafızada saklar. Bir markanın isminin farklı bağlamlarda, link verilmeden dahi tekrar tekrar geçmesi <strong>(Repeated Exposure)</strong>, modelin nöron ağlarında o markaya ait ağırlığı artırır.
                             </p>
                             <p>
-                                Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> sinyalini vererek markayı potansiyel cevap havuzunda tutar.
+                                Google'ın "Entity-Based Phrase Indexing" patentlerine göre, bir varlığın (entity) isminin düzenli aralıklarla içeriklerde yer alması, o varlığın "güncel" ve "hatırlanmaya değer" olduğuna dair güçlü bir sinyaldir. Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> sinyalini vererek markayı potansiyel cevap havuzunda tutar.
                             </p>
 
-                            {/* Infographic: 40% Stat */}
+                            {/* Infographic: AI Retention */}
                             <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">AI Hafızasında Kalma Süresi</h4>
+                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">AI Hafızasında Tutunma (Retention)</h4>
                                 <div className="space-y-6">
                                     <div>
                                         <div className="flex justify-between text-sm font-medium text-gray-500 mb-2">
                                             <span>Mention Olmayan Markalar</span>
-                                            <span className="text-xs bg-gray-200 px-2 py-1 rounded">Standart Süre</span>
+                                            <span className="text-xs bg-gray-200 px-2 py-1 rounded">Düşük Erişim</span>
                                         </div>
                                         <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
-                                            <div className="h-full bg-gray-400 w-[60%]"></div>
+                                            <div className="h-full bg-gray-400 w-[20%]"></div>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="flex justify-between text-sm font-bold text-gray-900 mb-2">
-                                            <span>Mention Edilen Markalar</span>
-                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded border border-blue-200">%40 Daha Uzun</span>
+                                            <span>Düzenli Mention Alanlar</span>
+                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded border border-blue-200">Yüksek Hatırlanma</span>
                                         </div>
                                         <div className="h-3 w-full bg-blue-100 rounded-full overflow-hidden">
                                             <div className="h-full bg-blue-600 w-full shadow-[0_0_10px_rgba(37,99,235,0.4)] animate-pulse"></div>
@@ -200,20 +202,20 @@ export default function BlogPost() {
                                     </div>
                                 </div>
                                 <p className="text-xs text-gray-400 mt-4 italic">
-                                    * Mention'lar, markanın tekrar hatırlanma (resurface) sıklığını ve süresini doğrudan artırır.
+                                    * Tekrarlayan mention'lar, LLM'lerin "retrieval" (geri çağırma) aşamasında markanın önceliklendirilmesini sağlar.
                                 </p>
                             </div>
 
-                            <h2 id="algisal-guven">2. Algısal Güven (Perceptual Trust) Oluşturur</h2>
+                            <h2 id="algisal-guven">2. Entity Güveni ve Knowledge Graph</h2>
                             <p>
-                                AI Search dünyasında iki tür güven vardır:
+                                Google'ın Knowledge Graph yapısında her varlığın (marka veya kişi) bir <strong>"Confidence Score"</strong> (Güven Skoru) bulunur.
                             </p>
                             <ul>
-                                <li><strong>Citation (Alıntılama):</strong> Linkli kaynak gösterimidir, doğrudan teknik güven sağlar.</li>
-                                <li><strong>Mention (Bahsedilme):</strong> Marka isminin geçmesidir, algısal güven sağlar.</li>
+                                <li><strong>Citation (Alıntılama - Link):</strong> Geleneksel SEO'nun temelidir. PageRank aktarır.</li>
+                                <li><strong>Mention (Bahsedilme - Link Isız):</strong> AI Search ve modern SEO'nun temelidir. Entity otoritesini besler.</li>
                             </ul>
                             <p>
-                                Mention, AI'ın markayı tanımasını sağlar. Link verilmese bile, AI bu veriyi işler ve markayı bir "varlık" (entity) olarak hafızasına kazır. Bu durum, <strong>GEO (Generative Engine Optimization)</strong> sürecinin ilk ve en temel adımıdır.
+                                Link verilmese bile, saygın kaynaklarda isminizin geçmesi, Google ve diğer AI sistemlerinin markanızı "gerçek ve otoriter bir varlık" olarak doğrulamasını sağlar. Bu durum, <strong>GEO (Generative Engine Optimization)</strong> sürecinin temel taşıdır.
                             </p>
 
                             {/* Infographic: Comparison Cards */}
@@ -232,10 +234,10 @@ export default function BlogPost() {
                                     </p>
                                     <ul className="space-y-2">
                                         <li className="flex items-center gap-2 text-xs font-semibold text-gray-500 bg-gray-50 p-2 rounded">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>Teknik Güven
+                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>PageRank Aktarımı
                                         </li>
                                         <li className="flex items-center gap-2 text-xs font-semibold text-gray-500 bg-gray-50 p-2 rounded">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>PageRank Aktarımı
+                                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>Referral Trafik
                                         </li>
                                     </ul>
                                 </div>
@@ -264,12 +266,12 @@ export default function BlogPost() {
                                 </div>
                             </div>
 
-                            <h2 id="semantik-oy">3. Semantik Oy (Semantic Vote) Olarak İşlenir</h2>
+                            <h2 id="semantik-oy">3. Semantik Yakınlık (Semantic Proximity)</h2>
                             <p>
-                                Özellikle haber siteleri, Reddit, forumlar veya sektörel portallarda markanızdan bahsedilmesi, AI modelleri tarafından bir "semantik oy" olarak yorumlanır.
+                                AI modelleri, kelimeleri ve markaları vektör uzayında konumlandırır. Eğer markanız, sektörel terimlerle (örneğin "SEO Danışmanlığı" ve "Bahattin Yaylagül") aynı paragraflarda sıkça geçiyorsa <strong>(Co-occurrence)</strong>, bu iki kavram arasındaki vektörel mesafe kısalır.
                             </p>
                             <p>
-                                AI, bu mention'ları toplar ve markanızı ilgili konu başlığında <strong>(Topic Authority)</strong> yetkin bir figür olarak sınıflandırır. Bu sayede, gelecekteki sorgularda sizi kaynak (citation) olarak gösterme ihtimali artar.
+                                Bu durum, otoriteyi artıran gizli bir <strong>Semantik Oy (Semantic Vote)</strong> mekanizmasıdır. Link olmasa bile, metin içi yakınlık, AI'ın "ilişkisel veritabanına" (Knowledge Vault) işlenir.
                             </p>
 
                             {/* Infographic: AI Authority Cycle */}
@@ -290,9 +292,9 @@ export default function BlogPost() {
                                             <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.2)] transition-all duration-300">
                                                 <span className="font-mono text-blue-400 font-bold text-xl">1</span>
                                             </div>
-                                            <h5 className="font-bold text-base mb-2">Mention</h5>
+                                            <h5 className="font-bold text-base mb-2">Mention (Co-occurrence)</h5>
                                             <p className="text-xs text-gray-400 leading-relaxed px-4">
-                                                İçerik içinde markanızdan bahsedilir
+                                                Marka ve konu aynı bağlamda geçer
                                             </p>
                                         </div>
 
@@ -301,9 +303,9 @@ export default function BlogPost() {
                                             <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-purple-500/50 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all duration-300">
                                                 <span className="font-mono text-purple-400 font-bold text-xl">2</span>
                                             </div>
-                                            <h5 className="font-bold text-base mb-2">Semantic Vote</h5>
+                                            <h5 className="font-bold text-base mb-2">Vector Proximity</h5>
                                             <p className="text-xs text-gray-400 leading-relaxed px-4">
-                                                AI, bağlamı ve güvenilirliği analiz eder
+                                                Semantik mesafe kısalır ve ilişki kurulur
                                             </p>
                                         </div>
 
@@ -312,27 +314,76 @@ export default function BlogPost() {
                                             <div className="w-14 h-14 bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center mb-4 group-hover:border-emerald-500/50 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all duration-300">
                                                 <span className="font-mono text-emerald-400 font-bold text-xl">3</span>
                                             </div>
-                                            <h5 className="font-bold text-base mb-2">Entity Memory</h5>
+                                            <h5 className="font-bold text-base mb-2">Retrieval Priority</h5>
                                             <p className="text-xs text-gray-400 leading-relaxed px-4">
-                                                Marka "güvenilir kaynak" olarak hafızaya alınır
+                                                Cevap üretilirken marka önceliklendirilir
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <h2 id="isim-tutarliligi">4. İsim Tutarlılığı Hafızayı Güçlendirir</h2>
+                            <h2 id="isim-tutarliligi">4. İsim Tutarlılığı ve Disambiguation</h2>
                             <p>
-                                AI'ın markanızı doğru hatırlaması ve mention etkisini maksimuma çıkarması için <strong>"İsim İstikrarı"</strong> şarttır. Marka ve ürün isimlerinin tüm içeriklerde ve platformlarda tekil, net ve değişmez bir biçimde kullanılması, AI'ın parçaları birleştirmesini kolaylaştırır.
+                                AI sistemlerinin en büyük zorluğu <strong>"Entity Disambiguation"</strong> (Varlık Anlam Ayrımı) sürecidir. Markanızın her platformda aynı isimle (Name Consistency) anılması, AI'ın dağınık verileri tek bir Entity altında toplamasını kolaylaştırır.
                             </p>
                             <p>
-                                Farklı varyasyonlar kullanmak (örn: "X Marka", "X.com", "X A.Ş.") AI hafızasında bölünmelere yol açarak mention etkisini zayıflatabilir.
+                                Çelişkili veya çok varyasyonlu isimlendirmeler, bilgi grafiğinde (Knowledge Graph) kopukluklara yol açarak <strong>Confidence Score</strong> değerini düşürebilir.
                             </p>
+
+                            <h2 id="veri-sistem">Veri & Sistem Dayanakları</h2>
+                            <p>
+                                Bu etkiler, modern bilgi erişim (Information Retrieval) sistemlerinin çalışma prensiplerine dayanmaktadır:
+                            </p>
+                            <ul>
+                                <li><strong>Information Gain Theory:</strong> Google ve diğer motorlar, kullanıcıya yeni ve benzersiz bilgi sunan kaynakları ödüllendirir. Mention'lar, markanın yeni bir bilgi kaynağı olduğunun kanıtıdır.</li>
+                                <li><strong>Knowledge Vault & Knowledge Graph:</strong> Google'ın yapılandırılmamış metinlerden (web) bilgi toplama sistemidir. Mention'lar, bu sistemin veritabanını besleyen ham verilerdir.</li>
+                                <li><strong>Retrieval-Augmented Generation (RAG):</strong> LLM'ler cevap üretirken, "güvenilir" olarak etiketledikleri dış kaynaklardan veri çeker. Mention sıklığı, bu güven etiketini güçlendiren bir faktördür.</li>
+                            </ul>
+
+                            <h2 id="geo-aksiyon">Mini GEO Testi (Gözlemsel)</h2>
+                            <p>
+                                Aşağıdaki tablo, yoğun "Co-occurrence" içeren bir markanın AI görünürlüğündeki değişim mantığını simüle etmektedir:
+                            </p>
+
+                            <div className="overflow-x-auto not-prose my-8">
+                                <table className="w-full text-sm text-left border-collapse">
+                                    <thead className="text-xs text-gray-500 uppercase bg-gray-50 border-b border-gray-100">
+                                        <tr>
+                                            <th className="px-4 py-3 font-semibold">Senaryo</th>
+                                            <th className="px-4 py-3 font-semibold">Semantik Durum</th>
+                                            <th className="px-4 py-3 font-semibold">AI Tepkisi (Olası)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-100 border border-gray-100 rounded-lg">
+                                        <tr className="bg-white">
+                                            <td className="px-4 py-4 font-medium text-gray-900">Marka A (0 Mention)</td>
+                                            <td className="px-4 py-4 text-gray-500">Vektörel izolasyon. Konuyla ilişkisi kurulmamış.</td>
+                                            <td className="px-4 py-4 text-gray-500">Halüsinasyon veya jenerik rakipleri önerme.</td>
+                                        </tr>
+                                        <tr className="bg-blue-50/50">
+                                            <td className="px-4 py-4 font-medium text-blue-900">Marka B (Yoğun Context Mention)</td>
+                                            <td className="px-4 py-4 text-gray-600">Konu + Marka sık sık yan yana (yüksek yakınlık).</td>
+                                            <td className="px-4 py-4 text-gray-600">Doğrudan öneri veya "Bu konuda uzman olarak X bilinir" ifadesi.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2 id="geo-aksiyon">Uygulanabilir GEO Aksiyonları</h2>
+                            <p>
+                                Markanızın AI hafızasındaki yerini sağlamlaştırmak için şunları uygulayabilirsiniz:
+                            </p>
+                            <ul>
+                                <li><strong>Dijital PR & Contextual Mention:</strong> Sadece anasayfa linki değil, sektörel makalelerde markanızın isminin "uzman" sıfatıyla geçmesini sağlayın.</li>
+                                <li><strong>Tutarlı "NAP" (Name, Address, Phone):</strong> Sadece yerel SEO için değil, Entity bütünlüğü için tüm platformlarda isminizi birebir aynı kullanın.</li>
+                                <li><strong>Structured Data (Schema):</strong> <code>Organization</code> ve <code>SameAs</code> şemalarını kullanarak, webdeki mention'ları (sosyal medya, profiller) Google'a resmi olarak tanıtın.</li>
+                            </ul>
 
                             <div className="bg-gray-50 border-l-4 border-blue-600 p-8 rounded-r-xl my-12 not-prose">
                                 <h4 className="text-xl font-bold text-foreground mb-4">Özetle</h4>
                                 <p className="text-gray-600 text-lg leading-relaxed">
-                                    Link (backlink) teknik bir referansken, <strong>mention</strong> markanın AI ekosistemindeki "bilinirliğini" ve "kalıcılığını" yönetir. Hedefiniz, mention'larla AI hafızasına girmek ve zamanla bunu linkli bir kaynağa (Citation) dönüştürmektir.
+                                    Mention'lar, bağlantı (link) içermese bile <strong>AI'ın nöronlarında iz bırakan</strong> dijital ayak izleridir. GEO stratejinizin temeli, bu izleri sıklaştırarak sistemin markanızı "hatırlamasını" kaçınılmaz hale getirmektir.
                                 </p>
                             </div>
                         </div>
