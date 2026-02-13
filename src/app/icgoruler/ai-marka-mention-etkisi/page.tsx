@@ -172,10 +172,10 @@ export default function BlogPost() {
 
                             <h2 id="yeniden-gorunme">1. "Yeniden Görünme" (Resurface) Potansiyeli Artar</h2>
                             <p>
-                                AI modelleri (LLM'ler), öğrendikleri verileri bir tür sıkıştırılmış hafızada saklar. Bir markanın isminin farklı bağlamlarda, link verilmeden dahi tekrar tekrar geçmesi <strong>(Repeated Exposure)</strong>, modelin nöron ağlarında o markaya ait ağırlığı artırır.
+                                LLM'ler, yani yapay zeka modelleri, öğrendikleri veriyi aslında devasa ve sıkıştırılmış bir hafıza gibi tutuyor. Markanızın ismi, link verilmese bile farklı bağlamlarda sık sık geçtiğinde <strong>(Repeated Exposure)</strong>, bu sistemin dikkatini çekmeye başlıyorsunuz.
                             </p>
                             <p>
-                                Google'ın "Entity-Based Phrase Indexing" patentlerine göre, bir varlığın (entity) isminin düzenli aralıklarla içeriklerde yer alması, o varlığın "güncel" ve "hatırlanmaya değer" olduğuna dair güçlü bir sinyaldir. Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> sinyalini vererek markayı potansiyel cevap havuzunda tutar.
+                                Google'ın "Entity-Based Phrase Indexing" patentlerinde de altını çizdiği gibi; bir ismin düzenli aralıklarla içeriklerde yer alması, o varlığın (entity) "güncel" ve "hatırlanmaya değer" olduğuna dair çok güçlü bir sinyal. Pratikte şunu net görüyoruz: Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> mesajını veriyor ve markanızı potansiyel cevap havuzunda tutuyor.
                             </p>
 
                             {/* Infographic: AI Retention */}
@@ -208,14 +208,14 @@ export default function BlogPost() {
 
                             <h2 id="algisal-guven">2. Entity Güveni ve Knowledge Graph</h2>
                             <p>
-                                Google'ın Knowledge Graph yapısında her varlığın (marka veya kişi) bir <strong>"Confidence Score"</strong> (Güven Skoru) bulunur.
+                                Biliyoruz ki Google'ın Knowledge Graph yapısında herkesin—marka ya da şahıs fark etmez—bir <strong>"Confidence Score"</strong> (Güven Skoru) var.
                             </p>
                             <ul>
-                                <li><strong>Citation (Alıntılama - Link):</strong> Geleneksel SEO'nun temelidir. PageRank aktarır.</li>
-                                <li><strong>Mention (Bahsedilme - Link Isız):</strong> AI Search ve modern SEO'nun temelidir. Entity otoritesini besler.</li>
+                                <li><strong>Citation (Alıntılama - Link):</strong> Geleneksel SEO'nun bel kemiğidir. PageRank aktarır.</li>
+                                <li><strong>Mention (Bahsedilme - Linksiz):</strong> AI Search ve modern SEO'nun yeni para birimidir. Entity otoritesini besler.</li>
                             </ul>
                             <p>
-                                Link verilmese bile, saygın kaynaklarda isminizin geçmesi, Google ve diğer AI sistemlerinin markanızı "gerçek ve otoriter bir varlık" olarak doğrulamasını sağlar. Bu durum, <strong>GEO (Generative Engine Optimization)</strong> sürecinin temel taşıdır.
+                                Linkiniz olmasa bile, saygın kaynaklarda isminizin geçmesi, Google ve diğer AI sistemlerinin sizi "gerçek ve otoriter bir varlık" olarak tanımasını sağlar. <strong>GEO (Generative Engine Optimization)</strong> sürecinin temel taşı, işte bu güveni inşa etmektir.
                             </p>
 
                             {/* Infographic: Comparison Cards */}
@@ -268,10 +268,10 @@ export default function BlogPost() {
 
                             <h2 id="semantik-oy">3. Semantik Yakınlık (Semantic Proximity)</h2>
                             <p>
-                                AI modelleri, kelimeleri ve markaları vektör uzayında konumlandırır. Eğer markanız, sektörel terimlerle (örneğin "SEO Danışmanlığı" ve "Bahattin Yaylagül") aynı paragraflarda sıkça geçiyorsa <strong>(Co-occurrence)</strong>, bu iki kavram arasındaki vektörel mesafe kısalır.
+                                Yapay zeka, kelimeleri ve markaları devasa bir anlamsal haritada birbirine yakınlığına göre gruplar. Gerçek projelerde bu mekanizma şöyle işliyor: Markanız, "SEO Danışmanlığı" veya "Bahattin Yaylagül" gibi sektörel terimlerle aynı paragraflarda sıkça geçiyorsa <strong>(Co-occurrence)</strong>, AI bu iki kavramı zihninde birbirine bağlıyor.
                             </p>
                             <p>
-                                Bu durum, otoriteyi artıran gizli bir <strong>Semantik Oy (Semantic Vote)</strong> mekanizmasıdır. Link olmasa bile, metin içi yakınlık, AI'ın "ilişkisel veritabanına" (Knowledge Vault) işlenir.
+                                Bu durum, otoriteyi artıran gizli ama etkili bir <strong>Semantik Oy (Semantic Vote)</strong> mekanizmasıdır. Link olmasa bile, metin içindeki bu yakınlık, AI'ın "ilişkisel veritabanına" (Knowledge Vault) işleniyor.
                             </p>
 
                             {/* Infographic: AI Authority Cycle */}
@@ -325,25 +325,25 @@ export default function BlogPost() {
 
                             <h2 id="isim-tutarliligi">4. İsim Tutarlılığı ve Disambiguation</h2>
                             <p>
-                                AI sistemlerinin en büyük zorluğu <strong>"Entity Disambiguation"</strong> (Varlık Anlam Ayrımı) sürecidir. Markanızın her platformda aynı isimle (Name Consistency) anılması, AI'ın dağınık verileri tek bir Entity altında toplamasını kolaylaştırır.
+                                AI sistemlerinde en sık karşılaşılan zorluklardan biri <strong>"Entity Disambiguation"</strong>, yani hangi ismin kime ait olduğunu çözme sürecidir. Markanızın her platformda aynı isimle (Name Consistency) anılması, AI'ın dağınık verileri tek bir çatı altında toplamasını inanılmaz kolaylaştırır.
                             </p>
                             <p>
-                                Çelişkili veya çok varyasyonlu isimlendirmeler, bilgi grafiğinde (Knowledge Graph) kopukluklara yol açarak <strong>Confidence Score</strong> değerini düşürebilir.
+                                Çelişkili veya çok varyasyonlu isimlendirmeler, bilgi grafiğinde (Knowledge Graph) kopukluklara yol açıyor ve maalesef <strong>Confidence Score</strong> değerini düşürebiliyor.
                             </p>
 
                             <h2 id="veri-sistem">Veri & Sistem Dayanakları</h2>
                             <p>
-                                Bu etkiler, modern bilgi erişim (Information Retrieval) sistemlerinin çalışma prensiplerine dayanmaktadır:
+                                Tüm bu etkiler havada kalan teoriler değil; modern bilgi erişim (Information Retrieval) sistemlerinin temel çalışma mantığına dayanıyor:
                             </p>
                             <ul>
-                                <li><strong>Information Gain Theory:</strong> Google ve diğer motorlar, kullanıcıya yeni ve benzersiz bilgi sunan kaynakları ödüllendirir. Mention'lar, markanın yeni bir bilgi kaynağı olduğunun kanıtıdır.</li>
-                                <li><strong>Knowledge Vault & Knowledge Graph:</strong> Google'ın yapılandırılmamış metinlerden (web) bilgi toplama sistemidir. Mention'lar, bu sistemin veritabanını besleyen ham verilerdir.</li>
-                                <li><strong>Retrieval-Augmented Generation (RAG):</strong> LLM'ler cevap üretirken, "güvenilir" olarak etiketledikleri dış kaynaklardan veri çeker. Mention sıklığı, bu güven etiketini güçlendiren bir faktördür.</li>
+                                <li><strong>Information Gain Theory:</strong> Google ve diğer motorlar, kullanıcıya "yeni bir şey" söyleyen kaynakları sever. Mention'lar, markanızın taze bir bilgi kaynağı olduğunun kanıtıdır.</li>
+                                <li><strong>Knowledge Vault & Knowledge Graph:</strong> Google'ın web üzerindeki dağınık metinlerden bilgi toplama sistemidir. Mention'lar, bu devasa veritabanını besleyen ham maddelerdir.</li>
+                                <li><strong>Retrieval-Augmented Generation (RAG):</strong> LLM'ler cevap üretirken, "güvenilir" etiketli dış kaynaklara bakar. Mention sıklığınız, bu güven etiketini güçlendiren en önemli faktörlerden biridir.</li>
                             </ul>
 
                             <h2 id="geo-aksiyon">Mini GEO Testi (Gözlemsel)</h2>
                             <p>
-                                Aşağıdaki tablo, yoğun "Co-occurrence" içeren bir markanın AI görünürlüğündeki değişim mantığını simüle etmektedir:
+                                Pratikte işlerin nasıl yürüdüğünü görmek için, yoğun "Co-occurrence" içeren bir markanın durumunu şöyle simüle edebiliriz:
                             </p>
 
                             <div className="overflow-x-auto not-prose my-8">
@@ -372,12 +372,12 @@ export default function BlogPost() {
 
                             <h2 id="geo-aksiyon">Uygulanabilir GEO Aksiyonları</h2>
                             <p>
-                                Markanızın AI hafızasındaki yerini sağlamlaştırmak için şunları uygulayabilirsiniz:
+                                Peki ne yapmalı? Markanızın AI hafızasındaki yerini sağlamlaştırmak için sahada uyguladığımız bazı yöntemler şunlar:
                             </p>
                             <ul>
-                                <li><strong>Dijital PR & Contextual Mention:</strong> Sadece anasayfa linki değil, sektörel makalelerde markanızın isminin "uzman" sıfatıyla geçmesini sağlayın.</li>
-                                <li><strong>Tutarlı "NAP" (Name, Address, Phone):</strong> Sadece yerel SEO için değil, Entity bütünlüğü için tüm platformlarda isminizi birebir aynı kullanın.</li>
-                                <li><strong>Structured Data (Schema):</strong> <code>Organization</code> ve <code>SameAs</code> şemalarını kullanarak, webdeki mention'ları (sosyal medya, profiller) Google'a resmi olarak tanıtın.</li>
+                                <li><strong>Dijital PR & Contextual Mention:</strong> Sadece anasayfa linkine odaklanmayın. Sektörel makalelerde markanızın isminin "uzman" sıfatıyla geçmesini sağlayın.</li>
+                                <li><strong>Tutarlı "NAP" (Name, Address, Phone):</strong> Sadece yerel SEO için değil, Entity bütünlüğü için de kritik. Tüm platformlarda isminizi birebir aynı kullanın.</li>
+                                <li><strong>Structured Data (Schema):</strong> <code>Organization</code> ve <code>SameAs</code> şemalarını kullanarak, webdeki mention'larınızı (sosyal medya, profiller) Google'a "Bak bunlar benim" diyerek tanıtın.</li>
                             </ul>
 
                             <div className="bg-gray-50 border-l-4 border-blue-600 p-8 rounded-r-xl my-12 not-prose">
