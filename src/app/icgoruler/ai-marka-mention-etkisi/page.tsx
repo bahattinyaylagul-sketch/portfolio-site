@@ -149,7 +149,7 @@ export default function BlogPost() {
                     <article className="min-w-0">
                         {/* Lead Description */}
                         <p className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600">
-                            Marka isminin link olmadan, sadece metin içinde "mention" (bahsedilme) olarak geçmesi, AI algoritmalarının hafızasını ve karar mekanizmasını <strong className="font-bold text-gray-900">"Algısal Güven" (Perceptual Trust)</strong> ve <strong className="font-bold text-gray-900">"Yeniden Görünme" (Resurface)</strong> açısından doğrudan etkiler.
+                            Marka isminin link olmadan, sadece metin içinde geçmesi ("mention"), yapay zeka algoritmalarının kafasındaki o <strong className="font-bold text-gray-900">"Güven"</strong> ve <strong className="font-bold text-gray-900">"Hatırlanma"</strong> mekanizmalarını sandığımızdan çok daha derin etkiliyor.
                         </p>
 
                         {/* Content Body */}
@@ -167,25 +167,25 @@ export default function BlogPost() {
                                 mb-16"
                         >
                             <p>
-                                Kaynaklara göre, marka isminin mention olarak geçmesinin AI hafızasındaki 4 temel etkisi şunlardır:
+                                Kaynakları taradığımızda ve sistemin çalışma mantığına baktığımızda, marka isminin geçmesinin 4 kritik etkisiyle karşılaşıyoruz:
                             </p>
 
                             <h2 id="yeniden-gorunme">1. "Yeniden Görünme" (Resurface) Potansiyeli Artar</h2>
                             <p>
-                                LLM'ler, yani yapay zeka modelleri, öğrendikleri veriyi aslında devasa ve sıkıştırılmış bir hafıza gibi tutuyor. Markanızın ismi, link verilmese bile farklı bağlamlarda sık sık geçtiğinde <strong>(Repeated Exposure)</strong>, bu sistemin dikkatini çekmeye başlıyorsunuz.
+                                Yapay zeka modelleri (LLM'ler) bilgiyi bizim gibi "öğrenmiyor", aslında devasa bir olasılık havuzunda sıkıştırıyor. Markanızın ismi, link olmasa bile sağda solda, farklı konularda sürekli karşısına çıktığında <strong>(Repeated Exposure)</strong>, sistem ister istemez "Bu isim önemli galiba" demeye başlıyor.
                             </p>
                             <p>
-                                Google'ın "Entity-Based Phrase Indexing" patentlerinde de altını çizdiği gibi; bir ismin düzenli aralıklarla içeriklerde yer alması, o varlığın (entity) "güncel" ve "hatırlanmaya değer" olduğuna dair çok güçlü bir sinyal. Pratikte şunu net görüyoruz: Mention, yapay zekaya <em>"bu marka bu konuyla ilgilidir"</em> mesajını veriyor ve markanızı potansiyel cevap havuzunda tutuyor.
+                                Google'ın o meşhur "Entity-Based Phrase Indexing" patentlerine filan baktığınızda olay aslında çok net: Bir isim düzenli aralıklarla içeriklerde geçiyorsa, o isim "günceldir" ve "hatırlanmaya değerdir". Sahada gördüğümüz durum tam olarak bu: Mention, yapay zekaya <em>"Bak bu marka bu işin içinde"</em> diye fısıldıyor ve cevap üretirken sizi ön sıralara itiyor.
                             </p>
 
                             {/* Infographic: AI Retention */}
                             <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-100 not-prose">
-                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">AI Hafızasında Tutunma (Retention)</h4>
+                                <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">AI Sizi Ne Kadar Hatırlar?</h4>
                                 <div className="space-y-6">
                                     <div>
                                         <div className="flex justify-between text-sm font-medium text-gray-500 mb-2">
                                             <span>Mention Olmayan Markalar</span>
-                                            <span className="text-xs bg-gray-200 px-2 py-1 rounded">Düşük Erişim</span>
+                                            <span className="text-xs bg-gray-200 px-2 py-1 rounded">Çabuk Unutulur</span>
                                         </div>
                                         <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
                                             <div className="h-full bg-gray-400 w-[20%]"></div>
@@ -194,7 +194,7 @@ export default function BlogPost() {
                                     <div>
                                         <div className="flex justify-between text-sm font-bold text-gray-900 mb-2">
                                             <span>Düzenli Mention Alanlar</span>
-                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded border border-blue-200">Yüksek Hatırlanma</span>
+                                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded border border-blue-200">Hafızada Yer Eder</span>
                                         </div>
                                         <div className="h-3 w-full bg-blue-100 rounded-full overflow-hidden">
                                             <div className="h-full bg-blue-600 w-full shadow-[0_0_10px_rgba(37,99,235,0.4)] animate-pulse"></div>
@@ -202,20 +202,20 @@ export default function BlogPost() {
                                     </div>
                                 </div>
                                 <p className="text-xs text-gray-400 mt-4 italic">
-                                    * Tekrarlayan mention'lar, LLM'lerin "retrieval" (geri çağırma) aşamasında markanın önceliklendirilmesini sağlar.
+                                    * Basit kural: Ne kadar çok görünürseniz, sistemin sizi geri çağırma (retrieval) ihtimali o kadar artar.
                                 </p>
                             </div>
 
                             <h2 id="algisal-guven">2. Entity Güveni ve Knowledge Graph</h2>
                             <p>
-                                Biliyoruz ki Google'ın Knowledge Graph yapısında herkesin—marka ya da şahıs fark etmez—bir <strong>"Confidence Score"</strong> (Güven Skoru) var.
+                                Şöyle düşünün: Google'ın Knowledge Graph dediğimiz o devasa bilgi ağında herkese bir not veriliyor. Buna <strong>"Confidence Score"</strong> (Güven Skoru) diyoruz.
                             </p>
                             <ul>
-                                <li><strong>Citation (Alıntılama - Link):</strong> Geleneksel SEO'nun bel kemiğidir. PageRank aktarır.</li>
-                                <li><strong>Mention (Bahsedilme - Linksiz):</strong> AI Search ve modern SEO'nun yeni para birimidir. Entity otoritesini besler.</li>
+                                <li><strong>Citation (Link):</strong> Eski usül referans mektubu. Güçlü ama her zaman şart değil.</li>
+                                <li><strong>Mention (Sadece İsim):</strong> Yapay zeka çağının yeni itibarı. Entity (Varlık) otoritesini asıl bunlar besliyor.</li>
                             </ul>
                             <p>
-                                Linkiniz olmasa bile, saygın kaynaklarda isminizin geçmesi, Google ve diğer AI sistemlerinin sizi "gerçek ve otoriter bir varlık" olarak tanımasını sağlar. <strong>GEO (Generative Engine Optimization)</strong> sürecinin temel taşı, işte bu güveni inşa etmektir.
+                                İnanın bazen linkiniz olmasa bile, doğru yerlerde isminizin geçmesi yetiyor. Google ve diğer sistemler "Tamam," diyor, "Bu marka gerçek ve işini yapıyor." <strong>GEO (Generative Engine Optimization)</strong> dediğimiz şeyin temeli de zaten bu güveni oluşturmaktan geçiyor.
                             </p>
 
                             {/* Infographic: Comparison Cards */}
@@ -268,10 +268,10 @@ export default function BlogPost() {
 
                             <h2 id="semantik-oy">3. Semantik Yakınlık (Semantic Proximity)</h2>
                             <p>
-                                Yapay zeka, kelimeleri ve markaları devasa bir anlamsal haritada birbirine yakınlığına göre gruplar. Gerçek projelerde bu mekanizma şöyle işliyor: Markanız, "SEO Danışmanlığı" veya "Bahattin Yaylagül" gibi sektörel terimlerle aynı paragraflarda sıkça geçiyorsa <strong>(Co-occurrence)</strong>, AI bu iki kavramı zihninde birbirine bağlıyor.
+                                Yapay zeka kelimeleri bizim gibi okumuyor; onları anlam haritalarında grupluyor. Eğer markanız, "SEO Danışmanlığı" veya "Bahattin Yaylagül" gibi terimlerle sürekli yan yana geliyorsa <strong>(Co-occurrence)</strong>, AI zihninde "Bunlar kesin birbirilye alakalı" diyor.
                             </p>
                             <p>
-                                Bu durum, otoriteyi artıran gizli ama etkili bir <strong>Semantik Oy (Semantic Vote)</strong> mekanizmasıdır. Link olmasa bile, metin içindeki bu yakınlık, AI'ın "ilişkisel veritabanına" (Knowledge Vault) işleniyor.
+                                Bu aslında gizli bir oylama sistemi gibi. <strong>Semantik Oy (Semantic Vote)</strong> veriliyor size. Link yok, tıklama yok ama metin içindeki o yakınlık sayesinde, AI sizi o konunun uzmanı olarak veritabanına (Knowledge Vault'a) işliyor.
                             </p>
 
                             {/* Infographic: AI Authority Cycle */}
@@ -316,7 +316,7 @@ export default function BlogPost() {
                                             </div>
                                             <h5 className="font-bold text-base mb-2">Retrieval Priority</h5>
                                             <p className="text-xs text-gray-400 leading-relaxed px-4">
-                                                Cevap üretilirken marka önceliklendirilir
+                                                Cevap üretirken seni öne çeker
                                             </p>
                                         </div>
                                     </div>
@@ -325,25 +325,25 @@ export default function BlogPost() {
 
                             <h2 id="isim-tutarliligi">4. İsim Tutarlılığı ve Disambiguation</h2>
                             <p>
-                                AI sistemlerinde en sık karşılaşılan zorluklardan biri <strong>"Entity Disambiguation"</strong>, yani hangi ismin kime ait olduğunu çözme sürecidir. Markanızın her platformda aynı isimle (Name Consistency) anılması, AI'ın dağınık verileri tek bir çatı altında toplamasını inanılmaz kolaylaştırır.
+                                AI sistemlerinin baş belası bir durum var: <strong>"Entity Disambiguation"</strong>. Yani "Bu Ali hangi Ali?" sorunu. Markanızın her yerde ama her yerde aynı isimle (Name Consistency) geçmesi, sistemin parçaları birleştirmesini inanılmaz kolaylaştırıyor.
                             </p>
                             <p>
-                                Çelişkili veya çok varyasyonlu isimlendirmeler, bilgi grafiğinde (Knowledge Graph) kopukluklara yol açıyor ve maalesef <strong>Confidence Score</strong> değerini düşürebiliyor.
+                                Bir yerde "X Danışmanlık", öbür yerde "X Ltd. Şti." derseniz yapay zekanın kafası karışıyor. Bu da o zor kazandığımız <strong>Confidence Score</strong>'u maalesef aşağı çekebiliyor.
                             </p>
 
                             <h2 id="veri-sistem">Veri & Sistem Dayanakları</h2>
                             <p>
-                                Tüm bu etkiler havada kalan teoriler değil; modern bilgi erişim (Information Retrieval) sistemlerinin temel çalışma mantığına dayanıyor:
+                                Bu anlattıklarım teoriden ibaret değil; modern arama sistemlerinin (Information Retrieval) ciğerini bildiğimiz için bunları söylüyoruz:
                             </p>
                             <ul>
-                                <li><strong>Information Gain Theory:</strong> Google ve diğer motorlar, kullanıcıya "yeni bir şey" söyleyen kaynakları sever. Mention'lar, markanızın taze bir bilgi kaynağı olduğunun kanıtıdır.</li>
-                                <li><strong>Knowledge Vault & Knowledge Graph:</strong> Google'ın web üzerindeki dağınık metinlerden bilgi toplama sistemidir. Mention'lar, bu devasa veritabanını besleyen ham maddelerdir.</li>
-                                <li><strong>Retrieval-Augmented Generation (RAG):</strong> LLM'ler cevap üretirken, "güvenilir" etiketli dış kaynaklara bakar. Mention sıklığınız, bu güven etiketini güçlendiren en önemli faktörlerden biridir.</li>
+                                <li><strong>Information Gain Theory:</strong> Google ve türevleri, kullanıcıya "yeni bir laf eden" kaynağı sever. Mention'larınız, markanızın taze bilgi kaynağı olduğunun kanıtıdır.</li>
+                                <li><strong>Knowledge Vault & Knowledge Graph:</strong> Google'ın web'i tarayıp bilgi topladığı o dev yapı. Mention'lar, bu yapının yakıtıdır.</li>
+                                <li><strong>Retrieval-Augmented Generation (RAG):</strong> LLM'ler cevap verirken "güvenilir" kaynaklara bakar. İsminiz ne kadar çok geçiyorsa, o güven etiketini o kadar sağlam yapıştırırlar.</li>
                             </ul>
 
                             <h2 id="geo-aksiyon">Mini GEO Testi (Gözlemsel)</h2>
                             <p>
-                                Pratikte işlerin nasıl yürüdüğünü görmek için, yoğun "Co-occurrence" içeren bir markanın durumunu şöyle simüle edebiliriz:
+                                Sahada işlerin nasıl yürüdüğünü net görelim. Diyelim ki bir marka var ve sürekli ilgili konunun içinde adı geçiyor (Co-occurrence). Tablo şöyle şekilleniyor:
                             </p>
 
                             <div className="overflow-x-auto not-prose my-8">
@@ -372,18 +372,18 @@ export default function BlogPost() {
 
                             <h2 id="geo-aksiyon">Uygulanabilir GEO Aksiyonları</h2>
                             <p>
-                                Peki ne yapmalı? Markanızın AI hafızasındaki yerini sağlamlaştırmak için sahada uyguladığımız bazı yöntemler şunlar:
+                                Peki biz ne yapacağız? Markamızın AI hafızasına kazınması için sahada uyguladığımız ama genelde atlanan yöntemler şunlar:
                             </p>
                             <ul>
-                                <li><strong>Dijital PR & Contextual Mention:</strong> Sadece anasayfa linkine odaklanmayın. Sektörel makalelerde markanızın isminin "uzman" sıfatıyla geçmesini sağlayın.</li>
-                                <li><strong>Tutarlı "NAP" (Name, Address, Phone):</strong> Sadece yerel SEO için değil, Entity bütünlüğü için de kritik. Tüm platformlarda isminizi birebir aynı kullanın.</li>
-                                <li><strong>Structured Data (Schema):</strong> <code>Organization</code> ve <code>SameAs</code> şemalarını kullanarak, webdeki mention'larınızı (sosyal medya, profiller) Google'a "Bak bunlar benim" diyerek tanıtın.</li>
+                                <li><strong>Dijital PR'ı Link İçin Değil, Context İçin Yapın:</strong> Sadece anasayfa linkine takılmayın. Sektörel yazılarda isminizin "uzman" sıfatıyla geçmesi bazen linkten daha değerlidir.</li>
+                                <li><strong>NAP (İsim, Adres, Telefon) Tutarlılığı:</strong> Yerel SEO kuralı sanılır ama Entity bütünlüğü için hayati. Her yerde adınız birebir aynı olsun. Noktasına kadar.</li>
+                                <li><strong>Schema (Structured Data) Kullanın:</strong> <code>Organization</code> ve <code>SameAs</code> ile Google'a açık açık "Bak bu profiller benim, bu mentionlar bana ait" deyin. İşini şansa bırakmayın.</li>
                             </ul>
 
                             <div className="bg-gray-50 border-l-4 border-blue-600 p-8 rounded-r-xl my-12 not-prose">
                                 <h4 className="text-xl font-bold text-foreground mb-4">Özetle</h4>
                                 <p className="text-gray-600 text-lg leading-relaxed">
-                                    Mention'lar, bağlantı (link) içermese bile <strong>AI'ın nöronlarında iz bırakan</strong> dijital ayak izleridir. GEO stratejinizin temeli, bu izleri sıklaştırarak sistemin markanızı "hatırlamasını" kaçınılmaz hale getirmektir.
+                                    Mention dediğimiz şey, link (backlink) gibi teknik bir bağlantı değil belki ama, <strong>AI'ın hafızasında bıraktığınız ayak izleridir</strong>. GEO stratejisinin bütün olayı da bu izleri derinleştirmek ve sistemin sizi "hatırlamasını" kaçınılmaz hale getirmek.
                                 </p>
                             </div>
                         </div>
