@@ -5,11 +5,21 @@ import Image from "next/image"; // Added Image import
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "İçgörüler | Bahattin Yaylagül",
-    description: "SEO, GEO ve dijital pazarlama üzerine stratejik fikirler ve derinlemesine analizler.",
+    title: "İçgörüler – Bahattin Yaylagül",
+    description: "SEO, GEO ve dijital pazarlama dünyasından en güncel stratejiler, teknik analizler ve sektörel notlar. Veri odaklı makalelerle dijital vizyonunuzu geliştirin.",
+    alternates: {
+        canonical: "/icgoruler",
+    },
 };
 
 const posts = [
+    {
+        slug: "geo-rehberi",
+        title: "Generative Engine Optimization (GEO): Kapsamlı Rehber",
+        excerpt: "Klasik SEO'dan yapay zeka çağına geçiş. LLM modellerinde kaynak olarak gösterilmek ve otorite kazanmak için uygulanabilir stratejiler.",
+        date: "13 Şubat 2026",
+        category: "GEO / AI Search"
+    },
     {
         slug: "reddit-forum-mention-etkisi",
         title: "Reddit ve Forumlardaki Mention'lar GEO Başarısını Nasıl Etkiler?",

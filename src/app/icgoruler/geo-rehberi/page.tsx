@@ -30,16 +30,28 @@ export default function BlogPost() {
 
             {/* Hero Header - Full Width Moz Style */}
             <div className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
-                {/* Abstract Background Shapes */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/geo-hero.png"
+                        alt="Generative Engine Optimization AI Brain"
+                        fill
+                        className="object-cover opacity-20"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
+                </div>
+
+                {/* Abstract Background Shapes (Kept as extra layer if needed, or removed if image is enough. Let's keep for depth but reduce opacity) */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] -ml-32 -mb-32"></div>
                 </div>
 
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
-                        <div className="space-y-8 flex flex-col justify-center h-full pb-8">
+                        <div className="space-y-8 flex flex-col justify-center h-full pb-16 pt-12">
                             <div>
                                 <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
                                     <span className="text-blue-400">İçgörüler</span>
@@ -95,14 +107,15 @@ export default function BlogPost() {
                             </div>
                         </div>
 
-                        {/* 3D Illustration - Using existing image as placeholder or leaving empty for clean look */}
+                        {/* 3D Illustration */}
                         <div className="relative hidden lg:block h-[500px] w-full">
-                            {/* Ideally create a new image for GEO context, reusing mention effect one for layout consistency if needed, 
-                                 or better yet, a generic abstract tech one if available. 
-                                 Since specific image wasn't provided, I'll use the same structure but maybe suppress the image or use a generic one if I knew the path.
-                                 Let's keep the layout but comment out the image source to avoid broken image, or reuse existing one temporarily.
-                             */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+                            <Image
+                                src="/images/geo-hero.png"
+                                alt="Generative Engine Optimization Visual"
+                                fill
+                                className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
+                                priority
+                            />
                         </div>
                     </div>
                 </div>
@@ -205,12 +218,21 @@ export default function BlogPost() {
                                 GEO'yu anlamak için, arama motorlarının ve LLM'lerin arka planda nasıl çalıştığını bilmek gerekir. Klasik anahtar kelime eşleşmesi yerini Semantik Arama ve Vektör teknolojilerine bırakmıştır.
                             </p>
 
+                            <div className="my-10 relative h-[300px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 not-prose">
+                                <Image
+                                    src="/images/geo-concept.png"
+                                    alt="Yapay zeka veri işleme ve yapılandırma süreci"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
                             <h3>Vektör Depoları (Vector Stores) ve Embeddings</h3>
                             <p>
-                                AI, kelimeleri metin olarak değil, sayısal vektörler (embeddings) olarak görür. "Kedi" ve "Yavru kedi" kelimeleri, vektör uzayında birbirine "Kedi" ve "Araba" kelimelerinden daha yakındır.
+                                AI, kelimeleri metin olarak değil, sayısal kavramlar (embeddings) olarak görür. "Kedi" ve "Yavru kedi" kelimeleri, anlamsal düzlemde birbirine "Kedi" ve "Araba" kelimelerinden daha yakındır.
                             </p>
                             <ul>
-                                <li><strong>Önemi:</strong> İçeriğinizin, kullanıcı sorgusuyla anlamsal (semantik) olarak eşleşmesi için vektör uzayında yakın olması gerekir. Bu, anahtar kelime tekrarı yerine bağlamsal bütünlük gerektirir.</li>
+                                <li><strong>Önemi:</strong> İçeriğinizin, kullanıcı sorgusuyla anlamsal (semantik) olarak eşleşmesi için bu düzlemde yakın olması gerekir. Bu, anahtar kelime tekrarı yerine bağlamsal bütünlük gerektirir.</li>
                             </ul>
 
                             <h3>RAG (Retrieval-Augmented Generation)</h3>
@@ -319,7 +341,7 @@ export default function BlogPost() {
 
                             <h2 id="sonuc">Sonuç: GEO = İyi Pazarlama</h2>
                             <p>
-                                Lorelight kurucusunun belirttiği gibi, "GEO stratejisi" aslında marka inşasından ayrı bir şey değildir. AI modelleri, insanlar için değerli, güvenilir ve otoriter olan içeriği taklit etmek ve sunmak üzere eğitilmiştir.
+                                "GEO stratejisi" aslında marka inşasından ayrı bir şey değildir. AI modelleri, insanlar için değerli, güvenilir ve otoriter olan içeriği taklit etmek ve sunmak üzere eğitilmiştir.
                             </p>
                             <p>
                                 Dolayısıyla, teknik optimizasyonlar (tablolar, schema, BLUF) gerekli olsa da, asıl sıralama faktörü gerçek dünyada bir marka değeri ve uzmanlık (E-E-A-T) oluşturmaktır. AI çağında kazananlar, algoritmaları kandırmaya çalışanlar değil; net, öz ve gerçekten faydalı bilgi sunarak AI modellerinin "güvenilir kaynağı" haline gelenler olacaktır.
