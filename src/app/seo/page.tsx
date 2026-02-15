@@ -140,7 +140,7 @@ export default function SEOPage() {
                                     Kapsamlı SEO Rehberi & Stratejik Danışmanlık Yaklaşımı
                                 </p>
                                 <p className="text-xl text-gray-600 leading-relaxed">
-                                    Arama motorlarında organik görünürlüğünüzü artırmak için teknik ve içerik odaklı stratejiler geliştirilmektedir.
+                                    Dijital varlıkların, arama motoru botları ve yapay zeka sistemleri için "anlaşılabilir veri kaynağı" olarak yapılandırılması ve semantik otorite inşası süreçlerini kapsar.
                                 </p>
                             </div>
                             <div className="grid grid-cols-2 gap-4 w-full lg:w-auto mt-8 lg:mt-0">
