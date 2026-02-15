@@ -140,7 +140,7 @@ export default function SEOPage() {
                                     Kapsamlı SEO Rehberi & Stratejik Danışmanlık Yaklaşımı
                                 </p>
                                 <p className="text-xl text-gray-600 leading-relaxed">
-                                    Dijital varlıkların, arama motoru botları ve yapay zeka sistemleri için "anlaşılabilir veri kaynağı" olarak yapılandırılması ve semantik otorite inşası süreçlerini kapsar.
+                                    Profesyonel SEO Danışmanlığı; web sitenizi arama motorları ve yapay zeka sistemleri için teknik ve anlamsal olarak optimize etme sürecidir. Veri odaklı SEO çalışmalarıyla sürdürülebilir organik trafik ve yüksek görünürlük elde edin.
                                 </p>
                             </div>
                             <div className="grid grid-cols-2 gap-4 w-full lg:w-auto mt-8 lg:mt-0">
