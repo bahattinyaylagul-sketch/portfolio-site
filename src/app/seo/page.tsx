@@ -139,9 +139,7 @@ export default function SEOPage() {
                                 <p className="text-lg font-medium text-gray-500 mb-6 border-l-4 border-gray-900 pl-4 bg-gray-50 py-2 rounded-r-lg max-w-2xl">
                                     Kapsamlı SEO Rehberi & Stratejik Danışmanlık Yaklaşımı
                                 </p>
-                                <p className="text-xl text-gray-600 leading-relaxed">
-                                    Profesyonel SEO Danışmanlığı; web sitenizi arama motorları ve yapay zeka sistemleri için teknik ve anlamsal olarak optimize etme sürecidir. Veri odaklı SEO çalışmalarıyla sürdürülebilir organik trafik ve yüksek görünürlük elde edin.
-                                </p>
+
                             </div>
                             <div className="grid grid-cols-2 gap-4 w-full lg:w-auto mt-8 lg:mt-0">
                                 <div className="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
