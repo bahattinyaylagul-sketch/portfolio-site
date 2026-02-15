@@ -8,22 +8,16 @@ import SEONavigator, { SEOMobileNav } from "./SEONavigator";
 import { services } from "./data";
 
 export const metadata: Metadata = {
-    title: "SEO Danışmanlığı | Bahattin Yaylagül",
-    description:
-        "Teknik SEO, içerik optimizasyonu ve arama motoru stratejileri ile organik görünürlüğünüzü artırın. Google'ın Passage Indexing algoritmasına uygun içerik yapıları.",
-    keywords: [
-        "SEO danışmanlığı",
-        "teknik SEO",
-        "içerik optimizasyonu",
-        "anahtar kelime araştırması",
-        "site hızı optimizasyonu",
-        "mobil SEO",
-    ],
+    title: "SEO Danışmanlığı – Bahattin Yaylagül",
+    description: "Teknik SEO ve içerik optimizasyonu ile organik büyümenizi sürdürülebilir kılın. Kapsamlı SEO rehberi ve danışmanlık hizmetleri ile otoritenizi artırın.",
     openGraph: {
-        title: "SEO Danışmanlığı | Bahattin Yaylagül",
-        description: "Teknik SEO ve içerik optimizasyonu ile organik görünürlüğünüzü artırın",
+        title: "SEO Danışmanlığı – Bahattin Yaylagül",
+        description: "Teknik SEO ve içerik optimizasyonu ile organik büyümenizi sürdürülebilir kılın.",
         type: "website",
         locale: "tr_TR",
+    },
+    alternates: {
+        canonical: "/seo",
     },
 };
 
@@ -43,11 +37,31 @@ export default function SEOPage() {
             {
                 "@type": "ProfessionalService",
                 "@id": "https://bahattinyaylagul.com/seo/#service",
-                "name": "SEO Danışmanlığı",
-                "provider": { "@id": "https://bahattinyaylagul.com/#person" },
-                "serviceType": "Search Engine Optimization",
+                "name": "Bahattin Yaylagül | SEO Uzmanı",
+                "url": "https://bahattinyaylagul.com/seo",
+                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+                "description": "Profesyonel SEO hizmetleri ve dijital pazarlama danışmanlığı.",
                 "areaServed": "TR",
-                "description": "Arama motoru optimizasyonu, teknik SEO, içerik stratejisi ve otorite inşası hizmetleri."
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "SEO Danışmanlık Hizmetleri",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "SEO Danışmanlığı",
+                                "description": "Arama motoru optimizasyonu, teknik SEO, içerik stratejisi ve otorite inşası hizmetleri. Google'ın modern algoritmalarına uygun organik büyüme çözümleri.",
+                                "serviceType": "Search Engine Optimization",
+                                "provider": { "@id": "https://bahattinyaylagul.com/#person" }
+                            }
+                        }
+                    ]
+                },
+                "sameAs": [
+                    "https://linkedin.com/in/bahattin-yaylagul",
+                    "https://bahattinyaylagul.com"
+                ]
             },
             {
                 "@type": "FAQPage",
@@ -74,11 +88,35 @@ export default function SEOPage() {
         ]
     };
 
+    const breadcrumbJson = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://bahattinyaylagul.com/seo/#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ana Sayfa",
+                "item": "https://bahattinyaylagul.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "SEO Danışmanlığı",
+                "item": "https://bahattinyaylagul.com/seo"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
             />
             {/* Fixed Header Wrapper */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -118,6 +156,84 @@ export default function SEOPage() {
                         </div>
                     </div>
                 </header>
+
+                {/* Strategic Approach Section */}
+                <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16">
+                    <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-10">
+                        <div className="max-w-3xl mb-10">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                SEO Danışmanlığı Kapsamı ve Stratejik Yaklaşım
+                            </h2>
+                            <p className="text-lg text-gray-600 leading-relaxed">
+                                SEO danışmanlığı, yalnızca trafik artışı değil; teknik altyapı, içerik mimarisi ve arama niyeti uyumunun bütüncül optimizasyonudur. Süreç; veri analizi, semantik yapılandırma ve performans odaklı strateji geliştirmeyi kapsar.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6 mb-6">
+                            {/* Scope Card */}
+                            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                    <span className="w-1.5 h-6 bg-blue-500 rounded-full"></span>
+                                    SEO Danışmanlığı Neleri Kapsar?
+                                </h3>
+                                <ul className="space-y-4">
+                                    {[
+                                        "Teknik altyapı optimizasyonu",
+                                        "İçerik ve semantik yapılandırma",
+                                        "Arama niyeti odaklı sayfa mimarisi",
+                                        "Otorite ve görünürlük inşası",
+                                        "AI ve GEO uyumlu arama stratejileri"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <div className="mt-2 w-1.5 h-1.5 bg-blue-400 rounded-full shrink-0" />
+                                            <span className="text-gray-700 font-medium">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Target Audience Card */}
+                            <div className="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                    <span className="w-1.5 h-6 bg-purple-500 rounded-full"></span>
+                                    Hangi İşletmeler İçin Uygundur?
+                                </h3>
+                                <ul className="space-y-4">
+                                    {[
+                                        "E-ticaret platformları",
+                                        "Kurumsal web siteleri",
+                                        "Büyüme odaklı dijital markalar",
+                                        "Rekabetçi pazarlarda faaliyet gösteren firmalar",
+                                        "Yeni ölçeklenen girişimler"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <div className="mt-2 w-1.5 h-1.5 bg-purple-400 rounded-full shrink-0" />
+                                            <span className="text-gray-700 font-medium">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Process Block */}
+                        <div className="p-8 bg-white rounded-2xl border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+                            <h3 className="text-xl font-bold text-gray-900 mb-6">SEO Danışmanlığı Süreç Yapısı</h3>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                {[
+                                    "Teknik denetim ve veri analizi",
+                                    "Stratejik yol haritası oluşturma",
+                                    "Uygulama ve optimizasyon",
+                                    "Performans takibi ve sürekli iyileştirme"
+                                ].map((step, i) => (
+                                    <div key={i} className="relative group">
+                                        <div className="text-5xl font-black text-gray-100 mb-2 group-hover:text-blue-50 transition-colors">0{i + 1}</div>
+                                        <div className="text-gray-900 font-bold leading-tight relative z-10">{step}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Main Content Grid */}
                 <div className="max-w-6xl mx-auto px-4 md:px-6">
@@ -612,7 +728,7 @@ export default function SEOPage() {
                                         <div className="text-center md:text-left">
                                             <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center md:justify-start">
                                                 <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
-                                                    <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
+                                                    <h2 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h2>
                                                 </Link>
                                                 <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                             </div>
@@ -667,8 +783,8 @@ export default function SEOPage() {
                         </main>
                     </div>
                 </div>
-            </article>
+            </article >
             <Footer />
-        </main>
+        </main >
     );
 }
