@@ -9,8 +9,7 @@ export default function SEONavigator() {
 
     const [formData, setFormData] = useState({
         name: "",
-        email: "",
-        website: "",
+        phone: "",
         message: ""
     });
     const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -30,10 +29,9 @@ export default function SEONavigator() {
 
             if (response.ok) {
                 setFormStatus("success");
-                setFormData({ name: "", email: "", website: "", message: "" });
+                setFormData({ name: "", phone: "", message: "" });
             } else {
                 setFormStatus("error");
-                // Optional: handle error state explicitly if needed, but keeping it simple as requested
             }
         } catch (error) {
             console.error("Form submission error:", error);
@@ -136,22 +134,12 @@ export default function SEONavigator() {
                                 </div>
                                 <div>
                                     <input
-                                        type="email"
-                                        placeholder="E-posta"
+                                        type="tel"
+                                        placeholder="Telefon Numarası"
                                         required
                                         className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all"
-                                        value={formData.email}
-                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    />
-                                </div>
-                                <div>
-                                    <input
-                                        type="url"
-                                        placeholder="Web Sitesi URL"
-                                        required
-                                        className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all"
-                                        value={formData.website}
-                                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
                                 </div>
                                 <div>

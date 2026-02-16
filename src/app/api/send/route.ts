@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
-        const { name, email, website, message } = await req.json();
+        const { name, phone, message } = await req.json();
 
         const { data, error } = await resend.emails.send({
             from: 'SEO Lead <onboarding@resend.dev>', // Default sender for testing with unverified domains
@@ -14,8 +14,7 @@ export async function POST(req: NextRequest) {
             html: `
         <h2>Yeni SEO Başvurusu</h2>
         <p><strong>Ad Soyad:</strong> ${name}</p>
-        <p><strong>E-posta:</strong> ${email}</p>
-        <p><strong>Web Sitesi:</strong> ${website}</p>
+        <p><strong>Telefon:</strong> ${phone}</p>
         <p><strong>Mesaj:</strong> ${message || 'Mesaj yok'}</p>
       `,
         });
