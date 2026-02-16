@@ -24,7 +24,11 @@ export default function SEONavigator() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.phone, // Sending phone as email per request
+                    message: formData.message
+                }),
             });
 
             if (response.ok) {
@@ -84,7 +88,7 @@ export default function SEONavigator() {
         <>
             {/* Desktop Sidebar */}
             <aside className="hidden lg:block relative">
-                <div className="sticky top-28">
+                <div>
                     <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                         İçindekiler
                     </h3>
