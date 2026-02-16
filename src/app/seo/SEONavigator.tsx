@@ -19,11 +19,26 @@ export default function SEONavigator() {
         e.preventDefault();
         setFormStatus("submitting");
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-        setFormStatus("success");
-        setFormData({ name: "", email: "", website: "", message: "" });
+            if (response.ok) {
+                setFormStatus("success");
+                setFormData({ name: "", email: "", website: "", message: "" });
+            } else {
+                setFormStatus("error");
+                // Optional: handle error state explicitly if needed, but keeping it simple as requested
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            setFormStatus("error");
+        }
     };
 
     useEffect(() => {
