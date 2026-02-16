@@ -26,15 +26,19 @@ export default function SEONavigator() {
                 },
                 body: JSON.stringify({
                     name: formData.name,
-                    email: formData.phone, // Sending phone as email per request
+                    phone: formData.phone,
                     message: formData.message
                 }),
             });
+
+            const data = await response.json();
+            console.log("API Response:", data);
 
             if (response.ok) {
                 setFormStatus("success");
                 setFormData({ name: "", phone: "", message: "" });
             } else {
+                console.error("Submission failed:", data);
                 setFormStatus("error");
             }
         } catch (error) {
@@ -87,8 +91,8 @@ export default function SEONavigator() {
     return (
         <>
             {/* Desktop Sidebar */}
-            <aside className="hidden lg:block relative">
-                <div>
+            <aside className="hidden lg:block relative h-full">
+                <div className="sticky top-6">
                     <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                         İçindekiler
                     </h3>
