@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bahattinyaylagul.com"),
   title: "Bahattin Yaylagül | SEO & GEO Danışmanı",
   description: "SEO ve GEO (Generative Engine Optimization) danışmanlığı. Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu.",
-  keywords: ["SEO", "GEO", "Generative Engine Optimization", "içerik optimizasyonu", "dijital pazarlama"],
   authors: [{ name: "Bahattin Yaylagül" }],
   openGraph: {
     title: "Bahattin Yaylagül | SEO & GEO Danışmanı",
@@ -32,6 +31,29 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "-jYOZPq9DIakkB-vYBm1rm7iPEmMt1FX5IqkvVY-M90",
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico?v=2', sizes: 'any' },
+      { url: '/favicon-16x16.png?v=2', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png?v=2', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png?v=2', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico?v=2',
+    apple: [
+      { url: '/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon-192x192.png?v=2',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -40,17 +62,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
-      <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
-        <noscript>
-          <style>{`
-            [style*="opacity: 0"], [style*="opacity:0"] { 
+    <html lang="tr" className="no-js">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.remove('no-js');`,
+          }}
+        />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+            .no-js [style*="opacity: 0"], .no-js [style*="opacity:0"] { 
               opacity: 1 !important; 
               transform: none !important;
               pointer-events: auto !important;
             }
-          `}</style>
-        </noscript>
+          `,
+          }}
+        />
+      </head>
+      <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
