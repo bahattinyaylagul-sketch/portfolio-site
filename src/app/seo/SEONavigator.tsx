@@ -7,6 +7,25 @@ export default function SEONavigator() {
     const [activeSection, setActiveSection] = useState("what-is-seo");
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        website: "",
+        message: ""
+    });
+    const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setFormStatus("submitting");
+
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        setFormStatus("success");
+        setFormData({ name: "", email: "", website: "", message: "" });
+    };
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -83,12 +102,69 @@ export default function SEONavigator() {
                         <p className="text-sm text-gray-300 mb-4">
                             Sitenizin SEO durumunu değerlendirelim.
                         </p>
-                        <a
-                            href="#contact"
-                            className="block text-center py-2 px-4 bg-white text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-100 transition-colors"
-                        >
-                            Randevu Al
-                        </a>
+                        {formStatus === "success" ? (
+                            <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-200 text-sm text-center animate-fade-in">
+                                <p className="font-semibold mb-1">Talebiniz Alındı!</p>
+                                <p className="text-xs opacity-90">24 saat içinde dönüş yapılacaktır.</p>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="space-y-3">
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Ad Soyad"
+                                        required
+                                        className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all"
+                                        value={formData.name}
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                    />
+                                </div>
+                                <div>
+                                    <input
+                                        type="email"
+                                        placeholder="E-posta"
+                                        required
+                                        className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all"
+                                        value={formData.email}
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                    />
+                                </div>
+                                <div>
+                                    <input
+                                        type="url"
+                                        placeholder="Web Sitesi URL"
+                                        required
+                                        className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all"
+                                        value={formData.website}
+                                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                                    />
+                                </div>
+                                <div>
+                                    <textarea
+                                        placeholder="Kısa mesaj (Opsiyonel)"
+                                        rows={2}
+                                        className="w-full px-3 py-2.5 bg-white/10 border border-white/10 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:border-white/30 focus:bg-white/20 transition-all resize-none"
+                                        value={formData.message}
+                                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={formStatus === "submitting"}
+                                    className="w-full py-3 px-4 bg-white text-gray-900 text-sm font-bold rounded-lg hover:bg-gray-100 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
+                                >
+                                    {formStatus === "submitting" ? (
+                                        <span className="flex items-center justify-center gap-2">
+                                            <svg className="animate-spin h-4 w-4 text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Gönderiliyor...
+                                        </span>
+                                    ) : "Ücretsiz SEO Ön Analizi Al"}
+                                </button>
+                            </form>
+                        )}
                     </div>
                 </div>
             </aside>
