@@ -20,16 +20,16 @@ const skills = [
 
 export default function About() {
     return (
-        <section id="about" className="py-24 bg-white" aria-labelledby="about-heading">
+        <section id="about" className="py-8 lg:py-24 bg-white" aria-labelledby="about-heading">
             <div className="max-w-5xl mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                     {/* Left - Photo & Visual */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true, amount: 0.1 }}
-                        className="relative lg:sticky top-32 flex flex-col items-center justify-center p-8 h-fit"
+                        className="relative lg:sticky lg:top-32 flex flex-col items-center justify-center p-0 lg:p-8 h-fit"
                     >
                         <div className="relative">
                             {/* Decorative Circle Background */}
@@ -72,23 +72,22 @@ export default function About() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <span className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-4 block">
+                        <h1 className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-4 block">
                             Hakkımda
-                        </span>
+                        </h1>
 
                         <p className="text-gray-600 leading-relaxed mb-6">
-                            Yaklaşık 12+ yıldır SEO ve dijital görünürlük alanında çalışıyorum. Ajans, kurumsal ve danışmanlık taraflarında farklı ölçeklerde projelerde yer aldım.
+                            Yaklaşık 12+ yıldır SEO ve dijital görünürlük alanında; yerel ve global ölçekte birçok lider markanın büyüme projelerinde yer aldım.
                         </p>
 
-                        <p className="text-gray-600 leading-relaxed mb-8">
-                            SEO’yu yalnızca sıralama veya trafik üretimi olarak değil, anlam ve güven inşası olarak ele alıyorum.
-                        </p>
+
 
                         {/* Experience Timeline */}
                         <div className="mb-8">
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-blue-600"></span>
                                 Kariyer Yolculuğu
-                            </h3>
+                            </h2>
                             <div className="space-y-6 border-l-2 border-gray-100 ml-3 pl-8 relative">
                                 <motion.div
                                     initial={{ opacity: 0, x: 20 }}
@@ -99,7 +98,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-black rounded-full border-4 border-white shadow-sm ring-1 ring-gray-100" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2023 — Current</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">Co-Founder</h4>
+                                        <h3 className="font-bold text-foreground text-lg">Co-Founder</h3>
                                         <span className="text-gray-500 font-medium">C-Level Agency</span>
                                     </div>
                                 </motion.div>
@@ -113,7 +112,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2019 — 2023</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">SEO Director & Team Lead</h4>
+                                        <h3 className="font-bold text-foreground text-lg">SEO Director & Team Lead</h3>
                                         <span className="text-gray-500 font-medium">Digital House</span>
                                     </div>
                                 </motion.div>
@@ -127,7 +126,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2018 — 2019</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">SEO Manager</h4>
+                                        <h3 className="font-bold text-foreground text-lg">SEO Manager</h3>
                                         <span className="text-gray-500 font-medium">Humble</span>
                                     </div>
                                 </motion.div>
@@ -141,7 +140,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2016 — 2018</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">Sr. SEO Executive</h4>
+                                        <h3 className="font-bold text-foreground text-lg">Sr. SEO Executive</h3>
                                         <span className="text-gray-500 font-medium">Digital Partners</span>
                                     </div>
                                 </motion.div>
@@ -155,7 +154,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2015 — 2018</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">ASO Consultant</h4>
+                                        <h3 className="font-bold text-foreground text-lg">ASO Consultant</h3>
                                         <span className="text-gray-500 font-medium">Pepapp BV.</span>
                                     </div>
                                 </motion.div>
@@ -169,7 +168,7 @@ export default function About() {
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
                                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2012 — 2016</span>
                                     <div>
-                                        <h4 className="font-bold text-foreground text-lg">SEO Executive & Medya Şefi</h4>
+                                        <h3 className="font-bold text-foreground text-lg">SEO Executive & Medya Şefi</h3>
                                         <span className="text-gray-500 font-medium">Ofisten / Medya Şef</span>
                                     </div>
                                 </motion.div>
@@ -178,9 +177,10 @@ export default function About() {
 
                         {/* Skills */}
                         <div>
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-blue-600"></span>
                                 Yetkinlikler
-                            </h3>
+                            </h2>
                             <div className="flex flex-wrap gap-2">
                                 {[
                                     "Business Strategy",
@@ -203,9 +203,13 @@ export default function About() {
 
                         {/* Top Clients - Text Based Tag Cloud */}
                         <div className="mt-10 pt-8 border-t border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                                Çalıştığım Markalar
-                            </h3>
+                            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                                Projeler
+                            </h2>
+                            <p className="text-sm text-gray-500 mb-6 leading-relaxed">
+                                Bugüne kadar çalıştığım markalar.
+                            </p>
                             <div className="text-sm text-gray-500 leading-relaxed font-medium">
                                 {[
                                     "Aktif Bank", "Vans", "The North Face", "Siemens", "Bosch",

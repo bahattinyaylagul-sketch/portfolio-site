@@ -5,8 +5,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Reddit ve Forumlar GEO Başarısını Nasıl Etkiler? | Bahattin Yaylagül",
-    description: "Reddit ve forumlardaki mention’lar, GEO başarısı için kritik bir 'güven doğrulama' mekanizması olarak çalışır.",
+    title: "Reddit ve Forumların GEO Etkisi – Bahattin Yaylagül",
+    description: "Reddit ve forum tartışmalarının GEO (Generative Engine Optimization) üzerindeki etkisi. Topluluk odaklı sinyallerle yapay zeka görünürlüğünü artırma rehberi.",
+    alternates: {
+        canonical: "/icgoruler/reddit-forum-mention-etkisi",
+    },
 };
 
 import ArticleContent from "./ArticleContent";

@@ -5,8 +5,11 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Vaka Çalışmaları | Bahattin Yaylagül",
-    description: "Finans, e-ticaret ve sağlık sektörlerinde gerçekleşen SEO & GEO başarı hikayeleri.",
+    title: "Vaka Çalışmaları – Bahattin Yaylagül",
+    description: "E-ticaret, Finans ve SaaS sektörlerinde %200+ trafik artışı sağlayan gerçek başarı hikayeleri. Veri odaklı SEO stratejilerimizin sonuçlarını detaylıca inceleyin.",
+    alternates: {
+        canonical: "/vaka-calismalari",
+    },
 };
 
 const caseStudies = [
@@ -46,14 +49,14 @@ export default function CaseStudiesPage() {
                 </div>
             </div>
 
-            <section className="py-24 px-6">
+            <section className="py-12 px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-10">
                         {caseStudies.map((study) => (
                             <Link
                                 key={study.slug}
                                 href={`/vaka-calismalari/${study.slug}`}
-                                className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                                className="block group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                             >
                                 <div className="relative aspect-video bg-gray-50 overflow-hidden">
                                     <Image
@@ -62,7 +65,7 @@ export default function CaseStudiesPage() {
                                         fill
                                         className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
                                 </div>
                                 <div className="p-8">
                                     <div className="flex justify-between items-start mb-4">

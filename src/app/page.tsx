@@ -4,6 +4,15 @@ import ServicesBento from "@/components/ServicesBento";
 import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bahattin Yaylagül – Yapay Zeka, GEO ve SEO Uzmanı",
+  description: "SEO ve GEO (Generative Engine Optimization) danışmanlığı ile markanızı geleceğe hazırlayın. Veri odaklı stratejilerle organik trafiğinizi ve otoritenizi artırın.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   const jsonLd = {

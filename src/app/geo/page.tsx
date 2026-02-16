@@ -4,22 +4,16 @@ import Footer from "@/components/Footer";
 import GEOContent from "./GEOContent";
 
 export const metadata: Metadata = {
-    title: "GEO Danışmanlığı | Generative Engine Optimization | Bahattin Yaylagül",
-    description:
-        "GEO (Generative Engine Optimization) ile içeriklerinizi ChatGPT, Gemini ve diğer yapay zeka sistemleri için optimize edin. AI arama sonuçlarında görünür olun.",
-    keywords: [
-        "GEO",
-        "Generative Engine Optimization",
-        "AI SEO",
-        "ChatGPT optimizasyonu",
-        "yapay zeka araması",
-        "LLM optimizasyonu",
-    ],
+    title: "GEO Danışmanlığı – Bahattin Yaylagül",
+    description: "Markanızı ChatGPT, Gemini ve AI arama motorlarına hazırlayın. Generative Engine Optimization (GEO) ile yapay zeka kaynaklı görünürlük kazanın.",
     openGraph: {
-        title: "GEO Danışmanlığı | Generative Engine Optimization",
+        title: "GEO Danışmanlığı – Bahattin Yaylagül",
         description: "Yapay zeka sistemleri için içerik optimizasyonu",
         type: "website",
         locale: "tr_TR",
+    },
+    alternates: {
+        canonical: "/geo",
     },
 };
 
@@ -39,11 +33,15 @@ export default function GEOPage() {
             {
                 "@type": "ProfessionalService",
                 "@id": "https://bahattinyaylagul.com/geo/#service",
-                "name": "GEO Danışmanlığı",
-                "provider": { "@id": "https://bahattinyaylagul.com/#person" },
-                "serviceType": "Generative Engine Optimization",
-                "areaServed": "TR",
-                "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak önerilmesini sağlayan optimizasyon hizmeti."
+                "name": "GEO Danışmanlığı (Generative Engine Optimization)",
+                "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak önerilmesini sağlayan optimizasyon hizmeti.",
+                "url": "https://bahattinyaylagul.com/geo",
+                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "TR"
+                },
+                "founder": { "@id": "https://bahattinyaylagul.com/#person" }
             },
             {
                 "@type": "FAQPage",

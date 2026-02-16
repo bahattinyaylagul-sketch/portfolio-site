@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { BlogPost, seoClusterData } from "@/lib/seo-data"; // Need to import this for types and related links
+import RelatedGuides from "@/components/RelatedGuides";
+
 
 interface Heading {
     text: string;
@@ -235,31 +237,10 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
 
                     {/* Related Topics */}
                     {post.relatedLinks && post.relatedLinks.length > 0 && (
-                        <div className="mb-16 pt-12 border-t border-gray-100">
-                            <h3 className="font-sans font-bold text-2xl mb-8 flex items-center gap-3">
-                                İlgili Diğer Başlıklar
-                            </h3>
-                            <div className="grid md:grid-cols-3 gap-6">
-                                {post.relatedLinks.map(linkSlug => {
-                                    const relatedPost = seoClusterData[linkSlug];
-                                    if (!relatedPost) return null;
-                                    return (
-                                        <Link
-                                            key={linkSlug}
-                                            href={`/${relatedPost.slug}`}
-                                            className="group block p-6 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition-all"
-                                        >
-                                            <h4 className="font-sans font-bold text-lg text-foreground group-hover:text-blue-600 transition-colors mb-2">
-                                                {relatedPost.title}
-                                            </h4>
-                                            <p className="text-xs text-gray-500 line-clamp-2">
-                                                {relatedPost.description}
-                                            </p>
-                                        </Link>
-                                    )
-                                })}
-                            </div>
-                        </div>
+                        <RelatedGuides
+                            posts={post.relatedLinks.map(slug => seoClusterData[slug]).filter(Boolean) as BlogPost[]}
+                            title="İlgili Diğer Başlıklar"
+                        />
                     )}
                 </article>
             </div>

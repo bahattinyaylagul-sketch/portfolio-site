@@ -7,12 +7,13 @@ export interface BlogPost {
     relatedLinks: string[]; // Slugs of related posts
     parent: string | null;
     publishDate: string;
+    image?: string;
 }
 
 export const seoClusterData: Record<string, BlogPost> = {
     "arama-niyeti": {
         slug: "arama-niyeti",
-        parent: "site-ici-seo",
+        parent: "icerik-optimizasyonu",
         title: "01. Arama Niyeti ve Anahtar Kelime Haritalama",
         description: "Arama niyeti (Search Intent); kullanıcının bir sorguyu gerçekleştirirken zihnindeki nihai hedefin (bilgi edinme, satın alma veya bir yere ulaşma) analiz edilerek, içeriğin bu motivasyonu tam olarak karşılayacak formatta sunulmasıdır.",
         content: `
@@ -134,7 +135,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Verimlilik", desc: "Yanlış anahtar kelimelere harcanan emek önlenir." },
             { title: "Kullanıcı Memnuniyeti", desc: "Sorulara doğrudan yanıt verilerek sitede kalma süresi artırılır." }
         ],
-        relatedLinks: ["site-ici-seo", "icerik-optimizasyonu"],
+        relatedLinks: ["icerik-optimizasyonu", "semantik-yazim", "silo-mimarisi", "bilgi-kazanci", "topikal-otorite"],
         publishDate: "2024-01-05"
     },
     "semantik-yazim": {
@@ -255,12 +256,12 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Bağlam", desc: "Kelime tekrarı yerine zengin kelime dağarcığı kullanılır." },
             { title: "Derinlik", desc: "Konu yüzeysel değil, tüm yönleriyle ele alınır." }
         ],
-        relatedLinks: ["icerik-optimizasyonu", "bilgi-kazanci"],
+        relatedLinks: ["icerik-optimizasyonu", "arama-niyeti", "silo-mimarisi", "bilgi-kazanci", "topikal-otorite"],
         publishDate: "2024-01-08"
     },
     "silo-mimarisi": {
         slug: "silo-mimarisi",
-        parent: "site-ici-seo",
+        parent: "icerik-optimizasyonu",
         title: "03. İç Linkleme ve Silo Mimarisi",
         description: "Silo mimarisi; web sitesindeki içeriklerin rastgele değil, belirli konu kümeleri (Clusters) ve ebeveyn-çocuk (Parent-Child) ilişkisi içinde gruplandırılarak otoritenin ve taranabilirliğin optimize edilmesidir.",
         content: `
@@ -376,7 +377,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Link Equity", desc: "Otoritenin ana sayfada (Money Page) toplanması hedeflenir." },
             { title: "Konusal Alaka", desc: "Sadece ilgili içerikler birbirine bağlanarak botlara net sinyal verilir." }
         ],
-        relatedLinks: ["semantik-yazim", "arama-niyeti"],
+        relatedLinks: ["icerik-optimizasyonu", "arama-niyeti", "semantik-yazim", "bilgi-kazanci", "topikal-otorite"],
         publishDate: "2024-01-12"
     },
     "tarama": {
@@ -490,7 +491,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Temiz Linkler", desc: "Parametre tuzakları (Spider Traps) ve döngüler engellenir." },
             { title: "Log Takibi", desc: "Botların siteyi ne sıklıkla ziyaret ettiği analiz edilir." }
         ],
-        relatedLinks: ["indeksleme", "teknik-seo"],
+        relatedLinks: ["teknik-seo", "indeksleme", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi", "siralama"],
         publishDate: "2024-01-14"
     },
     "indeksleme": {
@@ -604,7 +605,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "GSC Analizi", desc: "İndeksleme hataları Search Console üzerinden çözülür." },
             { title: "Meta Kontrolü", desc: "Noindex etiketi ile gereksiz sayfalar elenir." }
         ],
-        relatedLinks: ["tarama", "siralama", "icerik-optimizasyonu"],
+        relatedLinks: ["teknik-seo", "tarama", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi", "siralama"],
         publishDate: "2024-01-16"
     },
     "teknik-seo": {
@@ -612,6 +613,7 @@ export const seoClusterData: Record<string, BlogPost> = {
         parent: null,
         title: "Teknik SEO: Altyapı ve Performans",
         description: "Teknik SEO; Web site alt yapısının (Sunucu, Kod Yapısı, Hız), arama motoru botlarının siteyi sorunsuz tarayabileceği (Crawling) ve anlamlandırabileceği (Indexing) standartlara getirilmesidir.",
+        image: "/images/teknik-seo-cover.png",
         content: `
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
@@ -763,7 +765,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Hız (CWV)", desc: "Kullanıcı ve bot için açılış hızı maksimize edilir." },
             { title: "Verimlilik", desc: "Sunucu kaynakları ve tarama bütçesi doğru yönetilir." }
         ],
-        relatedLinks: ["tarama", "indeksleme", "siralama", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi"],
+        relatedLinks: ["tarama", "indeksleme", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi", "siralama"],
         publishDate: "2024-01-02"
     },
     "icerik-optimizasyonu": {
@@ -871,7 +873,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Kapsam", desc: "Konuyu %100 kapsayan içerik ağları oluşturulur." },
             { title: "Güven (Trust)", desc: "Yazar otoritesi ve şeffaflık sinyalleri verilir." }
         ],
-        relatedLinks: ["bilgi-kazanci", "semantik-yazim", "topikal-otorite", "eeat-sinyalleri"],
+        relatedLinks: ["arama-niyeti", "semantik-yazim", "silo-mimarisi", "bilgi-kazanci", "topikal-otorite"],
         publishDate: "2024-01-05"
     },
     "topikal-otorite": {
@@ -1038,7 +1040,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Uzmanlık", desc: "Sitenin o niş alandaki 'gidilecek yer' (Go-to Source) olması sağlanır." },
             { title: "Sürdürülebilirlik", desc: "İçerik sürekli güncel ve genişleyen yapıda tutulur." }
         ],
-        relatedLinks: ["icerik-optimizasyonu", "semantik-yazim", "eeat-sinyalleri"],
+        relatedLinks: ["icerik-optimizasyonu", "arama-niyeti", "semantik-yazim", "silo-mimarisi", "bilgi-kazanci"],
         publishDate: "2024-01-15"
     },
     "siralama": {
@@ -1158,12 +1160,12 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "E-E-A-T", desc: "Uzmanlık ve güvenilirlik sinyalleri güçlendirilir." },
             { title: "Sürekli Optimizasyon", desc: "Sıralama anlık bir durumdur, kalıcı olması için güncellik gerekir." }
         ],
-        relatedLinks: ["tarama", "indeksleme", "core-web-vitals"],
+        relatedLinks: ["teknik-seo", "tarama", "indeksleme", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi"],
         publishDate: "2024-01-25"
     },
     "eeat-sinyalleri": {
         slug: "eeat-sinyalleri",
-        parent: "icerik-optimizasyonu",
+        parent: "site-disi-seo",
         title: "E-E-A-T ve Güven Sinyalleri",
         description: "E-E-A-T (Deneyim, Uzmanlık, Otorite, Güven); Google'ın özellikle YMYL (Sağlık, Finans) konularında içeriğin kaynağını ve doğruluğunu denetlemek için kullandığı kalite değerlendirme standardıdır.",
         content: `
@@ -1270,7 +1272,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Şeffaflık", desc: "Kaynak gösterme, iletişim bilgileri ve 'hakkımızda' sayfası eklenir." },
             { title: "İtibar", desc: "Dış dünyada (sosyal medya, forumlar) marka hakkında konuşulanlar takip edilir." }
         ],
-        relatedLinks: ["icerik-optimizasyonu", "siralama", "teknik-seo"],
+        relatedLinks: ["site-disi-seo"],
         publishDate: "2024-01-20"
     },
     "bilgi-kazanci": {
@@ -1383,7 +1385,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Kaynak Değeri", desc: "Başkalarının atıfta bulunacağı kalitede iş üretilir." },
             { title: "Kopya Önleme", desc: "AI tarafından üretilen jenerik içerikten kaçınılır." }
         ],
-        relatedLinks: ["icerik-optimizasyonu", "topikal-otorite"],
+        relatedLinks: ["icerik-optimizasyonu", "arama-niyeti", "semantik-yazim", "silo-mimarisi", "topikal-otorite"],
         publishDate: "2024-01-12"
     },
     "site-ici-seo": {
@@ -1503,7 +1505,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Görsel SEO", desc: "Resimler sıkıştırılır ve alt etiketlerle anlamlandırılır." },
             { title: "İç Linkler", desc: "Sayfalar arası stratejik bağlantılar kurulur." }
         ],
-        relatedLinks: ["arama-niyeti", "topikal-otorite", "icerik-optimizasyonu"],
+        relatedLinks: [],
         publishDate: "2024-01-18"
     },
     "site-disi-seo": {
@@ -1626,7 +1628,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Marka Sinyalleri", desc: "Markanızın dijitalde konuşulma oranı artırılır." },
             { title: "Dijital PR", desc: "Sektörel otorite oluşturmak için medya çalışmaları yapılır." }
         ],
-        relatedLinks: ["yerel-seo", "siralama", "teknik-seo"],
+        relatedLinks: ["eeat-sinyalleri"],
         parent: null,
         publishDate: "2024-01-22"
     },
@@ -1738,7 +1740,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "İtibar", desc: "Yıldız puanı ve yorumların sıralamaya etkisi yönetilir." },
             { title: "Konum Sayfaları", desc: "Web sitesinde her şube veya bölge için özel sayfalar açılır." }
         ],
-        relatedLinks: ["site-disi-seo", "eeat-sinyalleri"],
+        relatedLinks: [],
         publishDate: "2024-01-27"
     },
     "core-web-vitals": {
@@ -1840,7 +1842,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Etkileşim Reaktivitesi", desc: "INP ve Main Thread optimizasyonu yapılır." },
             { title: "Kaynak Önceliklendirme", desc: "Preload, Preconnect ve Lazy Loading stratejileri uygulanır." }
         ],
-        relatedLinks: ["teknik-seo", "log-analizi"],
+        relatedLinks: ["teknik-seo", "tarama", "indeksleme", "yapisal-veri", "tarama-butcesi", "log-analizi", "siralama"],
         publishDate: "2024-01-26"
     },
     "yapisal-veri": {
@@ -1959,7 +1961,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "SameAs Bağlantısı", desc: "Dijital kimliklerin semantik eşleşmesi yapılır." },
             { title: "GEO Uyumluluğu", desc: "Yapay zeka modelleri için veri servisi oluşturulur." }
         ],
-        relatedLinks: ["teknik-seo", "siralama"],
+        relatedLinks: ["teknik-seo", "tarama", "indeksleme", "core-web-vitals", "tarama-butcesi", "log-analizi", "siralama"],
         publishDate: "2024-01-24"
     },
     "tarama-butcesi": {
@@ -2075,7 +2077,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Sinyal Kalitesi", desc: "Düşük kaliteli URL'ler taranmaktan men edilir." },
             { title: "İndeks Hızı", desc: "Yeni içeriklerin dizine girme süresi kısalır." }
         ],
-        relatedLinks: ["tarama", "log-analizi", "teknik-seo"],
+        relatedLinks: ["teknik-seo", "tarama", "indeksleme", "core-web-vitals", "yapisal-veri", "log-analizi", "siralama"],
         publishDate: "2024-01-23"
     },
     "log-analizi": {
@@ -2195,7 +2197,7 @@ export const seoClusterData: Record<string, BlogPost> = {
             { title: "Status Code", desc: "4xx ve 5xx yanıtları anlık olarak izlenir." },
             { title: "Davranış Modeli", desc: "Botların siteyi hangi frekansta ziyaret ettiği ölçülür." }
         ],
-        relatedLinks: ["teknik-seo", "tarama-butcesi"],
+        relatedLinks: ["teknik-seo", "tarama", "indeksleme", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "siralama"],
         publishDate: "2024-01-28"
     }
 };

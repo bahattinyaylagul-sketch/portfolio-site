@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { seoClusterData, BlogPost } from "@/lib/seo-data";
 import Link from "next/link";
@@ -144,6 +145,19 @@ export async function generateStaticParams() {
     return Object.keys(seoClusterData).map((slug) => ({
         slug: slug,
     }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const post = seoClusterData[params.slug];
+    if (!post) return {};
+
+    return {
+        title: `${post.title} | Bahattin Yaylagül`,
+        description: `${post.title} hakkında kapsamlı rehber. SEO, GEO ve dijital stratejiler üzerine uzman içgörüler edinin.`,
+        alternates: {
+            canonical: `/${params.slug}`,
+        },
+    };
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {

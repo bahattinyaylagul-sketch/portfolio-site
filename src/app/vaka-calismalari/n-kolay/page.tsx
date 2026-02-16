@@ -7,8 +7,11 @@ import { Metadata } from "next";
 import CaseContent from "./CaseContent";
 
 export const metadata: Metadata = {
-    title: "N Kolay SEO Başarı Hikayesi | Bahattin Yaylagül",
-    description: "Finans dikeyinde dijital otorite inşası ve teknik SEO mükemmeliyeti ile nasıl başarıya ulaştık?",
+    title: "N Kolay Vaka Analizi – Bahattin Yaylagül",
+    description: "N Kolay için kurgulanan teknik SEO ve içerik stratejisi ile %210 trafik artışı. Finans sektöründe rekabetçi kelimelerde lider konuma yükselme hikayesi.",
+    alternates: {
+        canonical: "/vaka-calismalari/n-kolay",
+    },
 };
 
 export default function NKolayCaseStudy() {

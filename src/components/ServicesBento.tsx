@@ -38,9 +38,9 @@ export default function ServicesBento() {
         <section className="py-20 px-6 bg-white">
             <div className="max-w-5xl mx-auto">
                 <FadeIn>
-                    <p className="text-[10px] md:text-xs font-medium text-gray-400 mb-8 uppercase tracking-[0.2em] text-center">
+                    <h2 className="text-[10px] md:text-xs font-medium text-gray-400 mb-8 uppercase tracking-[0.2em] text-center">
                         [ Stratejik Yetkinlik Mimarisi ]
-                    </p>
+                    </h2>
                 </FadeIn>
 
                 <div className="grid md:grid-cols-3 gap-8">
