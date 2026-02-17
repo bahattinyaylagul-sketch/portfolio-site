@@ -32,7 +32,10 @@ export default function SEOPage() {
                 "url": "https://bahattinyaylagul.com",
                 "jobTitle": "SEO Consultant",
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "sameAs": ["https://linkedin.com/in/bahattin-yaylagul"]
+                "sameAs": [
+                    "https://www.linkedin.com/in/bahattin-yaylagul/",
+                    "https://medium.com/@bahattinyaylagl"
+                ]
             },
             {
                 "@type": "ProfessionalService",
