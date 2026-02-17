@@ -26,9 +26,8 @@ export default function Home() {
         "jobTitle": "SEO Consultant",
         "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
         "sameAs": [
-          "https://linkedin.com/in/bahattin-yaylagul",
-          "https://twitter.com/bahattinylgl",
-          "https://github.com/bahattinyaylagul"
+          "https://www.linkedin.com/in/bahattin-yaylagul/",
+          "https://medium.com/@bahattinyaylagl"
         ],
         "worksFor": {
           "@type": "Organization",

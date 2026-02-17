@@ -25,7 +25,8 @@ export default function HakkimdaPage() {
                 "jobTitle": "SEO & GEO Consultant",
                 "description": "SEO, Generative Engine Optimization (GEO), teknik SEO ve AI tabanlı arama sistemleri üzerine uzman danışman",
                 "sameAs": [
-                    "https://www.linkedin.com/in/bahattin-yaylagul/"
+                    "https://www.linkedin.com/in/bahattin-yaylagul/",
+                    "https://medium.com/@bahattinyaylagl"
                 ],
                 "worksFor": {
                     "@type": "Organization",
