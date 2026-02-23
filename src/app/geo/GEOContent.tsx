@@ -86,6 +86,15 @@ export default function GEOContent() {
                             <p className="text-gray-500 mt-2 font-medium">
                                 Amaç klasik sıralama değil; AI’ın karar üretirken içeriğinizi sentezlenen cevabın parçası yapmasıdır.
                             </p>
+                            <Link
+                                href="/icgoruler/geo-rehberi"
+                                className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-blue-50 text-blue-700 font-medium rounded-full hover:bg-blue-100 transition-colors"
+                            >
+                                GEO Nedir? Kapsamlı Rehberi Okuyun
+                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </Link>
                         </div>
                         <div className="flex gap-4 flex-wrap">
                             {["ChatGPT", "Gemini", "Perplexity", "Claude"].map((platform) => (
