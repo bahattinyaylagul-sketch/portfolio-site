@@ -102,6 +102,7 @@ export default function CaseContent() {
                                 src="/images/case-studies/n-kolay/performance-summary.png"
                                 alt="2024-2025 Karşılaştırmalı Toplam SEO Performans Özeti"
                                 fill
+                                priority
                                 className="object-contain"
                             />
                         </div>

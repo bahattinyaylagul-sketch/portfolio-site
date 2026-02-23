@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -83,6 +84,25 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         {children}
+
+        {/* Örnek Third-Party Script Optimizasyonu:
+            Google Analytics veya diğer araçları buraya ekleyebilirsiniz.
+            Performansı etkilememesi için strategy="lazyOnload" kullanılmıştır.
+            Partytown ile "worker" stratejisi de kullanabilirsiniz. */}
+        {/* 
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="lazyOnload"
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
+        */}
       </body>
     </html>
   );

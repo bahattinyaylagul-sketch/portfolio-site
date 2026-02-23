@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import ServicesBento from "@/components/ServicesBento";
-import BlogPreview from "@/components/BlogPreview";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+
+const ServicesBento = dynamic(() => import("@/components/ServicesBento"));
+const BlogPreview = dynamic(() => import("@/components/BlogPreview"));
+const Contact = dynamic(() => import("@/components/Contact"));
+const Footer = dynamic(() => import("@/components/Footer"));
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
