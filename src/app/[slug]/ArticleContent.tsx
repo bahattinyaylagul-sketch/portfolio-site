@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { BlogPost, seoClusterData } from "@/lib/seo-data"; // Need to import this for types and related links
-import RelatedGuides from "@/components/RelatedGuides";
+import dynamic from "next/dynamic";
+
+const RelatedGuides = dynamic(() => import("@/components/RelatedGuides"));
 
 
 interface Heading {
@@ -23,31 +25,38 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            {
-                rootMargin: "-20% 0px -60% 0px", // Active zone: visible between 20% and 40% from top
-                threshold: 0 // Trigger as soon as any part enters the zone
-            }
-        );
+        let observer: IntersectionObserver;
 
-        // Add a small delay to ensure DOM is fully painted
-        const timer = setTimeout(() => {
+        const setupObserver = () => {
+            observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setActiveSection(entry.target.id);
+                        }
+                    });
+                },
+                {
+                    rootMargin: "-20% 0px -60% 0px", // Active zone
+                    threshold: 0
+                }
+            );
+
             headings.forEach((item) => {
                 const element = document.getElementById(item.id);
                 if (element) observer.observe(element);
             });
-        }, 100);
+        };
+
+        // Defer non-critical IntersectionObserver setup to reduce TBT and FCP block
+        if ('requestIdleCallback' in window) {
+            (window as any).requestIdleCallback(() => setupObserver());
+        } else {
+            setTimeout(setupObserver, 200);
+        }
 
         return () => {
-            observer.disconnect();
-            clearTimeout(timer);
+            if (observer) observer.disconnect();
         };
     }, [headings]);
 

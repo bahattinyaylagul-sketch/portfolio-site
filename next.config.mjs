@@ -12,6 +12,9 @@ const nextConfig = {
         // !! WARN !!
         ignoreBuildErrors: true,
     },
+    images: {
+        formats: ['image/avif', 'image/webp'],
+    },
 };
 
 export default nextConfig;

@@ -184,13 +184,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </header>
 
             {/* Hero Header - Global Design System */}
-            <div className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
-                {/* Abstract Background Shapes */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
-                </div>
-
+            <div className="w-full bg-gradient-to-br from-gray-900 via-gray-900 to-black pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
