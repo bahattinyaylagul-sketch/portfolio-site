@@ -183,11 +183,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <Navigation />
             </header>
 
-            {/* Hero Header - Global Design System (Critical CSS Inline) */}
-            <div
-                className="w-full pt-16 pb-0 relative overflow-hidden mt-20"
-                style={{ backgroundImage: 'linear-gradient(to bottom right, #111827, #111827, #000000)' }}
-            >
+            {/* Hero Header - Global Design System */}
+            <div className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}

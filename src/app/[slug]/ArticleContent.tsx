@@ -25,38 +25,27 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
     useEffect(() => {
-        let observer: IntersectionObserver;
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: "-20% 0px -60% 0px",
+                threshold: 0
+            }
+        );
 
-        const setupObserver = () => {
-            observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            setActiveSection(entry.target.id);
-                        }
-                    });
-                },
-                {
-                    rootMargin: "-20% 0px -60% 0px", // Active zone
-                    threshold: 0
-                }
-            );
-
-            headings.forEach((item) => {
-                const element = document.getElementById(item.id);
-                if (element) observer.observe(element);
-            });
-        };
-
-        // Defer non-critical IntersectionObserver setup to reduce TBT and FCP block
-        if ('requestIdleCallback' in window) {
-            (window as any).requestIdleCallback(() => setupObserver());
-        } else {
-            setTimeout(setupObserver, 200);
-        }
+        headings.forEach((item) => {
+            const element = document.getElementById(item.id);
+            if (element) observer.observe(element);
+        });
 
         return () => {
-            if (observer) observer.disconnect();
+            observer.disconnect();
         };
     }, [headings]);
 
@@ -177,13 +166,7 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                     )}
 
                     {/* Lead Description (LCP Kritik Metin Bloğu) */}
-                    <p
-                        className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600"
-                        style={{
-                            // FOIT (Flash of Invisible Text) engellemek için system-ui fallback inline edilir
-                            fontFamily: 'var(--font-inter), system-ui, -apple-system, sans-serif'
-                        }}
-                    >
+                    <p className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600">
                         {post.description}
                     </p>
 
