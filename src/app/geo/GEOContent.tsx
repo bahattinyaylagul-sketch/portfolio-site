@@ -86,15 +86,6 @@ export default function GEOContent() {
                             <p className="text-gray-500 mt-2 font-medium">
                                 Amaç klasik sıralama değil; AI’ın karar üretirken içeriğinizi sentezlenen cevabın parçası yapmasıdır.
                             </p>
-                            <Link
-                                href="/icgoruler/geo-rehberi"
-                                className="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-blue-50 text-blue-700 font-medium rounded-full hover:bg-blue-100 transition-colors"
-                            >
-                                GEO Nedir? Kapsamlı Rehberi Okuyun
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
                         </div>
                         <div className="flex gap-4 flex-wrap">
                             {["ChatGPT", "Gemini", "Perplexity", "Claude"].map((platform) => (
@@ -364,6 +355,30 @@ export default function GEOContent() {
                                     </div>
                                 </div>
                             </section>
+
+                            {/* Cross Link to Complete Guide */}
+                            <div className="mt-16 mb-20 p-8 bg-blue-50/50 border border-blue-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-blue-100 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+                                <div className="relative z-10 flex-1">
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Teknik Detayları Öğrenin</h3>
+                                    <p className="text-gray-600 leading-relaxed font-medium">
+                                        RAG sistemleri, vektörel aramalar ve sıralama faktörleri hakkında her şeyi A'dan Z'ye anlattığımız başucu rehberimizi ücretsiz okuyabilirsiniz.
+                                    </p>
+                                </div>
+
+                                <div className="relative z-10 shrink-0 w-full md:w-auto">
+                                    <Link
+                                        href="/icgoruler/geo-rehberi"
+                                        className="inline-flex items-center justify-center w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-md"
+                                    >
+                                        GEO Kapsamlı Rehberini Oku
+                                        <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </Link>
+                                </div>
+                            </div>
 
                             {/* Services Section */}
                             <section aria-labelledby="geo-services" className="mt-20">
