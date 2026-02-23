@@ -199,10 +199,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                     <span className="text-yellow-400">Rehber</span>
                                 </div>
 
-                                <h1
-                                    className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8"
-                                    style={{ fontFamily: 'var(--font-inter), system-ui, -apple-system, sans-serif' }}
-                                >
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
                                     {post.title}
                                 </h1>
 
@@ -259,7 +256,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                 sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover lg:object-contain"
                                 priority
-                                fetchPriority="high"
                             />
                         </div>
                     </div>
