@@ -167,8 +167,14 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                         </div>
                     )}
 
-                    {/* Lead Description */}
-                    <p className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600">
+                    {/* Lead Description (LCP Kritik Metin Bloğu) */}
+                    <p
+                        className="text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-blue-600"
+                        style={{
+                            // FOIT (Flash of Invisible Text) engellemek için system-ui fallback inline edilir
+                            fontFamily: 'var(--font-inter), system-ui, -apple-system, sans-serif'
+                        }}
+                    >
                         {post.description}
                     </p>
 

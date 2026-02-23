@@ -256,8 +256,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                 src={assets.image}
                                 alt={`${post.title} 3D Illustration`}
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover lg:object-contain drop-shadow-2xl"
                                 priority
+                                fetchPriority="high"
                             />
                         </div>
                     </div>
