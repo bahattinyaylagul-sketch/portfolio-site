@@ -183,8 +183,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <Navigation />
             </header>
 
-            {/* Hero Header - Global Design System */}
-            <div className="w-full bg-gradient-to-br from-gray-900 via-gray-900 to-black pt-16 pb-0 relative overflow-hidden mt-20">
+            {/* Hero Header - Global Design System (Critical CSS Inline) */}
+            <div
+                className="w-full pt-16 pb-0 relative overflow-hidden mt-20"
+                style={{ backgroundImage: 'linear-gradient(to bottom right, #111827, #111827, #000000)' }}
+            >
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Text Content */}
@@ -196,7 +199,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                     <span className="text-yellow-400">Rehber</span>
                                 </div>
 
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                                <h1
+                                    className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8"
+                                    style={{ fontFamily: 'var(--font-inter), system-ui, -apple-system, sans-serif' }}
+                                >
                                     {post.title}
                                 </h1>
 
@@ -250,8 +256,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                 src={assets.image}
                                 alt={`${post.title} 3D Illustration`}
                                 fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover lg:object-contain drop-shadow-2xl"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover lg:object-contain"
                                 priority
                                 fetchPriority="high"
                             />
