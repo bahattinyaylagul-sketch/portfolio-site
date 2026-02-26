@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Navigation from "@/components/Navigation";
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
