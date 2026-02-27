@@ -1,7 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 const expertiseAreas = [
     {
         number: "01",
@@ -78,12 +74,8 @@ export default function SEOAreasOfExpertise() {
 
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                     {expertiseAreas.map((step, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                             className="group relative bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300"
                         >
                             {/* Üst Kısım: İkon ve Sayı */}
@@ -119,7 +111,7 @@ export default function SEOAreasOfExpertise() {
                                     </li>
                                 ))}
                             </ul>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

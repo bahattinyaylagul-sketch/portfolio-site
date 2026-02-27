@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { SEOContactForm } from "./SEONavigator";
+import Breadcrumb from "@/components/Breadcrumb";
 import SEOExpertiseTabs from "./SEOExpertiseTabs";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import TestimonialsSection from "./TestimonialsSection";
@@ -170,8 +171,8 @@ export default function SEOPage() {
                             Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
                         </p>
 
-                        {/* CTA + stats */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                        {/* CTA */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                             <a
                                 href="mailto:bahattinyaylagul@gmail.com"
                                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-100 transition-all text-sm"
@@ -184,6 +185,21 @@ export default function SEOPage() {
                             <span className="text-white/30 text-xs font-medium">
                                 24 saat içinde dönüş · %100 ücretsiz
                             </span>
+                        </div>
+
+                        {/* Trust Stats Bar */}
+                        <div className="border-t border-white/10 pt-10">
+                            <div className="flex items-center justify-center gap-0 max-w-sm mx-auto">
+                                {[
+                                    { value: "14 Yıl+", label: "Sektör Deneyimi" },
+                                    { value: "200+", label: "Başarılı Proje" },
+                                ].map((stat, i) => (
+                                    <div key={i} className={`flex flex-col items-center gap-1 px-10 ${i === 0 ? "border-r border-white/10" : ""}`}>
+                                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
+                                        <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
 
                     </div>

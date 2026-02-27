@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -24,12 +23,16 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
 
+    const toggleMenu = useCallback(() => {
+        setMobileMenuOpen(prev => !prev);
+    }, []);
+
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
-        if (window.scrollY > 50) setScrolled(true);
-        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -37,137 +40,123 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
         setMobileMenuOpen(false);
     }, [pathname]);
 
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.touchAction = "none";
+        } else {
+            document.body.style.overflow = "unset";
+            document.body.style.touchAction = "unset";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+            document.body.style.touchAction = "unset";
+        };
+    }, [mobileMenuOpen]);
+
     const isDarkBg = theme === "dark" && !scrolled;
 
     return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || mobileMenuOpen
-                ? "bg-white/90 backdrop-blur-md py-4 shadow-sm"
-                : "bg-transparent py-6"
-                }`}
-            aria-label="Main Navigation"
-        >
-            <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-                <Link
-                    href="/"
-                    className={`text-lg font-bold tracking-widest transition-colors z-50 ${isDarkBg && !mobileMenuOpen ? "text-white" : "text-foreground"
-                        }`}
-                    aria-label="Ana Sayfa"
-                >
-                    BY.
-                </Link>
+        <>
+            {/* Main Header Bar */}
+            <nav
+                className={`fixed top-0 left-0 right-0 transition-all duration-300 pointer-events-auto ${scrolled || mobileMenuOpen
+                    ? "bg-white/95 backdrop-blur-xl py-4 shadow-sm"
+                    : "bg-transparent py-6"
+                    }`}
+                style={{ zIndex: 9999 }}
+                aria-label="Main Navigation"
+            >
+                <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
+                    <Link
+                        href="/"
+                        className={`text-lg font-bold tracking-widest transition-colors ${isDarkBg && !mobileMenuOpen ? "text-white" : "text-foreground"
+                            }`}
+                        style={{ position: 'relative', zIndex: 10001 }}
+                    >
+                        BY.
+                    </Link>
 
-                <ul className="hidden md:flex items-center gap-8">
-                    {navItems.map((item) => (
-                        <li key={item.href}>
+                    {/* Desktop Nav */}
+                    <ul className="hidden md:flex items-center gap-8">
+                        {navItems.map((item) => (
+                            <li key={item.href}>
+                                <Link
+                                    href={item.href}
+                                    className={`text-sm transition-colors duration-200 ${isDarkBg
+                                        ? "text-gray-300 hover:text-white"
+                                        : "text-gray-600 hover:text-foreground"
+                                        }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                        <li>
                             <Link
-                                href={item.href}
-                                className={`text-sm transition-colors duration-200 ${isDarkBg
-                                    ? "text-gray-300 hover:text-white"
-                                    : "text-gray-600 hover:text-foreground"
+                                href="/#contact"
+                                className={`px-5 py-2 text-sm font-medium rounded-full transition-colors ${isDarkBg
+                                    ? "bg-white text-gray-900 hover:bg-gray-200"
+                                    : "bg-foreground text-white hover:bg-gray-800"
                                     }`}
                             >
+                                İletişim
+                            </Link>
+                        </li>
+                    </ul>
+
+                    {/* Mobile Toggle Button */}
+                    <button
+                        onClick={toggleMenu}
+                        className="md:hidden flex flex-col gap-1.5 p-2 focus:outline-none"
+                        style={{ position: 'relative', zIndex: 10001 }}
+                        aria-label={mobileMenuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+                    >
+                        <span className={`block w-6 h-0.5 transition-all duration-300 origin-center ${mobileMenuOpen ? "bg-black rotate-45 translate-y-2" : (isDarkBg ? "bg-white" : "bg-black")}`} />
+                        <span className={`block w-4 h-0.5 transition-all duration-200 ${mobileMenuOpen ? "opacity-0" : (isDarkBg ? "bg-white" : "bg-black")}`} />
+                        <span className={`block w-6 h-0.5 transition-all duration-300 origin-center ${mobileMenuOpen ? "bg-black -rotate-45 -translate-y-2" : (isDarkBg ? "bg-white" : "bg-black")}`} />
+                    </button>
+                </div>
+            </nav>
+
+            {/* Mobile Menu Overlay */}
+            <div
+                id="mobile-menu"
+                className={`fixed inset-0 bg-white md:hidden flex flex-col pt-32 px-10 transition-all duration-500 ease-in-out ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-x-0" : "opacity-0 pointer-events-none translate-x-full"}`}
+                style={{ zIndex: 9998 }}
+            >
+                <ul className="flex flex-col gap-8 text-3xl font-light">
+                    {navItems.map((item, index) => (
+                        <li key={item.href} style={{ transitionDelay: `${index * 50}ms` }} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                            <Link
+                                href={item.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className={`block border-b border-gray-100 pb-4 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
+                            >
+                                <span className="text-xs font-mono mr-4 text-gray-300">0{index + 1}</span>
                                 {item.label}
                             </Link>
                         </li>
                     ))}
+                    <li className={`transform transition-all duration-500 delay-300 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                        <Link
+                            href="/#contact"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="block border-b border-gray-100 pb-4 text-gray-400"
+                        >
+                            <span className="text-xs font-mono mr-4 text-gray-300">08</span>
+                            İletişim
+                        </Link>
+                    </li>
                 </ul>
 
-                <Link
-                    href="/#contact"
-                    className={`hidden md:block px-5 py-2 text-sm font-medium rounded-full transition-colors ${isDarkBg
-                        ? "bg-white text-gray-900 hover:bg-gray-200"
-                        : "bg-foreground text-white hover:bg-gray-800"
-                        }`}
-                >
-                    İletişim
-                </Link>
-
-                <button
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden flex flex-col gap-1.5 p-2 z-50 group focus:outline-none"
-                    aria-label={mobileMenuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
-                    aria-expanded={mobileMenuOpen}
-                    aria-controls={mobileMenuOpen ? "mobile-menu" : undefined}
-                >
-                    <motion.span
-                        animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-                        className={`w-6 h-0.5 transition-colors ${isDarkBg && !mobileMenuOpen ? "bg-white" : "bg-black"}`}
-                    />
-                    <motion.span
-                        animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                        className={`w-4 h-0.5 transition-colors ${isDarkBg && !mobileMenuOpen ? "bg-white" : "bg-black"}`}
-                    />
-                    <motion.span
-                        animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-                        className={`w-6 h-0.5 transition-colors ${isDarkBg && !mobileMenuOpen ? "bg-white" : "bg-black"}`}
-                    />
-                </button>
-            </div>
-
-            <AnimatePresence>
-                {mobileMenuOpen && (
-                    <motion.div
-                        id="mobile-menu"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "100vh" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="fixed inset-0 top-0 bg-white z-40 md:hidden flex flex-col pt-24 px-6 overflow-hidden"
-                    >
-                        <ul className="flex flex-col gap-6 text-2xl font-light">
-                            {navItems.map((item) => (
-                                <li key={item.href}>
-                                    <Link
-                                        href={item.href}
-                                        onClick={() => setMobileMenuOpen(false)}
-                                        className={`block border-b border-gray-100 pb-4 ${pathname === item.href ? "text-black font-bold" : "text-gray-600"
-                                            }`}
-                                    >
-                                        {item.label}
-                                    </Link>
-                                </li>
-                            ))}
-                            <li>
-                                <Link
-                                    href="/#contact"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="block border-b border-gray-100 pb-4 text-gray-600"
-                                >
-                                    İletişim
-                                </Link>
-                            </li>
-                        </ul>
-
-                        <div className="mt-auto pb-12 text-sm text-gray-400">
-                            <p>© 2024 Bahattin Yaylagül</p>
-                            <p className="mt-2">SEO & GEO Danışmanlığı</p>
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-            <noscript>
-                <div className="fixed inset-0 top-0 bg-white z-40 md:hidden flex flex-col pt-24 px-6 overflow-auto">
-                    <ul className="flex flex-col gap-6 text-2xl font-light text-gray-900">
-                        {navItems.map((item) => (
-                            <li key={item.href}>
-                                <a href={item.href} className="block border-b border-gray-100 pb-4">
-                                    {item.label}
-                                </a>
-                            </li>
-                        ))}
-                        <li>
-                            <a href="/#contact" className="block border-b border-gray-100 pb-4">
-                                İletişim
-                            </a>
-                        </li>
-                    </ul>
-                    <div className="mt-12 text-sm text-gray-400">
-                        <p>SEO & GEO Danışmanlığı</p>
+                <div className="mt-auto pb-12">
+                    <div className="flex gap-6 text-sm text-gray-500">
+                        <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://medium.com/@bahattinyaylagl" target="_blank" rel="noopener noreferrer">Medium</a>
                     </div>
                 </div>
-            </noscript>
-        </nav>
+            </div>
+        </>
     );
 }

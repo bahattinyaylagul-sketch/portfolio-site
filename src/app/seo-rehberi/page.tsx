@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import FadeIn from "@/components/FadeIn";
 
 const headings = [
     { id: "bolum-1", text: "Bölüm 1: SEO Nedir? (2026 Vizyonu)" },
@@ -60,84 +59,82 @@ export default function SEOGuideHub() {
         <main className="min-h-screen bg-gray-50/50 flex flex-col font-sans">
             <Navigation />
 
-            {/* Dark/Brand Hero Area (Matches High-End Category Structure) */}
-            <div className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#0A0F1C]">
-                {/* Abstract Background Shapes */}
+            {/* Hero - Reference Style: Left text + Right image */}
+            <div className="relative overflow-hidden bg-[#0A0F1C] mt-[72px]">
+                {/* Subtle background glow */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+                    <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-indigo-900/40 rounded-full blur-[120px]"></div>
+                    <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/30 rounded-full blur-[100px]"></div>
                 </div>
 
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
-                    <div className="grid lg:grid-cols-[1fr_400px] gap-12 items-center">
-                        {/* Text Content */}
-                        <div className="space-y-8 flex flex-col justify-center h-full pb-8">
-                            <FadeIn>
-                                <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
-                                    <span className="text-blue-400">Ana HUB</span>
-                                    <span className="w-px h-3 bg-white/20"></span>
-                                    <span>Kapsamlı Rehber</span>
+                <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[500px]">
+                        {/* Left: Text Content */}
+                        <div className="flex flex-col justify-center py-16 lg:py-20 pr-0 lg:pr-16">
+                            {/* Breadcrumb */}
+                            <div className="flex items-center gap-3 mb-6">
+                                <span className="text-blue-400 font-bold tracking-widest text-xs uppercase">SEO Danışmanlığı</span>
+                                <span className="w-px h-3 bg-white/20"></span>
+                                <span className="text-yellow-400 font-bold tracking-widest text-xs uppercase">Kapsamlı Rehber</span>
+                            </div>
+
+                            {/* Title */}
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight mb-6">
+                                SEO Nedir ve<br />
+                                Nasıl Yapılır?
+                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400 mt-1 text-3xl md:text-4xl lg:text-5xl">
+                                    2026 Üretken Arama Rehberi
+                                </span>
+                            </h1>
+
+                            {/* Desc */}
+                            <p className="text-base text-gray-400 leading-relaxed max-w-xl mb-8">
+                                Arama motoru optimizasyonu (SEO), yapay zeka tarafından sentezlenen cevaplara, sohbet arayüzlerine ve otonom ajanlara yönelik yeni bir çağa girmiştir.
+                            </p>
+
+                            {/* Meta */}
+                            <div className="flex flex-wrap items-center gap-6 text-sm font-medium text-gray-500 mb-8">
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>GÜNCEL: 2026</span>
                                 </div>
-
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
-                                    SEO Nedir ve Nasıl Yapılır? <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
-                                        2026 Üretken Arama ve Otorite Rehberi
-                                    </span>
-                                </h1>
-
-                                <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
-                                    Arama motoru optimizasyonu (SEO), 2026 yılı itibarıyla geleneksel "10 mavi bağlantı" (SERP) dönemini kapatmış; yerini yapay zeka tarafından sentezlenen cevaplara, sohbet arayüzlerine ve otonom ajanlara bırakmıştır.
-                                </p>
-
-                                {/* Divider & Date Meta */}
-                                <div className="border-t border-white/10 pt-6 mt-8 flex flex-wrap items-center gap-6 text-sm font-medium text-gray-400">
-                                    <div className="flex items-center gap-2">
-                                        <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        <span>GÜNCEL: 2026</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                        </svg>
-                                        <span>15 dk okuma</span>
-                                    </div>
+                                <div className="flex items-center gap-2">
+                                    <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span>15 dk okuma</span>
                                 </div>
-                            </FadeIn>
+                            </div>
 
-                            {/* Author Section */}
-                            <FadeIn delay={0.1}>
-                                <div className="flex items-center gap-4 pt-2">
-                                    <Link href="/hakkimda" className="w-12 h-12 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-blue-400 transition-colors bg-gray-600">
-                                        <Image src="/images/bahattin-yaylagul.jpg" alt="Bahattin Yaylagül" fill className="object-cover" />
+                            {/* Author */}
+                            <div className="flex items-center gap-4">
+                                <Link href="/hakkimda" className="w-11 h-11 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-blue-400 transition-colors bg-gray-700 shrink-0">
+                                    <Image src="/images/bahattin-yaylagul.jpg" alt="Bahattin Yaylagül" fill className="object-cover" />
+                                </Link>
+                                <div>
+                                    <span className="text-gray-500 text-xs font-medium uppercase tracking-wider block mb-0.5">Yazar</span>
+                                    <Link href="/hakkimda" className="text-white font-bold text-base leading-none hover:text-blue-400 transition-colors">
+                                        Bahattin Yaylagül
                                     </Link>
-                                    <div className="flex flex-col">
-                                        <span className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Yazar</span>
-                                        <div className="flex items-center gap-3">
-                                            <Link href="/hakkimda" className="text-white font-bold text-lg leading-none hover:text-blue-400 transition-colors">
-                                                Bahattin Yaylagül
-                                            </Link>
-                                        </div>
-                                    </div>
                                 </div>
-                            </FadeIn>
+                            </div>
                         </div>
 
-                        {/* Visual / 3D element placeholder if available */}
-                        <div className="hidden lg:flex items-center justify-center relative h-[300px]">
-                            <svg className="w-full h-full drop-shadow-2xl opacity-60" viewBox="0 0 400 300" fill="none">
-                                <circle cx="200" cy="150" r="100" fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 8" className="animate-spin-slow" />
-                                <circle cx="200" cy="150" r="140" fill="none" stroke="#6366f1" strokeWidth="1" strokeDasharray="14 14" opacity="0.5" />
-                                <circle cx="200" cy="150" r="60" fill="url(#grad)" opacity="0.8" />
-                                <defs>
-                                    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stopColor="#60a5fa" />
-                                        <stop offset="100%" stopColor="#4f46e5" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                        {/* Right: Featured Image */}
+                        <div className="hidden lg:block relative">
+                            <div className="absolute inset-0">
+                                <Image
+                                    src="/images/seo-rehberi-hero.png"
+                                    alt="SEO Rehberi 2026 - Organik Büyüme ve Arama Motoru Optimizasyonu"
+                                    fill
+                                    className="object-cover object-center"
+                                    priority
+                                />
+                                {/* Left fade into dark background */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F1C] via-[#0A0F1C]/20 to-transparent"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,9 +212,6 @@ export default function SEOGuideHub() {
                         <div className="px-6 py-5 bg-blue-50/50 rounded-2xl border border-blue-100/50 mb-12 shadow-sm">
                             <p className="text-xl text-gray-800 font-medium m-0 leading-relaxed font-sans">
                                 Geleneksel SEO, sizi yalnızca bir listeye sokmayı hedeflerken; modern SEO ve GEO (Üretken Motor Optimizasyonu), içeriğinizin yapay zeka (AI) sistemleri tarafından bulunmasını, güvenilmesini ve <strong className="text-blue-600 font-bold">alıntılanmasını (Being Cited)</strong> sağlayan bir mühendislik disiplinidir.
-                            </p>
-                            <p className="text-base text-gray-600 mt-4 mb-0 font-sans">
-                                Bu Hub sayfası, <em className="text-gray-800 bg-yellow-100/50 px-1">"Domain otoritem yüksek ama trafik alamıyorum"</em> veya <em className="text-gray-800 bg-yellow-100/50 px-1">"Sitem AI aramalarında neden görünmüyor?"</em> diyen profesyoneller için tasarlanmış; teoriden ziyade kesin mühendislik kurallarına ve 2026 standartlarına dayanan bir ana rehberdir.
                             </p>
                         </div>
 
@@ -436,32 +430,35 @@ export default function SEOGuideHub() {
                         </div>
 
                         {/* Otorite Kontrolü */}
-                        <div id="otorite-kontrolu" className="scroll-mt-32 mt-20 p-8 md:p-12 bg-red-50/80 border-2 border-red-200 rounded-[2rem] relative overflow-hidden not-prose">
-                            <h2 className="text-3xl font-black text-red-900 mt-0 mb-6 flex items-center gap-3">
-                                🛑 Otorite Kontrolü (The Final Gate)
+                        <div id="otorite-kontrolu" className="scroll-mt-32 mt-20 p-8 md:p-12 bg-[#0A0F1C] border border-indigo-900/60 rounded-[2rem] relative overflow-hidden not-prose">
+                            {/* Glow */}
+                            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-indigo-600/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+                            <h2 className="text-3xl font-black text-white mt-0 mb-6 flex items-center gap-3">
+                                🛑 Otorite Kontrolü <span className="text-indigo-400">(The Final Gate)</span>
                             </h2>
-                            <p className="text-xl text-red-800 font-medium mb-8 leading-relaxed">
+                            <p className="text-base text-gray-400 font-medium mb-8 leading-relaxed">
                                 İçeriğinizi veya teknik bir değişikliği yayına almadan önce kendinize şu soruları sorun:
                             </p>
 
-                            <div className="space-y-4 text-lg text-red-900">
-                                <div className="p-4 bg-white/60 border border-red-100 rounded-xl flex gap-4">
-                                    <strong className="min-w-[140px] text-red-700">AI Citation Testi:</strong>
-                                    <span>Bu sayfa, bir LLM tarafından bir soruya "tek ve net kaynak" olarak gösterilebilir mi?</span>
+                            <div className="space-y-3 text-base">
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-xl flex gap-4">
+                                    <strong className="min-w-[140px] text-blue-400 shrink-0">AI Citation Testi:</strong>
+                                    <span className="text-gray-300">Bu sayfa, bir LLM tarafından bir soruya &quot;tek ve net kaynak&quot; olarak gösterilebilir mi?</span>
                                 </div>
-                                <div className="p-4 bg-white/60 border border-red-100 rounded-xl flex gap-4">
-                                    <strong className="min-w-[140px] text-red-700">JS Bağımsızlığı:</strong>
-                                    <span>Ham HTML (curl) yanıtım, bu sayfanın ana fikrini ve verisini barındırıyor mu?</span>
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-xl flex gap-4">
+                                    <strong className="min-w-[140px] text-blue-400 shrink-0">JS Bağımsızlığı:</strong>
+                                    <span className="text-gray-300">Ham HTML (curl) yanıtım, bu sayfanın ana fikrini ve verisini barındırıyor mu?</span>
                                 </div>
-                                <div className="p-4 bg-white/60 border border-red-100 rounded-xl flex gap-4">
-                                    <strong className="min-w-[140px] text-red-700">Karar Testi:</strong>
-                                    <span>Ziyaretçi bu sayfayı okuduktan sonra, başka bir web sitesine gitme ihtiyacı hisseder mi?</span>
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-xl flex gap-4">
+                                    <strong className="min-w-[140px] text-blue-400 shrink-0">Karar Testi:</strong>
+                                    <span className="text-gray-300">Ziyaretçi bu sayfayı okuduktan sonra, başka bir web sitesine gitme ihtiyacı hisseder mi?</span>
                                 </div>
                             </div>
 
-                            <div className="mt-10 p-6 bg-red-900 text-white rounded-2xl">
-                                <strong className="block text-red-300 mb-2 uppercase tracking-wider text-sm font-bold">Kesin Mühendislik Kuralı</strong>
-                                Eğer bu sorulardan herhangi birine "Hayır" diyorsanız, o çalışmayı henüz yayınlamayın. 2026 dünyasında AI sistemlerinde ceza yoktur; "yok sayılma" ve "görünmezlik" vardır. Görünmezliği reddedin ve sisteminizi mühendislik kesinliğiyle inşa edin.
+                            <div className="mt-8 p-6 bg-indigo-950/60 border border-indigo-800/40 rounded-2xl">
+                                <strong className="block text-indigo-400 mb-2 uppercase tracking-wider text-xs font-bold">Kesin Mühendislik Kuralı</strong>
+                                <p className="text-gray-300 text-sm leading-relaxed m-0">Eğer bu sorulardan herhangi birine &quot;Hayır&quot; diyorsanız, o çalışmayı henüz yayınlamayın. 2026 dünyasında AI sistemlerinde ceza yoktur; &quot;yok sayılma&quot; ve &quot;görünmezlik&quot; vardır. Görünmezliği reddedin ve sisteminizi mühendislik kesinliğiyle inşa edin.</p>
                             </div>
                         </div>
 

@@ -7,7 +7,8 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "optional",
+  display: "swap",
+  preload: true,
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -15,7 +16,8 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
   variable: "--font-serif",
-  display: "optional",
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -64,24 +66,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className="no-js">
+    <html lang="tr">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.remove('no-js');`,
-          }}
-        />
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-            .no-js [style*="opacity: 0"], .no-js [style*="opacity:0"] { 
-              opacity: 1 !important; 
-              transform: none !important;
-              pointer-events: auto !important;
-            }
-          `,
-          }}
-        />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         {children}

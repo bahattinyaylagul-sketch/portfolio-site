@@ -2,7 +2,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import Image from "next/image"; // Added Image import
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
