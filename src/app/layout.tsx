@@ -73,24 +73,20 @@ export default function RootLayout({
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         {children}
 
-        {/* Örnek Third-Party Script Optimizasyonu:
-            Google Analytics veya diğer araçları buraya ekleyebilirsiniz.
-            Performansı etkilememesi için strategy="lazyOnload" kullanılmıştır.
-            Partytown ile "worker" stratejisi de kullanabilirsiniz. */}
-        {/* 
+        {/* Google Analytics (GA4) - G-SFFCG8SZYN */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-          strategy="lazyOnload"
+          src="https://www.googletagmanager.com/gtag/js?id=G-SFFCG8SZYN"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+
+            gtag('config', 'G-SFFCG8SZYN');
           `}
         </Script>
-        */}
       </body>
     </html>
   );

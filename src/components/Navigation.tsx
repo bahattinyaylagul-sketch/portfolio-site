@@ -122,29 +122,27 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
             {/* Mobile Menu Overlay */}
             <div
                 id="mobile-menu"
-                className={`fixed inset-0 bg-white md:hidden flex flex-col pt-32 px-10 transition-all duration-500 ease-in-out ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-x-0" : "opacity-0 pointer-events-none translate-x-full"}`}
+                className={`fixed inset-0 bg-white md:hidden flex flex-col pt-24 px-6 transition-all duration-500 ease-in-out ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-x-0" : "opacity-0 pointer-events-none translate-x-full"}`}
                 style={{ zIndex: 9998 }}
             >
-                <ul className="flex flex-col gap-8 text-3xl font-light">
-                    {navItems.map((item, index) => (
-                        <li key={item.href} style={{ transitionDelay: `${index * 50}ms` }} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                <ul className="flex flex-col gap-4 text-2xl font-light">
+                    {navItems.map((item) => (
+                        <li key={item.href} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                             <Link
                                 href={item.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className={`block border-b border-gray-100 pb-4 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
+                                className={`block border-b border-gray-100 pb-3 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
                             >
-                                <span className="text-xs font-mono mr-4 text-gray-300">0{index + 1}</span>
                                 {item.label}
                             </Link>
                         </li>
                     ))}
-                    <li className={`transform transition-all duration-500 delay-300 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                    <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                         <Link
                             href="/#contact"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="block border-b border-gray-100 pb-4 text-gray-400"
+                            className="block border-b border-gray-100 pb-3 text-gray-400"
                         >
-                            <span className="text-xs font-mono mr-4 text-gray-300">08</span>
                             İletişim
                         </Link>
                     </li>
