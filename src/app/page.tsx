@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Script from "next/script";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 
@@ -54,6 +55,16 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Google Ads Conversion Script - Sayfa görüntüleme */}
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+              'send_to': 'AW-17973771680/B4kJCP7e9YEcEKD7x_pC',
+              'value': 1.0,
+              'currency': 'TRY'
+          });
+        `}
+      </Script>
       {/* Navigation */}
       <Navigation />
 
