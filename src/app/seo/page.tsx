@@ -174,7 +174,7 @@ export default function SEOPage() {
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
                             <a
-                                href="mailto:bahattinyaylagul@gmail.com"
+                                href="#analiz"
                                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-100 transition-all text-sm"
                             >
                                 Ücretsiz Analiz Al
