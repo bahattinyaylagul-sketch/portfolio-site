@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Referanslar – Bahattin Yaylagül",
@@ -23,6 +24,7 @@ const activeClients = [
 ];
 
 export default function ReferencesPage() {
+    notFound(); // GEÇİCİ GİZLİ - ileride geri açılacak
     return (
         <main className="min-h-screen bg-background">
             <Navigation />

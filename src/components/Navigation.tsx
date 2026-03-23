@@ -9,9 +9,9 @@ const navItems = [
     { label: "Hakkımda", href: "/hakkimda" },
     { label: "SEO", href: "/seo" },
     { label: "GEO", href: "/geo" },
-    { label: "Vaka Çalışmaları", href: "/vaka-calismalari" },
+    // { label: "Vaka Çalışmaları", href: "/vaka-calismalari" }, // GEÇİCİ GİZLİ
     { label: "İçgörüler", href: "/icgoruler" },
-    { label: "Referanslar", href: "/referanslar" },
+    // { label: "Referanslar", href: "/referanslar" }, // GEÇİCİ GİZLİ
 ];
 
 interface NavigationProps {
