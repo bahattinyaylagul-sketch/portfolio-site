@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Metadata } from "next";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
 };
 
 export default function SEOPage() {
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
