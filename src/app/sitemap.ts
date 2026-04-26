@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/seo',
         '/geo',
         '/hakkimda',
-        '/vaka-calismalari',
         '/icgoruler',
         '/referanslar',
     ].map((route) => ({
@@ -24,7 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const staticContent = [
         '/icgoruler/ai-marka-mention-etkisi',
         '/icgoruler/reddit-forum-mention-etkisi',
-        '/vaka-calismalari/n-kolay',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

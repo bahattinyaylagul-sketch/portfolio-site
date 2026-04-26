@@ -91,7 +91,7 @@ export default function SiteMapPage() {
                         <ul className="space-y-3">
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/hakkimda" className="text-blue-600 hover:underline">Hakkımda</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/referanslar" className="text-blue-600 hover:underline">Referanslar</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/vaka-calismalari" className="text-blue-600 hover:underline">Vaka Çalışmaları</Link></li>
+
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="mailto:bahattinyaylagul@gmail.com" className="text-blue-600 hover:underline">İletişim</Link></li>
                         </ul>
                     </section>

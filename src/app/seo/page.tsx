@@ -15,7 +15,7 @@ import TestimonialsCarousel from "./TestimonialsCarousel";
 import TestimonialsSection from "./TestimonialsSection";
 import StrategicApproach from "./StrategicApproach";
 import ConsultancyProcess from "./ConsultancyProcess";
-import CaseStudiesSection from "./CaseStudiesSection";
+
 import SEOAreasOfExpertise from "./SEOAreasOfExpertise";
 
 export const metadata: Metadata = {
@@ -250,7 +250,7 @@ export default function SEOPage() {
                 <TestimonialsSection />
 
                 {/* ── 5. Başarı Hikayeleri ── */}
-                <CaseStudiesSection />
+
 
                 {/* ── 6. Uzmanlık Alanları ── */}
                 <SEOAreasOfExpertise />

@@ -13,7 +13,7 @@ const testimonials = [
         photo: "/images/testimonials/sinem-goven.jpg",
         accentColor: "#f59e0b",
         quote: "Finans sektöründe organik büyüme sağlamak hem oldukça zor hem de uzun soluklu bir süreç. Bahattin ile çalışmaya başladığımızda, topikal otorite ve teknik SEO yaklaşımı sayesinde N Kolay'ın arama görünürlüğünde ciddi bir sıçrama yaşadık. Rakiplerimizin çok önüne geçtik ve bu büyüme sürdürülebilir bir yapıya kavuştu.",
-        caseStudy: "/vaka-calismalari/n-kolay",
+        caseStudy: null,
     },
     {
         id: 2,
@@ -79,15 +79,7 @@ export default function TestimonialsSection() {
                         </h2>
                     </div>
                     <div className="flex items-center gap-4 mt-2">
-                        <Link
-                            href="/vaka-calismalari"
-                            className="text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-1.5"
-                        >
-                            Tümünü Gör
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </Link>
+
                         <div className="flex gap-2">
                             <button
                                 onClick={prev}
@@ -164,15 +156,7 @@ export default function TestimonialsSection() {
                                 <div className="font-bold text-gray-900 text-base">{t.name}</div>
                                 <div className="text-gray-500 text-sm mt-0.5">{t.title} · {t.company}</div>
                             </div>
-                            {t.caseStudy && (
-                                <Link
-                                    href={t.caseStudy}
-                                    className="text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border transition-all hover:bg-gray-900 hover:text-white hover:border-gray-900"
-                                    style={{ borderColor: t.accentColor, color: t.accentColor }}
-                                >
-                                    Vaka Çalışmasını Gör →
-                                </Link>
-                            )}
+
                         </div>
 
                         {/* Nokta Nav */}

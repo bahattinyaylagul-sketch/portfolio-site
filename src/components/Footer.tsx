@@ -10,7 +10,6 @@ const footerLinks = {
     ],
     resources: [
         { label: "İçgörüler", href: "/icgoruler" },
-        { label: "Vaka Çalışmaları", href: "/vaka-calismalari" },
         { label: "Site Haritası", href: "/site-haritasi" },
     ],
     social: [

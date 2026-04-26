@@ -508,44 +508,7 @@ export default function SEOContent() {
                                 </div>
                             </section>
 
-                            {/* Success Stories */}
-                            <section aria-labelledby="success-stories" className="mt-24">
-                                <div className="p-12 rounded-3xl bg-gray-900 text-white relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
-                                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/3" />
 
-                                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-                                        <div className="max-w-xl text-center md:text-left">
-                                            <h2 id="success-stories" className="text-3xl md:text-4xl font-bold mb-6">
-                                                Başarı Hikayeleri &<br className="hidden md:block" />
-                                                <span className="text-gray-400">Vaka Çalışmaları</span>
-                                            </h2>
-                                            <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                                                E-ticaret, finans ve SaaS dikeyinde elde edilen somut büyüme verilerini ve stratejik yaklaşımları detaylıca inceleyin.
-                                            </p>
-                                            <Link
-                                                href="/vaka-calismalari"
-                                                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-100 transition-all group">
-                                                VAKA ÇALIŞMALARINI GÖR
-                                                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </Link>
-                                        </div>
-
-                                        <div className="flex flex-col gap-6 w-full md:w-auto">
-                                            <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-                                                <div className="text-3xl font-bold mb-1">%210</div>
-                                                <div className="text-xs font-medium text-gray-500 uppercase tracking-widest">Organik Trafik Artışı</div>
-                                            </div>
-                                            <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
-                                                <div className="text-3xl font-bold mb-1">1. Sayfa</div>
-                                                <div className="text-xs font-medium text-gray-500 uppercase tracking-widest">Rekabetçi Anahtar Kelimeler</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
 
                             {/* 6 Month Roadmap */}
                             <section aria-labelledby="process-roadmap" className="mt-24">

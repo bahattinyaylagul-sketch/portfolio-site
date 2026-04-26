@@ -7,9 +7,9 @@ import { usePathname } from "next/navigation";
 const navItems = [
     { label: "Ana Sayfa", href: "/" },
     { label: "Hakkımda", href: "/hakkimda" },
-    // { label: "SEO", href: "/seo" }, // GEÇİCİ GİZLİ
+    { label: "SEO", href: "/seo" },
     { label: "GEO", href: "/geo" },
-    // { label: "Vaka Çalışmaları", href: "/vaka-calismalari" }, // GEÇİCİ GİZLİ
+
     { label: "İçgörüler", href: "/icgoruler" },
     // { label: "Referanslar", href: "/referanslar" }, // GEÇİCİ GİZLİ
 ];
