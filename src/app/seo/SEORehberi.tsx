@@ -194,12 +194,11 @@ export default function SEORehberi() {
                                         </thead>
                                         <tbody>
                                             {[
-                                                { tool: "Google Search Console", use: "Arama performansını izleme, dizin sorunlarını tespit etme", paid: "Ücretsiz" },
-                                                { tool: "Google Analytics (GA4)", use: "Kullanıcı davranışı, trafik kaynakları, dönüşüm performansı", paid: "Ücretsiz" },
-                                                { tool: "Moz Keyword Explorer", use: "Anahtar kelime bulma ve zorluk değerlendirmesi", paid: "Ücretli (sınırlı ücretsiz)" },
-                                                { tool: "Moz Link Explorer", use: "Backlink profili analizi", paid: "Ücretli (sınırlı ücretsiz)" },
-                                                { tool: "MozBar", use: "Tarama sırasında anlık SEO metrikleri (tarayıcı uzantısı)", paid: "Ücretsiz" },
-                                                { tool: "Moz DA Checker", use: "Domain Authority kontrolü", paid: "Ücretsiz" },
+                                                { tool: "Google Search Console", use: "Arama performansını izleme, teknik tarama ve dizin sorunlarını tespit etme", paid: "Ücretsiz" },
+                                                { tool: "Google Analytics (GA4)", use: "Kullanıcı davranışı, organik trafik kaynakları ve dönüşüm analizi", paid: "Ücretsiz" },
+                                                { tool: "Ahrefs", use: "Kapsamlı backlink analizi, anahtar kelime araştırması ve rakip takibi", paid: "Ücretli" },
+                                                { tool: "Semrush", use: "Görünürlük takibi, detaylı anahtar kelime, site ve rakip analizi", paid: "Ücretli" },
+                                                { tool: "Screaming Frog", use: "Site içi teknik SEO hatalarını, yönlendirmeleri ve link yapısını tarama", paid: "Ücretli (Sınırlı Ücretsiz)" },
                                             ].map((row, i) => (
                                                 <tr key={i} className={`border-t border-gray-100 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}>
                                                     <td className="px-5 py-4 font-bold text-gray-900">{row.tool}</td>
