@@ -3,13 +3,7 @@ import Link from "next/link";
 import FadeIn from "./FadeIn";
 
 const items = [
-    {
-        title: "SEO Danışmanlığı",
-        desc: "Geleneksel sıralama faktörlerinin ötesinde, kullanıcı deneyimi ve semantik otorite.",
-        link: "/seo",
-        col: "md:col-span-2",
-        delay: 0.1,
-    },
+
     {
         title: "GEO Danışmanlığı",
         desc: "ChatGPT, Gemini, Perplexity ve SearchGPT gibi yeni nesil motorlarda markanızın referans gösterilmesi.",

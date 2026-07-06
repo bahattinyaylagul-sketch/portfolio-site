@@ -5,6 +5,14 @@ import FadeIn from './FadeIn';
 
 const latestPosts = [
     {
+        title: "llms.txt Nedir? Tanım, Format, Etkinlik Analizi ve Uygulama Rehberi",
+        excerpt: "llms.txt nedir, nasıl oluşturulur ve gerçekten işe yarıyor mu? 300.000 domain analizi, robots.txt farkı, format rehberi ve maliyet-fayda değerlendirmesi.",
+        date: "4 Temmuz 2026",
+        category: "GEO / AI Search",
+        slug: "llms-txt-nedir",
+        image: "/images/llms-txt-hero.png"
+    },
+    {
         title: "Reddit ve Forumlardaki Mention'lar GEO Başarısını Nasıl Etkiler?",
         excerpt: "Reddit ve forumlardaki mention’lar (bahsedilmeler), GEO başarısı için kritik bir 'güven doğrulama' mekanizması olarak çalışır.",
         date: "31 Ocak 2026",

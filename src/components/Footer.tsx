@@ -3,10 +3,7 @@ import Link from "next/link";
 
 const footerLinks = {
     services: [
-        { label: "SEO Danışmanlığı", href: "/seo" },
         { label: "GEO Danışmanlığı", href: "/geo" },
-        { label: "Teknik SEO", href: "/seo#technical-seo" },
-        { label: "İçerik Stratejisi", href: "/seo#content-optimization" },
     ],
     resources: [
         { label: "İçgörüler", href: "/icgoruler" },

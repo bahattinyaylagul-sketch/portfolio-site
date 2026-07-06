@@ -10,13 +10,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { SEOContactForm } from "./SEONavigator";
 import Breadcrumb from "@/components/Breadcrumb";
-import SEOExpertiseTabs from "./SEOExpertiseTabs";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import TestimonialsSection from "./TestimonialsSection";
 import StrategicApproach from "./StrategicApproach";
 import ConsultancyProcess from "./ConsultancyProcess";
 
 import SEOAreasOfExpertise from "./SEOAreasOfExpertise";
+import SEORehberi from "./SEORehberi";
+
 
 export const metadata: Metadata = {
     title: "SEO Danışmanlığı – Bahattin Yaylagül",
@@ -207,38 +208,8 @@ export default function SEOPage() {
                     </div>
                 </header>
 
-                {/* ── Beyaz Logo Şeridi ── */}
-                <div className="bg-white border-b border-gray-100 py-10 px-6">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <p className="text-gray-400 text-xs font-mono uppercase tracking-widest mb-7">
-                            Birlikte çalıştığımız markalar
-                        </p>
-                        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
-                            {[
-                                { src: "/images/references/atlas-uni.jpg", alt: "Atlas Üniversitesi", scale: "scale-[1.6]" },
-                                { src: "/images/references/n-kolay-yeni.png", alt: "N Kolay", scale: "scale-100" },
-                                { src: "/images/references/aktif-bank-yeni.png", alt: "Aktif Bank", scale: "scale-100" },
-                                { src: "/images/references/dunyagoz-yeni.png", alt: "Dünya Göz", scale: "scale-100" },
-                                { src: "/images/references/golf-final.png", alt: "Golf Dondurmaları", scale: "scale-[1.5]" },
-                                { src: "/images/references/tobb-etu-yeni.png", alt: "TOBB ETÜ", scale: "scale-100" },
-                                { src: "/images/references/passo-yeni.png", alt: "Passo", scale: "scale-[1.4]" },
-                            ].map((logo) => (
-                                <div key={logo.alt} className={`h-[45px] flex items-center transition-transform duration-300 cursor-pointer ${logo.scale} hover:-translate-y-1`}>
-                                    <Image
-                                        src={logo.src}
-                                        alt={logo.alt}
-                                        width={154}
-                                        height={45}
-                                        className="h-[45px] w-auto object-contain"
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* ── 1. SEO Hizmetleri (Tabs) ── */}
-                <SEOExpertiseTabs />
+                {/* ── SEO Rehberi ── */}
+                <SEORehberi />
 
                 {/* ── 2. Stratejik Yaklaşım ── */}
                 <StrategicApproach />
@@ -271,40 +242,41 @@ export default function SEOPage() {
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight">Sıkça Sorulan Sorular</h2>
                         <div className="space-y-3">
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">SEO çalışmaları ne zaman sonuç verir?</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    SEO uzun vadeli bir yatırımdır. İlk etkiler genellikle 2-3 ay içinde görülmeye başlar, ancak kalıcı ve büyük sonuçlar (ROI) için sektör rekabetine bağlı olarak 6-12 aylık bir süreç gereklidir.
-                                </p>
-                            </div>
-
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">Sıralama garantisi var mı?</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Google algoritmaları sürekli değiştiği için hiçbir profesyonel SEO uzmanı %100 sıralama garantisi veremez. Ancak veriye dayalı stratejilerle organik trafiğin ve dijital görünürlüğün sürekli artması ana hedefimizdir.
-                                </p>
-                            </div>
-
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">Hangi sektörlere hizmet veriliyor?</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    E-ticaret, SaaS yapıları, B2B çözümler, Hukuk, Sağlık (Özel Klinikler) ve Kurumsal hizmetler başta olmak üzere, dijital büyüme hedefi olan tüm rekabetçi sektörlere uçtan uca hizmet sağlanmaktadır.
-                                </p>
-                            </div>
-
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">GEO (Generative Engine Optimization) SEO&apos;nun yerini mi alıyor?</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    GEO bir alternatif değil, modern SEO&apos;nun yeni bir katmanıdır. Geleneksel arama motoru optimizasyonu ile AI asistanların (Gemini, ChatGPT, Perplexity) sitenizi nasıl okuduğu ve referans gösterdiğini kapsar. Her iki strateji de birlikte kurgulanmalıdır.
-                                </p>
-                            </div>
-
-                            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">E-ticaret siteleri için özel stratejiler yapılıyor mu?</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Evet. E-ticaret siteleri için facet navigasyon optimizasyonu, crawl budget analizleri, kategori hiyerarşisi kurulumu ve ürün sayfaları (PDP) için dönüşüm odaklı teknik senaryolar geliştirilmektedir.
-                                </p>
-                            </div>
+                            {[
+                                {
+                                    q: "SEO sonuçları ne kadar sürede görülür?",
+                                    a: "Erken iyileşmeler haftalar içinde fark edilebilir; anlamlı organik trafik artışı genellikle üç ila altı ay alır. Rekabetçi anahtar kelimelerde bu süre daha da uzayabilir."
+                                },
+                                {
+                                    q: "SEO ücretsiz midir?",
+                                    a: 'Organik sıralama için Google\'a ödeme yapmazsınız. Ama etkili optimizasyon zaman, uzmanlık ve çoğu zaman araç maliyeti gerektirir. "Ücretsiz" kelimesini "maliyetsiz" ile karıştırmamak gerekir.'
+                                },
+                                {
+                                    q: "Google'ın kaç sıralama faktörü var?",
+                                    a: '"200 sıralama faktörü" sık tekrarlanan bir rakam olsa da Google hiçbir zaman kesin bir liste yayınlamadı. Gerçekte çok daha fazla sinyal söz konusu olabilir. Tek bir faktöre odaklanmak yerine bütünsel bir yaklaşım daha sağlıklı sonuç verir.'
+                                },
+                                {
+                                    q: "Black hat SEO nedir, neden risklidir?",
+                                    a: "Black hat SEO, arama motorlarının onaylamadığı tekniklerin kullanılmasıdır; white hat ise arama motoru şirketlerinin önerdiği yöntemleri kapsar. Black hat yöntemler Google tarafından tespit edildiğinde siteniz cezalandırılır. Kısa vadeli kazanım için uzun vadeli görünürlüğü riske atmak pratikte hiçbir zaman kazançlı çıkmaz."
+                                },
+                                {
+                                    q: "Yapay zeka SEO'yu öldürür mü?",
+                                    a: "Hayır. GEO, arama motoru optimizasyonunun yerini almaz; onu genişletir. Tüketicilerin %82'si yapay zeka destekli aramayı geleneksel SERP'lerden daha faydalı bulduğunu söylüyor; bu, AI Overviews gibi yüzeylerde yer almayı giderek daha kritik kılıyor — ama klasik organik aramanın önemini ortadan kaldırmıyor."
+                                },
+                                {
+                                    q: "Teknik SEO mu, içerik mi daha önemli?",
+                                    a: "İkisi birbirini tamamlar. Teknik altyapı olmadan en kaliteli içerik bile aramada performans göstermekte zorlanır; içerik olmadan teknik zemin boş kalır. Harika içerik üretmek de tek başına organik trafik garantisi değildir."
+                                },
+                                {
+                                    q: "SEO mu, PPC mi tercih edilmeli?",
+                                    a: "İkisi farklı ihtiyaçlara yanıt verir. PPC hızlı görünürlük sağlar ama bütçe kesilince trafik de durur; SEO yavaş büyür ancak sürdürülebilir bir kanal oluşturur. Çoğu durumda kısa vadede PPC, uzun vadede SEO'ya yatırım yapmak ve ikisini birlikte yürütmek en dengeli yaklaşımdır."
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
+                                    <h3 className="text-base font-bold text-gray-900 mb-2">{item.q}</h3>
+                                    <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>

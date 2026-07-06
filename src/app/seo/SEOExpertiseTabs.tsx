@@ -6,21 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const tabs = [
     {
-        id: "what-is-seo",
-        title: "01. SEO Nedir?",
-        href: "/seo-rehberi",
-        subtitle: "Arama Motoru Optimizasyonu Temelleri",
-        description: "SEO (Arama Motoru Optimizasyonu), bir web varlığının arama motoru botları ve yapay zeka sistemleri için 'anlaşılabilir veri kaynağı' olarak yapılandırılması ve dijital otorite inşa etme mühendisliğidir. Süreç sadece trafik artışı değil, markanızın bilgi sistemlerine veri sağlayan güvenilir bir otorite (Entity) olarak konumlanmasını kapsar.",
-        features: ["Bilişsel Eşleşme (Cognitive Relevance)", "Algoritmik Verimlilik (Indexing Efficiency)", "Bilgi Kazancı (Information Gain)", "E-E-A-T Sinyalleri"],
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        )
-    },
-    {
         id: "teknik-seo",
-        title: "02. Teknik SEO",
+        title: "01. Teknik SEO",
         href: "/teknik-seo",
         subtitle: "Dijital Altyapı Optimizasyonu",
         description: "Google botlarının sitenizi kusursuz, hızlı ve eksiksiz tarayabilmesi için gerekli olan tüm altyapı mühendisliği. Crawl budget yönetimi, Core Web Vitals iyileştirmeleri ve yapısal veri (Schema) mimarisi ile güçlü bir temel atıyoruz.",
@@ -34,7 +21,7 @@ const tabs = [
     },
     {
         id: "on-page-seo",
-        title: "03. On-Page SEO",
+        title: "02. On-Page SEO",
         href: "/site-ici-seo",
         subtitle: "Site İçi & Niyet Optimizasyonu",
         description: "Arama motorlarının ve kullanıcıların içeriğinizi tam olarak anlaması için sayfa içi elementleri optimize ediyoruz. Hem makine algoritmalarına (Googlebot) hem de insan psikolojisine (Kullanıcı Niyeti) hitap eden stratejiler geliştiriyoruz.",
@@ -47,10 +34,10 @@ const tabs = [
     },
     {
         id: "icerik-seo",
-        title: "04. İçerik Optimizasyonu",
+        title: "03. İçerik Optimizasyonu",
         href: "/icerik-optimizasyonu",
         subtitle: "Semantik & Varlık Odaklı İçerik",
-        description: "Standart anahtar kelime doldurmanın ötesine geçiyoruz. Varlık (Entity) tabanlı, bilgi kazancı (Information Gain) yüksek ve NLP standartlarına uygun içerikler ile sitenizi sektörünüzde bir 'Otorite Merkezi'ne dönüştürüyoruz.",
+        description: "Standart anahtar kelime doldurmanın ötesine geçiyoruz. Varlık (Entity) tabanlı, bilgi kazançı (Information Gain) yüksek ve NLP standartlarına uygun içerikler ile sitenizi sektörünüzde bir 'Otorite Merkezi'ne dönüştürüyoruz.",
         features: ["Entity Odaklı Kurgu", "Topic Cluster Yapısı", "Yapay Zeka (GEO) Uyumluluğu", "İçerik Geliştirme (Information Gain)"],
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,7 +47,7 @@ const tabs = [
     },
     {
         id: "off-page-seo",
-        title: "05. Site Dışı SEO",
+        title: "04. Site Dışı SEO",
         href: "/site-disi-seo",
         subtitle: "Dijital Otorite & E-E-A-T İnşası",
         description: "Sitenize yüksek otoriteli, alaka düzeyi yüksek ve güvenilir dış kaynaklardan (backlink ve mentions) referanslar sağlıyoruz. Markanızı Google gözünde E-E-A-T (Deneyim, Uzmanlık, Otorite, Güvenilirlik) standartlarına ulaştırıyoruz.",
@@ -73,12 +60,12 @@ const tabs = [
     },
     {
         id: "seo-performance",
-        title: "06. SEO Performansı",
+        title: "05. SEO Performansı",
         contentTitle: "SEO Performansı",
         href: "#",
         hideButton: true,
         subtitle: "Ölçümleme ve Veri Analizi",
-        description: "Modern SEO'nun başarısı artık yalnızca organik trafik artışıyla değil; sitenizin arama motorları tarafından ne kadar verimli tarandığı, içeriklerin anlamsal olarak ne kadar doğru eşleştiği ve markanızın dijital dünyada ne kadar güvenilir bir otorite olarak kabul edildiği ile ölçülmektedir.",
+        description: "Modern SEO'nun başarısı artık yalnızca organik trafik artışıyla değil; sitenizin arama motorları tarafından ne kadar verimli tarandığı, içeriklerin anlamsal olarak ne kadar doğru eşleşteği ve markanızın dijital dünyada ne kadar güvenilir bir otorite olarak kabul edildiği ile ölçülmektedir.",
         features: ["Tarama ve İndeksleme Verimliliği", "Anlamsal Relevance ve Topical Güç", "Otorite ve Güven Sinyalleri", "Dönüşüm Optimizasyonu (CRO)"],
         icon: (
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,6 +74,8 @@ const tabs = [
         )
     }
 ];
+
+
 
 export default function SEOExpertiseTabs() {
     const [activeTab, setActiveTab] = useState(tabs[0].id);

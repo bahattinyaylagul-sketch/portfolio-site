@@ -97,7 +97,21 @@ export default function About() {
                                     className="relative"
                                 >
                                     <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-black rounded-full border-4 border-white shadow-sm ring-1 ring-gray-100" />
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2023 — Current</span>
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">Nis 2026 — Current</span>
+                                    <div>
+                                        <h3 className="font-bold text-foreground text-lg">Founder | Growth Strategist</h3>
+                                        <span className="text-gray-500 font-medium">NextCode Collective</span>
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    className="relative"
+                                >
+                                    <span className="absolute -left-[41px] top-1.5 w-5 h-5 bg-gray-200 rounded-full border-4 border-white shadow-sm" />
+                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1 block">2023 — 2026</span>
                                     <div>
                                         <h3 className="font-bold text-foreground text-lg">Co-Founder</h3>
                                         <span className="text-gray-500 font-medium">C-Level Agency</span>

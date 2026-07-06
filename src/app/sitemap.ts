@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 1. Statik Ana Sayfalar
     const staticPages = [
         '',
-        '/seo',
+
         '/geo',
         '/hakkimda',
         '/icgoruler',

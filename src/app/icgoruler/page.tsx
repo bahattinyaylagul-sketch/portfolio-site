@@ -15,6 +15,13 @@ export const metadata: Metadata = {
 
 const posts = [
     {
+        slug: "llms-txt-nedir",
+        title: "llms.txt Nedir? Tanım, Format, Etkinlik Analizi ve Uygulama Rehberi",
+        excerpt: "llms.txt nedir, nasıl oluşturulur ve gerçekten işe yarıyor mu? 300.000 domain analizi, robots.txt farkı, format rehberi ve maliyet-fayda değerlendirmesi.",
+        date: "4 Temmuz 2026",
+        category: "GEO / AI Search"
+    },
+    {
         slug: "geo-rehberi",
         title: "Generative Engine Optimization (GEO): Kapsamlı Rehber",
         excerpt: "Klasik SEO'dan yapay zeka çağına geçiş. LLM modellerinde kaynak olarak gösterilmek ve otorite kazanmak için uygulanabilir stratejiler.",
