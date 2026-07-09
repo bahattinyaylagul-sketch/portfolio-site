@@ -325,7 +325,7 @@ export default function BlogPost() {
 
                             <h2 id="geo-faktorleri">3. A'dan Z'ye GEO Sıralama Faktörleri</h2>
                             <p>
-                                Aşağıdaki faktörler, AI Search Authority dökümanları ve C-Level rehberlerinden derlenmiştir. Bu faktörler, bir içeriğin AI tarafından "cevap" olarak seçilme olasılığını (Probability) belirler.
+                                Aşağıdaki faktörler, AI Search Authority dökümanlarından derlenmiştir. Bu faktörler, bir içeriğin AI tarafından "cevap" olarak seçilme olasılığını (Probability) belirler.
                             </p>
 
                             {/* Infographic Grid: GEO Factors */}

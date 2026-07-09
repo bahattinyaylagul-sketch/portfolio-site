@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
     { label: "Ana Sayfa", href: "/" },
     { label: "Hakkımda", href: "/hakkimda" },
-
+    { label: "SEO", href: "/seo" },
     { label: "GEO", href: "/geo" },
 
     { label: "İçgörüler", href: "/icgoruler" },

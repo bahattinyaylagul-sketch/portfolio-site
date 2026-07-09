@@ -34,12 +34,17 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
-                        href="/geo"
+                        href="/seo"
                         className="px-8 py-3 bg-foreground text-white text-sm font-light rounded-full hover:bg-gray-800 transition-colors uppercase tracking-wider shadow-lg shadow-gray-200/50"
+                    >
+                        SEO Hizmetleri
+                    </Link>
+                    <Link
+                        href="/geo"
+                        className="px-8 py-3 border border-gray-300 text-foreground text-sm font-light rounded-full hover:border-foreground transition-colors uppercase tracking-wider hover:bg-white"
                     >
                         GEO Hizmetleri
                     </Link>
-
                 </div>
             </div>
         </section>
