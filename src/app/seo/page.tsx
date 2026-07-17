@@ -205,7 +205,7 @@ export default function SEOPage() {
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
-                                LinkedIn
+                                Bahattin Yaylagül LinkedIn Profili
                             </a>
                         </div>
 
@@ -218,7 +218,7 @@ export default function SEOPage() {
                                 href="#analiz"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 hover:-translate-y-0.5"
                             >
-                                Ücretsiz Analiz Al
+                                Ücretsiz SEO Analiz Formuna Ulaşın
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -347,7 +347,7 @@ export default function SEOPage() {
                                     </Link>
                                     <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
                                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                                        LinkedIn
+                                        Bahattin Yaylagül LinkedIn Profesyonel Profilini İncele
                                     </a>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@ export default function SEOPage() {
                     </div>
                     <div className="relative z-10 flex-shrink-0">
                         <Link href="/geo" className="inline-flex items-center gap-3 px-8 py-4 border border-violet-400/40 hover:border-violet-400 text-violet-300 hover:text-white hover:bg-violet-500/10 font-bold rounded-2xl transition-all shadow-lg text-lg">
-                            GEO Danışmanlığı
+                            Yapay Zekâ Aramaları İçin GEO Danışmanlığı
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>

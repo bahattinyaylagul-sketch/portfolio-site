@@ -95,7 +95,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                         <li>
                             <Link
                                 href="/#contact"
-                                aria-label="İletişim ve Teklif Formu"
+                                aria-label="İletişime Geçin ve Ücretsiz Teklif Alın"
                                 className={`px-5 py-2 text-sm font-medium rounded-full transition-colors ${isDarkBg
                                     ? "bg-white text-gray-900 hover:bg-gray-200"
                                     : "bg-foreground text-white hover:bg-gray-800"
@@ -142,7 +142,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                     <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                         <Link
                             href="/#contact"
-                            aria-label="İletişim ve Teklif Formu"
+                            aria-label="İletişime Geçin ve Ücretsiz Teklif Alın"
                             onClick={() => setMobileMenuOpen(false)}
                             className="block border-b border-gray-100 pb-3 text-gray-400"
                         >

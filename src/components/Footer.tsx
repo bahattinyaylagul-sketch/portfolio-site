@@ -3,13 +3,13 @@ import Link from "next/link";
 
 const footerLinks = {
     services: [
-        { label: "SEO Danışmanlığı", href: "/seo" },
-        { label: "GEO Danışmanlığı", href: "/geo" },
-        { label: "Teknik SEO", href: "/seo#uc-temel-alan" },
-        { label: "İçerik Stratejisi", href: "/seo#seo-kapsami" },
+        { label: "SEO Danışmanlığı Hizmetleri", href: "/seo" },
+        { label: "Generative Engine Optimization (GEO) Danışmanlığı", href: "/geo" },
+        { label: "Teknik SEO ve Altyapı Denetimi", href: "/seo#uc-temel-alan" },
+        { label: "Semantik İçerik ve Anahtar Kelime Stratejisi", href: "/seo#seo-kapsami" },
     ],
     resources: [
-        { label: "İçgörüler", href: "/icgoruler" },
+        { label: "Güncel SEO & Yazılım İçgörüleri", href: "/icgoruler" },
         { label: "Site Haritası", href: "/site-haritasi" },
     ],
     social: [
