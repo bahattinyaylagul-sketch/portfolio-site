@@ -57,7 +57,7 @@ export function SEOContactForm() {
 
     return (
         <div className="mt-8 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
-            <h4 className="font-semibold mb-2">Ücretsiz Analiz</h4>
+            <h3 className="font-semibold mb-2">Ücretsiz Analiz</h3>
             <p className="text-sm text-gray-300 mb-4">
                 Sitenizin SEO durumunu değerlendirelim.
             </p>
@@ -133,9 +133,9 @@ export default function SEONavigator() {
             {/* Desktop Sidebar */}
             <aside className="hidden lg:block relative h-full">
                 <div className="sticky top-28">
-                    <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                         İçindekiler
-                    </h3>
+                    </h2>
                     <nav className="mb-8">
                         <ul className="space-y-2">
                             {seoNavLinks.map((item) => {

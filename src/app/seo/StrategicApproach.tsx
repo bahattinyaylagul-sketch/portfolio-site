@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function StrategicApproach() {
     return (
-        <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8">
+        <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8" aria-labelledby="strategic-approach-heading">
             <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-10">
                 <div className="max-w-3xl mx-auto mb-12 text-center">
                     {/* SEO Illustration */}
@@ -29,7 +29,7 @@ export default function StrategicApproach() {
                         </div>
                     </div>
 
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                    <h2 id="strategic-approach-heading" className="text-3xl font-bold text-gray-900 mb-6">
                         SEO Danışmanlığı Kapsamı ve Stratejik Yaklaşım
                     </h2>
                     <p className="text-lg text-gray-600 leading-relaxed">

@@ -63,12 +63,12 @@ const expertiseAreas = [
 
 export default function SEOAreasOfExpertise() {
     return (
-        <section className="py-16 bg-white border-t border-gray-100 relative overflow-hidden">
+        <section className="py-16 bg-white border-t border-gray-100 relative overflow-hidden" aria-labelledby="expertise-areas-heading">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-16 md:mb-20">
-                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">Uzmanlık Alanları</h2>
+                    <h2 id="expertise-areas-heading" className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">Uzmanlık Alanları</h2>
                     <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto">Veri odaklı büyüme için, teknikten içeriğe tüm aşamalarda derinlemesine mühendislik yaklaşımı.</p>
                 </div>
 
@@ -91,7 +91,7 @@ export default function SEOAreasOfExpertise() {
                             </div>
 
                             {/* Orta Kısım: Başlık ve Açıklama */}
-                            <h3 className="text-2xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                            <p className="text-2xl font-bold text-gray-900 mb-3">{step.title}</p>
                             <p className="text-gray-500 leading-relaxed text-base mb-8">
                                 {step.description}
                             </p>

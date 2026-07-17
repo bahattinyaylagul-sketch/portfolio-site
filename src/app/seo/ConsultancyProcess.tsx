@@ -65,7 +65,7 @@ export default function ConsultancyProcess() {
     ];
 
     return (
-        <section className="relative w-full max-w-6xl mx-auto px-4 md:px-6 py-16">
+        <section className="relative w-full max-w-6xl mx-auto px-4 md:px-6 py-16" aria-labelledby="consultancy-process-heading">
             {/* Ortam Süslemeleri */}
             <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100/50 rounded-full blur-[60px] pointer-events-none"></div>
             <div className="absolute bottom-10 right-10 w-32 h-32 bg-teal-100/50 rounded-full blur-[60px] pointer-events-none"></div>
@@ -75,7 +75,7 @@ export default function ConsultancyProcess() {
                 <span className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 font-bold text-xs uppercase tracking-widest mb-4">
                     Nasıl Çalışıyoruz?
                 </span>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+                <h2 id="consultancy-process-heading" className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
                     SEO Danışmanlığı Süreç Yapısı
                 </h2>
                 <div className="w-16 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
@@ -108,12 +108,12 @@ export default function ConsultancyProcess() {
                                     {step.stage}
                                 </span>
 
-                                <h3 className="text-2xl font-black text-gray-900 mb-4 leading-tight">
-                                    {step.title}
+                                <p className="text-2xl font-black text-gray-900 mb-4 leading-tight">
+                                    {step.title}{" "}
                                     <span className={`block mt-1 text-[18px] font-bold ${step.text}`}>
                                         {step.sub}
                                     </span>
-                                </h3>
+                                </p>
 
                                 <p className="text-gray-600 text-sm leading-[1.6] opacity-90">
                                     {step.desc}

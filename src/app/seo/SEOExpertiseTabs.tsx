@@ -120,7 +120,7 @@ export default function SEOExpertiseTabs() {
                                             transition={{ duration: 0.3 }}
                                             className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-gray-100"
                                         >
-                                            <h4 className="text-2xl md:text-3xl font-black text-gray-900 mb-2">{tab.contentTitle ?? tab.title}</h4>
+                                            <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-2">{tab.contentTitle ?? tab.title}</h3>
                                             <p className="text-lg text-blue-600 font-medium mb-8">{tab.subtitle}</p>
 
                                             <p className="text-lg text-gray-600 leading-relaxed mb-10">

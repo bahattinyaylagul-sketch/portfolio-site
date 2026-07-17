@@ -41,10 +41,10 @@ export default function SEORehberi() {
                 <div className="grid lg:grid-cols-[280px_1fr] gap-12">
 
                     {/* Sol: Sticky TOC */}
-                    <aside className="hidden lg:block">
+                    <aside className="hidden lg:block" aria-label="Sayfa içi gezinti">
                         <div className="sticky top-28">
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">İçindekiler</h3>
-                            <nav>
+                            <h2 id="seo-toc-heading" className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">İçindekiler</h2>
+                            <nav aria-labelledby="seo-toc-heading">
                                 <ul className="space-y-2">
                                     {tableOfContents.map((item) => (
                                         <li key={item.id}>
@@ -68,7 +68,7 @@ export default function SEORehberi() {
                                 </ul>
                             </nav>
                             <div className="mt-8 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
-                                <h4 className="font-semibold mb-2">Ücretsiz SEO Analizi</h4>
+                                <h3 className="font-semibold mb-2">Ücretsiz SEO Analizi</h3>
                                 <p className="text-sm text-gray-300 mb-4">Sitenizin organik performansını detaylıca analiz edelim.</p>
                                 <a href="#analiz" className="block text-center py-2 px-4 bg-white text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-100 transition-colors">
                                     Analiz İste
@@ -78,12 +78,12 @@ export default function SEORehberi() {
                     </aside>
 
                     {/* Sağ: İçerik */}
-                    <main>
+                    <div>
                         <div className="space-y-12">
 
-                            <section id="seo-nedir" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="seo-nedir" aria-labelledby="seo-nedir-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">01</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO Nedir ve Ne İşe Yarar?</h2>
+                                <h2 id="seo-nedir-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO Nedir ve Ne İşe Yarar?</h2>
                                 <div className="space-y-4 text-gray-600 leading-relaxed">
                                     <p>SEO (Search Engine Optimization), bir web sitesinin Google gibi arama motorlarında daha üst sıralarda görünmesi için içeriğini, teknik yapısını ve otorite sinyallerini iyileştirme pratiğidir. Temel amacı, ücretli reklam harcamadan organik arama sonuçlarından kaliteli trafik kazanmaktır.</p>
                                     <p>SEO ücretsizdir, ama bedava değildir. Reklam bütçesi ödemezsiniz; karşılığında zaman, emek ve strateji harcarsınız. Bu yüzden SEO&apos;yu &quot;hızlı çözüm&quot; olarak değil, bileşik getiri sağlayan uzun vadeli bir yatırım olarak düşünmek gerekir.</p>
@@ -91,9 +91,9 @@ export default function SEORehberi() {
                                 </div>
                             </section>
 
-                            <section id="nasil-calisir" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="nasil-calisir" aria-labelledby="nasil-calisir-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">02</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO Nasıl Çalışır? Tarama, Dizinleme ve Sıralama</h2>
+                                <h2 id="nasil-calisir-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO Nasıl Çalışır? Tarama, Dizinleme ve Sıralama</h2>
                                 <p className="text-gray-600 leading-relaxed mb-6">Google&apos;ın bir sayfanızı sıralayabilmesi için önce onu bulması, sonra anlaması, ardından kaydetmesi gerekir.</p>
                                 <div className="space-y-4">
                                     {[
@@ -105,7 +105,7 @@ export default function SEORehberi() {
                                         <div key={item.step} className="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100">
                                             <span className="flex-shrink-0 w-9 h-9 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-black">{item.step}</span>
                                             <div>
-                                                <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
+                                                <p className="font-bold text-gray-900 mb-1">{item.title}</p>
                                                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                                             </div>
                                         </div>
@@ -113,9 +113,9 @@ export default function SEORehberi() {
                                 </div>
                             </section>
 
-                            <section id="uc-temel-alan" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="uc-temel-alan" aria-labelledby="uc-temel-alan-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">03</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">SEO&apos;nun 3 Temel Alanı: On-Page, Off-Page ve Teknik SEO</h2>
+                                <h2 id="uc-temel-alan-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">SEO&apos;nun 3 Temel Alanı: On-Page, Off-Page ve Teknik SEO</h2>
                                 <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-5">
                                     <table className="w-full text-sm">
                                         <thead>
@@ -145,9 +145,9 @@ export default function SEORehberi() {
                                 <p className="text-gray-600 leading-relaxed text-sm">On-page SEO&apos;nun merkezinde <strong>E-E-A-T</strong> yer alır: Google, içerikleri deneyim, uzmanlık, yetkililik ve güvenilirlik kriterleriyle değerlendirir.</p>
                             </section>
 
-                            <section id="seo-vs-ppc" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="seo-vs-ppc" aria-labelledby="seo-vs-ppc-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">04</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO ile SEM/PPC Arasındaki Fark</h2>
+                                <h2 id="seo-vs-ppc-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO ile SEM/PPC Arasındaki Fark</h2>
                                 <p className="text-gray-600 leading-relaxed mb-6 text-sm">SEM (Search Engine Marketing), hem SEO hem de PPC faaliyetlerini kapsayan üst bir terimdir. PPC ise her tıklama başına ücretlendirilen bir modeldir — rakip değil, tamamlayıcı.</p>
                                 <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-4">
                                     <table className="w-full text-sm">
@@ -179,9 +179,9 @@ export default function SEORehberi() {
                                 </div>
                             </section>
 
-                            <section id="metrikler" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="metrikler" aria-labelledby="metrikler-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">05</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">SEO Sonuçlarını Ölçmek: Metrikler ve Araçlar</h2>
+                                <h2 id="metrikler-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">SEO Sonuçlarını Ölçmek: Metrikler ve Araçlar</h2>
                                 <h3 className="text-lg font-bold text-gray-900 mb-4">Araç Karşılaştırması</h3>
                                 <div className="overflow-x-auto rounded-2xl border border-gray-200 mb-8">
                                     <table className="w-full text-sm">
@@ -223,7 +223,7 @@ export default function SEORehberi() {
                                         <div key={item.num} className="flex gap-4 p-5 bg-gray-50 rounded-2xl border border-gray-100">
                                             <span className="flex-shrink-0 w-9 h-9 bg-gray-900 text-white rounded-full flex items-center justify-center text-sm font-black">{item.num}</span>
                                             <div>
-                                                <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                                                <p className="font-bold text-gray-900 mb-1">{item.title}</p>
                                                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                                             </div>
                                         </div>
@@ -231,9 +231,9 @@ export default function SEORehberi() {
                                 </div>
                             </section>
 
-                            <section id="yapay-zeka" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="yapay-zeka" aria-labelledby="yapay-zeka-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">06</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">Yapay Zeka Çağında SEO: GEO, AI Overviews ve Değişen Dinamikler</h2>
+                                <h2 id="yapay-zeka-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">Yapay Zeka Çağında SEO: GEO, AI Overviews ve Değişen Dinamikler</h2>
                                 <h3 className="text-lg font-bold text-gray-900 mb-3">GEO, SEO&apos;nun Rakibi Değil Uzantısı</h3>
                                 <div className="space-y-4 text-gray-600 leading-relaxed text-sm mb-8">
                                     <p>ChatGPT, Perplexity ve Gemini gibi üretken yapay zeka araçlarının yükselişiyle birlikte <strong className="text-gray-900">AEO (Answer Engine Optimization)</strong> ve <strong className="text-gray-900">GEO (Generative Engine Optimization)</strong> adı verilen yeni optimizasyon yaklaşımları ortaya çıktı. GEO, SEO&apos;nun yerini almıyor; kullanıcıların bilgi aradığı her platformda görünürlük sağlamak için SEO&apos;yu genişletiyor.</p>
@@ -262,9 +262,9 @@ export default function SEORehberi() {
                                 </Link>
                             </section>
 
-                            <section id="site-turleri" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <section id="site-turleri" aria-labelledby="site-turleri-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">07</span><div className="h-px flex-1 bg-gray-100" /></div>
-                                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">Site Türüne Göre SEO Öncelikleri</h2>
+                                <h2 id="site-turleri-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-6 tracking-tight">Site Türüne Göre SEO Öncelikleri</h2>
                                 <div className="overflow-x-auto rounded-2xl border border-gray-200">
                                     <table className="w-full text-sm">
                                         <thead>
@@ -294,7 +294,7 @@ export default function SEORehberi() {
                             </section>
 
                         </div>
-                    </main>
+                    </div>
                 </div>
             </div>
         </section>

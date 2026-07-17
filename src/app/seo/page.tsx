@@ -257,10 +257,10 @@ export default function SEOPage() {
                 <SEOAreasOfExpertise />
 
                 {/* ── 6. Ücretsiz Analiz Formu ── */}
-                <section className="py-16 bg-white" id="analiz">
+                <section className="py-16 bg-white" id="analiz" aria-labelledby="analiz-heading">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <div className="text-center mb-10">
-                            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz SEO Denetimi</h2>
+                            <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz SEO Denetimi</h2>
                             <p className="text-gray-600 text-base md:text-lg">Sitenizin organik performansını detaylıca analiz edelim, büyüme için yol haritanızı çıkaralım.</p>
                         </div>
                         <SEOContactForm />
@@ -303,7 +303,7 @@ export default function SEOPage() {
                                 },
                             ].map((item, i) => (
                                 <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                    <h3 className="text-base font-bold text-gray-900 mb-2">{item.q}</h3>
+                                    <p className="text-base font-bold text-gray-900 mb-2">{item.q}</p>
                                     <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
                                 </div>
                             ))}
@@ -329,7 +329,7 @@ export default function SEOPage() {
                             <div className="text-center md:text-left">
                                 <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center md:justify-start">
                                     <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
-                                        <h2 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h2>
+                                        <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                     </Link>
                                     <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                 </div>
@@ -351,7 +351,7 @@ export default function SEOPage() {
             </article>
 
             {/* ── GEO DANIŞMANLIĞI CTA BANNER ── */}
-            <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8">
+            <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8" aria-labelledby="geo-cta-heading">
                 <div className="bg-gradient-to-r from-[#0a0a1a] to-[#0f172a] rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
                     {/* Background Decorations */}
                     <div className="absolute -right-20 -top-20 w-72 h-72 bg-violet-600 rounded-full blur-[100px] opacity-25"></div>
@@ -361,7 +361,7 @@ export default function SEOPage() {
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4 border border-violet-400/20">
                             Yeni Nesil Arama Optimizasyonu
                         </div>
-                        <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                        <h2 id="geo-cta-heading" className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
                             GEO Danışmanlığı &amp; <br />
                             <span className="text-violet-300">Generative Engine Optimization</span>
                         </h2>

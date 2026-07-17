@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
     const t = testimonials[current];
 
     return (
-        <section className="bg-white py-20 px-6 border-b border-gray-100">
+        <section className="bg-white py-20 px-6 border-b border-gray-100" aria-labelledby="testimonials-heading">
             <div className="max-w-6xl mx-auto">
 
                 {/* Başlık Satırı */}
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
                         <p className="text-blue-600 font-bold text-xs uppercase tracking-widest mb-2">
                             SEO Müşterilerimiz
                         </p>
-                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
+                        <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">
                             Müşterilerimiz Ne Düşünüyor?
                         </h2>
                     </div>
