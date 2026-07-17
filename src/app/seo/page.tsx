@@ -9,8 +9,6 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { SEOContactForm } from "./SEONavigator";
-import Breadcrumb from "@/components/Breadcrumb";
-import TestimonialsCarousel from "./TestimonialsCarousel";
 import TestimonialsSection from "./TestimonialsSection";
 import StrategicApproach from "./StrategicApproach";
 import ConsultancyProcess from "./ConsultancyProcess";
@@ -65,119 +63,118 @@ const faqData = [
     }
 ];
 
-export default function SEOPage() {
-
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                "@id": "https://bahattinyaylagul.com/#person",
-                "name": "Bahattin Yaylagül",
-                "url": "https://bahattinyaylagul.com",
-                "jobTitle": "SEO Consultant",
-                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "sameAs": [
-                    "https://www.linkedin.com/in/bahattin-yaylagul/",
-                    "https://medium.com/@bahattinyaylagl"
-                ]
-            },
-            {
-                "@type": "ProfessionalService",
-                "@id": "https://bahattinyaylagul.com/seo/#service",
-                "name": "Bahattin Yaylagül | SEO Uzmanı",
-                "url": "https://bahattinyaylagul.com/seo",
-                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "description": "Markanızın dijital varlığını güçlendirmek amacıyla profesyonel teknik SEO denetimleri ve semantik içerik stratejileriyle desteklenmiş, ölçülebilir seo danışmanlığı hizmeti sunuyorum.",
-                "priceRange": "[FIYAT_ARALIGI]",
-                "areaServed": ["TR", "İstanbul", "Ankara", "İzmir", "Uzaktan / Remote"],
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "SEO Danışmanlığı Hizmet Kapsamı",
-                    "itemListElement": [
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Teknik SEO Denetimi",
-                                "description": "Log analizleri, tarama bütçesi yönetimi, Core Web Vitals ve teknik site altyapı denetimleri."
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Semantik İçerik Stratejisi",
-                                "description": "Kullanıcı arama niyeti analizi, içerik haritalama ve bilgi boşluğu (information gain) optimizasyonları."
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Silo Mimarisi ve Dahili Bağlantı Yapılandırması",
-                                "description": "Bilgi hiyerarşisi oluşturarak otorite sayfaları ve konu otoritelerini besleyen iç bağlantı kurgusu."
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Generative Engine Optimization (GEO)",
-                                "description": "Yapay zekâ motorlarında (Perplexity, ChatGPT, Gemini) kaynak gösterilmek ve yanıt üretilmek için optimizasyon."
-                            }
+const jsonLdString = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://bahattinyaylagul.com/#person",
+            "name": "Bahattin Yaylagül",
+            "url": "https://bahattinyaylagul.com",
+            "jobTitle": "SEO Consultant",
+            "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+            "sameAs": [
+                "https://www.linkedin.com/in/bahattin-yaylagul/",
+                "https://medium.com/@bahattinyaylagl"
+            ]
+        },
+        {
+            "@type": "ProfessionalService",
+            "@id": "https://bahattinyaylagul.com/seo/#service",
+            "name": "Bahattin Yaylagül | SEO Uzmanı",
+            "url": "https://bahattinyaylagul.com/seo",
+            "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+            "description": "Markanızın dijital varlığını güçlendirmek amacıyla profesyonel teknik SEO denetimleri ve semantik içerik stratejileriyle desteklenmiş, ölçülebilir seo danışmanlığı hizmeti sunuyorum.",
+            "priceRange": "[FIYAT_ARALIGI]",
+            "areaServed": ["TR", "İstanbul", "Ankara", "İzmir", "Uzaktan / Remote"],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "SEO Danışmanlığı Hizmet Kapsamı",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Teknik SEO Denetimi",
+                            "description": "Log analizleri, tarama bütçesi yönetimi, Core Web Vitals ve teknik site altyapı denetimleri."
                         }
-                    ]
-                },
-                "sameAs": [
-                    "https://linkedin.com/in/bahattin-yaylagul",
-                    "https://bahattinyaylagul.com"
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Semantik İçerik Stratejisi",
+                            "description": "Kullanıcı arama niyeti analizi, içerik haritalama ve bilgi boşluğu (information gain) optimizasyonları."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Silo Mimarisi ve Dahili Bağlantı Yapılandırması",
+                            "description": "Bilgi hiyerarşisi oluşturarak otorite sayfaları ve konu otoritelerini besleyen iç bağlantı kurgusu."
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Generative Engine Optimization (GEO)",
+                            "description": "Yapay zekâ motorlarında (Perplexity, ChatGPT, Gemini) kaynak gösterilmek ve yanıt üretilmek için optimizasyon."
+                        }
+                    }
                 ]
             },
-            {
-                "@type": "FAQPage",
-                "@id": "https://bahattinyaylagul.com/seo/#faq",
-                "mainEntity": faqData.map(item => ({
-                    "@type": "Question",
-                    "name": item.q,
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": item.a
-                    }
-                }))
-            }
-        ]
-    };
+            "sameAs": [
+                "https://linkedin.com/in/bahattin-yaylagul",
+                "https://bahattinyaylagul.com"
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://bahattinyaylagul.com/seo/#faq",
+            "mainEntity": faqData.map(item => ({
+                "@type": "Question",
+                "name": item.q,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.a
+                }
+            }))
+        }
+    ]
+});
 
-    const breadcrumbJson = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": "https://bahattinyaylagul.com/seo/#breadcrumb",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Ana Sayfa",
-                "item": "https://bahattinyaylagul.com"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "SEO Danışmanlığı",
-                "item": "https://bahattinyaylagul.com/seo"
-            }
-        ]
-    };
+const breadcrumbJsonString = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://bahattinyaylagul.com/seo/#breadcrumb",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://bahattinyaylagul.com"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SEO Danışmanlığı",
+            "item": "https://bahattinyaylagul.com/seo"
+        }
+    ]
+});
 
+export default function SEOPage() {
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: jsonLdString }}
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJson) }}
+                dangerouslySetInnerHTML={{ __html: breadcrumbJsonString }}
             />
             {/* Fixed Header Wrapper */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">

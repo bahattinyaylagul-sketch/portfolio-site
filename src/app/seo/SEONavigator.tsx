@@ -2,17 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-export const seoNavLinks = [
-    { id: "what-is-seo", title: "01. SEO Nedir?", href: "/seo" },
-    { id: "technical-seo", title: "02. Teknik SEO", href: "/teknik-seo" },
-    { id: "on-page-seo", title: "03. On-Page SEO", href: "/site-ici-seo" },
-    { id: "icerik-seo", title: "04. İçerik Optimizasyonu", href: "/icerik-optimizasyonu" },
-    { id: "off-page-seo", title: "05. Site Dışı SEO", href: "/site-disi-seo" },
-    { id: "seo-performance", title: "06. SEO Performansı", href: "#" },
-];
 
 export function SEOContactForm() {
     const [formData, setFormData] = useState({
@@ -121,97 +110,6 @@ export function SEOContactForm() {
                     </button>
                 </form>
             )}
-        </div>
-    );
-}
-
-export default function SEONavigator() {
-    const pathname = usePathname();
-
-    return (
-        <>
-            {/* Desktop Sidebar */}
-            <aside className="hidden lg:block relative h-full">
-                <div className="sticky top-28">
-                    <h2 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                        İçindekiler
-                    </h2>
-                    <nav className="mb-8">
-                        <ul className="space-y-2">
-                            {seoNavLinks.map((item) => {
-                                const isActive = pathname === item.href;
-                                return (
-                                    <li key={item.id}>
-                                        <Link
-                                            href={item.href}
-                                            className={`block w-full text-left py-2.5 px-4 rounded-lg text-sm transition-all duration-200 ${isActive
-                                                    ? "bg-gray-900 text-white font-medium shadow-md"
-                                                    : "text-gray-600 hover:bg-gray-100 font-medium"
-                                                }`}
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </nav>
-
-                    {/* CTA in Sidebar */}
-                    <SEOContactForm />
-                </div>
-            </aside>
-        </>
-    );
-}
-
-export function SEOMobileNav() {
-    const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
-    const pathname = usePathname();
-
-    return (
-        <div className="lg:hidden border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm mb-8">
-            <button
-                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
-                className="w-full flex items-center justify-between p-4 bg-gray-50 text-left transition-colors hover:bg-gray-100"
-            >
-                <span className="font-bold text-gray-900 flex items-center gap-2 text-sm uppercase tracking-wider">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-                    </svg>
-                    İçindekiler
-                </span>
-                <svg
-                    className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isMobileTocOpen ? "rotate-180" : ""}`}
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileTocOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-                <nav className="p-4 border-t border-gray-100 bg-white">
-                    <ul className="space-y-3">
-                        {seoNavLinks.map((item) => {
-                            const isActive = pathname === item.href;
-                            return (
-                                <li key={item.id}>
-                                    <Link
-                                        href={item.href}
-                                        onClick={() => setIsMobileTocOpen(false)}
-                                        className={`block w-full text-left text-sm transition-colors ${isActive ? "text-blue-600 font-bold" : "text-gray-600 hover:text-blue-600"
-                                            }`}
-                                    >
-                                        {item.title}
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
-            </div>
-            {/* CTA Form placed directly below Mobile TOC for visibility on mobile */}
-            <SEOContactForm />
         </div>
     );
 }
