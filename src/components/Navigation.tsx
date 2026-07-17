@@ -5,13 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-    { label: "Ana Sayfa", href: "/" },
-    { label: "Hakkımda", href: "/hakkimda" },
-    { label: "SEO", href: "/seo" },
-    { label: "GEO", href: "/geo" },
-
-    { label: "İçgörüler", href: "/icgoruler" },
-    // { label: "Referanslar", href: "/referanslar" }, // GEÇİCİ GİZLİ
+    { label: "Ana Sayfa", href: "/", ariaLabel: "Bahattin Yaylagül Portfolyo Ana Sayfası" },
+    { label: "Hakkımda", href: "/hakkimda", ariaLabel: "Bahattin Yaylagül Hakkında Bilgi" },
+    { label: "SEO", href: "/seo", ariaLabel: "SEO Danışmanlığı ve Organik Büyüme Hizmetleri" },
+    { label: "GEO", href: "/geo", ariaLabel: "GEO (Generative Engine Optimization) Hizmetleri" },
+    { label: "İçgörüler", href: "/icgoruler", ariaLabel: "SEO, GEO ve Yapay Zeka Hakkında İçgörüler" },
 ];
 
 interface NavigationProps {
@@ -70,6 +68,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                 <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
                     <Link
                         href="/"
+                        aria-label="Bahattin Yaylagül Portfolyo Ana Sayfası"
                         className={`text-lg font-bold tracking-widest transition-colors ${isDarkBg && !mobileMenuOpen ? "text-white" : "text-foreground"
                             }`}
                         style={{ position: 'relative', zIndex: 10001 }}
@@ -83,6 +82,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                             <li key={item.href}>
                                 <Link
                                     href={item.href}
+                                    aria-label={item.ariaLabel}
                                     className={`text-sm transition-colors duration-200 ${isDarkBg
                                         ? "text-gray-300 hover:text-white"
                                         : "text-gray-600 hover:text-foreground"
@@ -95,6 +95,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                         <li>
                             <Link
                                 href="/#contact"
+                                aria-label="İletişim ve Teklif Formu"
                                 className={`px-5 py-2 text-sm font-medium rounded-full transition-colors ${isDarkBg
                                     ? "bg-white text-gray-900 hover:bg-gray-200"
                                     : "bg-foreground text-white hover:bg-gray-800"
@@ -130,6 +131,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                         <li key={item.href} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                             <Link
                                 href={item.href}
+                                aria-label={item.ariaLabel}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={`block border-b border-gray-100 pb-3 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
                             >
@@ -140,6 +142,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                     <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                         <Link
                             href="/#contact"
+                            aria-label="İletişim ve Teklif Formu"
                             onClick={() => setMobileMenuOpen(false)}
                             className="block border-b border-gray-100 pb-3 text-gray-400"
                         >
@@ -150,8 +153,8 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
                 <div className="mt-auto pb-12">
                     <div className="flex gap-6 text-sm text-gray-500">
-                        <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://medium.com/@bahattinyaylagl" target="_blank" rel="noopener noreferrer">Medium</a>
+                        <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili">LinkedIn</a>
+                        <a href="https://medium.com/@bahattinyaylagl" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Medium Blog Yazıları">Medium</a>
                     </div>
                 </div>
             </div>

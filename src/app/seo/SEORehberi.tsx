@@ -182,7 +182,7 @@ export default function SEORehberi() {
                                     </div>
                                 </div>
                                 <Link href="/geo" className="inline-flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors">
-                                    GEO Danışmanlığı sayfasına git
+                                    Generative Engine Optimization (GEO) Danışmanlık detayları
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                                 </Link>
                             </section>

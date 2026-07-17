@@ -191,7 +191,7 @@ export default function SEOPage() {
                             </div>
                             <span className="text-sm font-medium">
                                 Yazar:{" "}
-                                <Link href="/hakkimda" className="hover:text-blue-400 underline decoration-white/20 hover:decoration-blue-400 transition-colors">
+                                <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Bilgi" className="hover:text-blue-400 underline decoration-white/20 hover:decoration-blue-400 transition-colors">
                                     Bahattin Yaylagül
                                 </Link>
                             </span>
@@ -200,6 +200,7 @@ export default function SEOPage() {
                                 href="https://linkedin.com/in/bahattin-yaylagul"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="Bahattin Yaylagül LinkedIn Profili"
                                 className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity"
                             >
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -323,7 +324,7 @@ export default function SEOPage() {
                 <section aria-labelledby="author-bio" className="border-t border-gray-100 py-12">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
-                            <Link href="/hakkimda" className="shrink-0 group">
+                            <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Detaylı Bilgi" className="shrink-0 group">
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative">
                                     <Image
                                         src="/images/bahattin-yaylagul.jpg"
@@ -336,16 +337,16 @@ export default function SEOPage() {
                             </Link>
                             <div className="text-center md:text-left">
                                 <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center md:justify-start">
-                                    <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
+                                    <Link href="/hakkimda" aria-label="Bahattin Yaylagül Özgeçmiş ve Hakkında" className="hover:text-blue-600 transition-colors">
                                         <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                     </Link>
                                     <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center md:justify-start">
                                     <Link href="/hakkimda" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 hover:text-gray-950 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm rounded-full transition-all">
-                                        Hakkımda Detaylı Bilgi
+                                        Bahattin Yaylagül Kimdir ve Hakkında Detaylar
                                     </Link>
-                                    <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
+                                    <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
                                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
                                         LinkedIn
                                     </a>
