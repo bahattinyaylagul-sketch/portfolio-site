@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function StrategicApproach() {
     return (
-        <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8" aria-labelledby="strategic-approach-heading">
+        <section id="seo-kapsami" className="scroll-mt-32 max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8" aria-labelledby="strategic-approach-heading">
             <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-10">
                 <div className="max-w-3xl mx-auto mb-12 text-center">
                     {/* SEO Illustration */}

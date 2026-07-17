@@ -65,7 +65,7 @@ export default function ConsultancyProcess() {
     ];
 
     return (
-        <section className="relative w-full max-w-6xl mx-auto px-4 md:px-6 py-16" aria-labelledby="consultancy-process-heading">
+        <section id="surec-yapisi" className="scroll-mt-32 relative w-full max-w-6xl mx-auto px-4 md:px-6 py-16" aria-labelledby="consultancy-process-heading">
             {/* Ortam Süslemeleri */}
             <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100/50 rounded-full blur-[60px] pointer-events-none"></div>
             <div className="absolute bottom-10 right-10 w-32 h-32 bg-teal-100/50 rounded-full blur-[60px] pointer-events-none"></div>

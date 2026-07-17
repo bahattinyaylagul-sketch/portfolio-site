@@ -246,14 +246,14 @@ export default function SEOPage() {
                     </div>
                 </header>
 
-                {/* ── SEO Rehberi ── */}
-                <SEORehberi />
-
                 {/* ── 2. Stratejik Yaklaşım ── */}
                 <StrategicApproach />
 
                 {/* ── 3. Danışmanlık Süreci ── */}
                 <ConsultancyProcess />
+
+                {/* ── SEO Rehberi ── */}
+                <SEORehberi />
 
                 {/* ── 4. Müşteri Yorumları ── */}
                 <TestimonialsSection />

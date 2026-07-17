@@ -3,17 +3,19 @@
 import { useState, useEffect } from "react";
 
 const tableOfContents = [
-    { id: "seo-nedir", title: "01. SEO Nedir?" },
-    { id: "nasil-calisir", title: "02. Tarama & Dizinleme" },
-    { id: "uc-temel-alan", title: "03. On-Page, Off-Page & Teknik" },
-    { id: "seo-vs-ppc", title: "04. SEO vs SEM/PPC" },
-    { id: "metrikler", title: "05. Metrikler & Araçlar" },
-    { id: "yapay-zeka", title: "06. AI & GEO" },
-    { id: "site-turleri", title: "07. Site Türüne Göre SEO" },
+    { id: "seo-kapsami", title: "01. Hizmet Kapsamı" },
+    { id: "surec-yapisi", title: "02. Çalışma Süreci" },
+    { id: "seo-nedir", title: "03. SEO Nedir?" },
+    { id: "nasil-calisir", title: "04. Tarama & Dizinleme" },
+    { id: "uc-temel-alan", title: "05. On-Page, Off-Page & Teknik" },
+    { id: "seo-vs-ppc", title: "06. SEO vs SEM/PPC" },
+    { id: "metrikler", title: "07. Metrikler & Araçlar" },
+    { id: "yapay-zeka", title: "08. AI & GEO" },
+    { id: "site-turleri", title: "09. Site Türüne Göre SEO" },
 ];
 
 export default function SEOTableOfContents() {
-    const [activeSection, setActiveSection] = useState("seo-nedir");
+    const [activeSection, setActiveSection] = useState("seo-kapsami");
 
     useEffect(() => {
         const observer = new IntersectionObserver(
