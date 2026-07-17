@@ -1,88 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
-
-import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const tableOfContents = [
-    { id: "seo-nedir", title: "01. SEO Nedir?" },
-    { id: "nasil-calisir", title: "02. Tarama & Dizinleme" },
-    { id: "uc-temel-alan", title: "03. On-Page, Off-Page & Teknik" },
-    { id: "seo-vs-ppc", title: "04. SEO vs SEM/PPC" },
-    { id: "metrikler", title: "05. Metrikler & Araçlar" },
-    { id: "yapay-zeka", title: "06. AI & GEO" },
-    { id: "site-turleri", title: "07. Site Türüne Göre SEO" },
-];
-
 export default function SEORehberi() {
-    const [activeSection, setActiveSection] = useState("seo-nedir");
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) setActiveSection(entry.target.id);
-                });
-            },
-            { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
-        );
-        const timer = setTimeout(() => {
-            tableOfContents.forEach((item) => {
-                const el = document.getElementById(item.id);
-                if (el) observer.observe(el);
-            });
-        }, 100);
-        return () => { observer.disconnect(); clearTimeout(timer); };
-    }, []);
-
     return (
         <section className="py-20 bg-white" id="seo-rehberi">
-            <div className="max-w-6xl mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-[280px_1fr] gap-12">
-
-                    {/* Sol: Sticky TOC */}
-                    <aside className="hidden lg:block" aria-label="Sayfa içi gezinti">
-                        <div className="sticky top-28">
-                            <h2 id="seo-toc-heading" className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">İçindekiler</h2>
-                            <nav aria-labelledby="seo-toc-heading">
-                                <ul className="space-y-2">
-                                    {tableOfContents.map((item) => (
-                                        <li key={item.id}>
-                                            <a
-                                                href={`#${item.id}`}
-                                                className={`block py-2 px-4 rounded-lg text-sm transition-all duration-200 ${
-                                                    activeSection === item.id
-                                                        ? "bg-gray-900 text-white font-medium"
-                                                        : "text-gray-600 hover:bg-gray-100"
-                                                }`}
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
-                                                    setActiveSection(item.id);
-                                                }}
-                                            >
-                                                {item.title}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
-                            <div className="mt-8 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
-                                <h3 className="font-semibold mb-2">Ücretsiz SEO Analizi</h3>
-                                <p className="text-sm text-gray-300 mb-4">Sitenizin organik performansını detaylıca analiz edelim.</p>
-                                <a href="#analiz" className="block text-center py-2 px-4 bg-white text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-100 transition-colors">
-                                    Analiz İste
-                                </a>
-                            </div>
-                        </div>
-                    </aside>
-
-                    {/* Sağ: İçerik */}
-                    <div>
-                        <div className="space-y-12">
-
-                            <section id="seo-nedir" aria-labelledby="seo-nedir-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-                                <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">01</span><div className="h-px flex-1 bg-gray-100" /></div>
+            <div className="max-w-4xl mx-auto px-4 md:px-6">
+                <div className="space-y-12">
+                    <section id="seo-nedir" aria-labelledby="seo-nedir-heading" className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div className="flex items-center gap-4 mb-6"><span className="text-sm font-medium text-gray-400">01</span><div className="h-px flex-1 bg-gray-100" /></div>
                                 <h2 id="seo-nedir-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-4 tracking-tight">SEO Nedir ve Ne İşe Yarar?</h2>
                                 <div className="space-y-4 text-gray-600 leading-relaxed">
                                     <p>SEO (Search Engine Optimization), bir web sitesinin Google gibi arama motorlarında daha üst sıralarda görünmesi için içeriğini, teknik yapısını ve otorite sinyallerini iyileştirme pratiğidir. Temel amacı, ücretli reklam harcamadan organik arama sonuçlarından kaliteli trafik kazanmaktır.</p>
@@ -293,8 +218,6 @@ export default function SEORehberi() {
                                 </div>
                             </section>
 
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

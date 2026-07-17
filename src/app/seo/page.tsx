@@ -17,6 +17,7 @@ import ConsultancyProcess from "./ConsultancyProcess";
 
 import SEOAreasOfExpertise from "./SEOAreasOfExpertise";
 import SEORehberi from "./SEORehberi";
+import SEOTableOfContents from "./SEOTableOfContents";
 
 
 export const metadata: Metadata = {
@@ -169,13 +170,17 @@ export default function SEOPage() {
                             </span>
                         </h1>
 
-                        {/* Alt başlık */}
-                        <p className="text-lg text-white/50 mb-6 max-w-xl mx-auto leading-relaxed">
+                        {/* Tanıtım Paragrafı */}
+                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+                            [BURAYA DEĞER ÖNERMESİ]
+                        </p>
+
+                        <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
                             Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
                         </p>
 
                         {/* Yazar Bilgisi / Author Info */}
-                        <div className="flex items-center justify-center gap-3 mb-8 text-white/80">
+                        <div className="flex items-center justify-center gap-3 mb-8 text-white/85">
                             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
                                 <Image
                                     src="/images/bahattin-yaylagul.jpg"
@@ -204,18 +209,21 @@ export default function SEOPage() {
                             </a>
                         </div>
 
-                        {/* CTA */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                        {/* ── İçindekiler (TOC) ── */}
+                        <SEOTableOfContents />
+
+                        {/* CTA - Birincil (Dolgulu, Belirgin Stil) */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
                             <a
                                 href="#analiz"
-                                className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-100 transition-all text-sm"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 hover:-translate-y-0.5"
                             >
                                 Ücretsiz Analiz Al
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
-                            <span className="text-white/30 text-xs font-medium">
+                            <span className="text-white/40 text-xs font-medium">
                                 24 saat içinde dönüş · %100 ücretsiz
                             </span>
                         </div>
@@ -334,7 +342,7 @@ export default function SEOPage() {
                                     <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center md:justify-start">
-                                    <Link href="/hakkimda" className="text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-200 hover:decoration-gray-900 transition-all">
+                                    <Link href="/hakkimda" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 hover:text-gray-950 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm rounded-full transition-all">
                                         Hakkımda Detaylı Bilgi
                                     </Link>
                                     <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
@@ -370,7 +378,7 @@ export default function SEOPage() {
                         </p>
                     </div>
                     <div className="relative z-10 flex-shrink-0">
-                        <Link href="/geo" className="inline-flex items-center gap-3 px-8 py-4 bg-violet-500 hover:bg-violet-400 text-white font-bold rounded-2xl hover:scale-105 transition-all shadow-lg text-lg">
+                        <Link href="/geo" className="inline-flex items-center gap-3 px-8 py-4 border border-violet-400/40 hover:border-violet-400 text-violet-300 hover:text-white hover:bg-violet-500/10 font-bold rounded-2xl transition-all shadow-lg text-lg">
                             GEO Danışmanlığı
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
