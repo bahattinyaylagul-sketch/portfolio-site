@@ -34,6 +34,37 @@ export const metadata: Metadata = {
     },
 };
 
+const faqData = [
+    {
+        q: "SEO sonuçları ne kadar sürede görülür?",
+        a: "SEO çalışmalarının sonuçları, erken dönemde birkaç haftada görülse de anlamlı organik trafik artışları genellikle 3 ila 6 aylık tutarlı bir süreç gerektirir."
+    },
+    {
+        q: "SEO ücretsiz midir?",
+        a: "Organik arama motoru sıralamaları için doğrudan reklam bütçesi ödenmez; fakat etkili bir SEO stratejisi uygulamak uzmanlık, teknik araçlar ve zamansal yatırım gerektirmektedir."
+    },
+    {
+        q: "Google'ın kaç sıralama faktörü var?",
+        a: "Google arama algoritmalarında tek bir sıralama kriterine odaklanmak yerine bütünsel bir optimizasyon uygulamak gerekir; çünkü Google kesin ve sınırlı bir sıralama faktörü listesi yayınlamamıştır."
+    },
+    {
+        q: "Black hat SEO nedir, neden risklidir?",
+        a: "Black hat SEO, arama motoru kurallarına aykırı manipülatif tekniklerin kullanılmasıdır ve Google algoritması tarafından tespit edildiğinde sitenin kalıcı olarak cezalandırılmasına yol açar."
+    },
+    {
+        q: "Yapay zeka SEO'yu öldürür mü?",
+        a: "Yapay zekâ ve üretken arama motorlarının yükselişi klasik SEO'yu sonlandırmaz; aksine GEO (Generative Engine Optimization) adı verilen yeni nesil kaynak gösterme optimizasyonu ile kapsamını genişletir."
+    },
+    {
+        q: "Teknik SEO mu, içerik mi daha önemli?",
+        a: "Arama motorlarında yüksek performans elde etmek için teknik SEO altyapısı ile semantik içerik stratejisi birbirini tamamlamalıdır; altyapı zayıfsa içerik taranamayacağı gibi, içerik yoksa teknik altyapı tek başına trafik getirmez."
+    },
+    {
+        q: "SEO mu, PPC mi tercih edilmeli?",
+        a: "Hızlı ve geçici dönüşüm elde etmek için ücretli arama reklamcılığı (PPC) tercih edilmeli, sürdürülebilir ve bütçe bağımsız kalıcı organik trafik artışı için ise SEO yatırımı önceliklendirilmelidir."
+    }
+];
+
 export default function SEOPage() {
 
     const jsonLd = {
@@ -57,20 +88,43 @@ export default function SEOPage() {
                 "name": "Bahattin Yaylagül | SEO Uzmanı",
                 "url": "https://bahattinyaylagul.com/seo",
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "description": "Profesyonel SEO hizmetleri ve dijital pazarlama danışmanlığı.",
-                "areaServed": "TR",
+                "description": "Markanızın dijital varlığını güçlendirmek amacıyla profesyonel teknik SEO denetimleri ve semantik içerik stratejileriyle desteklenmiş, ölçülebilir seo danışmanlığı hizmeti sunuyorum.",
+                "priceRange": "[FIYAT_ARALIGI]",
+                "areaServed": ["TR", "İstanbul", "Ankara", "İzmir", "Uzaktan / Remote"],
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
-                    "name": "SEO Danışmanlık Hizmetleri",
+                    "name": "SEO Danışmanlığı Hizmet Kapsamı",
                     "itemListElement": [
                         {
                             "@type": "Offer",
                             "itemOffered": {
                                 "@type": "Service",
-                                "name": "SEO Danışmanlığı",
-                                "description": "Arama motoru optimizasyonu, teknik SEO, içerik stratejisi ve otorite inşası hizmetleri. Google'ın modern algoritmalarına uygun organik büyüme çözümleri.",
-                                "serviceType": "Search Engine Optimization",
-                                "provider": { "@id": "https://bahattinyaylagul.com/#person" }
+                                "name": "Teknik SEO Denetimi",
+                                "description": "Log analizleri, tarama bütçesi yönetimi, Core Web Vitals ve teknik site altyapı denetimleri."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Semantik İçerik Stratejisi",
+                                "description": "Kullanıcı arama niyeti analizi, içerik haritalama ve bilgi boşluğu (information gain) optimizasyonları."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Silo Mimarisi ve Dahili Bağlantı Yapılandırması",
+                                "description": "Bilgi hiyerarşisi oluşturarak otorite sayfaları ve konu otoritelerini besleyen iç bağlantı kurgusu."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Generative Engine Optimization (GEO)",
+                                "description": "Yapay zekâ motorlarında (Perplexity, ChatGPT, Gemini) kaynak gösterilmek ve yanıt üretilmek için optimizasyon."
                             }
                         }
                     ]
@@ -83,24 +137,14 @@ export default function SEOPage() {
             {
                 "@type": "FAQPage",
                 "@id": "https://bahattinyaylagul.com/seo/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "SEO çalışmaları ne zaman sonuç verir?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "SEO uzun vadeli bir yatırımdır. İlk etkiler genellikle 2-3 ay içinde görülmeye başlar, ancak kalıcı ve büyük sonuçlar için 6-12 aylık bir süreç gereklidir."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Sıralama garantisi var mı?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Google algoritmaları sürekli değiştiği için hiçbir profesyonel SEO uzmanı %100 sıralama garantisi veremez. Ancak, trafik ve görünürlük artışı için performans odaklı çalışılmaktadır."
-                        }
+                "mainEntity": faqData.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.a
                     }
-                ]
+                }))
             }
         ]
     };
@@ -280,36 +324,7 @@ export default function SEOPage() {
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight">Sıkça Sorulan Sorular</h2>
                         <div className="space-y-3">
-                            {[
-                                {
-                                    q: "SEO sonuçları ne kadar sürede görülür?",
-                                    a: "Erken iyileşmeler haftalar içinde fark edilebilir; anlamlı organik trafik artışı genellikle üç ila altı ay alır. Rekabetçi anahtar kelimelerde bu süre daha da uzayabilir."
-                                },
-                                {
-                                    q: "SEO ücretsiz midir?",
-                                    a: 'Organik sıralama için Google\'a ödeme yapmazsınız. Ama etkili optimizasyon zaman, uzmanlık ve çoğu zaman araç maliyeti gerektirir. "Ücretsiz" kelimesini "maliyetsiz" ile karıştırmamak gerekir.'
-                                },
-                                {
-                                    q: "Google'ın kaç sıralama faktörü var?",
-                                    a: '"200 sıralama faktörü" sık tekrarlanan bir rakam olsa da Google hiçbir zaman kesin bir liste yayınlamadı. Gerçekte çok daha fazla sinyal söz konusu olabilir. Tek bir faktöre odaklanmak yerine bütünsel bir yaklaşım daha sağlıklı sonuç verir.'
-                                },
-                                {
-                                    q: "Black hat SEO nedir, neden risklidir?",
-                                    a: "Black hat SEO, arama motorlarının onaylamadığı tekniklerin kullanılmasıdır; white hat ise arama motoru şirketlerinin önerdiği yöntemleri kapsar. Black hat yöntemler Google tarafından tespit edildiğinde siteniz cezalandırılır. Kısa vadeli kazanım için uzun vadeli görünürlüğü riske atmak pratikte hiçbir zaman kazançlı çıkmaz."
-                                },
-                                {
-                                    q: "Yapay zeka SEO'yu öldürür mü?",
-                                    a: "Hayır. GEO, arama motoru optimizasyonunun yerini almaz; onu genişletir. Tüketicilerin %82'si yapay zeka destekli aramayı geleneksel SERP'lerden daha faydalı bulduğunu söylüyor; bu, AI Overviews gibi yüzeylerde yer almayı giderek daha kritik kılıyor — ama klasik organik aramanın önemini ortadan kaldırmıyor."
-                                },
-                                {
-                                    q: "Teknik SEO mu, içerik mi daha önemli?",
-                                    a: "İkisi birbirini tamamlar. Teknik altyapı olmadan en kaliteli içerik bile aramada performans göstermekte zorlanır; içerik olmadan teknik zemin boş kalır. Harika içerik üretmek de tek başına organik trafik garantisi değildir."
-                                },
-                                {
-                                    q: "SEO mu, PPC mi tercih edilmeli?",
-                                    a: "İkisi farklı ihtiyaçlara yanıt verir. PPC hızlı görünürlük sağlar ama bütçe kesilince trafik de durur; SEO yavaş büyür ancak sürdürülebilir bir kanal oluşturur. Çoğu durumda kısa vadede PPC, uzun vadede SEO'ya yatırım yapmak ve ikisini birlikte yürütmek en dengeli yaklaşımdır."
-                                },
-                            ].map((item, i) => (
+                            {faqData.map((item, i) => (
                                 <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
                                     <p className="text-base font-bold text-gray-900 mb-2">{item.q}</p>
                                     <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
