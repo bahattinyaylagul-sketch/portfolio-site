@@ -5,11 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-    { label: "Ana Sayfa", href: "/", ariaLabel: "Bahattin Yaylagül Portfolyo Ana Sayfası" },
-    { label: "Hakkımda", href: "/hakkimda", ariaLabel: "Bahattin Yaylagül Hakkında Bilgi" },
-    { label: "SEO", href: "/seo", ariaLabel: "SEO Danışmanlığı ve Organik Büyüme Hizmetleri" },
-    { label: "GEO", href: "/geo", ariaLabel: "GEO (Generative Engine Optimization) Hizmetleri" },
-    { label: "İçgörüler", href: "/icgoruler", ariaLabel: "SEO, GEO ve Yapay Zeka Hakkında İçgörüler" },
+    { label: "Ana Sayfa", href: "/", ariaLabel: "Bahattin Yaylagül Portfolyo Ana Sayfası", srLabel: " - Bahattin Yaylagül Portfolyo Ana Sayfası" },
+    { label: "Hakkımda", href: "/hakkimda", ariaLabel: "Bahattin Yaylagül Hakkında Bilgi", srLabel: " - Bahattin Yaylagül Özgeçmiş ve Detaylar" },
+    { label: "SEO", href: "/seo", ariaLabel: "SEO Danışmanlığı ve Organik Büyüme Hizmetleri", srLabel: " Danışmanlığı ve Organik Büyüme Hizmetleri" },
+    { label: "GEO", href: "/geo", ariaLabel: "GEO (Generative Engine Optimization) Hizmetleri", srLabel: " (Generative Engine Optimization) Danışmanlığı" },
+    { label: "İçgörüler", href: "/icgoruler", ariaLabel: "SEO, GEO ve Yapay Zeka Hakkında İçgörüler", srLabel: " - SEO, GEO ve Yazılım Makaleleri" },
 ];
 
 interface NavigationProps {
@@ -74,6 +74,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                         style={{ position: 'relative', zIndex: 10001 }}
                     >
                         BY.
+                        <span className="sr-only"> - Bahattin Yaylagül Portfolyo Ana Sayfası</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -89,6 +90,7 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                                         }`}
                                 >
                                     {item.label}
+                                    {item.srLabel && <span className="sr-only">{item.srLabel}</span>}
                                 </Link>
                             </li>
                         ))}
@@ -129,13 +131,14 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                 <ul className="flex flex-col gap-4 text-2xl font-light">
                     {navItems.map((item) => (
                         <li key={item.href} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
-                            <Link
+                             <Link
                                 href={item.href}
                                 aria-label={item.ariaLabel}
                                 onClick={() => setMobileMenuOpen(false)}
                                 className={`block border-b border-gray-100 pb-3 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
                             >
                                 {item.label}
+                                {item.srLabel && <span className="sr-only">{item.srLabel}</span>}
                             </Link>
                         </li>
                     ))}

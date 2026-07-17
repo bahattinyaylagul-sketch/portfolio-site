@@ -336,6 +336,7 @@ export default function SEOPage() {
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
                             <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Detaylı Bilgi" className="shrink-0 group">
+                                <span className="sr-only">Bahattin Yaylagül Kimdir ve Hakkında Detaylar</span>
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative">
                                     <Image
                                         src="/images/bahattin-yaylagul.jpg"

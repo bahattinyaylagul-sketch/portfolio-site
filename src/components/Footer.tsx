@@ -33,6 +33,7 @@ export default function Footer() {
                             className="text-2xl font-bold tracking-widest block"
                         >
                             BY.
+                            <span className="sr-only"> - Bahattin Yaylagül Portfolyo Ana Sayfası</span>
                         </Link>
                         <p className="text-gray-400 text-sm mt-2 max-w-sm">
                             SEO & GEO odaklı dijital görünürlük danışmanlığı
