@@ -170,9 +170,8 @@ export default function SEOPage() {
                             </span>
                         </h1>
 
-                        {/* Tanıtım Paragrafı */}
                         <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
-                            [BURAYA DEĞER ÖNERMESİ]
+                            Sitenizi yalnızca Google için değil, yapay zekâ aramaları için de görünür kılıyorum. Teknik denetimden içerik stratejisine tüm süreci tek elden yürütüyor, her ay ölçülebilir raporla ilerlemeyi gösteriyorum.
                         </p>
 
                         <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
