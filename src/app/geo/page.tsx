@@ -27,11 +27,27 @@ export const metadata: Metadata = {
 const faqData = [
     {
         q: "GEO ile SEO arasındaki fark nedir?",
-        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler."
+        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler. Google'da üst sıraya çıkmak için bağlantı ve anahtar kelime yeterliyken, ChatGPT veya Perplexity'de anılmak için modelin sizi bir otorite olarak 'öğrenmesi' gerekir — bu farklı bir sinyal seti demektir."
+    },
+    {
+        q: "Mevcut SEO ajansım varken ayrıca GEO danışmanı almam gerekir mi?",
+        a: "Evet, genellikle gerekir. GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; aksine teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir. Ajansınıza şunu sorabilirsiniz: 'Hangi yapay zeka platformlarında anılıyoruz ve bunu nasıl ölçüyoruz?' Cevap alamıyorsanız o boşluğu dolduracak bir uzmana ihtiyacınız var demektir."
+    },
+    {
+        q: "GEO ile AEO aynı şey midir?",
+        a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir. AEO'yu 'yapay zekaya okunabilir içerik üretmek' olarak, GEO'yu ise 'yapay zekanın sizi güvenilir kaynak olarak kodlaması' olarak düşünebilirsiniz."
     },
     {
         q: "GEO sonuçları ne kadar sürede görülür?",
-        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir."
+        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir. LLM'ler çelişkili bilgilerle karşılaştığında belirsizliği çözmek yerine o konuyu tamamen geçer; tutarsız marka anlatısı bu süreyi ciddi ölçüde uzatır."
+    },
+    {
+        q: "SEO altyapım yoksa GEO'ya başlayabilir miyim?",
+        a: "Başlayabilirsiniz, ancak teknik SEO ve GEO çalışmalarını paralel yürütmek en verimli yöntemdir; biri diğerini beklesin diye vakit kaybetmeyin."
+    },
+    {
+        q: "YMYL sektöründe GEO çalışır mı?",
+        a: "Çalışır, ancak sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; dolayısıyla entity (varlık) otoritesi ve kaynak güvenilirliği diğer sektörlere kıyasla çok daha belirleyici hale gelir."
     }
 ];
 
@@ -44,7 +60,7 @@ export default function GEOPage() {
                 "@id": "https://bahattinyaylagul.com/#person",
                 "name": "Bahattin Yaylagül",
                 "url": "https://bahattinyaylagul.com",
-                "jobTitle": "Senior SEO & GEO Architect",
+                "jobTitle": "SEO Consultant",
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
                 "sameAs": ["https://linkedin.com/in/bahattin-yaylagul"]
             },
@@ -166,11 +182,11 @@ export default function GEOPage() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
-                            Markanızı ChatGPT, Gemini ve Perplexity gibi yapay zekâ arama motorlarına hazırlayın. Generative Engine Optimization (GEO) ile yapay zeka kaynaklı organik görünürlük kazanın.
+                            Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
                         </p>
 
                         <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
-                            Entity tutarlılığı, otoriter co-citation ve makine-okunabilir semantik şema kurgusu ile LLM entegrasyonu.
+                            Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
                         </p>
 
                         {/* Yazar Bilgisi / Author Info */}
@@ -262,16 +278,23 @@ export default function GEOPage() {
                     </div>
                 </section>
 
-                {/* FAQ */}
+                {/* FAQ - Tekilleştirilmiş ve accordion (details) formatına alınmış tekil SSS */}
                 <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
-                        <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight">Sıkça Sorulan Sorular</h2>
-                        <div className="space-y-3">
+                        <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight text-center">Sıkça Sorulan Sorular</h2>
+                        <div className="space-y-4 max-w-3xl mx-auto">
                             {faqData.map((item, i) => (
-                                <div key={i} className="p-6 bg-white rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                    <p className="text-base font-bold text-gray-900 mb-2">{item.q}</p>
-                                    <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
-                                </div>
+                                <details key={i} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+                                    <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
+                                        <span className="font-bold text-gray-950 text-base pr-4">{item.q}</span>
+                                        <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </summary>
+                                    <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
+                                        {item.a}
+                                    </div>
+                                </details>
                             ))}
                         </div>
                     </div>
@@ -298,7 +321,7 @@ export default function GEOPage() {
                                     <Link href="/hakkimda" aria-label="Bahattin Yaylagül Özgeçmiş ve Hakkında" className="hover:text-violet-600 transition-colors">
                                         <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                     </Link>
-                                    <span className="px-3 py-1 bg-violet-50 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">Senior SEO &amp; GEO Architect</span>
+                                    <span className="px-3 py-1 bg-violet-50 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center md:justify-start">
                                     <Link href="/hakkimda" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 hover:text-gray-950 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm rounded-full transition-all">

@@ -4,41 +4,14 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const headings = [
-    { id: "geo-nedir", text: "1. GEO Danışmanlığı Nedir?" },
-    { id: "geo-danismani-ne-yapar", text: "2. GEO Danışmanı Ne Yapar?" },
-    { id: "platform-bazli-strateji", text: "3. Platform Bazlı GEO Stratejisi" },
-    { id: "ne-zaman-sonuc-verir", text: "4. GEO Ne Zaman Sonuç Verir?" },
-    { id: "sektorel-vakalar", text: "5. Sektör Bazlı GEO Vakaları" },
-    { id: "geo-basarisi", text: "6. GEO Başarısı Nasıl Ölçülür?" },
-    { id: "danisman-secimi", text: "7. GEO Danışmanı Seçerken 6 Soru" },
-    { id: "sik-sorulan-sorular", text: "8. Sık Sorulan Sorular" }
-];
-
-const faqItems = [
-    {
-        q: "GEO ile SEO arasındaki fark nedir?",
-        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler."
-    },
-    {
-        q: "Mevcut SEO ajansım varken ayrıca GEO danışmanı almam gerekir mi?",
-        a: "GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir."
-    },
-    {
-        q: "GEO ile AEO aynı şey midir?",
-        a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir."
-    },
-    {
-        q: "GEO sonuçları ne kadar sürede görülür?",
-        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir."
-    },
-    {
-        q: "SEO altyapım yoksa GEO'ya başlayabilir miyim?",
-        a: "Teknik SEO ve GEO çalışmalarını paralel yürütün; biri diğerini beklesin diye vakit kaybetmeyin."
-    },
-    {
-        q: "YMYL sektöründe GEO çalışır mı?",
-        a: "Sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; entity otoritesi daha belirleyicidir."
-    }
+    { id: "geo-nedir", text: "GEO Danışmanlığı Nedir?" },
+    { id: "geo-danismani-ne-yapar", text: "GEO Danışmanı Ne Yapar?" },
+    { id: "platform-bazli-strateji", text: "Platform Bazlı GEO Stratejisi" },
+    { id: "ne-zaman-sonuc-verir", text: "GEO Çalışması Ne Zaman Sonuç Verir?" },
+    { id: "sektorel-vakalar", text: "Sektör Bazlı GEO Vakaları" },
+    { id: "geo-basarisi", text: "GEO Başarısı Nasıl Ölçülür?" },
+    { id: "danisman-secimi", text: "GEO Danışmanı Seçerken 6 Soru" },
+    { id: "faq-section", text: "Sıkça Sorulan Sorular" }
 ];
 
 const expertiseAreas = [
@@ -308,7 +281,7 @@ export default function GEOContent() {
                                 {headings.map((heading, i) => (
                                     <a
                                         key={i}
-                                        href={`#${heading.id}`}
+                                        href={heading.id === "faq-section" ? `#${heading.id}` : `#${heading.id}`}
                                         className="block py-3 pl-4 text-sm text-gray-600 hover:text-violet-700 hover:border-l-2 hover:border-violet-700 -ml-0.5 transition-all leading-relaxed"
                                     >
                                         <span className="font-mono text-xs text-gray-400 mr-2 font-medium">
@@ -323,7 +296,7 @@ export default function GEOContent() {
 
                     <div className="min-w-0">
                         <section className={`${proseBase} mb-16`} id="geo-nedir" aria-labelledby="geo-nedir-title">
-                            <h2 id="geo-nedir-title">1. GEO Danışmanlığı Nedir?</h2>
+                            <h2 id="geo-nedir-title">GEO Danışmanlığı Nedir?</h2>
                             <p>
                                 GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir. Klasik SEO'dan temel farkı şudur: arama motoru algoritması değil, AI modelinin markanızı tanıması, anlaması ve güvenmesi hedeflenir.
                             </p>
@@ -333,7 +306,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="geo-danismani-ne-yapar" aria-labelledby="geo-danismani-title">
-                            <h2 id="geo-danismani-title">2. GEO Danışmanı Ne Yapar?</h2>
+                            <h2 id="geo-danismani-title">GEO Danışmanı Ne Yapar?</h2>
                             
                             <h3>Entity Tutarlılığı Kurma</h3>
                             <p>
@@ -341,7 +314,7 @@ export default function GEOContent() {
                             </p>
 
                             <div className="not-prose bg-amber-50 border border-amber-200 rounded-2xl p-6 my-6">
-                                <h4 className="font-bold text-amber-900 mb-2">⚠️ Somut Entity Tutarlılığı Hata Örneği:</h4>
+                                <h3 className="text-base font-bold text-amber-900 mb-2">⚠️ Somut Entity Tutarlılığı Hata Örneği:</h3>
                                 <p className="text-sm text-amber-800 leading-relaxed">
                                     Gerçek bir müşteri analizinde; markanın ana sitesinde kurucu adı <strong>"Ahmet Yılmaz"</strong> olarak geçerken, Crunchbase profilinde eski kurucu ortağın isminin kalması ve LinkedIn şirket sayfasında ana kategorinin "Finans" yerine yanlışlıkla "Yazılım" olarak seçilmesi sebebiyle Gemini ve ChatGPT modellerinin markayı yanlış kategorize edip, eski ortağı kurucu olarak atfettiği saptanmıştır. Yapılan temizlikle sinyaller eşitlenmiş ve model güveni yeniden sağlanmıştır.
                                 </p>
@@ -364,7 +337,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
-                            <h2 id="platform-bazli-title">3. Platform Bazlı GEO Stratejisi: ChatGPT, Perplexity ve Gemini</h2>
+                            <h2 id="platform-bazli-title">Platform Bazlı GEO Stratejisi</h2>
                             <p>
                                 "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity and Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
                             </p>
@@ -409,7 +382,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="ne-zaman-sonuc-verir" aria-labelledby="ne-zaman-sonuc-title">
-                            <h2 id="ne-zaman-sonuc-title">4. GEO Çalışması Ne Zaman Sonuç Verir?</h2>
+                            <h2 id="ne-zaman-sonuc-title">GEO Çalışması Ne Zaman Sonuç Verir?</h2>
                             <p>
                                 Yapay zeka modellerinde önerilmeye başlamak 3 ile 9 ay arasında sinyal birikimi gerektirir.
                             </p>
@@ -425,7 +398,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="sektorel-vakalar" aria-labelledby="sektorel-vakalar-title">
-                            <h2 id="sektorel-vakalar-title">5. Sektör Bazlı GEO Vakaları</h2>
+                            <h2 id="sektorel-vakalar-title">Sektör Bazlı GEO Vakaları</h2>
 
                             <h3>Hukuk: YMYL Kısıtını Schema.org/Person ile Aşmak</h3>
                             <p>
@@ -444,7 +417,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="geo-basarisi" aria-labelledby="geo-basarisi-title">
-                            <h2 id="geo-basarisi-title">6. GEO Başarısı Nasıl Ölçülür?</h2>
+                            <h2 id="geo-basarisi-title">GEO Başarısı Nasıl Ölçülür?</h2>
                             <p>
                                 GEO'nun getirisi anlık dönüşüm değil, erişim genişliği üzerinden ölçülür: kaç platformda, kaç sorgu tipinde, kaç farklı kaynak üzerinden görünürsünüz.
                             </p>
@@ -465,7 +438,7 @@ export default function GEOContent() {
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="danisman-secimi" aria-labelledby="danisman-secimi-title">
-                            <h2 id="danisman-secimi-title">7. GEO Danışmanı Seçerken Sormanız Gereken 6 Soru</h2>
+                            <h2 id="danisman-secimi-title">GEO Danışmanı Seçerken Sormanız Gereken 6 Soru</h2>
                             
                             <ol>
                                 <li><strong>Platform bazlı strateji ayrıştırıyor musunuz?</strong> ChatGPT, Perplexity ve Gemini aynı şekilde çalışmaz.</li>
@@ -483,26 +456,6 @@ export default function GEOContent() {
                                 </p>
                             </div>
                         </section>
-
-                        <section className={`${proseBase} mb-8`} id="sik-sorulan-sorular" aria-labelledby="faq-title">
-                            <h2 id="faq-title">8. Sık Sorulan Sorular</h2>
-                        </section>
-
-                        <div className="not-prose space-y-4 my-8">
-                            {faqItems.map((item, i) => (
-                                <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
-                                    <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors list-none">
-                                        <span className="font-semibold text-gray-900 pr-4">{item.q}</span>
-                                        <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </summary>
-                                    <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
-                                        {item.a}
-                                    </div>
-                                </details>
-                            ))}
-                        </div>
 
                         <div className="border-t border-gray-100 mt-16 pt-8">
                             <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
