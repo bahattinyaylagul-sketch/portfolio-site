@@ -6,12 +6,79 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "llms.txt Nedir? Tanım, Format, Etkinlik Analizi ve Uygulama Rehberi – Bahattin Yaylagül",
+    title: "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
     description: "llms.txt nedir, nasıl oluşturulur ve gerçekten işe yarıyor mu? 300.000 domain analizi, robots.txt farkı, format rehberi ve maliyet-fayda değerlendirmesi.",
     alternates: {
         canonical: "/icgoruler/llms-txt-nedir",
     },
 };
+
+const jsonLd = `[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
+    "description": "llms.txt nedir, nasil olusturulur ve gercekten ise yariyor mu? 300.000 domain analizi, format rehberi ve maliyet-fayda degerlendirmesi.",
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "author": {
+      "@type": "Person",
+      "name": "Bahattin Yaylagul",
+      "url": "https://bahattinyaylagul.com/hakkimda"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Bahattin Yaylagul",
+      "url": "https://bahattinyaylagul.com"
+    },
+    "url": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir"
+    },
+    "inLanguage": "tr"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com" },
+      { "@type": "ListItem", "position": 2, "name": "Icgoruler", "item": "https://bahattinyaylagul.com/icgoruler" },
+      { "@type": "ListItem", "position": 3, "name": "llms.txt Nedir?", "item": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "llms.txt dosyasi zorunlu mu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hayir. Direktiflere uyum LLM tercihine birakilmistir." }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi AI sistemleri llms.txt okuyor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Kesin liste yok. GPTBot zaman zaman cekiyor. Google henuz desteklemiyor." }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txt SEO katki saglar mi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Dogrudan katkisi kanitlanmamis. 300.000 domain analizi korelasyon olmadigini gosterdi." }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txt ne siklikla guncellenmelidir?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Site guncellendikce llms.txt de yenilenmelidir." }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txt ile llms-full.txt farki nedir?",
+        "acceptedAnswer": { "@type": "Answer", "text": "llms.txt kisa rehber dosyasidir. llms-full.txt tum icerigi tek dosyada toplar." }
+      }
+    ]
+  }
+]`;
 
 const headings = [
     { id: "llms-txt-nedir", text: "1. llms.txt Nedir?" },
@@ -26,13 +93,17 @@ const headings = [
 export default function LlmsTxtPage() {
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: jsonLd }}
+            />
             {/* Fixed Header */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
             {/* Hero */}
-            <div className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
+            <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/llms-txt-hero.png"
@@ -119,7 +190,7 @@ export default function LlmsTxtPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-12 pb-20">
                 {/* Breadcrumb */}
@@ -133,7 +204,7 @@ export default function LlmsTxtPage() {
 
                 <div className="grid lg:grid-cols-[250px_1fr] gap-12 items-start relative">
                     {/* TOC Sidebar */}
-                    <aside className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar">
+                    <aside className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar" aria-label="İçindekiler">
                         <div>
                             <div className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2">
                                 <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -177,6 +248,7 @@ export default function LlmsTxtPage() {
                                 mb-16"
                         >
                             <h2 id="llms-txt-nedir">1. llms.txt Nedir?</h2>
+                            {/* section wrapper handled by article/prose container */}
                             <p>
                                 llms.txt, büyük dil modellerinin bir web sitesinin en kritik içeriklerini daha kolay bulup anlaması için kök dizine yerleştirilen, Markdown formatında yazılmış <strong>önerilen bir metin dosyasıdır</strong>. Eylül 2024'te Avustralyalı teknolog Jeremy Howard tarafından ortaya atılan bu standart, robots.txt ve XML sitemap protokollerine benzer bir mantıkla çalışır; ancak hedef kitle arama motorları değil, ChatGPT, Claude ve Perplexity gibi LLM tabanlı yapay zeka sistemleridir.
                             </p>
@@ -323,12 +395,12 @@ export default function LlmsTxtPage() {
                         <div className="not-prose grid md:grid-cols-2 gap-6 my-8">
                             <div className="p-6 bg-gray-50 border border-gray-200 rounded-xl">
                                 <div className="text-2xl mb-3">🚧</div>
-                                <h4 className="font-bold text-gray-900 mb-2">robots.txt = Kapı Bekçisi</h4>
+                                <h3 className="font-bold text-gray-900 mb-2">robots.txt = Kapı Bekçisi</h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">Neyin taranacağını kontrol eder. Bağlayıcıdır — arama motorları bu direktiflere uyar.</p>
                             </div>
                             <div className="p-6 bg-blue-50 border border-blue-100 rounded-xl">
                                 <div className="text-2xl mb-3">📋</div>
-                                <h4 className="font-bold text-gray-900 mb-2">llms.txt = Brifing Belgesi</h4>
+                                <h3 className="font-bold text-gray-900 mb-2">llms.txt = Brifing Belgesi</h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">Yapay zekaya sitenin ne hakkında olduğunu ve hangi içeriğin öncelikli olduğunu anlatır. Bağlayıcı değildir.</p>
                             </div>
                         </div>
@@ -508,9 +580,9 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                         {/* Pros / Cons */}
                         <div className="not-prose grid md:grid-cols-2 gap-6 my-8">
                             <div className="p-6 bg-green-50 border border-green-200 rounded-xl">
-                                <h4 className="font-bold text-green-800 mb-4 flex items-center gap-2">
+                                <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
                                     <span className="text-xl">✅</span> Artılar
-                                </h4>
+                                </h3>
                                 <ul className="space-y-3 text-sm text-green-800">
                                     <li className="flex gap-2"><span className="mt-0.5">•</span><span>Standart ileride olgunlaşırsa hazır olursunuz</span></li>
                                     <li className="flex gap-2"><span className="mt-0.5">•</span><span>Düşük teknik maliyet (birkaç saat iş)</span></li>
@@ -519,9 +591,9 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                                 </ul>
                             </div>
                             <div className="p-6 bg-red-50 border border-red-200 rounded-xl">
-                                <h4 className="font-bold text-red-800 mb-4 flex items-center gap-2">
+                                <h3 className="font-bold text-red-800 mb-4 flex items-center gap-2">
                                     <span className="text-xl">❌</span> Eksiler
-                                </h4>
+                                </h3>
                                 <ul className="space-y-3 text-sm text-red-800">
                                     <li className="flex gap-2"><span className="mt-0.5">•</span><span>Direktiflere uyum LLM'in tercihine bırakılmış</span></li>
                                     <li className="flex gap-2"><span className="mt-0.5">•</span><span>Rakiplerin içerik stratejinizi tek bakışta analiz etmesini kolaylaştırır</span></li>
@@ -533,7 +605,7 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
 
                         {/* Sector Priority */}
                         <div className="not-prose my-8 space-y-3">
-                            <h4 className="font-bold text-gray-900 text-lg mb-4">Sektöre Göre Öncelik Sırası</h4>
+                            <h3 className="font-bold text-gray-900 text-lg mb-4">Sektöre Göre Öncelik Sırası</h3>
                             <div className="flex items-center gap-4 p-4 bg-blue-50 border border-blue-100 rounded-xl">
                                 <span className="text-2xl">📚</span>
                                 <div>
@@ -612,8 +684,8 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                         </div>
 
                         {/* Sources */}
-                        <div className="not-prose mt-12 p-6 bg-gray-50 border border-gray-200 rounded-xl">
-                            <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Kaynaklar</h4>
+                        <aside className="not-prose mt-12 p-6 bg-gray-50 border border-gray-200 rounded-xl" aria-label="Kaynaklar">
+                            <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Kaynaklar</h3>
                             <ul className="space-y-2">
                                 <li>
                                     <a href="https://seranking.com/blog/llms-txt/" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
@@ -626,10 +698,10 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </aside>
 
                         {/* CTA */}
-                        <div className="my-16 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative overflow-hidden">
+                        <aside className="my-16 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative overflow-hidden" aria-label="GEO Danışmanlığı Teklifi">
                             <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-gray-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
 
                             <div className="relative z-10 flex-1">
@@ -650,7 +722,7 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                                     </svg>
                                 </Link>
                             </div>
-                        </div>
+                        </aside>
 
                         {/* Back Link */}
                         <div className="border-t border-gray-100 mt-16 pt-8">
