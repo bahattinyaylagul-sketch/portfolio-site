@@ -20,15 +20,19 @@ const jsonLd = `[
     "headline": "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
     "description": "llms.txt nedir, nasil olusturulur ve gercekten ise yariyor mu? 300.000 domain analizi, format rehberi ve maliyet-fayda degerlendirmesi.",
     "datePublished": "2026-07-04",
-    "dateModified": "2026-07-04",
+    "dateModified": "2026-07-18",
     "author": {
       "@type": "Person",
       "name": "Bahattin Yaylagul",
-      "url": "https://bahattinyaylagul.com/hakkimda"
+      "url": "https://bahattinyaylagul.com/hakkimda",
+      "sameAs": [
+        "https://linkedin.com/in/bahattinyaylagul",
+        "https://bahattinyaylagul.com"
+      ]
     },
     "publisher": {
-      "@type": "Person",
-      "name": "Bahattin Yaylagul",
+      "@type": "Organization",
+      "name": "bahattinyaylagul.com",
       "url": "https://bahattinyaylagul.com"
     },
     "url": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir",
@@ -36,7 +40,35 @@ const jsonLd = `[
       "@type": "WebPage",
       "@id": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir"
     },
-    "inLanguage": "tr"
+    "inLanguage": "tr",
+    "mentions": [
+      {
+        "@type": "Person",
+        "name": "Jeremy Howard",
+        "sameAs": "https://www.wikidata.org/wiki/Q111742353"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "GPTBot",
+        "operatingSystem": "Web",
+        "description": "OpenAI web crawler used to train GPT models"
+      },
+      {
+        "@type": "WebPage",
+        "name": "robots.txt",
+        "description": "Standard protocol to control web crawler access to a website"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Claude",
+        "manufacturer": { "@type": "Organization", "name": "Anthropic" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Perplexity",
+        "manufacturer": { "@type": "Organization", "name": "Perplexity AI" }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -54,27 +86,32 @@ const jsonLd = `[
       {
         "@type": "Question",
         "name": "llms.txt dosyasi zorunlu mu?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Hayir. Direktiflere uyum LLM tercihine birakilmistir." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Hayir, llms.txt hicbir platform tarafindan zorunlu tutulmamaktadir. Direktiflere uyum tamamen LLM veya AI ajaninin tercihine birakilmistir; dosyayi olusturmazsaniz yasal, teknik veya SEO acisindan herhangi bir yaptirimla karsilasmaz, arama siraniz dusmez." }
       },
       {
         "@type": "Question",
         "name": "Hangi AI sistemleri llms.txt okuyor?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Kesin liste yok. GPTBot zaman zaman cekiyor. Google henuz desteklemiyor." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Kesin ve guncel bir liste bulunmuyor. Bazi SEO log analizleri GPTBot zaman zaman llms.txt dosyalarini cekiyor olsa da bu davranis duzensiz ve dogrulanmamistir. Google AI Overviews, Bing Copilot ve Perplexity bu dosyayi resmi olarak destekledigine dair aciklama yapmamistir." }
       },
       {
         "@type": "Question",
         "name": "llms.txt SEO katki saglar mi?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Dogrudan katkisi kanitlanmamis. 300.000 domain analizi korelasyon olmadigini gosterdi." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Dogrudan SEO katkisi istatistiksel olarak kanitlanmamistir. SE Ranking analizi 300.000 domaini inceledi; llms.txt varligi ile AI atif sikligi arasinda korelasyon bulunamadi. Google henuz bu dosyayi bir siralama sinyali olarak tanimadigi icin klasik arama performansinizi etkilemez." }
       },
       {
         "@type": "Question",
         "name": "llms.txt ne siklikla guncellenmelidir?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Site guncellendikce llms.txt de yenilenmelidir." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yeni sayfa, urun, hizmet veya onemli icerik degisikliginde llms.txt guncellenmesi onerilir. Eski kalip bir llms.txt, LLM sisteminin sitenizi yanlis ozet cikarmasina yol acabilir; bu durum dosyanin temel amacina ters duser ve AI gorunurlugunu olumsuz etkileyebilir." }
       },
       {
         "@type": "Question",
         "name": "llms.txt ile llms-full.txt farki nedir?",
-        "acceptedAnswer": { "@type": "Answer", "text": "llms.txt kisa rehber dosyasidir. llms-full.txt tum icerigi tek dosyada toplar." }
+        "acceptedAnswer": { "@type": "Answer", "text": "llms.txt, sitenin en kritik sayfalarini isaret eden kisaltilmis bir rehber dosyasidir; model burayi okuduktan sonra istegi sayfalari ayrica ceker. llms-full.txt ise tum site icerigini tek duz metin dosyasinda birlestirir, boylece model ek istek gondermeye gerek duymaz." }
+      },
+      {
+        "@type": "Question",
+        "name": "llms.txt olmayan siteler yapay zekada gorunmez mi?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hayir, bu yanlis bir yargistir. llms.txt Eylul 2024 ortaya cikmis ihtiyari bir standarttir ve AI gorunurlugunun on kosulu kesinlikle degildir. LLM sistemleri bu dosyayi hic olmayan milyonlarca siteyi zaten tararken icerik kalitesi ve otorite sinyallerini daha belirleyici faktor olarak kullanmaktadir." }
       }
     ]
   }
@@ -141,6 +178,8 @@ export default function LlmsTxtPage() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
                                         <span>4 Temmuz 2026</span>
+                                        <span className="text-white/25 mx-1">·</span>
+                                        <span className="text-blue-400/80 text-xs font-medium">Son güncelleme: 18 Temmuz 2026</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -646,27 +685,27 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                             {[
                                 {
                                     q: "llms.txt dosyası zorunlu mu?",
-                                    a: "Hayır. llms.txt direktiflerine uyum LLM veya AI ajanının tercihine bırakılmıştır. Dosyayı oluşturmazsanız yasal veya teknik bir yaptırımla karşılaşmazsınız."
+                                    a: "Hayır, llms.txt hiçbir platform tarafından zorunlu tutulmamaktadır. Direktiflere uyum tamamen LLM veya AI ajanının tercihine bırakılmıştır; dosyayı oluşturmazsanız yasal, teknik veya SEO açısından herhangi bir yaptırımla karşılaşmaz, arama sıranız düşmez."
                                 },
                                 {
                                     q: "Hangi AI sistemleri llms.txt'yi okuyor?",
-                                    a: "Kesin bir liste yok. Bazı SEO logları GPTBot'un zaman zaman llms.txt dosyalarını çektiğini gösteriyor. Google'ın llms.txt dosyasını desteklediğine dair henüz herhangi bir bilgi bulunmuyor. Anthropic ve Perplexity kendi llms-full.txt dosyalarını yayımlıyor, ancak bu dosyaları aktif olarak okuyup okumadıkları ayrı bir soru."
+                                    a: "Kesin ve güncel bir liste bulunmuyor. Bazı SEO log analizleri GPTBot'un zaman zaman llms.txt dosyalarını çektiğini gösterse de bu davranış düzensiz ve doğrulanmamıştır. Google AI Overviews, Bing Copilot ve Perplexity bu dosyayı resmi olarak desteklediğine dair açıklama yapmamıştır."
                                 },
                                 {
                                     q: "llms.txt SEO'ya katkı sağlar mı?",
-                                    a: "Doğrudan bir katkısı kanıtlanmış değil. İstatistiksel analiz, llms.txt varlığı ile AI atıf sıklığı arasında korelasyon olmadığını ortaya koydu. Geleneksel arama sıralamanıza da etkisi beklenmez; Google bu dosyayı henüz tanımıyor."
+                                    a: "Doğrudan SEO katkısı istatistiksel olarak kanıtlanmamıştır. SE Ranking analizi 300.000 domaini inceledi; llms.txt varlığı ile AI atıf sıklığı arasında korelasyon bulunamadı. Google henüz bu dosyayı bir sıralama sinyali olarak tanımadığı için klasik arama performansınızı etkilemez."
                                 },
                                 {
                                     q: "llms.txt ne sıklıkla güncellenmelidir?",
-                                    a: "Web siteniz güncellendiğinde llms.txt de yenilenmelidir. Statik bırakılan bir llms.txt zamanla sitenizi yanlış temsil eder — bu dosyanın asıl amacına aykırıdır."
+                                    a: "Yeni sayfa, ürün, hizmet veya önemli içerik değişikliğinde llms.txt güncellenmesi önerilir. Eski kalmış bir llms.txt, LLM sisteminin sitenizi yanlış özetlemesine yol açabilir; bu durum dosyanın temel amacına ters düşer ve AI görünürlüğünü olumsuz etkileyebilir."
                                 },
                                 {
                                     q: "llms.txt ile llms-full.txt arasındaki fark nedir?",
-                                    a: "llms.txt, sitenin en önemli içeriklerine işaret eden kısa yapılandırılmış bir rehber dosyasıdır. llms-full.txt ise tüm içeriği tek düz metin dosyasında birleştirir. Anthropic, Perplexity ve Zapier bu dosyayı yayımlamaktadır."
+                                    a: "llms.txt, sitenin en kritik sayfalarına işaret eden kısaltılmış bir rehber dosyasıdır; model buraayı okuduktan sonra istediği sayfaları ayrıca çeker. llms-full.txt ise tüm site içeriğini tek düz metin dosyasında birleştirir, böylece model ek istek göndermeden tüm içeriğe ulaşır."
                                 },
                                 {
                                     q: "llms.txt olmayan siteler AI'da hiç görünmez mi?",
-                                    a: "Hayır. llms.txt, Eylül 2024'te ortaya çıkmış önerilen bir standarttır — AI görünürlüğünün ön koşulu değil. LLM'ler bu dosya olmayan milyonlarca siteyi zaten tarıyor ve içerik kalitesine, otorite sinyallerine göre atıf yapıyor. Bununla birlikte kalitesiz bir llms.txt, hiç olmamasından daha kötü sonuç doğurabilir."
+                                    a: "Hayır, bu yanlış bir yargıdır. llms.txt Eylül 2024'te ortaya çıkmış ihtiyari bir standarttır ve AI görünürlüğünün ön koşulu kesinlikle değildir. LLM sistemleri bu dosyayı hiç olmayan milyonlarca siteyi zaten tararken içerik kalitesi ve otorite sinyallerini daha belirleyici faktör olarak kullanmaktadır."
                                 },
                             ].map((item, i) => (
                                 <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
@@ -686,16 +725,18 @@ Sitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.
                         {/* Sources */}
                         <aside className="not-prose mt-12 p-6 bg-gray-50 border border-gray-200 rounded-xl" aria-label="Kaynaklar">
                             <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Kaynaklar</h3>
-                            <ul className="space-y-2">
-                                <li>
+                            <ul className="space-y-3">
+                                <li className="flex flex-col gap-0.5">
                                     <a href="https://seranking.com/blog/llms-txt/" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
-                                        LLMs.txt: Why Brands Rely On It and Why It Doesn't Work — SE Ranking
+                                        LLMs.txt: Why Brands Rely On It and Why It Doesn&apos;t Work — SE Ranking
                                     </a>
+                                    <span className="text-xs text-gray-400">SE Ranking Blog · Ocak 2025 · 300.000 domain XGBoost analizi</span>
                                 </li>
-                                <li>
+                                <li className="flex flex-col gap-0.5">
                                     <a href="https://searchengineland.com/llms-txt-proposed-standard-453676" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
                                         Meet llms.txt, a proposed standard for AI website content crawling — Search Engine Land
                                     </a>
+                                    <span className="text-xs text-gray-400">Search Engine Land · Eylül 2024 · Jeremy Howard önerisi ilk haberi</span>
                                 </li>
                             </ul>
                         </aside>
