@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,7 +34,7 @@ const testimonials = [
         companyLogo: "/images/references/dunyagoz-yeni.png",
         photo: "/images/testimonials/sertac-sakarya.jpg",
         accentColor: "#14b8a6",
-        quote: "Sağlık sektöründe YMYL kriterlerine uygun, güvenilir ve otoriter içerik üretmek kritik öneme sahip. Bahattin'in E-E-A-T odaklı stratejisi sayesinde Dünyagöz, Google'ın tıbbi sorgu sonuçlarında çok daha güçlü bir yer edindi. Hem organik trafik hem de hasta başvurusu kanallarımız belirgin şekilde güçlendi.",
+        quote: "Sağlık sektöründe YMYL kriterlerine uygun, güvenilir ve otoriter içerik üretmek kritik öneme sahip. Bahattin'in E-E-A-T odaklı stratejisi sayesinde Dünyagöz, Google'ın tıbbi sorgu sonuçlarında çok daha güçlü bir yer edinedi. Hem organik trafik hem de hasta başvurusu kanallarımız belirgin şekilde güçlendi.",
         caseStudy: null,
     },
 ];
@@ -42,19 +42,25 @@ const testimonials = [
 export default function TestimonialsSection() {
     const [current, setCurrent] = useState(0);
     const [animating, setAnimating] = useState(false);
+    const animTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const go = useCallback((idx: number) => {
-        if (animating) return;
+        // Clear any ongoing animation timeouts
+        if (animTimeoutRef.current) {
+            clearTimeout(animTimeoutRef.current);
+        }
+
         setAnimating(true);
-        setTimeout(() => {
+        animTimeoutRef.current = setTimeout(() => {
             setCurrent(idx);
             setAnimating(false);
         }, 220);
-    }, [animating]);
+    }, []);
 
     const prev = () => go((current - 1 + testimonials.length) % testimonials.length);
     const next = () => go((current + 1) % testimonials.length);
 
+    // Auto rotate every 7 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             go((current + 1) % testimonials.length);
@@ -62,6 +68,7 @@ export default function TestimonialsSection() {
         return () => clearInterval(interval);
     }, [current, go]);
 
+    // Handle initial hash routing & hashchange securely
     useEffect(() => {
         if (typeof window !== "undefined") {
             const handleHash = () => {
@@ -72,13 +79,18 @@ export default function TestimonialsSection() {
                 }
             };
             window.addEventListener("hashchange", handleHash);
-            // Sayfa ilk yüklendiğinde hash varsa tetikle
+            // Check immediately on mount/load
             handleHash();
-            return () => window.removeEventListener("hashchange", handleHash);
+            return () => {
+                window.removeEventListener("hashchange", handleHash);
+                if (animTimeoutRef.current) {
+                    clearTimeout(animTimeoutRef.current);
+                }
+            };
         }
     }, [go]);
 
-    const t = testimonials[current];
+    const t = testimonials[current] || testimonials[0];
 
     return (
         <section id="testimonials" className="bg-white py-20 px-6 border-b border-gray-100" aria-labelledby="testimonials-heading">
@@ -95,7 +107,6 @@ export default function TestimonialsSection() {
                         </h2>
                     </div>
                     <div className="flex items-center gap-4 mt-2">
-
                         <div className="flex gap-2">
                             <button
                                 onClick={prev}
@@ -121,7 +132,7 @@ export default function TestimonialsSection() {
 
                 {/* Ana İçerik */}
                 <div
-                    className={`grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-center transition-opacity duration-200 ${animating ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}`}
+                    className={`grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-center transition-all duration-200 ${animating ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}`}
                 >
                     {/* Sol: Fotoğraf */}
                     <div className="relative flex-shrink-0">
@@ -172,7 +183,6 @@ export default function TestimonialsSection() {
                                 <div className="font-bold text-gray-900 text-base">{t.name}</div>
                                 <div className="text-gray-500 text-sm mt-0.5">{t.title} · {t.company}</div>
                             </div>
-
                         </div>
 
                         {/* Nokta Nav */}
