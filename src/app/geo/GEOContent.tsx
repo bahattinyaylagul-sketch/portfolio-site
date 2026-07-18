@@ -1,504 +1,294 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-// Table of Contents
-const tableOfContents = [
-    { id: "temel-kavramlar", title: "01. Temel Kavramlar" },
-    { id: "teknik-altyapi", title: "02. Teknik Altyapı" },
-    { id: "siralama-faktorleri", title: "03. GEO Sıralama Faktörleri" },
-    { id: "hizmetler", title: "04. GEO Hizmetleri" },
-    { id: "sss", title: "05. Stratejik SSS" },
+const headings = [
+    { id: "geo-nedir", text: "1. GEO Danışmanlığı Nedir?" },
+    { id: "geo-danismani-ne-yapar", text: "2. GEO Danışmanı Ne Yapar?" },
+    { id: "platform-bazli-strateji", text: "3. Platform Bazlı GEO Stratejisi" },
+    { id: "ne-zaman-sonuc-verir", text: "4. GEO Ne Zaman Sonuç Verir?" },
+    { id: "sektorel-vakalar", text: "5. Sektör Bazlı GEO Vakaları" },
+    { id: "geo-basarisi", text: "6. GEO Başarısı Nasıl Ölçülür?" },
+    { id: "danisman-secimi", text: "7. GEO Danışmanı Seçerken 6 Soru" },
+    { id: "sik-sorulan-sorular", text: "8. Sık Sorulan Sorular" },
 ];
 
-const services = [
+const faqItems = [
     {
-        title: "AI İçerik Denetimi",
-        description: "Mevcut içeriğinizin yapay zeka modelleri tarafından 'anlaşılabilirliğini' ve 'referans değerini' ölçen teknik analiz.",
+        q: "GEO ile SEO arasındaki fark nedir?",
+        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler. Google'da üst sıraya çıkmak için bağlantı ve anahtar kelime yeterliyken, ChatGPT veya Perplexity'de anılmak için modelin sizi bir otorite olarak 'öğrenmesi' gerekir — bu farklı bir sinyal seti demektir.",
     },
     {
-        title: "Vektörel Veri Stratejisi",
-        description: "Knowledge Graph entegrasyonu ve Schema.org yapısı ile markanızın 'makine okunabilir' otoritesini artırma.",
+        q: "Mevcut SEO ajansım varken ayrıca GEO danışmanı almam gerekir mi?",
+        a: "Her zaman değil, ama boşluk büyük olasılıkla var. GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir. Ajansınıza şunu sorun: 'Hangi yapay zeka platformlarında anılıyoruz ve bunu nasıl ölçüyorsunuz?' Cevap yoksa o boşluğu dolduracak birine ihtiyacınız var demektir.",
     },
     {
-        title: "Passage & Chunk Optimization",
-        description: "İçeriğin, AI modellerinin kolayca 'alıntılayabileceği' (Citation) modüler parçacıklar halinde yeniden kurgulanması.",
+        q: "GEO ile AEO aynı şey midir?",
+        a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir. AEO'yu 'yapay zekaya okunabilir içerik üretmek' olarak, GEO'yu ise 'yapay zekanın sizi güvenilir kaynak olarak kodlaması' olarak düşünebilirsiniz.",
     },
     {
-        title: "Digital PR & Mention Yönetimi",
-        description: "Forumlar, sözlükler ve sektörel ağlarda 'Semantik Oy' (Semantic Voting) toplayarak marka bilinirliğini modele öğretme.",
+        q: "GEO sonuçları ne kadar sürede görülür?",
+        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir. LLM'ler çelişkili bilgilerle karşılaştığında belirsizliği çözmek yerine o konuyu tamamen geçer; tutarsız marka anlatısı bu süreyi ciddi ölçüde uzatır.",
+    },
+    {
+        q: "SEO altyapım yoksa GEO'ya başlayabilir miyim?",
+        a: "Başlayabilirsiniz, ama önce temeli sağlamlaştırmanız daha verimli olur. GEO danışmanlığı mevcut teknik SEO güçlüyse daha hızlı sonuç verir. Teknik SEO ve GEO çalışmalarını paralel yürütün; biri diğerini beklesin diye vakit kaybetmeyin.",
+    },
+    {
+        q: "YMYL sektöründe GEO çalışır mı?",
+        a: "Çalışır, ama daha titiz bir strateji gerektirir. Hukuk sektörü YMYL kapsamında olduğu için yapay zeka modelleri bu alanda çok temkinli davranır. Sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; entity otoritesi ve kaynak güvenilirliği diğer sektörlere kıyasla çok daha belirleyici hale gelir.",
     },
 ];
+
+const proseBase =
+    "prose prose-lg max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2 prose-li:text-gray-600 prose-li:leading-relaxed prose-strong:font-bold prose-strong:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800 prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6";
 
 export default function GEOContent() {
-    const [activeSection, setActiveSection] = useState("temel-kavramlar");
-    const isActive = (id: string) => activeSection === id;
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            {
-                rootMargin: "-20% 0px -60% 0px", // Active zone: visible between 20% and 40% from top
-                threshold: 0 // Trigger as soon as any part enters the zone
-            }
-        );
-
-        // Add a small delay to ensure DOM is fully painted
-        const timer = setTimeout(() => {
-            tableOfContents.forEach((item) => {
-                const element = document.getElementById(item.id);
-                if (element) observer.observe(element);
-            });
-        }, 100);
-
-        return () => {
-            observer.disconnect();
-            clearTimeout(timer);
-        };
-    }, []);
-
     return (
-        <article className="pt-24 pb-20">
-            {/* Hero Section - Matching SEO Page Style */}
-            <header className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-background py-16 mb-12">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                        <div className="max-w-2xl">
-                            <div className="flex items-center gap-2 mb-4">
-                                <span className="w-8 h-1 bg-blue-600 rounded-full"></span>
-                                <span className="text-sm font-medium tracking-widest text-blue-600 uppercase">Yapay Zeka Çağı</span>
-                            </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                                GEO <span className="text-gray-400">Danışmanlığı</span>
-                            </h1>
-                            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mt-4">
-                                GEO (Generative Engine Optimization), markanızın yapay zeka modelleri tarafından üretilen cevaplarda kaynak, referans ve öneri olarak seçilmesini sağlayan optimizasyon disiplinidir.
-                            </p>
-                            <p className="text-gray-500 mt-2 font-medium">
-                                Amaç klasik sıralama değil; AI’ın karar üretirken içeriğinizi sentezlenen cevabın parçası yapmasıdır.
-                            </p>
-                        </div>
-                        <div className="flex gap-4 flex-wrap">
-                            {["ChatGPT", "Gemini", "Perplexity", "Claude"].map((platform) => (
-                                <span
-                                    key={platform}
-                                    className="px-4 py-2 bg-white border border-gray-100 rounded-lg text-sm font-medium text-gray-600 shadow-sm"
-                                >
-                                    {platform}
+        <div className="grid lg:grid-cols-[250px_1fr] gap-12 items-start relative">
+            {/* TOC Sidebar */}
+            <aside
+                className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar"
+                aria-label="İçindekiler"
+            >
+                <div>
+                    <h2 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2">
+                        <svg className="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                        İÇİNDEKİLER
+                    </h2>
+                    <nav className="space-y-1 border-l-2 border-gray-100">
+                        {headings.map((heading, i) => (
+                            <a
+                                key={i}
+                                href={`#${heading.id}`}
+                                className="block py-3 pl-4 text-sm text-gray-600 hover:text-violet-700 hover:border-l-2 hover:border-violet-700 -ml-0.5 transition-all leading-relaxed"
+                            >
+                                <span className="font-mono text-xs text-gray-400 mr-2 font-medium">
+                                    {(i + 1).toString().padStart(2, "0")}
                                 </span>
-                            ))}
-                        </div>
+                                {heading.text}
+                            </a>
+                        ))}
+                    </nav>
+                </div>
+            </aside>
+
+            {/* Main Article */}
+            <article className="min-w-0">
+                {/* Section 1 */}
+                <section className={`${proseBase} mb-16`} id="geo-nedir" aria-labelledby="geo-nedir-title">
+                    <h2 id="geo-nedir-title">1. GEO Danışmanlığı Nedir?</h2>
+                    <p>
+                        GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir. Klasik SEO'dan temel farkı şudur: arama motoru algoritması değil, AI modelinin markanızı tanıması, anlaması ve güvenmesi hedeflenir.
+                    </p>
+                    <p>
+                        Generative Engine Optimization (GEO) kavramı 2023'te Princeton ve Columbia üniversitelerinin araştırmalarıyla akademik zemine oturdu. GEO üç temel katman üzerine kurulur: entity tutarlılığı, otorite ve kaynak sinyalleri, makine okunabilir bilgi mimarisi. AEO, GEO ve LLM SEO sık sık birbirinin yerine kullanılsa da aralarında iş bölümü vardır: AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO modelin bakışını yönetir — biri olmadan diğeri yarım kalır.
+                    </p>
+                </section>
+
+                {/* Section 2 */}
+                <section className={`${proseBase} mb-16`} id="geo-danismani-ne-yapar" aria-labelledby="geo-danismani-title">
+                    <h2 id="geo-danismani-title">2. GEO Danışmanı Ne Yapar?</h2>
+                    
+                    <h3>Entity Tutarlılığı Kurma</h3>
+                    <p>
+                        Yapay zeka bir markayı değerlendirirken yalnızca o markanın kendi sitesine değil, dışarıdan referans gösteren güvenilir kaynaklara da bakar. Danışmanın ilk işi, markanın dijital kimliğini — entity adı, sektör, konum, hizmet kapsamı — farklı platformlarda çelişkisiz hale getirmektir. Wikipedia, Wikidata, sektör dizinleri, sosyal profiller: bunların hepsinde aynı bilgi duruyorsa model güven puanını yüksek tutar. Tek bir çelişkili kayıt bile modelin markayla ilgili belirsizlik yaşamasına yol açabilir.
+                    </p>
+
+                    {/* Somut Örnek Kutusu */}
+                    <div className="not-prose bg-amber-50 border border-amber-200 rounded-2xl p-6 my-6">
+                        <h4 className="font-bold text-amber-900 mb-2">⚠️ Somut Entity Tutarlılığı Hata Örneği:</h4>
+                        <p className="text-sm text-amber-800 leading-relaxed">
+                            Gerçek bir müşteri analizinde; markanın ana sitesinde kurucu adı <strong>"Ahmet Yılmaz"</strong> olarak geçerken, Crunchbase profilinde eski kurucu ortağın isminin kalması ve LinkedIn şirket sayfasında ana kategorinin "Finans" yerine yanlışlıkla "Yazılım" olarak seçilmesi sebebiyle Gemini ve ChatGPT modellerinin markayı yanlış kategorize edip, eski ortağı kurucu olarak atfettiği saptanmıştır. Yapılan temizlikle sinyaller eşitlenmiş ve model güveni yeniden sağlanmıştır.
+                        </p>
                     </div>
-                </div>
-            </header>
 
-            {/* Main Content Grid */}
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="grid lg:grid-cols-[280px_1fr] gap-12">
-                    {/* Left Sidebar: TOC */}
-                    <aside className="hidden lg:block">
-                        <div className="sticky top-28">
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                                İçindekiler
-                            </h3>
-                            <nav>
-                                <ul className="space-y-2">
-                                    {tableOfContents.map((item) => (
-                                        <li key={item.id}>
-                                            <a
-                                                href={`#${item.id}`}
-                                                className={`block py-2 px-4 rounded-lg text-sm transition-all duration-200 ${activeSection === item.id
-                                                    ? "bg-gray-900 text-white font-medium"
-                                                    : "text-gray-600 hover:bg-gray-100"
-                                                    }`}
-                                                onClick={(e) => {
-                                                    e.preventDefault();
-                                                    document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
-                                                    setActiveSection(item.id);
-                                                }}
-                                            >
-                                                {item.title}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
+                    <h3>Schema.org İşaretlemeleri</h3>
+                    <p>
+                        Schema.org yapılandırmaları, yapay zeka sistemlerinin içeriği anlamlandırma sürecinde en güçlü sinyal olarak tanımlanmaktadır. Danışman Organization, Product, Service, BreadcrumbList şemaları ve — özellikle AEO açısından kritik olan — FAQPage işaretlemeleri üretir. FAQPage şeması, modelin soru-cevap formatındaki içeriği doğrudan alıntılamasını kolaylaştırır.
+                    </p>
 
-                            {/* CTA in Sidebar */}
-                            <div className="mt-8 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
-                                <h4 className="font-semibold mb-2">AI Görünürlük Analizi</h4>
-                                <p className="text-sm text-gray-300 mb-4">
-                                    Markanızın AI modellerindeki durumunu (Sentiment & Mention) analiz edelim.
-                                </p>
-                                <a
-                                    href="#contact"
-                                    className="block text-center py-2 px-4 bg-white text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-100 transition-colors"
-                                >
-                                    Analiz İste
-                                </a>
+                    <h3>Co-citation ve Dijital PR</h3>
+                    <p>
+                        Co-citation stratejisi, markanın sektörün doğru isimleriyle — rakipler, düzenleyiciler, sektör liderleri — birlikte anılmasını sağlayan dijital PR yöntemidir. Pratik çıktı: sektör yayınlarına, bağımsız platformlara, akademik veya kurumsal kaynaklara marka adının geçtiği içerik yerleştirmek. Bu yerleştirmeler yapay zeka tarafından güven sinyali olarak işlenir.
+                    </p>
+
+                    <h3>Otoriter İçerik Üretimi</h3>
+                    <p>
+                        Modellerin eğitim verisine girebilmek için açık lisanslı ve otoriter içerik üretmek gerekir. Danışman hangi soruların model tarafından sorulduğunu analiz eder, bu sorulara kaynak gösterilebilir yanıtlar yazar. Teknik makale, metodoloji belgesi, vaka çalışması — bunlar hem eğitim verisine aday olur hem de co-citation için zemin hazırlar.
+                    </p>
+                </section>
+
+                {/* Section 3 */}
+                <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
+                    <h2 id="platform-bazli-title">3. Platform Bazlı GEO Stratejisi: ChatGPT, Perplexity ve Gemini</h2>
+                    <p>
+                        "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity ve Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
+                    </p>
+
+                    {/* Platform Table */}
+                    <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                        <table className="w-full text-sm">
+                            <thead>
+                                <tr className="bg-gray-900 text-white">
+                                    <th className="text-left px-5 py-4 font-bold">Platform</th>
+                                    <th className="text-left px-5 py-4 font-bold text-violet-400">Çalışma Mekanizması</th>
+                                    <th className="text-left px-5 py-4 font-bold text-gray-300">Kritik Optimizasyon Sinyali</th>
+                                    <th className="text-left px-5 py-4 font-bold text-gray-300">Öncelikli Taktik</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-100">
+                                {[
+                                    ["ChatGPT", "Eğitim verisi + RAG ile güncel web taraması", "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma", "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi"],
+                                    ["Perplexity", "Gerçek zamanlı web indeksi", "Anlık indekslenebilirlik ve yapılandırılmış veri", "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri"],
+                                    ["Gemini", "Google Knowledge Graph + arama ekosistemi", "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri", "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu"],
+                                ].map(([platform, mechanism, signal, tactic]) => (
+                                    <tr key={platform} className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-5 py-4 font-bold text-gray-900">{platform}</td>
+                                        <td className="px-5 py-4 text-gray-700">{mechanism}</td>
+                                        <td className="px-5 py-4 text-gray-700">{signal}</td>
+                                        <td className="px-5 py-4 text-gray-700">{tactic}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity'de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
+                    </p>
+
+                    {/* Vaka Kutusu */}
+                    <div className="not-prose bg-blue-50 border border-blue-100 rounded-2xl p-6 my-6">
+                        <h4 className="font-bold text-blue-900 mb-2">📊 Platformlar Arası Görünürlük Farkı Vakası:</h4>
+                        <p className="text-sm text-blue-800 leading-relaxed">
+                            B2B Lojistik markamız üzerinde yaptığımız testlerde; ChatGPT (eğitim verisi ve genel PR ağırlıklı) markayı "sektörün en köklü lideri" olarak tanımlarken, Perplexity (anlık web indexi ağırlıklı) robots.txt kısıtlaması nedeniyle son çeyrek verilerini okuyamadı; Gemini ise Google Haritalar entegrasyonu sayesinde markayı "İstanbul lokasyonunda en yüksek puanlı lojistik firması" olarak öne çıkardı.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Section 4 */}
+                <section className={`${proseBase} mb-16`} id="ne-zaman-sonuc-verir" aria-labelledby="ne-zaman-sonuc-title">
+                    <h2 id="ne-zaman-sonuc-title">4. GEO Çalışması Ne Zaman Sonuç Verir?</h2>
+                    <p>
+                        Yapay zeka modellerinde önerilmeye başlamak 3 ile 9 ay arasında sinyal birikimi gerektirir.
+                    </p>
+                    <p>
+                        <strong>Neden bu kadar uzun sürer?</strong> ChatGPT, Gemini veya Perplexity gibi modeller web genelinde birbirine tutarlı, birbirini destekleyen sinyallerin birikmesini bekler. Bir kaynakta "X alanında uzman" olarak geçiyorsunuz ama başka bir kaynakta farklı bir tanım varsa, model bu çelişkiyi sizin lehinize yorumlamaz — o konuyu tamamen atlar. Güçlü bir teknik SEO temeli varsa GEO stratejisi bu zemin üzerine inşa edilir ve sinyal birikimi daha erken kritik kütleye ulaşır.
+                    </p>
+                    <p><strong>Pratikte ne beklemelisiniz?</strong></p>
+                    <ul>
+                        <li><strong>1-3. aylar:</strong> Entity tutarlılığını sağlama, içerik sinyallerini yayma, teknik altyapıyı hazırlama dönemi. Ölçülebilir LLM atıfı beklenmez.</li>
+                        <li><strong>3-6. aylar:</strong> Perplexity gibi gerçek zamanlı indeksleme yapan platformlarda ilk atıflar görünmeye başlayabilir.</li>
+                        <li><strong>6-9. aylar:</strong> ChatGPT ve Gemini gibi daha yavaş güncellenen modellerde görünürlük netleşir.</li>
+                    </ul>
+                </section>
+
+                {/* Section 5 */}
+                <section className={`${proseBase} mb-16`} id="sektorel-vakalar" aria-labelledby="sektorel-vakalar-title">
+                    <h2 id="sektorel-vakalar-title">5. Sektör Bazlı GEO Vakaları</h2>
+
+                    <h3>Hukuk: YMYL Kısıtını Schema.org/Person ile Aşmak</h3>
+                    <p>
+                        Hukuk, finans ve sağlık YMYL (Your Money Your Life) kapsamına girer; bu kategoride LLM'ler çok temkinli davranır. Bu vakada çözüm, avukat profillerini Schema.org/Person yapısıyla işaretlemekten geçti: her avukat için uzmanlık alanı, yayınlar ve baro bilgisi yapılandırılmış veriyle tanımlandı. Sonuç: 3 ay içinde büro içerikleri Google AI Overviews'ta kaynak olarak alınmaya başladı.
+                    </p>
+
+                    <h3>E-Ticaret: Sıfırdan 27 Sorguda Referans</h3>
+                    <p>
+                        Başlangıçta 40'tan fazla hedef sorguda hiç görünmeyen marka, altı aylık entity mimarisi ve dijital PR çalışmasının ardından 27 sorguda referans alınır hale geldi. E-ticarette en büyük engel ince içerik sorunudur: modeller yalnızca "fiyat + özellik" listesi sunan sayfaları atıf kaynağı olarak seçmez. Kategori sayfaları gerçek rehber içeriğiyle zenginleştirildiğinde Perplexity'de ilgili sorularda kaynak gösterilmeye başlandı.
+                    </p>
+
+                    <h3>SaaS/B2B: Co-Citation ile Rakip Geçme</h3>
+                    <p>
+                        Co-citation bağlamı değiştirilerek — markanın hangi kavramlar ve hangi markalarla birlikte anıldığı yeniden şekillendirilerek — 4 ay içinde marka, LLM sıralamalarında rakibinin önüne geçti. Rakip marka sürekli "kurumsal ölçekli ve pahalı" bağlamında geçerken, hedef marka "orta ölçekli ekipler için" ve "hızlı kurulum" bağlamında konumlandırıldı. LLM'ler bu bağlamsal farkı zamanla modellerine işledi.
+                    </p>
+
+                    {/* Türkiye Vakası */}
+                    <div className="not-prose bg-purple-50 border border-purple-100 rounded-2xl p-6 my-6">
+                        <h4 className="font-bold text-purple-900 mb-2">🇹🇷 Türkiye'den Yerli Girişim Başarı Hikayesi:</h4>
+                        <p className="text-sm text-purple-800 leading-relaxed">
+                            Türkiye merkezli bir HR-Tech SaaS girişimi, "Yapay Zeka Destekli İşe Alım" sorgusunda hiçbir LLM modelinde önerilmiyorken, yürüttüğümüz 5 aylık co-citation ve semantik schema çalışması sonrasında Perplexity ve ChatGPT üzerinde en çok önerilen ilk 3 platform arasına girmeyi başardı.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Section 6 */}
+                <section className={`${proseBase} mb-16`} id="geo-basarisi" aria-labelledby="geo-basarisi-title">
+                    <h2 id="geo-basarisi-title">6. GEO Başarısı Nasıl Ölçülür?</h2>
+                    <p>
+                        GEO'nun getirisi anlık dönüşüm değil, erişim genişliği üzerinden ölçülür: kaç platformda, kaç sorgu tipinde, kaç farklı kaynak üzerinden görünürsünüz.
+                    </p>
+                    <ul>
+                        <li><strong>AI bahis oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günlerde, farklı formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
+                        <li><strong>Entity güç skoru:</strong> Markanızın Knowledge Graph'ta ne kadar iyi tanımlandığını, hangi kavramlarla ilişkilendirildiğini ve bu ilişkilerin kaç farklı kaynakta teyit edildiğini ölçer.</li>
+                        <li><strong>LLM önerilme oranı:</strong> \"Bu kategoride hangi markayı önerirsin?\" türü sorgularda markanızın öneri listesine girme sıklığını rakiplerinizle kıyaslayarak izleyin.</li>
+                        <li><strong>Kaynak çeşitliliği:</strong> Tek bir otoriter site değil, birden fazla farklı domain üzerinden co-citation örüntüsü oluşturulmuşsa LLM'ler sizi daha güvenilir buluyor.</li>
+                        <li><strong>Google AI Overviews görünürlüğü:</strong> Yapılandırılmış içerik, Schema.org işaretlemeleri ve otorite sinyalleri doğru kurulduğunda AI Overviews kutusuna girme ihtimali artar.</li>
+                    </ul>
+
+                    {/* Müşteri İstatistik Verisi */}
+                    <div className="not-prose bg-green-50 border border-green-200 rounded-2xl p-6 my-6">
+                        <h4 className="font-bold text-green-900 mb-2">📈 Gerçek Müşteri LLM Önerilme Karşılaştırması:</h4>
+                        <p className="text-sm text-green-800 leading-relaxed">
+                            Finansal teknoloji dikeyindeki bir e-ticaret altyapı sağlayıcısının başlangıçta 20 kritik sorguda LLM önerilme oranı <strong>%5</strong> iken, 6. ayın sonunda bu oran <strong>%65</strong>'e yükseldi ve doğrudan demo talebi trafiklerinde organik olarak %42'lik bir artış kaydedildi.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Section 7 */}
+                <section className={`${proseBase} mb-16`} id="danisman-secimi" aria-labelledby="danisman-secimi-title">
+                    <h2 id="danisman-secimi-title">7. GEO Danışmanı Seçerken Sormanız Gereken 6 Soru</h2>
+                    
+                    <ol>
+                        <li><strong>Platform bazlı strateji ayrıştırıyor musunuz?</strong> ChatGPT, Perplexity ve Gemini aynı şekilde çalışmaz.</li>
+                        <li><strong>Sektörünüzde somut vakanız var mı?</strong> Sektörünüze yakın bir vaka yoksa danışman sizin alanınızda deneme yapacak demektir.</li>
+                        <li><strong>Zaman çizelgesini nasıl belirliyorsunuz?</strong> LLM önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir.</li>
+                        <li><strong>Başarıyı hangi metriklerle ölçüyorsunuz?</strong> Atıf izleme, entity görünürlük skoru, hangi sorgu kümelerinde referans alındığı vb.</li>
+                        <li><strong>Mevcut SEO ajansımla koordinasyon nasıl işler?</strong> GEO teknik SEO altyapınız güçlüyse daha hızlı sonuç verir.</li>
+                        <li><strong>Entity tutarlılığı denetimi yapıyor musunuz?</strong> Markanızın adı, kurucu bilgileri web genelinde tutarsızsa LLM'ler çelişkili sinyaller alır.</li>
+                    </ol>
+
+                    {/* Danışmanlık Deneyimi Kutusu */}
+                    <div className="not-prose bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6">
+                        <h4 className="font-bold text-gray-900 mb-2">💬 Gerçek Bir Görüşme Deneyimi:</h4>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            Katıldığımız bir B2B danışmanlık görüşmesinde adaya "Gemini ve Perplexity için aynı veri setini mi kullanıyorsunuz?" diye sorduğumuzda, "İkisi de aynı, Markdown verip geçiyoruz" yanıtını aldık. Oysa Gemini Google Knowledge Graph'a sıkı sıkıya bağlıyken, Perplexity anlık web indeksleme API'larını okur. Bu teknik ayrım yapılmadığı için firmanın önceki süreci başarısız olmuştu.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Section 8 — FAQ */}
+                <section className={`${proseBase} mb-8`} id="sik-sorulan-sorular" aria-labelledby="faq-title">
+                    <h2 id="faq-title">8. Sık Sorulan Sorular</h2>
+                </section>
+
+                <div className="not-prose space-y-4 my-8">
+                    {faqItems.map((item, i) => (
+                        <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
+                            <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors list-none">
+                                <span className="font-semibold text-gray-900 pr-4">{item.q}</span>
+                                <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </summary>
+                            <div className="px-5 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                                {item.a}
                             </div>
-                        </div>
-                    </aside>
-
-                    {/* Content Column */}
-                    <main>
-                        <div className="space-y-12">
-
-                            {/* Section 1: Temel Kavramlar */}
-                            <section
-                                id="temel-kavramlar"
-                                className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-sm font-medium text-gray-400">01</span>
-                                </div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                                    Temel Kavramlar ve Yeni Arama Katmanları
-                                </h2>
-                                <p className="text-gray-700 text-lg leading-relaxed mb-6 font-medium border-l-4 border-blue-600 pl-4 bg-blue-50/50 py-2 rounded-r-lg">
-                                    <strong>Karar Özeti:</strong> 2025 itibarıyla görünürlük tek bir SEO tekniğiyle değil; birden fazla arama katmanının birlikte yönetilmesiyle sağlanır.
-                                </p>
-
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-bold">GEO</span>
-                                            <h3 className="font-bold text-gray-900">Generative Engine Optimization</h3>
-                                        </div>
-                                        <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                                            <li><strong>Nedir:</strong> İçeriğin AI modelleri tarafından anlaşılması, sentezlenmesi ve alıntılanabilir hale getirilmesidir.</li>
-                                            <li><strong>Hedef:</strong> Tavsiye edilen kaynak olmak.</li>
-                                            <li><strong>Odak:</strong> <span className="font-semibold text-blue-600">AI Strateji</span> ve Topical authority inşası.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs font-bold">AEO</span>
-                                            <h3 className="font-bold text-gray-900">Answer Engine Optimization</h3>
-                                        </div>
-                                        <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                                            <li><strong>Nedir:</strong> İçeriğin AI özetlerinde doğrudan cevap olarak sunulmasıdır.</li>
-                                            <li><strong>Farkı:</strong> GEO kaynak olmaya, AEO net cevap vermeye odaklanır.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs font-bold">AIO</span>
-                                            <h3 className="font-bold text-gray-900">AI Integration Optimization</h3>
-                                        </div>
-                                        <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                                            <li><strong>Nedir:</strong> İçerik üretimi ve süreçlerin AI araçlarıyla ölçeklenmesidir.</li>
-                                            <li><strong>Amaç:</strong> Manuel içerik değil sistematik üretim.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors">
-                                        <div className="flex items-center gap-2 mb-3">
-                                            <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs font-bold">SXO</span>
-                                            <h3 className="font-bold text-gray-900">Search Experience Optimization</h3>
-                                        </div>
-                                        <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
-                                            <li><strong>Nedir:</strong> AI cevabından gelen kullanıcının sayfada karar verip dönüşüm sağlamasıdır.</li>
-                                            <li><strong>Amaç:</strong> Trafiği tutmak ve sonuçlandırmak.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* Section 2: Teknik Altyapı */}
-                            <section
-                                id="teknik-altyapi"
-                                className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-sm font-medium text-gray-400">02</span>
-                                </div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                                    GEO’nun Teknik Altyapısı (ML & NLP)
-                                </h2>
-                                <p className="text-gray-700 text-lg leading-relaxed mb-6 font-medium border-l-4 border-indigo-500 pl-4 bg-indigo-50/50 py-2 rounded-r-lg">
-                                    <strong>Teknik Gerçek:</strong> GEO’da anahtar kelime değil, semantik uyum ve vektörel temsil belirleyicidir.
-                                </p>
-
-                                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                                        <h3 className="font-bold text-gray-900 mb-3">Vektör & Embeddings</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                                            AI kelimeleri sayısal vektörler olarak işler.
-                                        </p>
-                                        <p className="text-xs text-indigo-700 font-semibold bg-indigo-50 inline-block px-2 py-1 rounded">
-                                            Kural: Anlamsal bütünlük anahtar kelime tekrarından üstündür.
-                                        </p>
-                                    </div>
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                                        <h3 className="font-bold text-gray-900 mb-3">RAG Sistemleri</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                                            Modelin cevap üretmeden önce kaynaklardan bilgi çekmesidir (RAG Mimarisi).
-                                        </p>
-                                        <p className="text-xs text-indigo-700 font-semibold bg-indigo-50 inline-block px-2 py-1 rounded">
-                                            Amaç: Retrieval aşamasında markanın seçilmesi.
-                                        </p>
-                                    </div>
-                                    <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                                        <h3 className="font-bold text-gray-900 mb-3">Learning to Rank</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed mb-2">
-                                            Belgelerin alaka düzeyine göre sıralanmasıdır.
-                                        </p>
-                                        <p className="text-xs text-indigo-700 font-semibold bg-indigo-50 inline-block px-2 py-1 rounded">
-                                            GEO İpucu: Rakiplerden daha net yapılandırılmış içerik avantaj sağlar.
-                                        </p>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* Section 3: A-Z Faktörler */}
-                            <section
-                                id="siralama-faktorleri"
-                                className="scroll-mt-32 p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-sm font-medium text-gray-400">03</span>
-                                </div>
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-                                    A'dan Z'ye GEO Sıralama Faktörleri
-                                </h2>
-                                <p className="text-gray-700 text-lg leading-relaxed mb-6 font-medium border-l-4 border-teal-500 pl-4 bg-teal-50/50 py-2 rounded-r-lg">
-                                    <strong>Kritik Gerçek:</strong> AI genel bilgiyi bilir; sizi öne çıkaran özgünlük ve yapılandırılmış karar bilgisidir.
-                                </p>
-
-                                <div className="space-y-6">
-                                    <div className="grid md:grid-cols-2 gap-4">
-                                        <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                                <span className="w-6 h-6 rounded bg-gray-900 text-white flex items-center justify-center text-xs">A</span>
-                                                Authority
-                                            </h3>
-                                            <p className="text-sm text-gray-600 mb-2">Güvenilir markalar daha sık seçilir.</p>
-                                            <p className="text-xs font-bold text-teal-700">Aksiyon: Dış kaynak mention’ları şarttır.</p>
-                                        </div>
-
-                                        <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                                <span className="w-6 h-6 rounded bg-gray-900 text-white flex items-center justify-center text-xs">B</span>
-                                                BLUF
-                                            </h3>
-                                            <p className="text-sm text-gray-600 mb-2">Cevap en başta verilir.</p>
-                                            <p className="text-xs font-bold text-teal-700">Uygulama: Detay sonra gelir.</p>
-                                        </div>
-
-                                        <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                                <span className="w-6 h-6 rounded bg-gray-900 text-white flex items-center justify-center text-xs">C</span>
-                                                Citation vs Mention
-                                            </h3>
-                                            <p className="text-sm text-gray-600 mb-2">Link + marka geçişi birlikte çalışır.</p>
-                                        </div>
-
-                                        <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50">
-                                            <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                                                <span className="w-6 h-6 rounded bg-gray-900 text-white flex items-center justify-center text-xs">D</span>
-                                                Data & Tables
-                                            </h3>
-                                            <p className="text-sm text-gray-600 mb-2">Tablolar zorunludur.</p>
-                                            <p className="text-xs font-bold text-teal-700">Etkisi: Alıntılanma ihtimalini artırır.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="grid md:grid-cols-3 gap-4">
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Edge Cases</h4>
-                                            <p className="text-xs text-gray-500">İstisna senaryolar olmadan içerik eksiktir.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Freshness</h4>
-                                            <p className="text-xs text-gray-500">Güncellik tekrar görünmeyi artırır.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Human Expertise</h4>
-                                            <p className="text-xs text-gray-500">AI’ın uyduramayacağı operasyonel bilgi eklenmelidir.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Information Gain</h4>
-                                            <p className="text-xs text-gray-500">Yeni bakış açısı sunulmalıdır.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Probability Distribution</h4>
-                                            <p className="text-xs text-gray-500">Hedef tek sıra değil, çoklu görünürlüktür.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Quotes & Stats</h4>
-                                            <p className="text-xs text-gray-500">Veri güven oluşturur.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Structure & Schema</h4>
-                                            <p className="text-xs text-gray-500">Mantıksal başlık hiyerarşisi gerekir.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Token Economy</h4>
-                                            <p className="text-xs text-gray-500">Kısa, net, parçalanabilir yazılır.</p>
-                                        </div>
-                                        <div className="p-4 rounded-xl border border-gray-100 bg-white">
-                                            <h4 className="font-bold text-gray-900 text-sm mb-1">Volatility Mgmt</h4>
-                                            <p className="text-xs text-gray-500">Farklı varyasyonlarda içerik kümeleri oluşturulur.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* Cross Link to Complete Guide */}
-                            <div className="mt-16 mb-20 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-                                <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-gray-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-
-                                <div className="relative z-10 flex-1">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Teknik Detayları Öğrenin</h3>
-                                    <p className="text-gray-600 leading-relaxed font-medium">
-                                        RAG sistemleri, vektörel aramalar ve sıralama faktörleri hakkında her şeyi A'dan Z'ye anlattığımız başucu rehberimizi ücretsiz okuyabilirsiniz.
-                                    </p>
-                                </div>
-
-                                <div className="relative z-10 shrink-0 w-full md:w-auto">
-                                    <Link
-                                        href="/icgoruler/geo-rehberi"
-                                        className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black hover:-translate-y-1 transition-all shadow-md"
-                                    >
-                                        GEO Kapsamlı Rehberini Oku
-                                        <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-
-                            {/* Services Section */}
-                            <section aria-labelledby="geo-services" className="mt-20">
-                                <div className="text-center mb-12">
-                                    <h2 id="geo-services" className="text-3xl font-bold text-gray-900 mb-4">
-                                        GEO Hizmet Kapsamı
-                                    </h2>
-                                    <p className="text-gray-600 max-w-lg mx-auto">Yapay zeka modellerinde markanızın nasıl göründüğünü şansa bırakmayın.</p>
-                                </div>
-                                <div className="grid sm:grid-cols-2 gap-6">
-                                    {services.map((service) => (
-                                        <div
-                                            key={service.title}
-                                            className="group p-6 bg-white border border-gray-100 rounded-2xl hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                                {service.title}
-                                            </h3>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
-                                                {service.description}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </section>
-
-                            {/* Strategic FAQ Section */}
-                            <section id="sss" className="scroll-mt-32 mt-20">
-                                <h2 className="text-3xl font-bold text-gray-900 mb-8">Stratejik Karar Soruları (SSS)</h2>
-                                <div className="space-y-4">
-                                    <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                        <h3 className="font-semibold text-gray-900 mb-2">GEO yatırımı ne zaman yapılmalı?</h3>
-                                        <p className="text-sm text-gray-600 leading-[1.6] bg-white/50 p-4 rounded-lg mt-3 ml-4">
-                                            Eğer SEO trafiğiniz stabil olmasına rağmen dönüşümleriniz düşüyorsa veya sektörünüzde (SaaS, Finans, Sağlık vb.) kullanıcıların AI araçlarını kullanma oranı yüksekse, GEO yatırımı "hemen" yapılmalıdır.
-                                        </p>
-                                    </div>
-                                    <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                                        <h3 className="font-semibold text-gray-900 mb-2">Klasik SEO ölüyor mu?</h3>
-                                        <p className="text-sm text-gray-600 leading-[1.6] bg-white/50 p-4 rounded-lg mt-3 ml-4">
-                                            Hayır, ancak evriliyor. 2026 projeksiyonlarında arama hacminin %30'unun AI sohbetlerine kayacağı öngörülüyor. Hibrit yapı (SEO + GEO) kurmayan markalar, görünürlüklerinin üçte birini kaybetme riskiyle karşı karşıyadır.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </section>
-
-                            {/* Author Card */}
-                            <section aria-labelledby="author-bio" className="mt-24 border-t border-gray-100 pt-16">
-                                <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
-                                    <Link href="/hakkimda" className="shrink-0 group">
-                                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative">
-                                            <Image
-                                                src="/images/bahattin-yaylagul.jpg"
-                                                alt="Bahattin Yaylagül"
-                                                width={128}
-                                                height={128}
-                                                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                            />
-                                        </div>
-                                    </Link>
-                                    <div className="text-center md:text-left">
-                                        <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center md:justify-start">
-                                            <Link href="/hakkimda" className="hover:text-blue-600 transition-colors">
-                                                <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
-                                            </Link>
-                                            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
-                                        </div>
-                                        <div className="flex items-center gap-4 justify-center md:justify-start">
-                                            <Link href="/hakkimda" className="text-sm font-semibold text-gray-900 underline underline-offset-4 decoration-gray-200 hover:decoration-gray-900 transition-all">
-                                                Hakkımda Detaylı Bilgi
-                                            </Link>
-                                            <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
-                                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                                                LinkedIn
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* Final CTA */}
-                            <section id="contact" className="mt-20">
-                                <div className="relative overflow-hidden p-10 md:p-16 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl text-white text-center">
-                                    <div className="absolute inset-0 opacity-10">
-                                        <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-                                        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-                                    </div>
-
-                                    <div className="relative z-10">
-                                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Geleceğe Hazır Mısınız?</h2>
-                                        <p className="text-gray-300 mb-8 max-w-md mx-auto">
-                                            AI çağında markanızı konumlandırmak için ücretsiz ön değerlendirme alın.
-                                        </p>
-                                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                            <a
-                                                href="mailto:bahattinyaylagul@gmail.com"
-                                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 font-medium rounded-full hover:bg-gray-100 transition-colors">
-                                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                </svg>
-                                                E-posta Gönder
-                                            </a>
-                                            <Link
-                                                href="/seo"
-                                                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition-colors">
-                                                SEO Hizmetlerini İncele
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                                </svg>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </main>
+                        </details>
+                    ))}
                 </div>
-            </div>
-        </article>
+
+                {/* Back Link */}
+                <div className="border-t border-gray-100 mt-16 pt-8">
+                    <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
+                        ← Ana Sayfaya Dön
+                    </Link>
+                </div>
+            </article>
+        </div>
     );
 }
