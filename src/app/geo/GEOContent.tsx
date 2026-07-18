@@ -401,7 +401,7 @@ export default function GEOContent() {
                             </p>
 
                             <div className="not-prose bg-blue-50 border border-blue-100 rounded-2xl p-6 my-6">
-                                <h4 className="font-bold text-blue-900 mb-2">📊 Platformlar Arası Görünürlük Farkı Vakası:</h4>
+                                <h3 className="text-base font-bold text-blue-900 mb-2">📊 Platformlar Arası Görünürlük Farkı Vakası:</h3>
                                 <p className="text-sm text-blue-800 leading-relaxed">
                                     B2B Lojistik markamız üzerinde yaptığımız testlerde; ChatGPT (eğitim verisi ve genel PR ağırlıklı) markayı "sektörün en köklü lideri" olarak tanımlarken, Perplexity (anlık web indexi ağırlıklı) robots.txt kısıtlaması nedeniyle son çeyrek verilerini okuyamadı; Gemini ise Google Haritalar entegrasyonu sayesinde markayı "İstanbul lokasyonunda en yüksek puanlı lojistik firması" olarak öne çıkardı.
                                 </p>
@@ -457,7 +457,7 @@ export default function GEOContent() {
                             </ul>
 
                             <div className="not-prose bg-green-50 border border-green-200 rounded-2xl p-6 my-6">
-                                <h4 className="font-bold text-green-900 mb-2">📈 Gerçek Müşteri LLM Önerilme Karşılaştırması:</h4>
+                                <h3 className="text-base font-bold text-green-900 mb-2">📈 Gerçek Müşteri LLM Önerilme Karşılaştırması:</h3>
                                 <p className="text-sm text-green-800 leading-relaxed">
                                     Finansal teknoloji dikeyindeki bir e-ticaret altyapı sağlayıcısının başlangıçta 20 kritik sorguda LLM önerilme oranı <strong>%5</strong> iken, 6. ayın sonunda bu oran <strong>%65</strong>'e yükseldi ve doğrudan demo talebi trafiklerinde organik olarak %42'lik bir artış kaydedildi.
                                 </p>
@@ -477,7 +477,7 @@ export default function GEOContent() {
                             </ol>
 
                             <div className="not-prose bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6">
-                                <h4 className="font-bold text-gray-900 mb-2">💬 Gerçek Bir Görüşme Deneyimi:</h4>
+                                <h3 className="text-base font-bold text-gray-900 mb-2">💬 Gerçek Bir Görüşme Deneyimi:</h3>
                                 <p className="text-sm text-gray-600 leading-relaxed">
                                     Katıldığımız bir B2B danışmanlık görüşmesinde adaya "Gemini ve Perplexity için aynı veri setini mi kullanıyorsunuz?" diye sorduğumuzda, "İkisi de aynı, Markdown verip geçiyoruz" yanıtını aldık. Oysa Gemini Google Knowledge Graph'a sıkı sıkıya bağlıyken, Perplexity anlık web indeksleme API'larını okur. Bu teknik ayrım yapılmadığı için firmanın önceki süreci başarısız olmuştu.
                                 </p>

@@ -100,6 +100,17 @@ export default function GEOPage() {
                         "text": item.a
                     }
                 }))
+            },
+            {
+                "@type": "Article",
+                "@id": "https://bahattinyaylagul.com/geo/#article",
+                "headline": "GEO Danışmanlığı: Yapay Zekâ Arama Optimizasyonu",
+                "author": { "@id": "https://bahattinyaylagul.com/#person" },
+                "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
+                "datePublished": "2026-07-18T10:00:00Z",
+                "dateModified": "2026-07-18T10:00:00Z",
+                "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi üretken yapay zekâ motorlarında atıf alması, kaynak gösterilmesi ve önerilmesi için stratejik optimizasyon rehberi.",
+                "inLanguage": "tr-TR"
             }
         ]
     };
@@ -115,7 +126,16 @@ export default function GEOPage() {
                 <Navigation />
             </header>
 
-            <article className="pt-24 pb-8">
+            {/* Breadcrumb - Placed high for semantic hierarchy */}
+            <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-28 pb-2">
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 font-medium tracking-wide font-sans">
+                    <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
+                    <span className="text-gray-200">/</span>
+                    <span className="text-gray-600 font-bold truncate">GEO Danışmanlığı</span>
+                </nav>
+            </div>
+
+            <article className="pb-8">
                 {/* ── HERO ── */}
                 <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12">
                     {/* Subtle glow */}
@@ -154,7 +174,7 @@ export default function GEOPage() {
                         </p>
 
                         {/* Yazar Bilgisi / Author Info */}
-                        <div className="flex items-center justify-center gap-3 mb-8 text-white/85">
+                        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 text-white/85">
                             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
                                 <Image
                                     src="/images/bahattin-yaylagul.jpg"
@@ -171,6 +191,8 @@ export default function GEOPage() {
                                 </Link>
                             </span>
                             <span className="text-white/30">•</span>
+                            <span className="text-xs text-white/60 font-medium">Son Güncelleme: 18 Temmuz 2026</span>
+                            <span className="text-white/30">•</span>
                             <a
                                 href="https://linkedin.com/in/bahattin-yaylagul"
                                 target="_blank"
@@ -181,7 +203,7 @@ export default function GEOPage() {
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
-                                Bahattin Yaylagül LinkedIn Profili
+                                LinkedIn Profili
                             </a>
                         </div>
 
@@ -219,15 +241,8 @@ export default function GEOPage() {
                     </div>
                 </header>
 
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-6 pb-12">
-                    {/* Breadcrumb */}
-                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-12 font-medium tracking-wide font-sans">
-                        <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
-                        <span className="text-gray-200">/</span>
-                        <span className="text-gray-600 font-bold truncate">GEO Danışmanlığı</span>
-                    </nav>
-
-                    {/* GEO Content Body */}
+                {/* GEO Content Body - Placed immediately after Hero for high centerpiece ranking */}
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12">
                     <GEOContent />
                 </div>
 
