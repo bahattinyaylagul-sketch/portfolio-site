@@ -42,6 +42,18 @@ const jsonLd = `[
       "@id": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir"
     },
     "inLanguage": "tr",
+    "about": {
+      "@type": "Thing",
+      "name": "llms.txt",
+      "description": "A proposed standard file format (Markdown) for website content optimization targeting LLMs and AI search bots."
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        "#llms-txt-nedir p:first-of-type",
+        ".lead-text"
+      ]
+    },
     "mentions": [
       {
         "@type": "Person",
@@ -160,9 +172,13 @@ export default function LlmsTxtPage() {
                                     <span>GEO &amp; AI Search</span>
                                 </div>
 
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
                                     llms.txt Nedir? Tanım, Format, Etkinlik Analizi ve Uygulama Rehberi
                                 </h1>
+
+                                <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
+                                    llms.txt; yapay zeka arama motorları, LLM'ler ve otonom yazılım ajanlarının web sitenizin en kritik içeriklerini hızlı, doğru ve gürültüsüz bir şekilde anlayabilmesi için kök dizinde yayımlanan Markdown tabanlı yeni nesil bir yönlendirme standartıdır.
+                                </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
                                     <div className="flex items-center gap-2">

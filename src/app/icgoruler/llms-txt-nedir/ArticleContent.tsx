@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 const headings = [
     { id: "llms-txt-nedir", text: "1. llms.txt Nedir?" },
@@ -42,7 +44,31 @@ const faqItems = [
 const proseBase =
     "prose prose-lg max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2 prose-li:text-gray-600 prose-li:leading-relaxed prose-strong:font-bold prose-strong:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800 prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6";
 
+function CopyButton({ text }: { text: string }) {
+    const [copied, setCopied] = useState(false);
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            console.error("Failed to copy", err);
+        }
+    };
+    return (
+        <button
+            onClick={handleCopy}
+            className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold bg-gray-800 hover:bg-gray-700 text-gray-300 rounded border border-gray-700 transition-colors z-20"
+        >
+            {copied ? "Kopyalandı!" : "Kopyala"}
+        </button>
+    );
+}
+
 export default function ArticleContent() {
+    const codeBlock1 = `# Örnek Site\n\n> Yazılım geliştirici araçları üzerine dokümantasyon sitesi.\n\n## Kılavuzlar\n\n- [Kurulum](https://example.com/docs/setup): Ortam kurulumu adım adım.\n- [API Referansı](https://example.com/docs/api): Tüm endpoint'lerin listesi.`;
+    const codeBlock2 = `# Site Adı\n\n> Sitenizin tek paragraflık özeti. LLM bu satırı önce okur.\n\n## Hakkında\nSitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.\n\n## Kaynaklar\n- [Ürün Sayfası](https://example.com/urun)\n- [Blog](https://example.com/blog)\n- [SSS](https://example.com/sss)`;
+
     return (
         <div className="grid lg:grid-cols-[250px_1fr] gap-12 items-start relative">
             {/* TOC Sidebar */}
@@ -51,12 +77,12 @@ export default function ArticleContent() {
                 aria-label="İçindekiler"
             >
                 <div>
-                    <div className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2">
+                    <h2 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2">
                         <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
                         </svg>
                         İÇİNDEKİLER
-                    </div>
+                    </h2>
                     <nav className="space-y-1 border-l-2 border-gray-100">
                         {headings.map((heading, i) => (
                             <a
@@ -129,7 +155,10 @@ export default function ArticleContent() {
                         <li><strong>Ayrıntılı bilgi</strong> — Kapsam, kısıtlamalar veya bağlam notları</li>
                         <li><strong>Bağlantı listeleri</strong> — LLM&apos;nin okumasını istediğiniz sayfalara işaret eden URL&apos;ler</li>
                     </ol>
-                    <pre><code>{`# Örnek Site\n\n> Yazılım geliştirici araçları üzerine dokümantasyon sitesi.\n\n## Kılavuzlar\n\n- [Kurulum](https://example.com/docs/setup): Ortam kurulumu adım adım.\n- [API Referansı](https://example.com/docs/api): Tüm endpoint'lerin listesi.`}</code></pre>
+                    <div className="relative my-6">
+                        <CopyButton text={codeBlock1} />
+                        <pre className="relative overflow-hidden"><code className="block pr-16">{codeBlock1}</code></pre>
+                    </div>
                     <p>
                         Her URL&apos;e isteğe bağlı kısa açıklama eklenebilir; bu, modelin sayfanın ne işe yaradığını
                         bağlam olmadan anlamasını kolaylaştırır.
@@ -175,6 +204,19 @@ export default function ArticleContent() {
                         İki protokol benzer mantıkla çalışıyor gibi görünse de amaç, hedef kitle ve bağlayıcılık
                         açısından köklü biçimde ayrışır.
                     </p>
+                </div>
+
+                {/* Diagram Section */}
+                <div className="not-prose my-8 bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-inner flex flex-col items-center">
+                    <div className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-md">
+                        <Image
+                            src="/images/llms-txt-diagram.png"
+                            alt="robots.txt (Kapı Bekçisi) vs llms.txt (Brifing Belgesi) Karşılaştırma Diyagramı"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <span className="text-xs text-gray-500 mt-4 text-center">Görsel 1: robots.txt geleneksel botları engellerken; llms.txt AI arama botlarına brifing sunar.</span>
                 </div>
 
                 {/* Comparison Table */}
@@ -230,6 +272,19 @@ export default function ArticleContent() {
                     </p>
                 </div>
 
+                {/* Stats Image Section */}
+                <div className="not-prose my-8 bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-inner flex flex-col items-center">
+                    <div className="relative w-full max-w-2xl h-[400px] rounded-xl overflow-hidden shadow-md">
+                        <Image
+                            src="/images/llms-txt-stats.png"
+                            alt="SE Ranking llms.txt 300.000 Domain Analizi Sonuçları Grafiği"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <span className="text-xs text-gray-500 mt-4 text-center">Görsel 2: SE Ranking XGBoost ve korelasyon analizi; benimseme oranının düşüklüğünü ve AI atıf etkisinin sıfıra yakınlığını gösterir.</span>
+                </div>
+
                 {/* Stats Banner */}
                 <div className="not-prose grid grid-cols-3 gap-4 my-8">
                     {[
@@ -264,7 +319,10 @@ export default function ArticleContent() {
                     <h3>1. Markdown dosyasını hazırlayın</h3>
                     <p>Bir metin editörü açın, <code>.txt</code> uzantısıyla kaydedin. HTML etiketleri veya JavaScript kullanmayın.</p>
                     <h3>2. İçerik yapısını kurun</h3>
-                    <pre><code>{`# Site Adı\n\n> Sitenizin tek paragraflık özeti. LLM bu satırı önce okur.\n\n## Hakkında\nSitenizin ne yaptığını, kimi hedeflediğini açıklayan metin.\n\n## Kaynaklar\n- [Ürün Sayfası](https://example.com/urun)\n- [Blog](https://example.com/blog)\n- [SSS](https://example.com/sss)`}</code></pre>
+                    <div className="relative my-6">
+                        <CopyButton text={codeBlock2} />
+                        <pre className="relative overflow-hidden"><code className="block pr-16">{codeBlock2}</code></pre>
+                    </div>
                     <h3>3. Dosyayı kök dizine yükleyin</h3>
                     <p>
                         Dosyayı <code>llms.txt</code> adıyla kök dizine koyun; doğru adres{" "}
@@ -279,19 +337,30 @@ export default function ArticleContent() {
                     <p>Tarayıcınızda <code>https://siteniz.com/llms.txt</code> adresine gidin. Düz metin açılıyorsa dosya doğru konumda demektir.</p>
                 </div>
 
-                {/* Tools Cards */}
-                <div className="not-prose grid md:grid-cols-3 gap-4 my-8">
-                    {[
-                        { icon: "🔥", name: "FireCrawl", desc: "Mevcut site içeriğinizi tarayarak dosyayı otomatik üretiyor." },
-                        { icon: "📝", name: "Markdowner", desc: "Açık kaynaklı, Markdown'a dönüştürür." },
-                        { icon: "🔌", name: "Website LLMs (WP)", desc: "WordPress eklentisi, 3.000+ indirme, otomatik güncelleme." },
-                    ].map(({ icon, name, desc }) => (
-                        <div key={name} className="p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                            <div className="text-2xl mb-3">{icon}</div>
-                            <h4 className="font-bold text-gray-900 mb-1">{name}</h4>
-                            <p className="text-sm text-gray-600">{desc}</p>
-                        </div>
-                    ))}
+                {/* Tools Comparison Table */}
+                <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                    <table className="w-full text-sm">
+                        <thead>
+                            <tr className="bg-gray-50 border-b border-gray-200">
+                                <th className="text-left px-6 py-4 font-bold text-gray-900">Araç</th>
+                                <th className="text-left px-6 py-4 font-bold text-gray-900">Temel Özellik</th>
+                                <th className="text-left px-6 py-4 font-bold text-gray-900">En Uygun Senaryo</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                            {[
+                                ["🔥 FireCrawl", "Mevcut site içeriğini tarayarak llms.txt'yi otomatik üretir", "Büyük ve karmaşık siteler için hızlı başlangıç"],
+                                ["📝 Markdowner", "Açık kaynaklı yerel kütüphane, HTML sayfalarını Markdown'a çevirir", "Statik site üreteci kullanan yazılımcılar"],
+                                ["🔌 Website LLMs (WP)", "WordPress eklentisi, 3.000+ indirme ile otomatik yönetim sunar", "Kod yazmadan dinamik WordPress siteleri yönetmek"],
+                            ].map(([tool, feature, scenario]) => (
+                                <tr key={tool} className="hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 font-semibold text-gray-900">{tool}</td>
+                                    <td className="px-6 py-4 text-gray-700">{feature}</td>
+                                    <td className="px-6 py-4 text-gray-700">{scenario}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
 
                 <div className="not-prose bg-amber-50 border border-amber-200 rounded-xl p-6 my-8">
@@ -384,9 +453,29 @@ export default function ArticleContent() {
                     ))}
                 </div>
 
+                {/* Topical Cluster Recommendation & Internal Links */}
+                <div className="not-prose my-12 p-6 bg-blue-50/50 border border-blue-100 rounded-2xl">
+                    <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span className="text-blue-600">💡</span> AI &amp; Arama Stratejinizi Genişletin
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                        llms.txt standardı LLM tarayıcılarına doğrudan hitap ederken, markanızın yapay zeka sonuçlarında asıl konumlanması ve atıf alması için GEO (Yapay Zeka Arama Optimizasyonu) temellerini iyi oturtmanız gerekir. 
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4">
+                        <Link href="/geo" className="p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group">
+                            <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">GEO Danışmanlığı →</h4>
+                            <p className="text-xs text-gray-500">Yapay zeka arama motorlarında görünürlük ve marka atıf stratejileri.</p>
+                        </Link>
+                        <Link href="/seo" className="p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group">
+                            <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">Semantik SEO Çalışmaları →</h4>
+                            <p className="text-xs text-gray-500">Google ve yapay zeka botlarının sitenizi tam anlamıyla anlaması için semantik yapılandırma.</p>
+                        </Link>
+                    </div>
+                </div>
+
                 {/* Sources */}
                 <aside className="not-prose mt-12 p-6 bg-gray-50 border border-gray-200 rounded-xl" aria-label="Kaynaklar">
-                    <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Kaynaklar</h3>
+                    <h2 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">Kaynaklar</h2>
                     <ul className="space-y-3">
                         <li className="flex flex-col gap-0.5">
                             <a href="https://seranking.com/blog/llms-txt/" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
