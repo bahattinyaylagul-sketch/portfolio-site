@@ -1,8 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
+import { SEOContactForm } from "../seo/SEONavigator";
 import GEOContent from "./GEOContent";
 
 export const metadata: Metadata = {
@@ -18,6 +23,17 @@ export const metadata: Metadata = {
         canonical: "/geo",
     },
 };
+
+const faqData = [
+    {
+        q: "GEO ile SEO arasındaki fark nedir?",
+        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler."
+    },
+    {
+        q: "GEO sonuçları ne kadar sürede görülür?",
+        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir."
+    }
+];
 
 export default function GEOPage() {
     const jsonLd = {
@@ -63,7 +79,7 @@ export default function GEOPage() {
                     "name": "Ücretsiz GEO Analizi Talebi",
                     "target": {
                         "@type": "EntryPoint",
-                        "urlTemplate": "https://bahattinyaylagul.com/seo#contact-form",
+                        "urlTemplate": "https://bahattinyaylagul.com/geo#analiz",
                         "inLanguage": "tr",
                         "actionPlatform": [
                             "http://schema.org/DesktopWebPlatform",
@@ -76,33 +92,14 @@ export default function GEOPage() {
             {
                 "@type": "FAQPage",
                 "@id": "https://bahattinyaylagul.com/geo/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "GEO ile SEO arasındaki fark nedir?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "GEO sonuçları ne kadar sürede görülür?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir."
-                        }
+                "mainEntity": faqData.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.a
                     }
-                ]
-            },
-            {
-                "@type": "Article",
-                "@id": "https://bahattinyaylagul.com/geo/#article",
-                "headline": "GEO Danışmanlığı: Generative Engine Optimization Rehberi",
-                "author": { "@id": "https://bahattinyaylagul.com/#person" },
-                "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
-                "description": "GEO (Generative Engine Optimization), markanızın yapay zeka modelleri tarafından üretilen cevaplarda kaynak ve referans olarak seçilmesini sağlayan yeni nesil optimizasyon disiplinidir.",
-                "inLanguage": "tr-TR"
+                }))
             }
         ]
     };
@@ -118,49 +115,190 @@ export default function GEOPage() {
                 <Navigation />
             </header>
 
-            {/* Hero */}
-            <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
-                </div>
+            <article className="pt-24 pb-8">
+                {/* ── HERO ── */}
+                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12">
+                    {/* Subtle glow */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[100px] -ml-32 -mb-32"></div>
-                </div>
+                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
+                        {/* Üst etiket */}
+                        <span className="inline-flex items-center gap-2 text-violet-400 font-mono font-bold tracking-widest text-xs uppercase mb-6 bg-violet-400/10 px-4 py-1.5 rounded-full border border-violet-400/15">
+                            <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" />
+                            Yeni Nesil Arama
+                        </span>
 
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
-                    <div className="space-y-8 flex flex-col justify-center h-full pb-16 pt-12 text-center max-w-3xl mx-auto">
-                        <div>
-                            <div className="flex items-center justify-center gap-3 text-violet-400 font-bold tracking-widest text-xs uppercase mb-4">
-                                <span>Hizmetler</span>
-                                <span className="w-px h-3 bg-white/20"></span>
-                                <span>Generative Engine Optimization</span>
+                        {/* Başlık */}
+                        <h1
+                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
+                            style={{ fontWeight: 900 }}
+                        >
+                            <span
+                                style={{
+                                    textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(139,92,246,0.08)"
+                                }}
+                            >
+                                GEO{" "}
+                                <span className="text-white">
+                                    Danışmanlığı
+                                </span>
+                            </span>
+                        </h1>
+
+                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+                            Markanızı ChatGPT, Gemini ve Perplexity gibi yapay zekâ arama motorlarına hazırlayın. Generative Engine Optimization (GEO) ile yapay zeka kaynaklı organik görünürlük kazanın.
+                        </p>
+
+                        <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
+                            Entity tutarlılığı, otoriter co-citation ve makine-okunabilir semantik şema kurgusu ile LLM entegrasyonu.
+                        </p>
+
+                        {/* Yazar Bilgisi / Author Info */}
+                        <div className="flex items-center justify-center gap-3 mb-8 text-white/85">
+                            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
+                                <Image
+                                    src="/images/bahattin-yaylagul.jpg"
+                                    alt="Bahattin Yaylagül"
+                                    fill
+                                    sizes="32px"
+                                    className="object-cover"
+                                />
                             </div>
+                            <span className="text-sm font-medium">
+                                Yazar:{" "}
+                                <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Bilgi" className="hover:text-violet-400 underline decoration-white/20 hover:decoration-violet-400 transition-colors">
+                                    Bahattin Yaylagül
+                                </Link>
+                            </span>
+                            <span className="text-white/30">•</span>
+                            <a
+                                href="https://linkedin.com/in/bahattin-yaylagul"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Bahattin Yaylagül LinkedIn Profili"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                Bahattin Yaylagül LinkedIn Profili
+                            </a>
+                        </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
-                                GEO Danışmanlığı: Yapay Zekâ Arama Optimizasyonu
-                            </h1>
+                        {/* CTA - Birincil (Dolgulu, Belirgin Stil) */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
+                            <a
+                                href="#analiz"
+                                className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-violet-600/25 hover:shadow-violet-600/35 hover:-translate-y-0.5"
+                            >
+                                Ücretsiz GEO Analiz Formuna Ulaşın
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                            <span className="text-white/40 text-xs font-medium">
+                                24 saat içinde dönüş · %100 ücretsiz
+                            </span>
+                        </div>
 
-                            <p className="text-gray-300 text-lg leading-relaxed font-medium">
-                                Markanızın ChatGPT, Gemini ve Perplexity gibi üretken yapay zekâ motorlarında atıf alması, kaynak gösterilmesi ve önerilmesi için stratejik optimizasyon süreçleri.
-                            </p>
+                        {/* Trust Stats Bar */}
+                        <div className="border-t border-white/10 pt-10">
+                            <div className="flex items-center justify-center gap-0 max-w-sm mx-auto">
+                                {[
+                                    { value: "14 Yıl+", label: "Sektör Deneyimi" },
+                                    { value: "200+", label: "Başarılı Proje" },
+                                ].map((stat, i) => (
+                                    <div key={i} className={`flex flex-col items-center gap-1 px-10 ${i === 0 ? "border-r border-white/10" : ""}`}>
+                                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
+                                        <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                    </div>
+                </header>
+
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-6 pb-12">
+                    {/* Breadcrumb */}
+                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-12 font-medium tracking-wide font-sans">
+                        <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
+                        <span className="text-gray-200">/</span>
+                        <span className="text-gray-600 font-bold truncate">GEO Danışmanlığı</span>
+                    </nav>
+
+                    {/* GEO Content Body */}
+                    <GEOContent />
+                </div>
+
+                {/* ── Ücretsiz Analiz Formu ── */}
+                <section className="py-16 bg-white border-t border-gray-100" id="analiz" aria-labelledby="analiz-heading">
+                    <div className="max-w-4xl mx-auto px-4 md:px-6">
+                        <div className="text-center mb-10">
+                            <div className="text-center mb-6 bg-violet-50 border border-violet-100 px-6 py-4 rounded-2xl max-w-2xl mx-auto shadow-sm hover:shadow-md transition-shadow">
+                                <p className="text-sm text-violet-900 font-medium">
+                                    💼 Yapay zeka motorlarında (ChatGPT, Gemini, Perplexity) markanızın <strong>önerilme ve atıf sıklığını</strong> analiz etmek için formu doldurun.
+                                </p>
+                            </div>
+                            <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz GEO Denetimi</h2>
+                            <p className="text-gray-600 text-base md:text-lg">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü denetleyelim.</p>
+                        </div>
+                        <SEOContactForm />
+                    </div>
+                </section>
+
+                {/* FAQ */}
+                <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
+                    <div className="max-w-4xl mx-auto px-4 md:px-6">
+                        <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight">Sıkça Sorulan Sorular</h2>
+                        <div className="space-y-3">
+                            {faqData.map((item, i) => (
+                                <div key={i} className="p-6 bg-white rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
+                                    <p className="text-base font-bold text-gray-900 mb-2">{item.q}</p>
+                                    <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                </div>
-            </header>
+                </section>
 
-            <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-12 pb-20">
-                {/* Breadcrumb */}
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
-                    <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
-                    <span className="text-gray-200">/</span>
-                    <span className="text-gray-600 font-bold truncate">GEO Danışmanlığı</span>
-                </nav>
-
-                {/* Main Body */}
-                <GEOContent />
-            </div>
+                {/* Author Card */}
+                <section aria-labelledby="author-bio" className="border-t border-gray-100 py-12 bg-white">
+                    <div className="max-w-4xl mx-auto px-4 md:px-6">
+                        <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                            <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Detaylı Bilgi" className="shrink-0 group">
+                                <span className="sr-only">Bahattin Yaylagül Kimdir ve Hakkında Detaylar</span>
+                                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative">
+                                    <Image
+                                        src="/images/bahattin-yaylagul.jpg"
+                                        alt="Bahattin Yaylagül"
+                                        width={128}
+                                        height={128}
+                                        className="object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                </div>
+                            </Link>
+                            <div className="text-center md:text-left">
+                                <div className="flex flex-col md:flex-row items-center gap-3 mb-4 justify-center md:justify-start">
+                                    <Link href="/hakkimda" aria-label="Bahattin Yaylagül Özgeçmiş ve Hakkında" className="hover:text-violet-600 transition-colors">
+                                        <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
+                                    </Link>
+                                    <span className="px-3 py-1 bg-violet-50 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">Senior SEO &amp; GEO Architect</span>
+                                </div>
+                                <div className="flex items-center gap-4 justify-center md:justify-start">
+                                    <Link href="/hakkimda" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 hover:text-gray-950 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm rounded-full transition-all">
+                                        Bahattin Yaylagül Kimdir ve Hakkında Detaylar
+                                    </Link>
+                                    <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili" className="inline-flex items-center gap-1 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity">
+                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                                        Bahattin Yaylagül LinkedIn Profesyonel Profilini İncele
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
 
             <Footer />
         </main>
