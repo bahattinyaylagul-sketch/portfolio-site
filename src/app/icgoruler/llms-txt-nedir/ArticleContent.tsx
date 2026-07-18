@@ -213,6 +213,7 @@ export default function ArticleContent() {
                             src="/images/llms-txt-diagram.png"
                             alt="robots.txt (Kapı Bekçisi) vs llms.txt (Brifing Belgesi) Karşılaştırma Diyagramı"
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
                             className="object-cover"
                         />
                     </div>
@@ -279,6 +280,7 @@ export default function ArticleContent() {
                             src="/images/llms-txt-stats.png"
                             alt="SE Ranking llms.txt 300.000 Domain Analizi Sonuçları Grafiği"
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
                             className="object-cover"
                         />
                     </div>

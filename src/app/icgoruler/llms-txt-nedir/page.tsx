@@ -150,7 +150,8 @@ export default function LlmsTxtPage() {
                         src="/images/llms-txt-hero.png"
                         alt="llms.txt — AI Tarayıcıları için Web Standardı"
                         fill
-                        className="object-cover opacity-20"
+                        sizes="(max-width: 768px) 1px, 100vw"
+                        className="object-cover opacity-20 hidden md:block"
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
@@ -201,7 +202,13 @@ export default function LlmsTxtPage() {
                             {/* Author */}
                             <div className="flex items-center gap-4 pt-2">
                                 <Link href="/hakkimda" className="w-12 h-12 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-blue-400 transition-colors">
-                                    <Image src="/images/bahattin-yaylagul.jpg" alt="Bahattin Yaylagül" fill className="object-cover" />
+                                    <Image 
+                                        src="/images/bahattin-yaylagul.jpg" 
+                                        alt="Bahattin Yaylagül" 
+                                        fill 
+                                        sizes="48px"
+                                        className="object-cover" 
+                                    />
                                 </Link>
                                 <div className="flex flex-col">
                                     <span className="text-gray-400 text-xs font-medium uppercase tracking-wider mb-0.5">Yazar</span>
@@ -231,6 +238,7 @@ export default function LlmsTxtPage() {
                                 src="/images/llms-txt-hero.png"
                                 alt="llms.txt — AI Tarayıcıları için Web Standardı"
                                 fill
+                                sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
                                 priority
                             />
