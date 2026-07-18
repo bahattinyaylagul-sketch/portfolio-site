@@ -3,20 +3,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { Metadata } from "next";
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
-import { SEOContactForm } from "./SEONavigator";
 import SEOContentBody from "./SEOContentBody";
+import { SEOContactForm } from "./SEONavigator";
 
 export const metadata: Metadata = {
     title: "SEO Danışmanlığı – Bahattin Yaylagül",
-    description: "Teknik SEO ve içerik optimizasyonu ile organik büyümenizi sürdürülebilir kılın. Kapsamlı SEO rehberi ve danışmanlık hizmetleri ile otoritenizi artırın.",
+    description: "Google'da organik trafiğinizi ve satışlarınızı artırmak için profesyonel SEO danışmanlığı. Teknik SEO, semantik içerik ve otorite inşası.",
     openGraph: {
         title: "SEO Danışmanlığı – Bahattin Yaylagül",
-        description: "Teknik SEO ve içerik optimizasyonu ile organik büyümenizi sürdürülebilir kılın.",
+        description: "Google'da organik trafiğinizi artırın",
         type: "website",
         locale: "tr_TR",
     },
@@ -27,190 +26,109 @@ export const metadata: Metadata = {
 
 const faqData = [
     {
-        q: "SEO sonuçları ne kadar sürede görülür?",
-        a: "SEO çalışmalarının sonuçları, erken dönemde birkaç haftada görülse de anlamlı organik trafik artışları genellikle 3 ila 6 aylık tutarlı bir süreç gerektirir."
+        q: "SEO danışmanlığı ne kadar sürede sonuç verir?",
+        a: "Genellikle ilk etkiler ve teknik düzeltmelerin yansıması 2-3 ay sürerken, rekabetçi sektörlerde anahtar kelimelerde sürdürülebilir büyüme 6-12 ay arasında gerçekleşmektedir."
     },
     {
-        q: "SEO ücretsiz midir?",
-        a: "Organik arama motoru sıralamaları için doğrudan reklam bütçesi ödenmez; fakat etkili bir SEO stratejisi uygulamak uzmanlık, teknik araçlar ve zamansal yatırım gerektirmektedir."
-    },
-    {
-        q: "Google'ın kaç sıralama faktörü var?",
-        a: "Google arama algoritmalarında tek bir sıralama kriterine odaklanmak yerine bütünsel bir optimizasyon uygulamak gerekir; çünkü Google kesin ve sınırlı bir sıralama faktörü listesi yayınlamamıştır."
-    },
-    {
-        q: "Black hat SEO nedir, neden risklidir?",
-        a: "Black hat SEO, arama motoru kurallarına aykırı manipülatif tekniklerin kullanılmasıdır ve Google algoritması tarafından tespit edildiğinde sitenin kalıcı olarak cezalandırılmasına yol açar."
-    },
-    {
-        q: "Yapay zeka SEO'yu öldürür mü?",
-        a: "Yapay zekâ ve üretken arama motorlarının yükselişi klasik SEO'yu sonlandırmaz; aksine GEO (Generative Engine Optimization) adı verilen yeni nesil kaynak gösterme optimizasyonu ile kapsamını genişletir."
-    },
-    {
-        q: "Teknik SEO mu, içerik mi daha önemli?",
-        a: "Arama motorlarında yüksek performans elde etmek için teknik SEO altyapısı ile semantik içerik stratejisi birbirini tamamlamalıdır; altyapı zayıfsa içerik taranamayacağı gibi, içerik yoksa teknik altyapı tek başına trafik getirmez."
-    },
-    {
-        q: "SEO mu, PPC mi tercih edilmeli?",
-        a: "Hızlı ve geçici dönüşüm elde etmek için ücretli arama reklamcılığı (PPC) tercih edilmeli, sürdürülebilir ve bütçe bağımsız kalıcı organik trafik artışı için ise SEO yatırımı önceliklendirilmelidir."
+        q: "Hangi SEO araçlarını kullanıyorsunuz?",
+        a: "Analiz ve raporlamalarda Google Search Console, Google Analytics (GA4), Ahrefs, Semrush ve Screaming Frog araçlarından faydalanıyoruz."
     }
 ];
 
-const jsonLdString = JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Person",
-            "@id": "https://bahattinyaylagul.com/#person",
-            "name": "Bahattin Yaylagül",
-            "url": "https://bahattinyaylagul.com",
-            "jobTitle": "SEO Consultant",
-            "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-            "sameAs": [
-                "https://www.linkedin.com/in/bahattin-yaylagul/",
-                "https://medium.com/@bahattinyaylagl"
-            ]
-        },
-        {
-            "@type": "ProfessionalService",
-            "@id": "https://bahattinyaylagul.com/seo/#service",
-            "name": "Bahattin Yaylagül | SEO Uzmanı",
-            "url": "https://bahattinyaylagul.com/seo",
-            "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-            "description": "Markanızın dijital varlığını güçlendirmek amacıyla profesyonel teknik SEO denetimleri ve semantik içerik stratejileriyle desteklenmiş, ölçülebilir seo danışmanlığı hizmeti sunuyorum.",
-            "priceRange": "$$$",
-            "areaServed": [
-                {
-                    "@type": "Country",
-                    "name": "TR"
-                },
-                {
-                    "@type": "AdministrativeArea",
-                    "name": "İstanbul"
-                },
-                {
-                    "@type": "AdministrativeArea",
-                    "name": "Ankara"
-                },
-                {
-                    "@type": "AdministrativeArea",
-                    "name": "İzmir"
-                }
-            ],
-            "potentialAction": {
-                "@type": "CommunicateAction",
-                "name": "Ücretsiz SEO Denetimi Talebi",
-                "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://bahattinyaylagul.com/seo#contact-form",
-                    "inLanguage": "tr",
-                    "actionPlatform": [
-                        "http://schema.org/DesktopWebPlatform",
-                        "http://schema.org/MobileWebPlatform"
-                    ]
-                },
-                "result": {
-                    "@type": "CommunicateAction",
-                    "name": "Ücretsiz SEO Denetim Raporu"
-                }
-            },
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "SEO Danışmanlığı Hizmet Kapsamı",
-                "itemListElement": [
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Teknik SEO Denetimi",
-                            "description": "Log analizleri, tarama bütçesi yönetimi, Core Web Vitals ve teknik site altyapı denetimleri."
-                        }
-                    },
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Semantik İçerik Stratejisi",
-                            "description": "Kullanıcı arama niyeti analizi, içerik haritalama ve bilgi boşluğu (information gain) optimizasyonları."
-                        }
-                    },
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Silo Mimarisi ve Dahili Bağlantı Yapılandırması",
-                            "description": "Bilgi hiyerarşisi oluşturarak otorite sayfaları ve konu otoritelerini besleyen iç bağlantı kurgusu."
-                        }
-                    },
-                    {
-                        "@type": "Offer",
-                        "itemOffered": {
-                            "@type": "Service",
-                            "name": "Generative Engine Optimization (GEO)",
-                            "description": "Yapay zekâ motorlarında (Perplexity, ChatGPT, Gemini) kaynak gösterilmek ve yanıt üretilmek için optimizasyon."
-                        }
-                    }
-                ]
-            },
-            "sameAs": [
-                "https://linkedin.com/in/bahattinyaylagul",
-                "https://bahattinyaylagul.com"
-            ]
-        },
-        {
-            "@type": "FAQPage",
-            "@id": "https://bahattinyaylagul.com/seo/#faq",
-            "mainEntity": faqData.map(item => ({
-                "@type": "Question",
-                "name": item.q,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": item.a
-                }
-            }))
-        }
-    ]
-});
-
-const breadcrumbJsonString = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://bahattinyaylagul.com/seo/#breadcrumb",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Ana Sayfa",
-            "item": "https://bahattinyaylagul.com"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "SEO Danışmanlığı",
-            "item": "https://bahattinyaylagul.com/seo"
-        }
-    ]
-});
-
 export default function SEOPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://bahattinyaylagul.com/#person",
+                "name": "Bahattin Yaylagül",
+                "url": "https://bahattinyaylagul.com",
+                "jobTitle": "SEO Consultant",
+                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+                "sameAs": ["https://linkedin.com/in/bahattin-yaylagul"]
+            },
+            {
+                "@type": "ProfessionalService",
+                "@id": "https://bahattinyaylagul.com/seo/#service",
+                "name": "SEO Danışmanlığı",
+                "description": "Google'da organik trafiğinizi ve satışlarınızı artırmak için profesyonel SEO danışmanlığı.",
+                "url": "https://bahattinyaylagul.com/seo",
+                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+                "priceRange": "$$$",
+                "areaServed": [
+                    {
+                        "@type": "Country",
+                        "name": "TR"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "İstanbul"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Ankara"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "İzmir"
+                    }
+                ],
+                "potentialAction": {
+                    "@type": "CommunicateAction",
+                    "name": "Ücretsiz SEO Denetimi Talebi",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://bahattinyaylagul.com/seo#analiz",
+                        "inLanguage": "tr",
+                        "actionPlatform": [
+                            "http://schema.org/DesktopWebPlatform",
+                            "http://schema.org/MobileWebPlatform"
+                        ]
+                    }
+                },
+                "founder": { "@id": "https://bahattinyaylagul.com/#person" }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://bahattinyaylagul.com/seo/#faq",
+                "mainEntity": faqData.map(item => ({
+                    "@type": "Question",
+                    "name": item.q,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item.a
+                    }
+                }))
+            },
+            {
+                "@type": "Article",
+                "@id": "https://bahattinyaylagul.com/seo/#article",
+                "headline": "SEO Danışmanlığı: Arama Motoru Optimizasyonu Rehberi",
+                "author": { "@id": "https://bahattinyaylagul.com/#person" },
+                "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
+                "datePublished": "2026-07-18T10:00:00Z",
+                "dateModified": "2026-07-18T10:00:00Z",
+                "description": "Google'da organik trafiğinizi ve marka bilinirliğinizi artırmak için derinlemesine rehber ve danışmanlık detayları.",
+                "inLanguage": "tr-TR"
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: jsonLdString }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: breadcrumbJsonString }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {/* Fixed Header Wrapper */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
-            <article className="pt-24 pb-8">
+            <article className="pb-8">
                 {/* ── HERO ── */}
-                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12">
+                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12 pt-28">
                     {/* Subtle glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -247,7 +165,7 @@ export default function SEOPage() {
                         </p>
 
                         {/* Yazar Bilgisi / Author Info */}
-                        <div className="flex items-center justify-center gap-3 mb-8 text-white/85">
+                        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 text-white/85">
                             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
                                 <Image
                                     src="/images/bahattin-yaylagul.jpg"
@@ -264,6 +182,8 @@ export default function SEOPage() {
                                 </Link>
                             </span>
                             <span className="text-white/30">•</span>
+                            <span className="text-xs text-white/60 font-medium">Son Güncelleme: 18 Temmuz 2026</span>
+                            <span className="text-white/30">•</span>
                             <a
                                 href="https://linkedin.com/in/bahattin-yaylagul"
                                 target="_blank"
@@ -274,7 +194,7 @@ export default function SEOPage() {
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                                 </svg>
-                                Bahattin Yaylagül LinkedIn Profili
+                                LinkedIn Profili
                             </a>
                         </div>
 
@@ -312,11 +232,22 @@ export default function SEOPage() {
                     </div>
                 </header>
 
-                {/* ── SEO Body Contents ── */}
-                <SEOContentBody />
+                {/* Breadcrumb - Placed below Hero (header) for correct visual and semantic order */}
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-4 pb-4">
+                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 font-medium tracking-wide font-sans">
+                        <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
+                        <span className="text-gray-200">/</span>
+                        <span className="text-gray-600 font-bold truncate">SEO Danışmanlığı</span>
+                    </nav>
+                </div>
 
-                {/* ── 6. Ücretsiz Analiz Formu ── */}
-                <section className="py-16 bg-white" id="analiz" aria-labelledby="analiz-heading">
+                {/* SEO Body Contents */}
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12">
+                    <SEOContentBody />
+                </div>
+
+                {/* ── Ücretsiz Analiz Formu ── */}
+                <section className="py-16 bg-white border-t border-gray-100" id="analiz" aria-labelledby="analiz-heading">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <div className="text-center mb-10">
                             <div className="text-center mb-6 bg-blue-50 border border-blue-100 px-6 py-4 rounded-2xl max-w-2xl mx-auto shadow-sm hover:shadow-md transition-shadow">
@@ -331,23 +262,30 @@ export default function SEOPage() {
                     </div>
                 </section>
 
-                {/* FAQ */}
-                <section aria-labelledby="faq-section" className="py-16">
+                {/* FAQ - Tekilleştirilmiş Accordion FAQ */}
+                <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
-                        <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight">Sıkça Sorulan Sorular</h2>
-                        <div className="space-y-3">
+                        <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight text-center">Sıkça Sorulan Sorular</h2>
+                        <div className="space-y-4 max-w-3xl mx-auto">
                             {faqData.map((item, i) => (
-                                <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-colors">
-                                    <p className="text-base font-bold text-gray-900 mb-2">{item.q}</p>
-                                    <p className="text-sm text-gray-600 leading-relaxed">{item.a}</p>
-                                </div>
+                                <details key={i} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+                                    <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
+                                        <span className="font-bold text-gray-950 text-base pr-4">{item.q}</span>
+                                        <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </summary>
+                                    <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
+                                        {item.a}
+                                    </div>
+                                </details>
                             ))}
                         </div>
                     </div>
                 </section>
 
                 {/* Author Card */}
-                <section aria-labelledby="author-bio" className="border-t border-gray-100 py-12">
+                <section aria-labelledby="author-bio" className="border-t border-gray-100 py-12 bg-white">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
                             <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Detaylı Bilgi" className="shrink-0 group">
@@ -382,39 +320,7 @@ export default function SEOPage() {
                         </div>
                     </div>
                 </section>
-
-
             </article>
-
-            {/* ── GEO DANIŞMANLIĞI CTA BANNER ── */}
-            <section className="max-w-6xl mx-auto px-4 md:px-6 mb-16 mt-8" aria-labelledby="geo-cta-heading">
-                <div className="bg-gradient-to-r from-[#0a0a1a] to-[#0f172a] rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
-                    {/* Background Decorations */}
-                    <div className="absolute -right-20 -top-20 w-72 h-72 bg-violet-600 rounded-full blur-[100px] opacity-25"></div>
-                    <div className="absolute -left-10 -bottom-10 w-48 h-48 bg-indigo-500 rounded-full blur-[80px] opacity-20"></div>
-
-                    <div className="relative z-10 max-w-2xl">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-bold uppercase tracking-wider mb-4 border border-violet-400/20">
-                            Yeni Nesil Arama Optimizasyonu
-                        </div>
-                        <h2 id="geo-cta-heading" className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
-                            GEO Danışmanlığı &amp; <br />
-                            <span className="text-violet-300">Generative Engine Optimization</span>
-                        </h2>
-                        <p className="text-slate-300/80 text-lg">
-                            ChatGPT, Gemini ve Perplexity gibi yapay zeka motorlarında <strong className="text-white">kaynak olarak gösterilmek</strong> için sitenizi hazırlayın. GEO stratejisiyle AI çağında rekabette öne geçin.
-                        </p>
-                    </div>
-                    <div className="relative z-10 flex-shrink-0">
-                        <Link href="/geo" className="inline-flex items-center gap-3 px-8 py-4 border border-violet-400/40 hover:border-violet-400 text-violet-300 hover:text-white hover:bg-violet-500/10 font-bold rounded-2xl transition-all shadow-lg text-lg">
-                            Yapay Zekâ Aramaları İçin GEO Danışmanlığı
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </Link>
-                    </div>
-                </div>
-            </section>
 
             <Footer />
         </main>

@@ -88,7 +88,7 @@ const consultancySteps = [
     {
         num: "04",
         stage: "AŞAMA 4",
-        title: "LLM Bahis ve",
+        title: "LLM Önerilme ve",
         sub: "Atıf Raporlama",
         desc: "ChatGPT, Gemini ve Perplexity üzerinde marka önerilme oranlarının ve atıf sıklığının düzenli takibi.",
         bg: "bg-emerald-50",
