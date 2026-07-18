@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const headings = [
@@ -12,41 +11,41 @@ const headings = [
     { id: "sektorel-vakalar", text: "5. Sektör Bazlı GEO Vakaları" },
     { id: "geo-basarisi", text: "6. GEO Başarısı Nasıl Ölçülür?" },
     { id: "danisman-secimi", text: "7. GEO Danışmanı Seçerken 6 Soru" },
-    { id: "sik-sorulan-sorular", text: "8. Sık Sorulan Sorular" },
+    { id: "sik-sorulan-sorular", text: "8. Sık Sorulan Sorular" }
 ];
 
 const faqItems = [
     {
         q: "GEO ile SEO arasındaki fark nedir?",
-        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler. Google'da üst sıraya çıkmak için bağlantı ve anahtar kelime yeterliyken, ChatGPT veya Perplexity'de anılmak için modelin sizi bir otorite olarak 'öğrenmesi' gerekir — bu farklı bir sinyal seti demektir.",
+        a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler."
     },
     {
         q: "Mevcut SEO ajansım varken ayrıca GEO danışmanı almam gerekir mi?",
-        a: "Her zaman değil, ama boşluk büyük olasılıkla var. GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir. Ajansınıza şunu sorun: 'Hangi yapay zeka platformlarında anılıyoruz ve bunu nasıl ölçüyorsunuz?' Cevap yoksa o boşluğu dolduracak birine ihtiyacınız var demektir.",
+        a: "GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir."
     },
     {
         q: "GEO ile AEO aynı şey midir?",
-        a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir. AEO'yu 'yapay zekaya okunabilir içerik üretmek' olarak, GEO'yu ise 'yapay zekanın sizi güvenilir kaynak olarak kodlaması' olarak düşünebilirsiniz.",
+        a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir."
     },
     {
         q: "GEO sonuçları ne kadar sürede görülür?",
-        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir. LLM'ler çelişkili bilgilerle karşılaştığında belirsizliği çözmek yerine o konuyu tamamen geçer; tutarsız marka anlatısı bu süreyi ciddi ölçüde uzatır.",
+        a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir."
     },
     {
         q: "SEO altyapım yoksa GEO'ya başlayabilir miyim?",
-        a: "Başlayabilirsiniz, ama önce temeli sağlamlaştırmanız daha verimli olur. GEO danışmanlığı mevcut teknik SEO güçlüyse daha hızlı sonuç verir. Teknik SEO ve GEO çalışmalarını paralel yürütün; biri diğerini beklesin diye vakit kaybetmeyin.",
+        a: "Teknik SEO ve GEO çalışmalarını paralel yürütün; biri diğerini beklesin diye vakit kaybetmeyin."
     },
     {
         q: "YMYL sektöründe GEO çalışır mı?",
-        a: "Çalışır, ama daha titiz bir strateji gerektirir. Hukuk sektörü YMYL kapsamında olduğu için yapay zeka modelleri bu alanda çok temkinli davranır. Sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; entity otoritesi ve kaynak güvenilirliği diğer sektörlere kıyasla çok daha belirleyici hale gelir.",
-    },
+        a: "Sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; entity otoritesi daha belirleyicidir."
+    }
 ];
 
 const expertiseAreas = [
     {
         number: "01",
         title: "Entity (Varlık) Otoritesi İnşası",
-        description: "Markanızın dijital kimliğini farklı platformlarda (Wikidata, Wikipedia, Crunchbase, Linkedin) çelişkisiz ve tutarlı hale getirme süreci.",
+        description: "Markanızın dijital kimliğini farklı platformlarda çelişkisiz ve tutarlı hale getirme süreci.",
         features: [
             "Wikidata & Wikipedia Kayıt Doğrulaması",
             "Marka & Kurucu Profili Eşleşmesi",
@@ -56,7 +55,7 @@ const expertiseAreas = [
     {
         number: "02",
         title: "LLM Odaklı İçerik Optimizasyonu",
-        description: "Yapay zeka modellerinin kolayca 'alıntılayabileceği' (Citation) bilgi kazancı yüksek, modüler yapıda içerik üretimi.",
+        description: "Yapay zeka modellerinin kolayca alıntılayabileceği bilgi kazancı yüksek, modüler yapıda içerik üretimi.",
         features: [
             "Information Gain (Bilgi Kazancı) Sağlama",
             "Passage & Chunk (Metin Parçacığı) Optimizasyonu",
@@ -93,12 +92,7 @@ const consultancySteps = [
         sub: "ve Tutarlılık Analizi",
         desc: "Markanızın web genelindeki tüm dijital ayak izlerinin, kurucu ve şirket bilgilerinin taranarak çelişkilerin tespiti.",
         bg: "bg-violet-50",
-        text: "text-violet-600",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-        )
+        text: "text-violet-600"
     },
     {
         num: "02",
@@ -107,12 +101,7 @@ const consultancySteps = [
         sub: "ve Schema Kurulumu",
         desc: "Arama motoru botları ve LLM'ler için Schema.org, JSON-LD ve FAQPage işaretlemelerinin sisteme entegrasyonu.",
         bg: "bg-indigo-50",
-        text: "text-indigo-600",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-            </svg>
-        )
+        text: "text-indigo-600"
     },
     {
         num: "03",
@@ -121,12 +110,7 @@ const consultancySteps = [
         sub: "ve Dijital PR Yayılımı",
         desc: "Sektörel yayınlarda, forumlarda ve akademik platformlarda marka adının doğru bağlamda anılmasının tetiklenmesi.",
         bg: "bg-blue-50",
-        text: "text-blue-600",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-            </svg>
-        )
+        text: "text-blue-600"
     },
     {
         num: "04",
@@ -135,12 +119,7 @@ const consultancySteps = [
         sub: "Atıf Raporlama",
         desc: "ChatGPT, Gemini ve Perplexity üzerinde marka önerilme oranlarının ve atıf sıklığının düzenli takibi.",
         bg: "bg-emerald-50",
-        text: "text-emerald-600",
-        icon: (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-        )
+        text: "text-emerald-600"
     }
 ];
 
@@ -154,18 +133,6 @@ export default function GEOContent() {
             <section id="geo-kapsami" className="scroll-mt-32 max-w-6xl mx-auto px-4 md:px-6" aria-labelledby="strategic-approach-heading">
                 <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-10">
                     <div className="max-w-3xl mx-auto mb-12 text-center">
-                        <div className="flex justify-center mb-10">
-                            <div className="relative flex items-center justify-center">
-                                <div className="absolute w-[420px] h-[420px] rounded-full bg-gradient-to-br from-violet-50 via-indigo-50/60 to-slate-50 pointer-events-none" />
-                                <div className="absolute w-[400px] h-[400px] rounded-full border border-violet-100/60 pointer-events-none" />
-                                <div className="absolute w-[320px] h-[320px] rounded-full border border-indigo-100/40 pointer-events-none" />
-                                <div className="absolute top-6 right-12 w-3 h-3 bg-violet-200 rounded-full opacity-60 pointer-events-none" />
-                                <div className="absolute bottom-8 left-10 w-2 h-2 bg-indigo-300 rounded-full opacity-50 pointer-events-none" />
-                                <div className="absolute top-14 left-6 w-1.5 h-1.5 bg-violet-400 rounded-full opacity-40 pointer-events-none" />
-                                <span className="text-8xl relative z-10 select-none filter drop-shadow-sm">🤖</span>
-                            </div>
-                        </div>
-
                         <h2 id="strategic-approach-heading" className="text-3xl font-bold text-gray-900 mb-6">
                             GEO Danışmanlığı Kapsamı ve Stratejik Yaklaşım
                         </h2>
@@ -249,12 +216,8 @@ export default function GEOContent() {
                             </div>
 
                             <div className="relative z-10 flex-col flex h-full">
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 shadow-sm ${step.bg} ${step.text}`}>
-                                    {step.icon}
-                                </div>
-
-                                <div>
-                                    <span className="inline-block px-3 py-1 bg-gray-50 text-gray-500 text-[10px] font-bold uppercase tracking-widest rounded-full border border-gray-100 mb-4">
+                                <div className="relative z-10 flex-col flex h-full">
+                                    <span className={`inline-block px-3 py-1 bg-gray-50 text-gray-500 text-[10px] font-bold uppercase tracking-widest rounded-full border border-gray-100 mb-4 self-start ${step.text}`}>
                                         {step.stage}
                                     </span>
 
@@ -268,14 +231,6 @@ export default function GEOContent() {
                                     <p className="text-gray-600 text-sm leading-[1.6] opacity-90">
                                         {step.desc}
                                     </p>
-                                </div>
-
-                                <div className="mt-auto pt-8 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-4 group-hover:translate-x-0">
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${step.bg} ${step.text}`}>
-                                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +256,9 @@ export default function GEOContent() {
                             >
                                 <div className="flex items-center justify-between mb-8">
                                     <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center border border-gray-100 group-hover:scale-110 group-hover:bg-violet-50 group-hover:border-violet-100 transition-all duration-500">
-                                        <span className="text-2xl">⚡</span>
+                                        <svg className="w-6 h-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                        </svg>
                                     </div>
                                     <span className="text-4xl font-black text-gray-100 group-hover:text-gray-200 transition-colors duration-500">
                                         {step.number}
@@ -336,7 +293,6 @@ export default function GEOContent() {
             {/* ── 4. Semantik Rehber Bölümü (TOC Sidebar ile) ── */}
             <section id="geo-rehberi" className="max-w-6xl mx-auto px-4 md:px-6 py-12 border-t border-gray-100">
                 <div className="grid lg:grid-cols-[250px_1fr] gap-12 items-start relative">
-                    {/* TOC Sidebar */}
                     <aside
                         className="hidden lg:block sticky top-32 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar"
                         aria-label="Rehber İçindekiler"
@@ -365,9 +321,7 @@ export default function GEOContent() {
                         </div>
                     </aside>
 
-                    {/* Main Article */}
                     <div className="min-w-0">
-                        {/* Section 1 */}
                         <section className={`${proseBase} mb-16`} id="geo-nedir" aria-labelledby="geo-nedir-title">
                             <h2 id="geo-nedir-title">1. GEO Danışmanlığı Nedir?</h2>
                             <p>
@@ -378,7 +332,6 @@ export default function GEOContent() {
                             </p>
                         </section>
 
-                        {/* Section 2 */}
                         <section className={`${proseBase} mb-16`} id="geo-danismani-ne-yapar" aria-labelledby="geo-danismani-title">
                             <h2 id="geo-danismani-title">2. GEO Danışmanı Ne Yapar?</h2>
                             
@@ -387,7 +340,6 @@ export default function GEOContent() {
                                 Yapay zeka bir markayı değerlendirirken yalnızca o markanın kendi sitesine değil, dışarıdan referans gösteren güvenilir kaynaklara da bakar. Danışmanın ilk işi, markanın dijital kimliğini — entity adı, sektör, konum, hizmet kapsamı — farklı platformlarda çelişkisiz hale getirmektir. Wikipedia, Wikidata, sektör dizinleri, sosyal profiller: bunların hepsinde aynı bilgi duruyorsa model güven puanını yüksek tutar. Tek bir çelişkili kayıt bile modelin markayla ilgili belirsizlik yaşamasına yol açabilir.
                             </p>
 
-                            {/* Somut Örnek Kutusu */}
                             <div className="not-prose bg-amber-50 border border-amber-200 rounded-2xl p-6 my-6">
                                 <h4 className="font-bold text-amber-900 mb-2">⚠️ Somut Entity Tutarlılığı Hata Örneği:</h4>
                                 <p className="text-sm text-amber-800 leading-relaxed">
@@ -411,14 +363,12 @@ export default function GEOContent() {
                             </p>
                         </section>
 
-                        {/* Section 3 */}
                         <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
                             <h2 id="platform-bazli-title">3. Platform Bazlı GEO Stratejisi: ChatGPT, Perplexity ve Gemini</h2>
                             <p>
-                                "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity ve Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
+                                "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity and Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
                             </p>
 
-                            {/* Platform Table */}
                             <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                                 <table className="w-full text-sm">
                                     <thead>
@@ -450,7 +400,6 @@ export default function GEOContent() {
                                 Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity'de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
                             </p>
 
-                            {/* Vaka Kutusu */}
                             <div className="not-prose bg-blue-50 border border-blue-100 rounded-2xl p-6 my-6">
                                 <h4 className="font-bold text-blue-900 mb-2">📊 Platformlar Arası Görünürlük Farkı Vakası:</h4>
                                 <p className="text-sm text-blue-800 leading-relaxed">
@@ -459,7 +408,6 @@ export default function GEOContent() {
                             </div>
                         </section>
 
-                        {/* Section 4 */}
                         <section className={`${proseBase} mb-16`} id="ne-zaman-sonuc-verir" aria-labelledby="ne-zaman-sonuc-title">
                             <h2 id="ne-zaman-sonuc-title">4. GEO Çalışması Ne Zaman Sonuç Verir?</h2>
                             <p>
@@ -476,7 +424,6 @@ export default function GEOContent() {
                             </ul>
                         </section>
 
-                        {/* Section 5 */}
                         <section className={`${proseBase} mb-16`} id="sektorel-vakalar" aria-labelledby="sektorel-vakalar-title">
                             <h2 id="sektorel-vakalar-title">5. Sektör Bazlı GEO Vakaları</h2>
 
@@ -494,31 +441,21 @@ export default function GEOContent() {
                             <p>
                                 Co-citation bağlamı değiştirilerek — markanın hangi kavramlar ve hangi markalarla birlikte anıldığı yeniden şekillendirilerek — 4 ay içinde marka, LLM sıralamalarında rakibinin önüne geçti. Rakip marka sürekli "kurumsal ölçekli ve pahalı" bağlamında geçerken, hedef marka "orta ölçekli ekipler için" ve "hızlı kurulum" bağlamında konumlandırıldı. LLM'ler bu bağlamsal farkı zamanla modellerine işledi.
                             </p>
-
-                            {/* Türkiye Vakası */}
-                            <div className="not-prose bg-purple-50 border border-purple-100 rounded-2xl p-6 my-6">
-                                <h4 className="font-bold text-purple-900 mb-2">🇹🇷 Türkiye'den Yerli Girişim Başarı Hikayesi:</h4>
-                                <p className="text-sm text-purple-800 leading-relaxed">
-                                    Türkiye merkezli bir HR-Tech SaaS girişimi, "Yapay Zeka Destekli İşe Alım" sorgusunda hiçbir LLM modelinde önerilmiyorken, yürüttüğümüz 5 aylık co-citation ve semantik schema çalışması sonrasında Perplexity ve ChatGPT üzerinde en çok önerilen ilk 3 platform arasına girmeyi başardı.
-                                </p>
-                            </div>
                         </section>
 
-                        {/* Section 6 */}
                         <section className={`${proseBase} mb-16`} id="geo-basarisi" aria-labelledby="geo-basarisi-title">
                             <h2 id="geo-basarisi-title">6. GEO Başarısı Nasıl Ölçülür?</h2>
                             <p>
                                 GEO'nun getirisi anlık dönüşüm değil, erişim genişliği üzerinden ölçülür: kaç platformda, kaç sorgu tipinde, kaç farklı kaynak üzerinden görünürsünüz.
                             </p>
                             <ul>
-                                <li><strong>AI bahis oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günlerde, farklı formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
+                                <li><strong>AI bahis oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günleşmiş formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
                                 <li><strong>Entity güç skoru:</strong> Markanızın Knowledge Graph'ta ne kadar iyi tanımlandığını, hangi kavramlarla ilişkilendirildiğini ve bu ilişkilerin kaç farklı kaynakta teyit edildiğini ölçer.</li>
                                 <li><strong>LLM önerilme oranı:</strong> "Bu kategoride hangi markayı önerirsin?" türü sorgularda markanızın öneri listesine girme sıklığını rakiplerinizle kıyaslayarak izleyin.</li>
                                 <li><strong>Kaynak çeşitliliği:</strong> Tek bir otoriter site değil, birden fazla farklı domain üzerinden co-citation örüntüsü oluşturulmuşsa LLM'ler sizi daha güvenilir buluyor.</li>
                                 <li><strong>Google AI Overviews görünürlüğü:</strong> Yapılandırılmış içerik, Schema.org işaretlemeleri ve otorite sinyalleri doğru kurulduğunda AI Overviews kutusuna girme ihtimali artar.</li>
                             </ul>
 
-                            {/* Müşteri İstatistik Verisi */}
                             <div className="not-prose bg-green-50 border border-green-200 rounded-2xl p-6 my-6">
                                 <h4 className="font-bold text-green-900 mb-2">📈 Gerçek Müşteri LLM Önerilme Karşılaştırması:</h4>
                                 <p className="text-sm text-green-800 leading-relaxed">
@@ -527,7 +464,6 @@ export default function GEOContent() {
                             </div>
                         </section>
 
-                        {/* Section 7 */}
                         <section className={`${proseBase} mb-16`} id="danisman-secimi" aria-labelledby="danisman-secimi-title">
                             <h2 id="danisman-secimi-title">7. GEO Danışmanı Seçerken Sormanız Gereken 6 Soru</h2>
                             
@@ -540,7 +476,6 @@ export default function GEOContent() {
                                 <li><strong>Entity tutarlılığı denetimi yapıyor musunuz?</strong> Markanızın adı, kurucu bilgileri web genelinde tutarsızsa LLM'ler çelişkili sinyaller alır.</li>
                             </ol>
 
-                            {/* Danışmanlık Deneyimi Kutusu */}
                             <div className="not-prose bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6">
                                 <h4 className="font-bold text-gray-900 mb-2">💬 Gerçek Bir Görüşme Deneyimi:</h4>
                                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -549,7 +484,6 @@ export default function GEOContent() {
                             </div>
                         </section>
 
-                        {/* Section 8 — FAQ */}
                         <section className={`${proseBase} mb-8`} id="sik-sorulan-sorular" aria-labelledby="faq-title">
                             <h2 id="faq-title">8. Sık Sorulan Sorular</h2>
                         </section>
@@ -570,7 +504,6 @@ export default function GEOContent() {
                             ))}
                         </div>
 
-                        {/* Back Link */}
                         <div className="border-t border-gray-100 mt-16 pt-8">
                             <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
                                 ← Ana Sayfaya Dön
