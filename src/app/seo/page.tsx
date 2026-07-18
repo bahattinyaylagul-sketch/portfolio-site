@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SEOContentBody from "./SEOContentBody";
 import { SEOContactForm } from "./SEONavigator";
+import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "SEO Danışmanlığı – Bahattin Yaylagül",
@@ -36,6 +37,10 @@ const faqData = [
 ];
 
 export default function SEOPage() {
+    const breadcrumbItems = [
+        { label: "SEO Danışmanlığı", href: "/seo" }
+    ];
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
@@ -110,8 +115,10 @@ export default function SEOPage() {
                 "datePublished": "2026-07-18T10:00:00Z",
                 "dateModified": "2026-07-18T10:00:00Z",
                 "description": "Google'da organik trafiğinizi ve marka bilinirliğinizi artırmak için derinlemesine rehber ve danışmanlık detayları.",
-                "inLanguage": "tr-TR"
-            }
+                "inLanguage": "tr-TR",
+                "breadcrumb": { "@id": "https://bahattinyaylagul.com/seo#breadcrumb" }
+            },
+            getBreadcrumbSchema(breadcrumbItems)
         ]
     };
 
@@ -128,20 +135,25 @@ export default function SEOPage() {
 
             <article className="pb-8">
                 {/* ── HERO ── */}
-                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12 pt-28">
+                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 pt-28">
                     {/* Subtle glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
-                        {/* Üst etiket */}
-                        <span className="inline-flex items-center gap-2 text-blue-400 font-mono font-bold tracking-widest text-xs uppercase mb-6 bg-blue-400/10 px-4 py-1.5 rounded-full border border-blue-400/15">
-                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
-                            Hizmet
-                        </span>
+                    <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+                        {/* Breadcrumb inside Hero header, logo-aligned, above upper badge */}
+                        <Breadcrumb items={breadcrumbItems} />
 
-                        {/* Başlık */}
+                        {/* Upper Badge with space-above config */}
+                        <div className="text-left mt-8 mb-6">
+                            <span className="inline-flex items-center gap-2 text-blue-400 font-mono font-bold tracking-widest text-xs uppercase mb-6 bg-blue-400/10 px-4 py-1.5 rounded-full border border-blue-400/15">
+                                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
+                                Hizmet
+                            </span>
+                        </div>
+
+                        {/* Başlık - align left */}
                         <h1
-                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
+                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight text-left"
                             style={{ fontWeight: 900 }}
                         >
                             <span
@@ -156,16 +168,16 @@ export default function SEOPage() {
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl text-left leading-relaxed font-medium">
                             Sitenizi yalnızca Google için değil, yapay zekâ aramaları için de görünür kılıyorum. Teknik denetimden içerik stratejisine tüm süreci tek elden yürütüyor, her ay ölçülebilir raporla ilerlemeyi gösteriyorum.
                         </p>
 
-                        <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
+                        <p className="text-sm text-white/50 mb-8 max-w-xl text-left leading-relaxed">
                             Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
                         </p>
 
-                        {/* Yazar Bilgisi / Author Info */}
-                        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 text-white/85">
+                        {/* Yazar Bilgisi / Author Info - align left */}
+                        <div className="flex flex-wrap items-center justify-start gap-3 mb-8 text-white/85">
                             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
                                 <Image
                                     src="/images/bahattin-yaylagul.jpg"
@@ -198,8 +210,8 @@ export default function SEOPage() {
                             </a>
                         </div>
 
-                        {/* CTA - Birincil (Dolgulu, Belirgin Stil) */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
+                        {/* CTA - align left */}
+                        <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12 mt-8">
                             <a
                                 href="#analiz"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 hover:-translate-y-0.5"
@@ -214,14 +226,14 @@ export default function SEOPage() {
                             </span>
                         </div>
 
-                        {/* Trust Stats Bar */}
+                        {/* Trust Stats Bar - align left */}
                         <div className="border-t border-white/10 pt-10">
-                            <div className="flex items-center justify-center gap-0 max-w-sm mx-auto">
+                            <div className="flex items-center justify-start gap-0 max-w-sm">
                                 {[
                                     { value: "14 Yıl+", label: "Sektör Deneyimi" },
                                     { value: "200+", label: "Başarılı Proje" },
                                 ].map((stat, i) => (
-                                    <div key={i} className={`flex flex-col items-center gap-1 px-10 ${i === 0 ? "border-r border-white/10" : ""}`}>
+                                    <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
                                         <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
                                         <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
                                     </div>
@@ -232,17 +244,8 @@ export default function SEOPage() {
                     </div>
                 </header>
 
-                {/* Breadcrumb - Placed below Hero (header) for correct visual and semantic order */}
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-4 pb-4">
-                    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 font-medium tracking-wide font-sans">
-                        <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
-                        <span className="text-gray-200">/</span>
-                        <span className="text-gray-600 font-bold truncate">SEO Danışmanlığı</span>
-                    </nav>
-                </div>
-
                 {/* SEO Body Contents */}
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12">
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <SEOContentBody />
                 </div>
 

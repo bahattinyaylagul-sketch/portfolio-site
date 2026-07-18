@@ -73,9 +73,9 @@ export default function About() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        <h1 className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-4 block">
-                            Hakkımda
-                        </h1>
+                        <h2 className="text-sm font-medium tracking-widest text-gray-500 uppercase mb-4 block">
+                            Uzmanlık & Deneyim
+                        </h2>
 
                         <p className="text-gray-600 leading-relaxed mb-6">
                             Yaklaşık 12+ yıldır SEO ve dijital görünürlük alanında; yerel ve global ölçekte birçok lider markanın büyüme projelerinde yer aldım.

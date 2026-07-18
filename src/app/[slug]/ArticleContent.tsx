@@ -54,21 +54,6 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
 
     return (
         <div className="max-w-6xl mx-auto px-6 pt-12 pb-20">
-            {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
-                <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
-                <span className="text-gray-200">/</span>
-                <Link href="/seo" className="hover:text-blue-600 transition-colors">SEO</Link>
-                {post.parent && seoClusterData[post.parent] && (
-                    <>
-                        <span className="text-gray-200">/</span>
-                        <Link href={`/${seoClusterData[post.parent].slug}`} className="hover:text-blue-600 transition-colors">{seoClusterData[post.parent].title}</Link>
-                    </>
-                )}
-                <span className="text-gray-200">/</span>
-                <span className="text-gray-600 font-bold">{post.title}</span>
-            </nav>
-
             <div className="flex flex-col lg:grid lg:grid-cols-[280px_1fr] gap-12 items-start relative">
                 {/* Left Sidebar: TOC Only - Sticky */}
                 <aside className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar">

@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SEOContactForm } from "../seo/SEONavigator";
 import GEOContent from "./GEOContent";
+import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "GEO Danışmanlığı – Bahattin Yaylagül",
@@ -52,6 +53,10 @@ const faqData = [
 ];
 
 export default function GEOPage() {
+    const breadcrumbItems = [
+        { label: "GEO Danışmanlığı", href: "/geo" }
+    ];
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
@@ -126,8 +131,10 @@ export default function GEOPage() {
                 "datePublished": "2026-07-18T10:00:00Z",
                 "dateModified": "2026-07-18T10:00:00Z",
                 "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi üretken yapay zekâ motorlarında atıf alması, kaynak gösterilmesi ve önerilmesi için stratejik optimizasyon rehberi.",
-                "inLanguage": "tr-TR"
-            }
+                "inLanguage": "tr-TR",
+                "breadcrumb": { "@id": "https://bahattinyaylagul.com/geo#breadcrumb" }
+            },
+            getBreadcrumbSchema(breadcrumbItems)
         ]
     };
 
@@ -142,31 +149,27 @@ export default function GEOPage() {
                 <Navigation />
             </header>
 
-            {/* Breadcrumb - Placed high for semantic hierarchy */}
-            <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-28 pb-2">
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 font-medium tracking-wide font-sans">
-                    <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
-                    <span className="text-gray-200">/</span>
-                    <span className="text-gray-600 font-bold truncate">GEO Danışmanlığı</span>
-                </nav>
-            </div>
-
             <article className="pb-8">
                 {/* ── HERO ── */}
-                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 mb-12">
+                <header className="relative overflow-hidden bg-[#0a0a0a] py-20 pt-28">
                     {/* Subtle glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center relative z-10">
-                        {/* Üst etiket */}
-                        <span className="inline-flex items-center gap-2 text-violet-400 font-mono font-bold tracking-widest text-xs uppercase mb-6 bg-violet-400/10 px-4 py-1.5 rounded-full border border-violet-400/15">
-                            <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" />
-                            Yeni Nesil Arama
-                        </span>
+                    <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+                        {/* Breadcrumb inside Hero header, logo-aligned, above upper badge */}
+                        <Breadcrumb items={breadcrumbItems} />
 
-                        {/* Başlık */}
+                        {/* Upper Badge with space-above config */}
+                        <div className="text-left mt-8 mb-6">
+                            <span className="inline-flex items-center gap-2 text-violet-400 font-mono font-bold tracking-widest text-xs uppercase bg-violet-400/10 px-4 py-1.5 rounded-full border border-violet-400/15">
+                                <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" />
+                                Yeni Nesil Arama
+                            </span>
+                        </div>
+
+                        {/* Başlık - align left */}
                         <h1
-                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
+                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight text-left"
                             style={{ fontWeight: 900 }}
                         >
                             <span
@@ -181,16 +184,16 @@ export default function GEOPage() {
                             </span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl text-left leading-relaxed font-medium">
                             Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
                         </p>
 
-                        <p className="text-sm text-white/50 mb-8 max-w-xl mx-auto leading-relaxed">
+                        <p className="text-sm text-white/50 mb-8 max-w-xl text-left leading-relaxed">
                             Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
                         </p>
 
-                        {/* Yazar Bilgisi / Author Info */}
-                        <div className="flex flex-wrap items-center justify-center gap-3 mb-8 text-white/85">
+                        {/* Yazar Bilgisi / Author Info - align left */}
+                        <div className="flex flex-wrap items-center justify-start gap-3 mb-8 text-white/85">
                             <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
                                 <Image
                                     src="/images/bahattin-yaylagul.jpg"
@@ -223,8 +226,8 @@ export default function GEOPage() {
                             </a>
                         </div>
 
-                        {/* CTA - Birincil (Dolgulu, Belirgin Stil) */}
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 mt-8">
+                        {/* CTA - align left */}
+                        <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12 mt-8">
                             <a
                                 href="#analiz"
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-violet-600/25 hover:shadow-violet-600/35 hover:-translate-y-0.5"
@@ -239,14 +242,14 @@ export default function GEOPage() {
                             </span>
                         </div>
 
-                        {/* Trust Stats Bar */}
+                        {/* Trust Stats Bar - align left */}
                         <div className="border-t border-white/10 pt-10">
-                            <div className="flex items-center justify-center gap-0 max-w-sm mx-auto">
+                            <div className="flex items-center justify-start gap-0 max-w-sm">
                                 {[
                                     { value: "14 Yıl+", label: "Sektör Deneyimi" },
                                     { value: "200+", label: "Başarılı Proje" },
                                 ].map((stat, i) => (
-                                    <div key={i} className={`flex flex-col items-center gap-1 px-10 ${i === 0 ? "border-r border-white/10" : ""}`}>
+                                    <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
                                         <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
                                         <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
                                     </div>
@@ -257,8 +260,8 @@ export default function GEOPage() {
                     </div>
                 </header>
 
-                {/* GEO Content Body - Placed immediately after Hero for high centerpiece ranking */}
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12">
+                {/* GEO Content Body */}
+                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <GEOContent />
                 </div>
 
@@ -278,7 +281,7 @@ export default function GEOPage() {
                     </div>
                 </section>
 
-                {/* FAQ - Tekilleştirilmiş ve accordion (details) formatına alınmış tekil SSS */}
+                {/* FAQ */}
                 <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight text-center">Sıkça Sorulan Sorular</h2>

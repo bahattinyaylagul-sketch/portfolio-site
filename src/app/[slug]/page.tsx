@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 
 import ArticleContent from "./ArticleContent";
+import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 
 // Helper function to calculate reading time
 function calculateReadingTime(content: string) {
@@ -60,17 +61,16 @@ function injectHeadingIds(content: string) {
 
 // Map slugs to Visual Assets & Series Titles
 const getCategoryAssets = (slug: string, parent: string | null) => {
-    // 1. Define specific images for specific slugs (Highest Priority)
     const specificImages: Record<string, string> = {
         "arama-niyeti": "/images/search_intent_3d.png",
         "semantik-yazim": "/images/semantic_seo_3d.png",
         "silo-mimarisi": "/images/silo_architecture_3d.png",
-        "tarama": "/images/crawling_indexing_3d.png", // Shared for related topics
+        "tarama": "/images/crawling_indexing_3d.png",
         "indeksleme": "/images/crawling_indexing_3d.png",
         "siralama": "/images/ranking_factors_3d.png",
         "eeat-sinyalleri": "/images/eeat_trust_3d.png",
         "topikal-otorite": "/images/topic_authority_3d.png",
-        "bilgi-kazanci": "/images/topic_authority_3d.png", // Reusing topical authority for now as it fits "Knowledge"
+        "bilgi-kazanci": "/images/topic_authority_3d.png",
         "teknik-seo": "/images/technical_seo_cover_3d.png",
         "icerik-optimizasyonu": "/images/content_seo_cover_3d.png",
         "site-ici-seo": "/images/on_page_seo_cover_3d.png",
@@ -79,7 +79,6 @@ const getCategoryAssets = (slug: string, parent: string | null) => {
     };
 
     if (specificImages[slug]) {
-        // Determine series color based on parent or category
         let series = "SEO Uzmanlık Serisi";
         let color = "text-blue-400";
 
@@ -104,7 +103,6 @@ const getCategoryAssets = (slug: string, parent: string | null) => {
         };
     }
 
-    // 2. Fallback to Parent Category Images if no specific image exists
     const key = parent || slug;
 
     if (key === 'teknik-seo') {
@@ -136,7 +134,6 @@ const getCategoryAssets = (slug: string, parent: string | null) => {
         };
     }
 
-    // Default Fallback
     return {
         image: "/images/technical_seo_cover_3d.png",
         series: "SEO Uzmanlık Serisi",
@@ -174,22 +171,61 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     const assets = getCategoryAssets(post.slug, post.parent);
     const headings = extractHeadings(post.content);
 
-    // Find next post logic (simplified)
     const nextPostSlug = post.relatedLinks?.[0];
     const nextPost = nextPostSlug ? seoClusterData[nextPostSlug] : null;
     const contentWithIds = injectHeadingIds(post.content);
 
+    const breadcrumbItems = [
+        { label: "İçgörüler", href: "/icgoruler" },
+        { label: post.title, href: `/${post.slug}` }
+    ];
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://bahattinyaylagul.com/#person",
+                "name": "Bahattin Yaylagül",
+                "url": "https://bahattinyaylagul.com",
+                "jobTitle": "SEO Consultant",
+                "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
+                "sameAs": ["https://linkedin.com/in/bahattin-yaylagul"]
+            },
+            {
+                "@type": "Article",
+                "@id": `https://bahattinyaylagul.com/${post.slug}#article`,
+                "headline": post.title,
+                "author": { "@id": "https://bahattinyaylagul.com/#person" },
+                "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
+                "datePublished": post.publishDate,
+                "dateModified": post.publishDate,
+                "description": post.description,
+                "inLanguage": "tr-TR",
+                "breadcrumb": { "@id": `https://bahattinyaylagul.com/${post.slug}#breadcrumb` }
+            },
+            getBreadcrumbSchema(breadcrumbItems)
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Fixed Header Wrapper */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
             {/* Hero Header - Global Design System */}
-            <div className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
+            <div className="w-full bg-gray-900 pt-28 pb-0 relative overflow-hidden">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Breadcrumbs logo-aligned */}
+                    <Breadcrumb items={breadcrumbItems} />
+
+                    <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
                         {/* Text Content */}
                         <div className="space-y-8 flex flex-col justify-center h-full pb-8">
                             <div>
@@ -232,7 +268,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                             Bahattin Yaylagül
                                         </Link>
                                         <a
-                                            href="https://linkedin.com/in/bahattinyaylagul"
+                                            href="https://linkedin.com/in/bahattin-yaylagul"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-gray-400 hover:text-blue-500 transition-colors"
