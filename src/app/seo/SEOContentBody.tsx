@@ -116,12 +116,6 @@ export default function SEOContentBody() {
 
                             <div className="text-xs text-gray-500 border-t border-gray-100 pt-4 flex flex-wrap gap-x-4 gap-y-2 justify-between items-center">
                                 <span>Ek Etki: Hasta Randevularında Belirgin Artış</span>
-                                <a 
-                                    href="#testimonials-dunyagoz" 
-                                    className="text-blue-600 hover:underline font-semibold flex items-center gap-1"
-                                >
-                                    Müşteri Beyanı ve Görüşü →
-                                </a>
                             </div>
                         </div>
                     </div>
