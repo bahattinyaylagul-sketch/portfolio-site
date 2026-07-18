@@ -62,10 +62,26 @@ export default function TestimonialsSection() {
         return () => clearInterval(interval);
     }, [current, go]);
 
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const handleHash = () => {
+                if (window.location.hash === "#testimonials-dunyagoz") {
+                    go(2); // Sertaç Sakarya - Dünyagöz indexi
+                } else if (window.location.hash === "#testimonials-nkolay") {
+                    go(0); // Sinem Göven - N Kolay indexi
+                }
+            };
+            window.addEventListener("hashchange", handleHash);
+            // Sayfa ilk yüklendiğinde hash varsa tetikle
+            handleHash();
+            return () => window.removeEventListener("hashchange", handleHash);
+        }
+    }, [go]);
+
     const t = testimonials[current];
 
     return (
-        <section className="bg-white py-20 px-6 border-b border-gray-100" aria-labelledby="testimonials-heading">
+        <section id="testimonials" className="bg-white py-20 px-6 border-b border-gray-100" aria-labelledby="testimonials-heading">
             <div className="max-w-6xl mx-auto">
 
                 {/* Başlık Satırı */}
