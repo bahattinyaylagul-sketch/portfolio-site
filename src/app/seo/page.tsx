@@ -85,8 +85,42 @@ const jsonLdString = JSON.stringify({
             "url": "https://bahattinyaylagul.com/seo",
             "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
             "description": "Markanızın dijital varlığını güçlendirmek amacıyla profesyonel teknik SEO denetimleri ve semantik içerik stratejileriyle desteklenmiş, ölçülebilir seo danışmanlığı hizmeti sunuyorum.",
-            "priceRange": "[FIYAT_ARALIGI]",
-            "areaServed": ["TR", "İstanbul", "Ankara", "İzmir", "Uzaktan / Remote"],
+            "priceRange": "8099$",
+            "areaServed": [
+                {
+                    "@type": "Country",
+                    "name": "TR"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "İstanbul"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Ankara"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "İzmir"
+                }
+            ],
+            "potentialAction": {
+                "@type": "CommunicateAction",
+                "name": "Ücretsiz SEO Denetimi Talebi",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://bahattinyaylagul.com/seo#contact-form",
+                    "inLanguage": "tr",
+                    "actionPlatform": [
+                        "http://schema.org/DesktopWebPlatform",
+                        "http://schema.org/MobileWebPlatform"
+                    ]
+                },
+                "result": {
+                    "@type": "CommunicateAction",
+                    "name": "Ücretsiz SEO Denetim Raporu"
+                }
+            },
             "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "SEO Danışmanlığı Hizmet Kapsamı",
@@ -126,7 +160,7 @@ const jsonLdString = JSON.stringify({
                 ]
             },
             "sameAs": [
-                "https://linkedin.com/in/bahattin-yaylagul",
+                "https://linkedin.com/in/bahattinyaylagul",
                 "https://bahattinyaylagul.com"
             ]
         },
