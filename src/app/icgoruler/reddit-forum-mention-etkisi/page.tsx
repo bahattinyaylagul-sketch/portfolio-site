@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Reddit ve Forumların GEO Etkisi – Bahattin Yaylagül",
-    description: "Reddit ve forum tartışmalarının GEO (Generative Engine Optimization) üzerindeki etkisi. Topluluk odaklı sinyallerle yapay zeka görünürlüğünü artırma rehberi.",
+    title: "Reddit ve Forum Mention'larının GEO Etkisi – Bahattin Yaylagül",
+    description: "Reddit ve forum mention'ı GEO başarısını nasıl etkiler? Topluluk sinyallerinin yapay zeka kaynaklarda görünme olasılığını artırma rehberi.",
     alternates: {
         canonical: "/icgoruler/reddit-forum-mention-etkisi",
     },

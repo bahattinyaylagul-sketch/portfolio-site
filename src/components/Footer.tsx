@@ -11,6 +11,7 @@ const footerLinks = {
     resources: [
         { label: "Güncel SEO & Yazılım İçgörüleri", href: "/icgoruler" },
         { label: "Site Haritası", href: "/site-haritasi" },
+        { label: "EntityMap (AI için entity index)", href: "/entitymap.html" },
     ],
     social: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/bahattin-yaylagul/", icon: "linkedin" },

@@ -1,0 +1,154 @@
+{
+  "specVersion": "1.0",
+  "generatedAt": "2026-07-23T00:00:00Z",
+  "publisher": {
+    "name": "Bahattin Yaylagül",
+    "url": "https://bahattinyaylagul.com",
+    "type": "Person",
+    "sameAs": [
+      "https://www.linkedin.com/in/bahattin-yaylagul/",
+      "https://medium.com/@bahattinyaylagl"
+    ]
+  },
+  "verificationStatus": "self-declared",
+  "language": "tr",
+  "entities": [
+    {
+      "id": "bahattin-yaylagul",
+      "type": "Person",
+      "name": "Bahattin Yaylagül",
+      "description": "SEO & GEO danışmanı, AI Search Architect. Modern arama ekosistemi için stratejik danışmanlık veriyor; geleneksel sıralama faktörlerinin ötesinde semantik otorite inşası ve AI sistemlerinin markayı yeniden seçme olasılığını artırma üzerine çalışıyor.",
+      "aliases": ["Bahattin Yaylagul"],
+      "sameAs": [
+        "https://www.linkedin.com/in/bahattin-yaylagul/",
+        "https://medium.com/@bahattinyaylagl"
+      ],
+      "evidence": [
+        "https://bahattinyaylagul.com/hakkimda"
+      ]
+    },
+    {
+      "id": "seo",
+      "type": "Discipline",
+      "name": "SEO",
+      "aliases": ["Search Engine Optimization", "Arama Motoru Optimizasyonu"],
+      "sameAs": ["https://en.wikipedia.org/wiki/Search_engine_optimization"],
+      "description": "Geleneksel sıralama faktörlerinin ötesinde, kullanıcı deneyimi ve semantik otorite üzerine kurulu SEO stratejisi disiplini.",
+      "evidence": [
+        "https://bahattinyaylagul.com/seo"
+      ]
+    },
+    {
+      "id": "geo",
+      "type": "Discipline",
+      "name": "Generative Engine Optimization",
+      "aliases": ["GEO", "AI Search Optimization", "AEO"],
+      "description": "ChatGPT, Gemini, Perplexity ve SearchGPT gibi yeni nesil generative arama motorlarında marka referansının sağlanması ve AI sistemlerinin markayı yeniden seçme olasılığının artırılması disiplini.",
+      "evidence": [
+        "https://bahattinyaylagul.com/geo"
+      ]
+    },
+    {
+      "id": "technical-seo",
+      "type": "Discipline",
+      "name": "Teknik SEO & Altyapı",
+      "aliases": ["Technical SEO"],
+      "description": "Core Web Vitals, Crawl Budget optimizasyonu, Next.js/React altyapı çözümleri, render davranışı ve structured data implementasyonu.",
+      "evidence": [
+        "https://bahattinyaylagul.com/teknik-seo"
+      ]
+    },
+    {
+      "id": "ai-strategy-rag",
+      "type": "Methodology",
+      "name": "AI Strateji & RAG",
+      "aliases": ["Yapay Zeka Yanıt Optimizasyonu", "RAG Architecture"],
+      "description": "LLM ve RAG (Retrieval-Augmented Generation) sistemleri için içerik mimarisi kurgusu. AI cevap katmanında marka görünürlüğünü optimize eden metodolojik çerçeve.",
+      "evidence": [
+        "https://bahattinyaylagul.com/geo"
+      ]
+    },
+    {
+      "id": "entity-based-seo",
+      "type": "Methodology",
+      "name": "Entity-Based Content Strategy",
+      "aliases": ["Entity SEO", "Semantic SEO", "Semantik İçerik Stratejisi"],
+      "description": "Anahtar kelime yoğunluğu yerine entity ilişkileri, disambiguation ve semantic authority üzerine kurulu içerik metodolojisi."
+    },
+    {
+      "id": "structured-data",
+      "type": "Concept",
+      "name": "Structured Data",
+      "aliases": ["Yapısal Veri", "Schema.org", "JSON-LD"],
+      "sameAs": ["https://schema.org"],
+      "description": "Web içeriğinin makine tarafından okunabilir hale getirilmesi için kullanılan JSON-LD veya microdata formatındaki metadata katmanı."
+    },
+    {
+      "id": "semantic-authority",
+      "type": "Concept",
+      "name": "Semantik Otorite",
+      "aliases": ["Semantic Authority"],
+      "description": "Bir markanın belirli bir konu alanındaki uzmanlık ve güvenilirlik derecesinin arama motorları ve AI sistemleri tarafından algılanan hali; entity ilişkileri, evidence yoğunluğu ve external validation ile ölçülür."
+    },
+    {
+      "id": "brand-mention",
+      "type": "Concept",
+      "name": "Marka Mention'ı",
+      "aliases": ["Brand Mention", "Unlinked Mention"],
+      "description": "Bir markanın link olmadan başka bir platformda bahsedilmesi; AI modellerinin hafıza ve güven skorunda kritik bir sinyal olarak işlev görür.",
+      "evidence": [
+        "https://bahattinyaylagul.com/icgoruler/ai-marka-mention-etkisi",
+        "https://bahattinyaylagul.com/icgoruler/reddit-forum-mention-etkisi"
+      ]
+    },
+    {
+      "id": "llms-txt",
+      "type": "Standard",
+      "name": "llms.txt",
+      "description": "Jeremy Howard tarafından Eylül 2024'te önerilen, sitelerin LLM'ler için markdown formatında bir index sunmasını sağlayan opsiyonel dosya standardı. SE Ranking'in 300.000 domainlik XGBoost analizinde AI atıf sıklığı ile istatistiksel korelasyon göstermemiştir; XGBoost modeli llms.txt değişkenini gürültü olarak sınıflandırmıştır.",
+      "sameAs": ["https://llmstxt.org/"],
+      "evidence": [
+        "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir"
+      ]
+    },
+    {
+      "id": "entitymap-standard",
+      "type": "Standard",
+      "name": "EntityMap",
+      "description": "Fred Laurent ve Dixon Jones tarafından geliştirilen, sitelerin AI sistemleri için entity index'i yayınlamasını sağlayan CC BY 4.0 lisanslı açık standart. v1.0 sürümü Mayıs 2026'da yayınlanmıştır.",
+      "sameAs": ["https://entitymap.org/spec/v1.0"]
+    },
+    {
+      "id": "icgoruler-blog",
+      "type": "CreativeWork",
+      "name": "İçgörüler",
+      "description": "Bahattin Yaylagül'ün SEO, GEO ve yazılım üzerine data-odaklı analizleri ve stratejik notlarından oluşan blog.",
+      "url": "https://bahattinyaylagul.com/icgoruler"
+    },
+    {
+      "id": "nextcode-collective",
+      "type": "Organization",
+      "name": "NextCode Collective",
+      "description": "Bahattin Yaylagül'ün kurucusu olduğu SEO ve GEO ajansı.",
+      "url": "https://nextcodecollective.com"
+    }
+  ],
+  "relations": [
+    { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "seo" },
+    { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "geo" },
+    { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "technical-seo" },
+    { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "ai-strategy-rag" },
+    { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "icgoruler-blog" },
+    { "subject": "bahattin-yaylagul", "predicate": "AFFILIATED_WITH", "object": "nextcode-collective" },
+    { "subject": "technical-seo", "predicate": "INCLUDES", "object": "structured-data" },
+    { "subject": "geo", "predicate": "DEPENDS_ON", "object": "entity-based-seo" },
+    { "subject": "geo", "predicate": "DEPENDS_ON", "object": "structured-data" },
+    { "subject": "geo", "predicate": "DEPENDS_ON", "object": "semantic-authority" },
+    { "subject": "entity-based-seo", "predicate": "IMPROVES", "object": "geo" },
+    { "subject": "brand-mention", "predicate": "IMPROVES", "object": "geo" },
+    { "subject": "brand-mention", "predicate": "MEASURES", "object": "semantic-authority" },
+    { "subject": "ai-strategy-rag", "predicate": "INCLUDES", "object": "entity-based-seo" },
+    { "subject": "llms-txt", "predicate": "RELATED_TO", "object": "geo" },
+    { "subject": "entitymap-standard", "predicate": "RELATED_TO", "object": "geo" }
+  ]
+}

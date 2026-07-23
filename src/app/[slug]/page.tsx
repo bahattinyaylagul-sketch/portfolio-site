@@ -201,8 +201,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 "datePublished": post.publishDate,
                 "dateModified": post.publishDate,
                 "description": post.description,
-                "inLanguage": "tr-TR",
-                "breadcrumb": { "@id": `https://bahattinyaylagul.com/${post.slug}#breadcrumb` }
+                "inLanguage": "tr-TR"
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]

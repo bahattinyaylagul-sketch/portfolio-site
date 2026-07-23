@@ -26,11 +26,37 @@ export default function Home() {
         "@id": "https://bahattinyaylagul.com/#person",
         "name": "Bahattin Yaylagül",
         "url": "https://bahattinyaylagul.com",
-        "jobTitle": "SEO Consultant",
+        "jobTitle": "SEO & GEO Consultant",
+        "description": "SEO ve GEO (Generative Engine Optimization) danışmanı. Arama motorları ve yapay zeka sistemleri için semantik otorite inşası ve içerik optimizasyonu konusunda uzman.",
         "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
         "sameAs": [
           "https://www.linkedin.com/in/bahattin-yaylagul/",
           "https://medium.com/@bahattinyaylagl"
+        ],
+        "knowsAbout": [
+          "Search Engine Optimization",
+          "Generative Engine Optimization",
+          "Technical SEO",
+          "AI Search Optimization",
+          "Entity-Based SEO",
+          "Semantic SEO",
+          "Structured Data",
+          "RAG Architecture",
+          "Content Strategy",
+          "Digital Marketing"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "SEO & GEO Consultant",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Turkey"
+          },
+          "skills": "SEO, GEO, Technical SEO, AI Search, Semantic Authority"
+        },
+        "knowsLanguage": [
+          { "@type": "Language", "name": "Turkish" },
+          { "@type": "Language", "name": "English" }
         ],
         "worksFor": {
           "@type": "Organization",
@@ -49,12 +75,16 @@ export default function Home() {
     ]
   };
 
+
   return (
     <main className="relative min-h-screen bg-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* EntityMap v1.0 + RSS — anchor page discovery */}
+      <link rel="entitymap" type="application/json" href="https://bahattinyaylagul.com/entitymap.json" />
+      <link rel="alternate" type="application/rss+xml" href="https://bahattinyaylagul.com/feed.xml" title="Bahattin Yaylagül – İçgörüler RSS" />
       {/* Google Ads Conversion Script - Sayfa görüntüleme */}
       <Script id="google-ads-conversion" strategy="afterInteractive">
         {`

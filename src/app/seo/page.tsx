@@ -115,8 +115,7 @@ export default function SEOPage() {
                 "datePublished": "2026-07-18T10:00:00Z",
                 "dateModified": "2026-07-18T10:00:00Z",
                 "description": "Google'da organik trafiğinizi ve marka bilinirliğinizi artırmak için derinlemesine rehber ve danışmanlık detayları.",
-                "inLanguage": "tr-TR",
-                "breadcrumb": { "@id": "https://bahattinyaylagul.com/seo#breadcrumb" }
+                "inLanguage": "tr-TR"
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]

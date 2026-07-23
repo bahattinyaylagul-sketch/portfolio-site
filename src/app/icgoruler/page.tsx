@@ -71,6 +71,9 @@ export default function InsightsPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            {/* RSS feed — blog index, en alakalı sayfa */}
+            <link rel="alternate" type="application/rss+xml" href="https://bahattinyaylagul.com/feed.xml" title="Bahattin Yaylagül – İçgörüler RSS" />
+            <link rel="entitymap" type="application/json" href="https://bahattinyaylagul.com/entitymap.json" />
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>

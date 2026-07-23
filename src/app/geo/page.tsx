@@ -131,8 +131,7 @@ export default function GEOPage() {
                 "datePublished": "2026-07-18T10:00:00Z",
                 "dateModified": "2026-07-18T10:00:00Z",
                 "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi üretken yapay zekâ motorlarında atıf alması, kaynak gösterilmesi ve önerilmesi için stratejik optimizasyon rehberi.",
-                "inLanguage": "tr-TR",
-                "breadcrumb": { "@id": "https://bahattinyaylagul.com/geo#breadcrumb" }
+                "inLanguage": "tr-TR"
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]

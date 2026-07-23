@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "AI ve Marka Mention Etkisi – Bahattin Yaylagül",
-    description: "Marka isminin link olmadan geçmesi (Brand Mentions) AI modellerini nasıl etkiler? Güven skoru ve GEO başarısı üzerine derinlemesine bir analiz.",
+    title: "Marka Mention'ı AI Hafızasını Nasıl Etkiler? – Bahattin Yaylagül",
+    description: "Brand Mention (marka mention'ı) AI modellerinin hafızasını ve güven skorunu nasıl etkiler? Link olmadan geçen atıfların GEO üzerindeki 4 kritik etkisi.",
     alternates: {
         canonical: "/icgoruler/ai-marka-mention-etkisi",
     },

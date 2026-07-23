@@ -8,26 +8,27 @@ export default function StrategicApproach() {
                 <div className="max-w-3xl mx-auto mb-12 text-center">
                     {/* SEO Illustration */}
                     <div className="flex justify-center mb-10">
-                        <div className="relative flex items-center justify-center">
+                        <div className="relative flex items-center justify-center w-full max-w-[420px]">
                             {/* Background blob */}
-                            <div className="absolute w-[420px] h-[420px] rounded-full bg-gradient-to-br from-blue-50 via-indigo-50/60 to-slate-50 pointer-events-none" />
+                            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-50 via-indigo-50/60 to-slate-50 pointer-events-none" />
                             {/* Decorative rings */}
-                            <div className="absolute w-[400px] h-[400px] rounded-full border border-blue-100/60 pointer-events-none" />
-                            <div className="absolute w-[320px] h-[320px] rounded-full border border-indigo-100/40 pointer-events-none" />
+                            <div className="absolute inset-[5%] rounded-full border border-blue-100/60 pointer-events-none" />
+                            <div className="absolute inset-[20%] rounded-full border border-indigo-100/40 pointer-events-none" />
                             {/* Floating dots */}
-                            <div className="absolute top-6 right-12 w-3 h-3 bg-blue-200 rounded-full opacity-60 pointer-events-none" />
-                            <div className="absolute bottom-8 left-10 w-2 h-2 bg-indigo-300 rounded-full opacity-50 pointer-events-none" />
-                            <div className="absolute top-14 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-40 pointer-events-none" />
+                            <div className="absolute top-4 right-8 w-3 h-3 bg-blue-200 rounded-full opacity-60 pointer-events-none" />
+                            <div className="absolute bottom-6 left-6 w-2 h-2 bg-indigo-300 rounded-full opacity-50 pointer-events-none" />
+                            <div className="absolute top-10 left-4 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-40 pointer-events-none" />
                             <Image
                                 src="/images/seo-illustration.png"
                                 alt="SEO Danışmanlığı İllüstrasyon"
                                 width={400}
                                 height={400}
-                                className="relative z-10"
+                                className="relative z-10 w-full h-auto max-w-[320px] md:max-w-[400px]"
                                 priority
                             />
                         </div>
                     </div>
+
 
                     <h2 id="strategic-approach-heading" className="text-3xl font-bold text-gray-900 mb-6">
                         SEO Danışmanlığı Kapsamı ve Stratejik Yaklaşım

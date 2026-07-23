@@ -40,8 +40,7 @@ export default function HakkimdaPage() {
                 "worksFor": {
                     "@type": "Organization",
                     "name": "Bağımsız SEO & GEO Danışmanı"
-                },
-                "breadcrumb": { "@id": "https://bahattinyaylagul.com/hakkimda#breadcrumb" }
+                }
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]
@@ -53,6 +52,9 @@ export default function HakkimdaPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+            {/* EntityMap v1.0 — identity anchor page */}
+            <link rel="entitymap" type="application/json" href="https://bahattinyaylagul.com/entitymap.json" />
+            <link rel="alternate" type="application/rss+xml" href="https://bahattinyaylagul.com/feed.xml" title="Bahattin Yaylagül – İçgörüler RSS" />
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
