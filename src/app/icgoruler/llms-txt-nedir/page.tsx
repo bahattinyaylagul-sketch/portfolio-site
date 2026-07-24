@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import ArticleContent from "./ArticleContent";
+import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
     title: "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
@@ -14,26 +15,19 @@ export const metadata: Metadata = {
     },
 };
 
-const jsonLd = `[
+const jsonLd = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
-    "description": "llms.txt nedir, nasil olusturulur ve gercekten ise yariyor mu? 300.000 domain analizi, format rehberi ve maliyet-fayda degerlendirmesi.",
+    "description": "llms.txt nedir, nasıl oluşturulur ve gerçekten işe yarıyor mu? 300.000 domain analizi, format rehberi ve maliyet-fayda değlendirmesi.",
     "datePublished": "2026-07-04",
     "dateModified": "2026-07-18",
-    "author": {
-      "@type": "Person",
-      "name": "Bahattin Yaylagul",
-      "url": "https://bahattinyaylagul.com/hakkimda",
-      "sameAs": [
-        "https://linkedin.com/in/bahattinyaylagul",
-        "https://bahattinyaylagul.com"
-      ]
-    },
+    "author": AUTHOR_ENTITY,
     "publisher": {
-      "@type": "Organization",
-      "name": "bahattinyaylagul.com",
+      "@type": "Person",
+      "@id": "https://bahattinyaylagul.com/#bahattin-yaylagul",
+      "name": "Bahattin Yaylagül",
       "url": "https://bahattinyaylagul.com"
     },
     "url": "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir",
@@ -128,7 +122,7 @@ const jsonLd = `[
       }
     ]
   }
-]`;
+]);
 
 export default function LlmsTxtPage() {
     return (

@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import { AUTHOR_ENTITY, WEBSITE_ENTITY } from "@/lib/schema";
 
 const ServicesBento = dynamic(() => import("@/components/ServicesBento"));
 const BlogPreview = dynamic(() => import("@/components/BlogPreview"));
@@ -21,57 +22,8 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://bahattinyaylagul.com/#person",
-        "name": "Bahattin Yaylagül",
-        "url": "https://bahattinyaylagul.com",
-        "jobTitle": "SEO & GEO Consultant",
-        "description": "SEO ve GEO (Generative Engine Optimization) danışmanı. Arama motorları ve yapay zeka sistemleri için semantik otorite inşası ve içerik optimizasyonu konusunda uzman.",
-        "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-        "sameAs": [
-          "https://www.linkedin.com/in/bahattin-yaylagul/",
-          "https://medium.com/@bahattinyaylagl"
-        ],
-        "knowsAbout": [
-          "Search Engine Optimization",
-          "Generative Engine Optimization",
-          "Technical SEO",
-          "AI Search Optimization",
-          "Entity-Based SEO",
-          "Semantic SEO",
-          "Structured Data",
-          "RAG Architecture",
-          "Content Strategy",
-          "Digital Marketing"
-        ],
-        "hasOccupation": {
-          "@type": "Occupation",
-          "name": "SEO & GEO Consultant",
-          "occupationLocation": {
-            "@type": "Country",
-            "name": "Turkey"
-          },
-          "skills": "SEO, GEO, Technical SEO, AI Search, Semantic Authority"
-        },
-        "knowsLanguage": [
-          { "@type": "Language", "name": "Turkish" },
-          { "@type": "Language", "name": "English" }
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Bağımsız Danışmanlık"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://bahattinyaylagul.com/#website",
-        "url": "https://bahattinyaylagul.com",
-        "name": "Bahattin Yaylagül | SEO & GEO Danışmanı",
-        "description": "SEO ve GEO (Generative Engine Optimization) danışmanlığı. Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu.",
-        "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
-        "inLanguage": "tr-TR"
-      }
+      AUTHOR_ENTITY,
+      WEBSITE_ENTITY,
     ]
   };
 

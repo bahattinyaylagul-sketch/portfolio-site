@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
+import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
     title: "Hakkımda – Bahattin Yaylagül",
@@ -26,21 +27,8 @@ export default function HakkimdaPage() {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Person",
-                "@id": "https://bahattinyaylagul.com/#person",
-                "name": "Bahattin Yaylagül",
-                "url": "https://bahattinyaylagul.com/hakkimda",
+                ...AUTHOR_ENTITY,
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "jobTitle": "SEO Consultant",
-                "description": "SEO, Generative Engine Optimization (GEO), teknik SEO ve AI tabanlı arama sistemleri üzerine uzman danışman",
-                "sameAs": [
-                    "https://www.linkedin.com/in/bahattin-yaylagul/",
-                    "https://medium.com/@bahattinyaylagl"
-                ],
-                "worksFor": {
-                    "@type": "Organization",
-                    "name": "Bağımsız SEO & GEO Danışmanı"
-                }
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]
