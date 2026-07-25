@@ -465,12 +465,7 @@ export default function GEOContent() {
                                 <li><strong>Google AI Overviews görünürlüğü:</strong> Yapılandırılmış içerik, Schema.org işaretlemeleri ve otorite sinyalleri doğru kurulduğunda AI Overviews kutusuna girme ihtimali artar.</li>
                             </ul>
 
-                            <div className="not-prose bg-green-50 border border-green-200 rounded-2xl p-6 my-6">
-                                <h3 className="text-base font-bold text-green-900 mb-2">📈 Gerçek Müşteri LLM Önerilme Karşılaştırması:</h3>
-                                <p className="text-sm text-green-800 leading-relaxed">
-                                    Finansal teknoloji dikeyindeki bir e-ticaret altyapı sağlayıcısının başlangıçta 20 kritik sorguda LLM önerilme oranı <strong>%5</strong> iken, 6. ayın sonunda bu oran <strong>%65</strong>'e yükseldi ve doğrudan demo talebi trafiklerinde organik olarak %42'lik bir artış kaydedildi.
-                                </p>
-                            </div>
+
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="danisman-secimi" aria-labelledby="danisman-secimi-title">
@@ -485,12 +480,7 @@ export default function GEOContent() {
                                 <li><strong>Entity tutarlılığı denetimi yapıyor musunuz?</strong> Markanızın adı, kurucu bilgileri web genelinde tutarsızsa LLM'ler çelişkili sinyaller alır.</li>
                             </ol>
 
-                            <div className="not-prose bg-gray-50 border border-gray-200 rounded-2xl p-6 my-6">
-                                <h3 className="text-base font-bold text-gray-900 mb-2">💬 Gerçek Bir Görüşme Deneyimi:</h3>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Katıldığımız bir B2B danışmanlık görüşmesinde adaya "Gemini ve Perplexity için aynı veri setini mi kullanıyorsunuz?" diye sorduğumuzda, "İkisi de aynı, Markdown verip geçiyoruz" yanıtını aldık. Oysa Gemini Google Knowledge Graph'a sıkı sıkıya bağlıyken, Perplexity anlık web indeksleme API'larını okur. Bu teknik ayrım yapılmadığı için firmanın önceki süreci başarısız olmuştu.
-                                </p>
-                            </div>
+
                         </section>
 
                         <div className="border-t border-gray-100 mt-16 pt-8">
