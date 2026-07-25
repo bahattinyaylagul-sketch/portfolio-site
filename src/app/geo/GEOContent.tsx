@@ -414,12 +414,7 @@ export default function GEOContent() {
                                 Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity'de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
                             </p>
 
-                            <div className="not-prose bg-blue-50 border border-blue-100 rounded-2xl p-6 my-6">
-                                <h3 className="text-base font-bold text-blue-900 mb-2">📊 Platformlar Arası Görünürlük Farkı Vakası:</h3>
-                                <p className="text-sm text-blue-800 leading-relaxed">
-                                    B2B Lojistik markamız üzerinde yaptığımız testlerde; ChatGPT (eğitim verisi ve genel PR ağırlıklı) markayı "sektörün en köklü lideri" olarak tanımlarken, Perplexity (anlık web indexi ağırlıklı) robots.txt kısıtlaması nedeniyle son çeyrek verilerini okuyamadı; Gemini ise Google Haritalar entegrasyonu sayesinde markayı "İstanbul lokasyonunda en yüksek puanlı lojistik firması" olarak öne çıkardı.
-                                </p>
-                            </div>
+
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="ne-zaman-sonuc-verir" aria-labelledby="ne-zaman-sonuc-title">
