@@ -27,9 +27,10 @@ export default function SEOContentBody() {
                         <p className="text-blue-600 font-bold text-xs uppercase tracking-widest mb-2">ORGANİK BÜYÜME KANITLARI</p>
                         <h2 id="cases-heading" className="text-3xl md:text-4xl font-black text-gray-900 leading-tight">Vaka Çalışmaları</h2>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* N Kolay */}
-                        <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                <ul className="grid md:grid-cols-2 gap-8">
+                    {/* N Kolay */}
+                    <li className="list-none">
+                        <article className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                             <div className="flex items-center justify-between mb-6">
                                 <span className="px-3 py-1 bg-orange-50 border border-orange-100 text-orange-600 text-[10px] font-bold uppercase tracking-widest rounded-full">FİNANS & TEKNOLOJİ</span>
                                 <span className="text-sm font-semibold text-gray-400">Süre: 1 Yıl (2024-2025)</span>
@@ -75,10 +76,12 @@ export default function SEOContentBody() {
                                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                                 </a>
                             </div>
-                        </div>
+                        </article>
+                    </li>
 
-                        {/* Dünyagöz */}
-                        <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    {/* Dünyagöz */}
+                    <li className="list-none">
+                        <article className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                             <div className="flex items-center justify-between mb-6">
                                 <span className="px-3 py-1 bg-teal-50 border border-teal-100 text-teal-600 text-[10px] font-bold uppercase tracking-widest rounded-full">SAĞLIK & YMYL</span>
                                 <span className="text-sm font-semibold text-gray-400">Süre: 8 Ay (Önerilen)</span>
@@ -115,8 +118,9 @@ export default function SEOContentBody() {
                             <div className="text-xs text-gray-500 border-t border-gray-100 pt-4 flex flex-wrap gap-x-4 gap-y-2 justify-between items-center">
                                 <span>Ek Etki: Hasta Randevularında Belirgin Artış</span>
                             </div>
-                        </div>
-                    </div>
+                        </article>
+                    </li>
+                </ul>
                 </div>
             </section>
 
