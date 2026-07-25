@@ -9,6 +9,7 @@ const headings = [
     { id: "sektorel-vakalar", text: "Sektör Bazlı GEO Vakaları" },
     { id: "geo-basarisi", text: "GEO Başarısı Nasıl Ölçülür?" },
     { id: "danisman-secimi", text: "GEO Danışmanı Seçerken 6 Soru" },
+    { id: "geo-terimler", text: "GEO Terimleri & Sözlüğü" },
     { id: "faq-section", text: "Sıkça Sorulan Sorular" }
 ];
 
@@ -478,6 +479,51 @@ export default function GEOContent() {
                             </ol>
 
 
+                        </section>
+
+                        <section className={`${proseBase} mb-16`} id="geo-terimler" aria-labelledby="geo-terimler-title">
+                            <h2 id="geo-terimler-title">GEO Terimleri &amp; Sözlüğü</h2>
+                            <p>
+                                Yapay zeka odaklı arama optimizasyonu (GEO) süreçlerinde sıkça kullanılan teknik terimler, kısaltmalar ve anlamları:
+                            </p>
+                            <dl className="space-y-6 mt-8">
+                                <div className="border-b border-gray-100 pb-4">
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">Entity (Varlık) Otoritesi</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        Markanızın veya ürününüzün, arama motorları ve büyük dil modelleri (LLM) tarafından eşsiz, çelişkisiz ve doğrulanabilir bir "varlık" (entity) olarak algılanması durumudur. Bilgi grafikleri ve Wikidata eşleşmeleri ile ölçümlenir.
+                                    </dd>
+                                </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">RAG (Retrieval-Augmented Generation)</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        Yapay zeka modellerinin kullanıcı sorgusuna yanıt hazırlarken yalnızca statik eğitim verilerini değil; web indeksinden anlık olarak çektikleri en güvenilir verileri sentezleyerek kaynaklı ve güncel cevap üretme teknolojisidir.
+                                    </dd>
+                                </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">Co-Citation (Birlikte Anılma Skoru)</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        Web genelindeki farklı bağımsız ve otoriter platformlarda markanızın, sektörünüzdeki anahtar kelimelerle veya doğrudan rakiplerinizle aynı metin bloğu içinde doğal olarak geçmesidir. AI modellerinin en güvendiği semantik referans desenlerinden biridir.
+                                    </dd>
+                                </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">Information Gain (Bilgi Kazancı)</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        Bir web sayfasının, internetteki diğer tüm benzer sayfalardan farklı olarak sunduğu benzersiz veri dikeyidir. LLM'ler ve AI arama motorları, tekrarlanan makaleler yerine orijinal vaka çalışmaları ve yeni veriler barındıran sayfaları kaynak göstermeyi tercih eder.
+                                    </dd>
+                                </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">AEO (Answer Engine Optimization)</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        İçeriklerin yapay zeka cevap motorları ve sesli asistanlar tarafından kolayca okunup doğrudan çekilebilmesi için soru-cevap formunda (FAQPage şemasıyla) biçimlendirilip sunulması optimizasyonudur.
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt className="text-lg font-bold text-gray-900 mb-1">LLM SEO (Large Language Model SEO)</dt>
+                                    <dd className="text-gray-600 leading-relaxed text-sm">
+                                        Büyük dil modellerinin eğitim veri setlerinde yer alabilmek ve bu modellerin çıkarım yaparken (inference) markanızı öncelikli tavsiye etmesini sağlamak amacıyla uygulanan yeni nesil semantik SEO yöntemleridir.
+                                    </dd>
+                                </div>
+                            </dl>
                         </section>
 
                     </div>

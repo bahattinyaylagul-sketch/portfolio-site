@@ -1,5 +1,3 @@
-"use client";
-
 const expertiseAreas = [
     {
         number: "01",

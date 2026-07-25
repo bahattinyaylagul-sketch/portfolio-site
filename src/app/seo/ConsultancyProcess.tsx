@@ -1,5 +1,3 @@
-"use client";
-
 export default function ConsultancyProcess() {
     const steps = [
         {
@@ -85,11 +83,11 @@ export default function ConsultancyProcess() {
             </div>
 
             {/* Kart Grid Container */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
                 {steps.map((step) => (
-                    <div
+                    <li
                         key={step.num}
-                        className="group relative bg-white rounded-3xl p-8 border border-gray-100/80 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full z-10 hover:z-20"
+                        className="group relative bg-white rounded-3xl p-8 border border-gray-100/80 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full z-10 hover:z-20 list-none"
                     >
                         {/* Dev Numara Fligranı (Watermark) */}
                         <div className="absolute -right-4 -top-6 text-[140px] font-black text-gray-50/80 group-hover:text-gray-100/50 transition-colors duration-500 pointer-events-none select-none leading-none z-0">
@@ -129,9 +127,9 @@ export default function ConsultancyProcess() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
 
         </section>
     );
