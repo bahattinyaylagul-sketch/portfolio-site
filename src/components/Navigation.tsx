@@ -31,7 +31,16 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
         };
         handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+        
+        // Interval checks to catch asynchronous scroll restoration on mobile load
+        const interval = setInterval(handleScroll, 100);
+        const timeout = setTimeout(() => clearInterval(interval), 1000);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            clearInterval(interval);
+            clearTimeout(timeout);
+        };
     }, []);
 
     useEffect(() => {

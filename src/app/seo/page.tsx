@@ -127,10 +127,7 @@ export default function SEOPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            {/* Fixed Header Wrapper */}
-            <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-                <Navigation />
-            </header>
+            <Navigation theme="dark" />
 
             <article className="pb-8">
                 {/* ── HERO ── */}
