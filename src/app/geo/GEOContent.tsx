@@ -102,6 +102,7 @@ const proseBase =
 
 export default function GEOContent() {
     return (
+        <>
         <div className="space-y-20">
             {/* ── 1. Stratejik Yaklaşım ── */}
             <section id="geo-kapsami" className="scroll-mt-32 max-w-6xl mx-auto px-4 md:px-6" aria-labelledby="strategic-approach-heading">
@@ -490,5 +491,6 @@ export default function GEOContent() {
         </div>
 
         <TestimonialsSection />
+    </>
     );
 }
