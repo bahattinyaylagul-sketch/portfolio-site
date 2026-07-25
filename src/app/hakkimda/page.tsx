@@ -86,9 +86,9 @@ export default function HakkimdaPage() {
                 </header>
 
                 {/* About Content Component */}
-                <div className="bg-white max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
+                <section aria-label="Hakkımda Detayları" className="bg-white max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <About />
-                </div>
+                </section>
             </article>
 
             <Footer />

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import StrategicApproach from "./StrategicApproach";
 import ConsultancyProcess from "./ConsultancyProcess";

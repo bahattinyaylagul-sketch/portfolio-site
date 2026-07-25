@@ -138,129 +138,80 @@ export default function SEOPage() {
                     {/* Subtle glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-                    <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+                    <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
                         {/* Breadcrumb inside Hero header, logo-aligned, above upper badge */}
                         <Breadcrumb items={breadcrumbItems} />
 
-                        {/* Upper Badge with space-above config */}
-                        <div className="text-left mt-8 mb-6">
-                            <span className="inline-flex items-center gap-2 text-blue-400 font-mono font-bold tracking-widest text-xs uppercase mb-6 bg-blue-400/10 px-4 py-1.5 rounded-full border border-blue-400/15">
-                                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
-                                Hizmet
-                            </span>
-                        </div>
+                        <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-center mt-8">
+                            {/* Sol Kolon */}
+                            <div className="text-left">
+                                {/* Başlık - align left */}
+                                <h1
+                                    className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
+                                    style={{ fontWeight: 900 }}
+                                >
+                                    <span
+                                        style={{
+                                            textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(99,102,241,0.08)"
+                                        }}
+                                    >
+                                        SEO{" "}
+                                        <span className="text-white">
+                                            Danışmanlığı
+                                        </span>
+                                    </span>
+                                </h1>
 
-                        {/* Başlık - align left */}
-                        <h1
-                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight text-left"
-                            style={{ fontWeight: 900 }}
-                        >
-                            <span
-                                style={{
-                                    textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(99,102,241,0.08)"
-                                }}
-                            >
-                                SEO{" "}
-                                <span className="text-white">
-                                    Danışmanlığı
-                                </span>
-                            </span>
-                        </h1>
+                                <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl leading-relaxed font-medium">
+                                    Sitenizi yalnızca Google için değil, yapay zekâ aramaları için de görünür kılıyorum. Teknik denetimden içerik stratejisine tüm süreci tek elden yürütüyor, her ay ölçülebilir raporla ilerlemeyi gösteriyorum.
+                                </p>
 
-                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl text-left leading-relaxed font-medium">
-                            Sitenizi yalnızca Google için değil, yapay zekâ aramaları için de görünür kılıyorum. Teknik denetimden içerik stratejisine tüm süreci tek elden yürütüyor, her ay ölçülebilir raporla ilerlemeyi gösteriyorum.
-                        </p>
+                                <p className="text-sm text-white/50 mb-8 max-w-xl leading-relaxed">
+                                    Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
+                                </p>
 
-                        <p className="text-sm text-white/50 mb-8 max-w-xl text-left leading-relaxed">
-                            Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
-                        </p>
-
-                        {/* Yazar Bilgisi / Author Info - align left */}
-                        <div className="flex flex-wrap items-center justify-start gap-3 mb-8 text-white/85">
-                            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20">
-                                <Image
-                                    src="/images/bahattin-yaylagul.jpg"
-                                    alt="Bahattin Yaylagül"
-                                    fill
-                                    sizes="32px"
-                                    className="object-cover"
-                                />
-                            </div>
-                            <span className="text-sm font-medium">
-                                Yazar:{" "}
-                                <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Bilgi" className="hover:text-blue-400 underline decoration-white/20 hover:decoration-blue-400 transition-colors">
-                                    Bahattin Yaylagül
-                                </Link>
-                            </span>
-                            <span className="text-white/30">•</span>
-                            <span className="text-xs text-white/60 font-medium">Son Güncelleme: 18 Temmuz 2026</span>
-                            <span className="text-white/30">•</span>
-                            <a
-                                href="https://linkedin.com/in/bahattin-yaylagul"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Bahattin Yaylagül LinkedIn Profili"
-                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0077B5] hover:opacity-80 transition-opacity"
-                            >
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                </svg>
-                                LinkedIn Profili
-                            </a>
-                        </div>
-
-                        {/* CTA - align left */}
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12 mt-8">
-                            <a
-                                href="#analiz"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-blue-600/25 hover:shadow-blue-600/35 hover:-translate-y-0.5"
-                            >
-                                Ücretsiz SEO Analiz Formuna Ulaşın
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                            <span className="text-white/40 text-xs font-medium">
-                                24 saat içinde dönüş · %100 ücretsiz
-                            </span>
-                        </div>
-
-                        {/* Trust Stats Bar - align left */}
-                        <div className="border-t border-white/10 pt-10">
-                            <div className="flex items-center justify-start gap-0 max-w-sm">
-                                {[
-                                    { value: "14 Yıl+", label: "Sektör Deneyimi" },
-                                    { value: "200+", label: "Başarılı Proje" },
-                                ].map((stat, i) => (
-                                    <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
-                                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
-                                        <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                {/* Trust Stats Bar */}
+                                <div className="border-t border-white/10 pt-10 mt-8">
+                                    <div className="flex items-center justify-start gap-0 max-w-sm">
+                                        {[
+                                            { value: "14 Yıl+", label: "Sektör Deneyimi" },
+                                            { value: "200+", label: "Başarılı Proje" },
+                                        ].map((stat, i) => (
+                                            <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
+                                                <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
+                                                <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
+                                </div>
+                            </div>
+
+                            {/* Sağ Kolon: Form */}
+                            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
+                                <h3 className="text-xl font-bold text-white mb-2">Ücretsiz SEO Denetimi</h3>
+                                <p className="text-sm text-white/60 mb-6">Sitenizin organik performansını detaylıca analiz edelim, büyüme için yol haritanızı çıkaralım.</p>
+                                <SEOContactForm />
                             </div>
                         </div>
-
                     </div>
                 </header>
 
                 {/* SEO Body Contents */}
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
+                <section aria-label="SEO Danışmanlığı İçeriği" className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <SEOContentBody />
-                </div>
+                </section>
 
                 {/* ── Ücretsiz Analiz Formu ── */}
                 <section className="py-16 bg-white border-t border-gray-100" id="analiz" aria-labelledby="analiz-heading">
-                    <div className="max-w-4xl mx-auto px-4 md:px-6">
-                        <div className="text-center mb-10">
-                            <div className="text-center mb-6 bg-blue-50 border border-blue-100 px-6 py-4 rounded-2xl max-w-2xl mx-auto shadow-sm hover:shadow-md transition-shadow">
-                                <p className="text-sm text-blue-900 font-medium">
-                                    💼 Vaka çalışmalarımızda elde ettiğimiz <strong>%210'a varan organik büyüme</strong> oranlarını kendi markanızda gerçekleştirmek için formu doldurun.
-                                </p>
-                            </div>
-                            <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz SEO Denetimi</h2>
-                            <p className="text-gray-600 text-base md:text-lg">Sitenizin organik performansını detaylıca analiz edelim, büyüme için yol haritanızı çıkaralım.</p>
-                        </div>
-                        <SEOContactForm />
+                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+                        <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz SEO Denetimi</h2>
+                        <p className="text-gray-600 text-base md:text-lg mb-8">Sitenizin organik performansını hemen denetlemek için yukarıdaki formu doldurun.</p>
+                        <a href="#" className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-blue-600/25">
+                            Forma Git
+                            <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                            </svg>
+                        </a>
                     </div>
                 </section>
 

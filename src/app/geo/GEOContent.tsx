@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import TestimonialsSection from "../seo/TestimonialsSection";
 
 const headings = [

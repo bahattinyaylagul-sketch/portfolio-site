@@ -155,89 +155,80 @@ export default function GEOPage() {
                     {/* Subtle glow */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-                    <div className="max-w-4xl mx-auto px-4 md:px-6 relative z-10">
+                    <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
                         {/* Breadcrumb inside Hero header, logo-aligned, above upper badge */}
                         <Breadcrumb items={breadcrumbItems} />
 
+                        <div className="grid lg:grid-cols-[1fr_400px] gap-12 lg:gap-16 items-center mt-8">
+                            {/* Sol Kolon */}
+                            <div className="text-left">
+                                {/* Başlık - align left */}
+                                <h1
+                                    className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
+                                    style={{ fontWeight: 900 }}
+                                >
+                                    <span
+                                        style={{
+                                            textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(139,92,246,0.08)"
+                                        }}
+                                    >
+                                        GEO{" "}
+                                        <span className="text-white">
+                                            Danışmanlığı
+                                        </span>
+                                    </span>
+                                </h1>
 
-                        {/* Başlık - align left */}
-                        <h1
-                            className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight text-left"
-                            style={{ fontWeight: 900 }}
-                        >
-                            <span
-                                style={{
-                                    textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(139,92,246,0.08)"
-                                }}
-                            >
-                                GEO{" "}
-                                <span className="text-white">
-                                    Danışmanlığı
-                                </span>
-                            </span>
-                        </h1>
+                                <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl leading-relaxed font-medium">
+                                    Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
+                                </p>
 
-                        <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl text-left leading-relaxed font-medium">
-                            Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
-                        </p>
+                                <p className="text-sm text-white/50 mb-8 max-w-xl leading-relaxed">
+                                    Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
+                                </p>
 
-                        <p className="text-sm text-white/50 mb-8 max-w-xl text-left leading-relaxed">
-                            Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
-                        </p>
-
-
-                        {/* CTA - align left */}
-                        <div className="flex flex-col sm:flex-row items-center justify-start gap-4 mb-12 mt-8">
-                            <a
-                                href="#analiz"
-                                className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-violet-600/25 hover:shadow-violet-600/35 hover:-translate-y-0.5"
-                            >
-                                Ücretsiz GEO Analiz Formuna Ulaşın
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                            <span className="text-white/40 text-xs font-medium">
-                                24 saat içinde dönüş · %100 ücretsiz
-                            </span>
-                        </div>
-
-                        {/* Trust Stats Bar - align left */}
-                        <div className="border-t border-white/10 pt-10">
-                            <div className="flex items-center justify-start gap-0 max-w-sm">
-                                {[
-                                    { value: "14 Yıl+", label: "Sektör Deneyimi" },
-                                    { value: "200+", label: "Başarılı Proje" },
-                                ].map((stat, i) => (
-                                    <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
-                                        <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
-                                        <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                {/* Trust Stats Bar */}
+                                <div className="border-t border-white/10 pt-10 mt-8">
+                                    <div className="flex items-center justify-start gap-0 max-w-sm">
+                                        {[
+                                            { value: "14 Yıl+", label: "Sektör Deneyimi" },
+                                            { value: "200+", label: "Başarılı Proje" },
+                                        ].map((stat, i) => (
+                                            <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
+                                                <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
+                                                <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
+                                </div>
+                            </div>
+
+                            {/* Sağ Kolon: Form */}
+                            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
+                                <h3 className="text-xl font-bold text-white mb-2">Ücretsiz GEO Denetimi</h3>
+                                <p className="text-sm text-white/60 mb-6">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü denetleyelim.</p>
+                                <SEOContactForm />
                             </div>
                         </div>
-
                     </div>
                 </header>
 
                 {/* GEO Content Body */}
-                <div className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
+                <section aria-label="GEO Danışmanlığı İçeriği" className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <GEOContent />
-                </div>
+                </section>
 
                 {/* ── Ücretsiz Analiz Formu ── */}
                 <section className="py-16 bg-white border-t border-gray-100" id="analiz" aria-labelledby="analiz-heading">
-                    <div className="max-w-4xl mx-auto px-4 md:px-6">
-                        <div className="text-center mb-10">
-                            <div className="text-center mb-6 bg-violet-50 border border-violet-100 px-6 py-4 rounded-2xl max-w-2xl mx-auto shadow-sm hover:shadow-md transition-shadow">
-                                <p className="text-sm text-violet-900 font-medium">
-                                    💼 Yapay zeka motorlarında (ChatGPT, Gemini, Perplexity) markanızın <strong>önerilme ve atıf sıklığını</strong> analiz etmek için formu doldurun.
-                                </p>
-                            </div>
-                            <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz GEO Denetimi</h2>
-                            <p className="text-gray-600 text-base md:text-lg">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü denetleyelim.</p>
-                        </div>
-                        <SEOContactForm />
+                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
+                        <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz GEO Denetimi</h2>
+                        <p className="text-gray-600 text-base md:text-lg mb-8">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü hemen denetlemek için yukarıdaki formu doldurun.</p>
+                        <a href="#" className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-violet-600/25">
+                            Forma Git
+                            <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                            </svg>
+                        </a>
                     </div>
                 </section>
 
