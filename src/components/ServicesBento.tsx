@@ -47,7 +47,7 @@ export default function ServicesBento() {
                     {items.map((item, index) => (
                         <Link href={item.link} key={index} className={`${item.col} block h-full`}>
                             <FadeIn delay={item.delay} className="h-full">
-                                <div className="h-full min-h-[220px] flex flex-col justify-center p-8 bg-gray-50 rounded-2xl group cursor-pointer relative overflow-hidden border border-gray-100/50 hover:border-gray-200 hover:shadow-sm transition-all duration-300">
+                                <article className="h-full min-h-[220px] flex flex-col justify-center p-8 bg-gray-50 rounded-2xl group cursor-pointer relative overflow-hidden border border-gray-100/50 hover:border-gray-200 hover:shadow-sm transition-all duration-300">
                                     {/* Abstract background shape (optional) */}
                                     <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-gray-100 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -63,7 +63,7 @@ export default function ServicesBento() {
                                     <p className="text-sm text-gray-600 leading-relaxed font-sans font-light relative z-10">
                                         {item.desc}
                                     </p>
-                                </div>
+                                </article>
                             </FadeIn>
                         </Link>
                     ))}

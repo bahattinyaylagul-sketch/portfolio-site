@@ -205,7 +205,7 @@ export default function GEOPage() {
 
                             {/* Sağ Kolon: Form */}
                             <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
-                                <h3 className="text-xl font-bold text-white mb-2">Ücretsiz GEO Denetimi</h3>
+                                <p className="text-xl font-bold text-white mb-2">Ücretsiz GEO Denetimi</p>
                                 <p className="text-sm text-white/60 mb-6">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü denetleyelim.</p>
                                 <SEOContactForm />
                             </div>
@@ -216,20 +216,6 @@ export default function GEOPage() {
                 {/* GEO Content Body */}
                 <section aria-label="GEO Danışmanlığı İçeriği" className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <GEOContent />
-                </section>
-
-                {/* ── Ücretsiz Analiz Formu ── */}
-                <section className="py-16 bg-white border-t border-gray-100" id="analiz" aria-labelledby="analiz-heading">
-                    <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
-                        <h2 id="analiz-heading" className="text-3xl md:text-4xl font-black text-gray-900 mb-3 tracking-tight">Ücretsiz GEO Denetimi</h2>
-                        <p className="text-gray-600 text-base md:text-lg mb-8">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü hemen denetlemek için yukarıdaki formu doldurun.</p>
-                        <a href="#" className="inline-flex items-center gap-2 px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-full transition-all text-base shadow-lg shadow-violet-600/25">
-                            Forma Git
-                            <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                            </svg>
-                        </a>
-                    </div>
                 </section>
 
                 {/* FAQ */}
