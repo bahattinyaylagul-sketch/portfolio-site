@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import TestimonialsSection from "../seo/TestimonialsSection";
 
 const headings = [
     { id: "geo-nedir", text: "GEO Danışmanlığı Nedir?" },
@@ -483,14 +484,11 @@ export default function GEOContent() {
 
                         </section>
 
-                        <div className="border-t border-gray-100 mt-16 pt-8">
-                            <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
-                                ← Ana Sayfaya Dön
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </section>
         </div>
+
+        <TestimonialsSection />
     );
 }
