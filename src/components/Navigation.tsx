@@ -123,44 +123,45 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
             </nav>
 
             {/* Mobile Menu Overlay */}
-            <div
+            <nav
                 id="mobile-menu"
                 className={`fixed inset-0 bg-white md:hidden flex flex-col pt-24 px-6 transition-all duration-500 ease-in-out ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-x-0" : "opacity-0 pointer-events-none translate-x-full"}`}
                 style={{ zIndex: 9998 }}
+                aria-label="Mobile Navigation"
             >
                 <ul className="flex flex-col gap-4 text-2xl font-light">
                     {navItems.map((item) => (
                         <li key={item.href} className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                              <Link
-                                href={item.href}
-                                aria-label={item.ariaLabel}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className={`block border-b border-gray-100 pb-3 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
-                            >
-                                {item.label}
-                                {item.srLabel && <span className="sr-only">{item.srLabel}</span>}
-                            </Link>
-                        </li>
-                    ))}
-                    <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
-                        <Link
-                            href="/#contact"
-                            aria-label="İletişime Geçin ve Ücretsiz Teklif Alın"
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block border-b border-gray-100 pb-3 text-gray-400"
-                        >
-                            İletişim
-                        </Link>
-                    </li>
-                </ul>
-
-                <div className="mt-auto pb-12">
-                    <div className="flex gap-6 text-sm text-gray-500">
-                        <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili">LinkedIn</a>
-                        <a href="https://medium.com/@bahattinyaylagl" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Medium Blog Yazıları">Medium</a>
-                    </div>
-                </div>
-            </div>
+                                 href={item.href}
+                                 aria-label={item.ariaLabel}
+                                 onClick={() => setMobileMenuOpen(false)}
+                                 className={`block border-b border-gray-100 pb-3 ${pathname === item.href ? "text-black font-medium" : "text-gray-400"}`}
+                             >
+                                 {item.label}
+                                 {item.srLabel && <span className="sr-only">{item.srLabel}</span>}
+                             </Link>
+                         </li>
+                     ))}
+                     <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                         <Link
+                             href="/#contact"
+                             aria-label="İletişime Geçin ve Ücretsiz Teklif Alın"
+                             onClick={() => setMobileMenuOpen(false)}
+                             className="block border-b border-gray-100 pb-3 text-gray-400"
+                         >
+                             İletişim
+                         </Link>
+                     </li>
+                 </ul>
+ 
+                 <div className="mt-auto pb-12">
+                     <div className="flex gap-6 text-sm text-gray-500">
+                         <a href="https://linkedin.com/in/bahattin-yaylagul" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Profesyonel LinkedIn Profili">LinkedIn</a>
+                         <a href="https://medium.com/@bahattinyaylagl" target="_blank" rel="noopener noreferrer" aria-label="Bahattin Yaylagül Medium Blog Yazıları">Medium</a>
+                     </div>
+                 </div>
+             </nav>
         </>
     );
 }

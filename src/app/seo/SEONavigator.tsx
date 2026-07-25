@@ -45,11 +45,7 @@ export function SEOContactForm() {
     };
 
     return (
-        <div className="mt-8 p-6 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl text-white">
-            <h3 className="font-semibold mb-2">Ücretsiz Analiz</h3>
-            <p className="text-sm text-gray-300 mb-4">
-                Sitenizin SEO durumunu değerlendirelim.
-            </p>
+        <div className="w-full text-white">
             {formStatus === "success" ? (
                 <div className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-200 text-sm text-center animate-fade-in">
                     <p className="font-semibold mb-1">Talebiniz Alındı!</p>

@@ -171,27 +171,27 @@ export default function SEOPage() {
                                 </p>
 
                                 {/* Trust Stats Bar */}
-                                <div className="border-t border-white/10 pt-10 mt-8">
-                                    <div className="flex items-center justify-start gap-0 max-w-sm">
+                                <nav className="border-t border-white/10 pt-10 mt-8" aria-label="Güven İstatistikleri">
+                                    <ul className="flex items-center justify-start gap-0 max-w-sm">
                                         {[
                                             { value: "14 Yıl+", label: "Sektör Deneyimi" },
                                             { value: "200+", label: "Başarılı Proje" },
                                         ].map((stat, i) => (
-                                            <div key={i} className={`flex flex-col items-start gap-1 ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
+                                            <li key={i} className={`flex flex-col items-start gap-1 list-none ${i === 0 ? "border-r border-white/10 pr-10" : "pl-10"}`}>
                                                 <span className="text-2xl md:text-3xl font-black text-white tracking-tight">{stat.value}</span>
                                                 <span className="text-white/40 text-xs font-medium uppercase tracking-wider">{stat.label}</span>
-                                            </div>
+                                            </li>
                                         ))}
-                                    </div>
-                                </div>
+                                    </ul>
+                                </nav>
                             </div>
 
                             {/* Sağ Kolon: Form */}
-                            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
+                            <aside aria-label="Hızlı SEO Denetimi Formu" className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
                                 <p className="text-xl font-bold text-white mb-2">Ücretsiz SEO Denetimi</p>
                                 <p className="text-sm text-white/60 mb-6">Sitenizin organik performansını detaylıca analiz edelim, büyüme için yol haritanızı çıkaralım.</p>
                                 <SEOContactForm />
-                            </div>
+                            </aside>
                         </div>
                     </div>
                 </header>
@@ -205,28 +205,30 @@ export default function SEOPage() {
                 <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight text-center">Sıkça Sorulan Sorular</h2>
-                        <div className="space-y-4 max-w-3xl mx-auto">
+                        <ul className="space-y-4 max-w-3xl mx-auto">
                             {faqData.map((item, i) => (
-                                <details key={i} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
-                                    <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
-                                        <span className="font-bold text-gray-950 text-base pr-4">{item.q}</span>
-                                        <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                                        </svg>
-                                    </summary>
-                                    <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
-                                        {item.a}
-                                    </div>
-                                </details>
+                                <li key={i} className="list-none">
+                                    <details className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+                                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
+                                            <span className="font-bold text-gray-950 text-base pr-4">{item.q}</span>
+                                            <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
+                                            {item.a}
+                                        </div>
+                                    </details>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
                 </section>
 
                 {/* Author Card */}
                 <section aria-labelledby="author-bio" className="border-t border-gray-100 py-12 bg-white">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
-                        <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                        <article className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
                             <Link href="/hakkimda" aria-label="Bahattin Yaylagül Hakkında Detaylı Bilgi" className="shrink-0 group">
                                 <span className="sr-only">Bahattin Yaylagül Kimdir ve Hakkında Detaylar</span>
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative">
@@ -256,7 +258,7 @@ export default function SEOPage() {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </section>
             </article>

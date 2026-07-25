@@ -131,80 +131,92 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Ana İçerik */}
-                <div
-                    className={`grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-center transition-all duration-200 ${animating ? "opacity-0 translate-y-1" : "opacity-100 translate-y-0"}`}
-                >
-                    {/* Sol: Fotoğraf */}
-                    <div className="relative flex-shrink-0">
-                        <div className="relative w-64 h-64 mx-auto md:mx-0">
-                            <div
-                                className="absolute inset-0 rounded-full blur-3xl opacity-15 transition-all duration-700"
-                                style={{ background: t.accentColor }}
-                            />
-                            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                                <Image
-                                    src={t.photo}
-                                    alt={t.name}
-                                    fill
-                                    className="object-cover object-top"
-                                    sizes="256px"
-                                    priority
-                                />
-                            </div>
-                            {/* Şirket Logo Rozeti */}
-                            <div className="absolute -bottom-2 left-2 bg-white rounded-full px-3 py-2 shadow-lg border border-gray-100 flex items-center">
-                                <Image
-                                    src={t.companyLogo}
-                                    alt={t.company}
-                                    width={80}
-                                    height={24}
-                                    className="h-5 w-auto object-contain"
-                                />
-                            </div>
-                        </div>
-                    </div>
+                <ul className="relative min-h-[480px] md:min-h-[300px]">
+                    {testimonials.map((item, idx) => {
+                        const isActive = idx === current;
+                        return (
+                            <li
+                                key={item.id}
+                                className={`grid md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-center transition-all duration-300 list-none ${
+                                    isActive
+                                        ? "opacity-100 relative pointer-events-auto"
+                                        : "opacity-0 absolute inset-0 pointer-events-none"
+                                }`}
+                            >
+                                {/* Sol: Fotoğraf */}
+                                <div className="relative flex-shrink-0">
+                                    <div className="relative w-64 h-64 mx-auto md:mx-0">
+                                        <div
+                                            className="absolute inset-0 rounded-full blur-3xl opacity-15 transition-all duration-700"
+                                            style={{ background: item.accentColor }}
+                                        />
+                                        <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                                            <Image
+                                                src={item.photo}
+                                                alt={item.name}
+                                                fill
+                                                className="object-cover object-top"
+                                                sizes="256px"
+                                                priority={idx === 0}
+                                            />
+                                        </div>
+                                        {/* Şirket Logo Rozeti */}
+                                        <div className="absolute -bottom-2 left-2 bg-white rounded-full px-3 py-2 shadow-lg border border-gray-100 flex items-center">
+                                            <Image
+                                                src={item.companyLogo}
+                                                alt={item.company}
+                                                width={80}
+                                                height={24}
+                                                className="h-5 w-auto object-contain"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
 
-                    {/* Sağ: Alıntı */}
-                    <div>
-                        <div
-                            className="border-l-4 pl-8 mb-8 transition-all duration-500"
-                            style={{ borderColor: t.accentColor }}
-                        >
-                            {/* Büyük tırnak */}
-                            <div className="text-6xl font-serif leading-none mb-3 opacity-20" style={{ color: t.accentColor }}>&quot;</div>
-                            <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium">
-                                {t.quote}
-                            </p>
-                        </div>
+                                {/* Sağ: Alıntı */}
+                                <div>
+                                    <div
+                                        className="border-l-4 pl-8 mb-8 transition-all duration-500"
+                                        style={{ borderColor: item.accentColor }}
+                                    >
+                                        {/* Büyük tırnak */}
+                                        <div className="text-6xl font-serif leading-none mb-3 opacity-20" style={{ color: item.accentColor }}>&quot;</div>
+                                        <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium">
+                                            {item.quote}
+                                        </blockquote>
+                                    </div>
 
-                        {/* İsim & Unvan */}
-                        <div className="pl-8 flex items-center justify-between flex-wrap gap-4">
-                            <div>
-                                <div className="font-bold text-gray-900 text-base">{t.name}</div>
-                                <div className="text-gray-500 text-sm mt-0.5">{t.title} · {t.company}</div>
-                            </div>
-                        </div>
+                                    {/* İsim & Unvan */}
+                                    <div className="pl-8 flex items-center justify-between flex-wrap gap-4">
+                                        <div>
+                                            <cite className="font-bold text-gray-900 text-base not-italic">{item.name}</cite>
+                                            <div className="text-gray-500 text-sm mt-0.5">{item.title} · {item.company}</div>
+                                        </div>
+                                    </div>
 
-                        {/* Nokta Nav */}
-                        <div className="pl-8 mt-8 flex gap-2 items-center">
-                            {testimonials.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => go(i)}
-                                    className="h-1.5 rounded-full transition-all duration-300"
-                                    style={{
-                                        width: i === current ? "28px" : "8px",
-                                        background: i === current ? t.accentColor : "#e5e7eb",
-                                    }}
-                                    aria-label={`Yorum ${i + 1}`}
-                                />
-                            ))}
-                            <span className="text-xs text-gray-400 font-mono ml-2">
-                                {current + 1}/{testimonials.length}
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                                    {/* Nokta Nav */}
+                                    <div className="pl-8 mt-8 flex gap-2 items-center">
+                                        {testimonials.map((_, i) => (
+                                            <button
+                                                key={i}
+                                                onClick={() => go(i)}
+                                                className="h-1.5 rounded-full transition-all duration-300"
+                                                style={{
+                                                    width: i === current ? "28px" : "8px",
+                                                    background: i === current ? item.accentColor : "#e5e7eb",
+                                                }}
+                                                aria-label={`Yorum ${i + 1}`}
+                                            />
+                                        ))}
+                                        <span className="text-xs text-gray-400 font-mono ml-2">
+                                            {current + 1}/{testimonials.length}
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </section>
     );
