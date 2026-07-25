@@ -102,6 +102,30 @@ export default function ArticleContent() {
 
             {/* Main Article */}
             <article className="min-w-0">
+                {/* TL;DR Section */}
+                <section aria-label="Özet (TL;DR)" className="mb-12 p-6 md:p-8 bg-blue-50/50 border border-blue-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-blue-600 text-white text-xs font-black uppercase tracking-widest rounded-full">
+                            TL;DR
+                        </span>
+                        <h2 className="text-lg font-bold text-gray-900 font-sans my-0">Tek Cümlede Özet</h2>
+                    </div>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0">
+                        <li className="flex items-start gap-3">
+                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">✦</span>
+                            <span><strong>Nedir:</strong> <code>llms.txt</code>, yapay zekâ ve dil modellerinin (LLM) sitenizi daha verimli taraması için hazırlanan, kök dizine yerleştirilen Markdown formatında bir dosyadır.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">✦</span>
+                            <span><strong>Neden Önemli:</strong> Menüler, reklamlar ve gereksiz JavaScript gürültüsünü filtreleyerek yapay zekânın doğrudan temiz içeriğe ulaşmasını sağlar.</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">✦</span>
+                            <span><strong>Zorunlu mu:</strong> Hayır. Şu an için hiçbir platform tarafından zorunlu tutulmamaktadır ve doğrudan SEO sıralamalarına bir etkisi yoktur.</span>
+                        </li>
+                    </ul>
+                </section>
+
                 {/* Section 1 */}
                 <div className={`${proseBase} mb-16`}>
                     <h2 id="llms-txt-nedir">1. llms.txt Nedir?</h2>
