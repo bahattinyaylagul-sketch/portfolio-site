@@ -313,12 +313,7 @@ export default function GEOContent() {
                                 Yapay zeka bir markayı değerlendirirken yalnızca o markanın kendi sitesine değil, dışarıdan referans gösteren güvenilir kaynaklara da bakar. Danışmanın ilk işi, markanın dijital kimliğini — entity adı, sektör, konum, hizmet kapsamı — farklı platformlarda çelişkisiz hale getirmektir. Wikipedia, Wikidata, sektör dizinleri, sosyal profiller: bunların hepsinde aynı bilgi duruyorsa model güven puanını yüksek tutar. Tek bir çelişkili kayıt bile modelin markayla ilgili belirsizlik yaşamasına yol açabilir.
                             </p>
 
-                            <div className="not-prose bg-amber-50 border border-amber-200 rounded-2xl p-6 my-6">
-                                <h3 className="text-base font-bold text-amber-900 mb-2">⚠️ Somut Entity Tutarlılığı Hata Örneği:</h3>
-                                <p className="text-sm text-amber-800 leading-relaxed">
-                                    Gerçek bir müşteri analizinde; markanın ana sitesinde kurucu adı <strong>"Ahmet Yılmaz"</strong> olarak geçerken, Crunchbase profilinde eski kurucu ortağın isminin kalması ve LinkedIn şirket sayfasında ana kategorinin "Finans" yerine yanlışlıkla "Yazılım" olarak seçilmesi sebebiyle Gemini ve ChatGPT modellerinin markayı yanlış kategorize edip, eski ortağı kurucu olarak atfettiği saptanmıştır. Yapılan temizlikle sinyaller eşitlenmiş ve model güveni yeniden sağlanmıştır.
-                                </p>
-                            </div>
+
 
                             <h3>Schema.org İşaretlemeleri</h3>
                             <p>
@@ -342,7 +337,52 @@ export default function GEOContent() {
                                 "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity and Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
                             </p>
 
-                            <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                            {/* Mobil: kart görünümü */}
+                            <div className="not-prose my-8 md:hidden space-y-4">
+                                {[
+                                    {
+                                        platform: "ChatGPT",
+                                        mechanism: "Eğitim verisi + RAG ile güncel web taraması",
+                                        signal: "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma",
+                                        tactic: "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi",
+                                    },
+                                    {
+                                        platform: "Perplexity",
+                                        mechanism: "Gerçek zamanlı web indeksi",
+                                        signal: "Anlık indekslenebilirlik ve yapılandırılmış veri",
+                                        tactic: "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri",
+                                    },
+                                    {
+                                        platform: "Gemini",
+                                        mechanism: "Google Knowledge Graph + arama ekosistemi",
+                                        signal: "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri",
+                                        tactic: "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu",
+                                    },
+                                ].map(({ platform, mechanism, signal, tactic }) => (
+                                    <div key={platform} className="rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                                        <div className="bg-gray-900 px-4 py-3">
+                                            <span className="font-bold text-white text-base">{platform}</span>
+                                        </div>
+                                        <div className="divide-y divide-gray-100">
+                                            <div className="px-4 py-3">
+                                                <p className="text-xs font-semibold text-violet-600 uppercase tracking-wide mb-1">Çalışma Mekanizması</p>
+                                                <p className="text-sm text-gray-700">{mechanism}</p>
+                                            </div>
+                                            <div className="px-4 py-3">
+                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Kritik Optimizasyon Sinyali</p>
+                                                <p className="text-sm text-gray-700">{signal}</p>
+                                            </div>
+                                            <div className="px-4 py-3">
+                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Öncelikli Taktik</p>
+                                                <p className="text-sm text-gray-700">{tactic}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Masaüstü: tablo görünümü */}
+                            <div className="not-prose my-8 hidden md:block overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                                 <table className="w-full text-sm">
                                     <thead>
                                         <tr className="bg-gray-900 text-white">
@@ -368,6 +408,7 @@ export default function GEOContent() {
                                     </tbody>
                                 </table>
                             </div>
+
 
                             <p>
                                 Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity'de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
