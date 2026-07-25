@@ -166,9 +166,29 @@ export default function SEOPage() {
                                     Sitenizi yalnızca Google için değil, yapay zekâ aramaları için de görünür kılıyorum. Teknik denetimden içerik stratejisine tüm süreci tek elden yürütüyor, her ay ölçülebilir raporla ilerlemeyi gösteriyorum.
                                 </p>
 
-                                <p className="text-sm text-white/50 mb-8 max-w-xl leading-relaxed">
+                                <p className="text-sm text-white/50 mb-6 max-w-xl leading-relaxed">
                                     Teknik altyapı, semantik içerik ve otorite inşasının sistemli birleşimi ile sürdürülebilir organik büyüme.
                                 </p>
+
+                                {/* TL;DR Card */}
+                                <div className="mb-8 p-5 bg-white/5 border border-white/10 rounded-2xl max-w-xl">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="px-2 py-0.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded">
+                                            TL;DR
+                                        </span>
+                                        <span className="text-xs font-bold text-white/70">Tek Bakışta SEO</span>
+                                    </div>
+                                    <ul className="space-y-2 text-white/80 text-xs leading-relaxed pl-0 my-0 list-none">
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-blue-500 font-bold shrink-0 mt-0.5">✦</span>
+                                            <span><strong>Organik Büyüme:</strong> Teknik altyapı, içerik mimarisi ve arama niyeti uyumuyla Google'da ve arama motorlarında kalıcı sıralama artışı sağlar.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-blue-500 font-bold shrink-0 mt-0.5">✦</span>
+                                            <span><strong>Ölçülebilir Çıktı:</strong> Kampanyalarda sadece trafik değil, doğrudan müşteri edinimini ve dönüşüm oranlarını artırmayı hedefler.</span>
+                                        </li>
+                                    </ul>
+                                </div>
 
                                 {/* Trust Stats Bar */}
                                 <nav className="border-t border-white/10 pt-10 mt-8" aria-label="Güven İstatistikleri">

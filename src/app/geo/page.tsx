@@ -183,9 +183,29 @@ export default function GEOPage() {
                                     Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
                                 </p>
 
-                                <p className="text-sm text-white/50 mb-8 max-w-xl leading-relaxed">
+                                <p className="text-sm text-white/50 mb-6 max-w-xl leading-relaxed">
                                     Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
                                 </p>
+
+                                {/* TL;DR Card */}
+                                <div className="mb-8 p-5 bg-white/5 border border-white/10 rounded-2xl max-w-xl">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="px-2 py-0.5 bg-violet-600 text-white text-[10px] font-black uppercase tracking-widest rounded">
+                                            TL;DR
+                                        </span>
+                                        <span className="text-xs font-bold text-white/70">Tek Bakışta GEO</span>
+                                    </div>
+                                    <ul className="space-y-2 text-white/80 text-xs leading-relaxed pl-0 my-0 list-none">
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-violet-500 font-bold shrink-0 mt-0.5">✦</span>
+                                            <span><strong>AI Görünürlüğü:</strong> ChatGPT, Gemini ve Perplexity sorgularında markanızın tavsiye edilen kaynak olarak listelenmesini hedefler.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="text-violet-500 font-bold shrink-0 mt-0.5">✦</span>
+                                            <span><strong>Semantik Otorite:</strong> Web genelinde entity (varlık) tutarlılığını ve co-citation atıflarını artırarak yapay zekanın markanıza güvenmesini sağlar.</span>
+                                        </li>
+                                    </ul>
+                                </div>
 
                                 {/* Trust Stats Bar */}
                                 <nav className="border-t border-white/10 pt-10 mt-8" aria-label="Güven İstatistikleri">
