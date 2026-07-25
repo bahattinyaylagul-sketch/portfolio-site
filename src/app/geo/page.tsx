@@ -299,6 +299,8 @@ export default function GEOPage() {
                         </div>
                     </div>
                 </section>
+            </article>
+
             <article>
                 <TestimonialsSection />
 
