@@ -108,7 +108,6 @@ export default function ArticleContent() {
                         <span className="px-3 py-1 bg-blue-600 text-white text-xs font-black uppercase tracking-widest rounded-full">
                             TL;DR
                         </span>
-                        <h2 className="text-lg font-bold text-gray-900 font-sans my-0">Tek Cümlede Özet</h2>
                     </div>
                     <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0">
                         <li className="flex items-start gap-3">
