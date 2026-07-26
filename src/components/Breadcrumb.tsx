@@ -10,7 +10,6 @@ export const ROUTE_LABELS: Record<string, string> = {
     "/geo": "GEO Danışmanlığı",
     "/seo": "SEO Danışmanlığı",
     "/hakkimda": "Hakkımda",
-    "/icgoruler": "İçgörüler",
 };
 
 interface BreadcrumbProps {

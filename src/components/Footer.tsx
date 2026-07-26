@@ -9,7 +9,7 @@ const footerLinks = {
         { label: "Semantik İçerik ve Anahtar Kelime Stratejisi", href: "/seo#seo-kapsami" },
     ],
     resources: [
-        { label: "Güncel SEO & Yazılım İçgörüleri", href: "/icgoruler" },
+        { label: "Güncel GEO & SEO İçgörüleri", href: "/geo" },
         { label: "Site Haritası", href: "/site-haritasi" },
         { label: "EntityMap", href: "/entitymap.html" },
     ],

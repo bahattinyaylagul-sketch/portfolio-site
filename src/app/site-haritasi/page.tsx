@@ -56,9 +56,9 @@ export default function SiteMapPage() {
                     <section>
                         <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Strateji Hub’ları</h2>
                         <ul className="space-y-3">
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/site-ici-seo" className="text-blue-600 hover:underline">On-Page Stratejileri</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/icerik-optimizasyonu" className="text-blue-600 hover:underline">İçerik Stratejileri</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/site-disi-seo" className="text-blue-600 hover:underline">Site Dışı Stratejileri</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/seo/site-ici-seo" className="text-blue-600 hover:underline">On-Page Stratejileri</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/seo/icerik-optimizasyonu" className="text-blue-600 hover:underline">İçerik Stratejileri</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/seo/site-disi-seo" className="text-blue-600 hover:underline">Site Dışı Stratejileri</Link></li>
                         </ul>
                     </section>
                 </div>
@@ -68,7 +68,7 @@ export default function SiteMapPage() {
                     <ul className="grid md:grid-cols-2 gap-4">
                         {clusters.map(post => (
                             <li key={post.slug} className="list-disc ml-5 marker:text-gray-400 group">
-                                <Link href={`/${post.slug}`} className="text-gray-700 group-hover:text-blue-600 transition-colors">
+                                <Link href={`/seo/${post.slug}`} className="text-gray-700 group-hover:text-blue-600 transition-colors">
                                     <span className="font-medium">{post.title}</span>
                                 </Link>
                             </li>

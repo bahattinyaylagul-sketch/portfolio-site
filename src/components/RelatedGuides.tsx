@@ -30,7 +30,7 @@ export default function RelatedGuides({
                 <section className="grid md:grid-cols-2 gap-6">
                     {posts.map((post) => (
                         <Link
-                            href={`/${post.slug}`}
+                            href={`/seo/${post.slug}`}
                             key={post.slug}
                             className="group block p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 flex flex-col h-full"
                         >

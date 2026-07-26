@@ -51,24 +51,27 @@ function escapeXml(str: string): string {
 export function GET() {
   const items = posts
     .map(
-      (post) => `
+      (post) => {
+        const url = post.slug === 'geo-rehberi' ? `${baseUrl}/geo` : `${baseUrl}/geo/${post.slug}`;
+        return `
     <item>
       <title>${escapeXml(post.title)}</title>
-      <link>${baseUrl}/icgoruler/${post.slug}</link>
-      <guid isPermaLink="true">${baseUrl}/icgoruler/${post.slug}</guid>
+      <link>${url}</link>
+      <guid isPermaLink="true">${url}</guid>
       <description>${escapeXml(post.excerpt)}</description>
       <pubDate>${post.date}</pubDate>
       <category>${escapeXml(post.category)}</category>
       <author>noreply@bahattinyaylagul.com (Bahattin Yaylagül)</author>
-    </item>`
+    </item>`;
+      }
     )
     .join('');
 
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bahattin Yaylagül – İçgörüler</title>
-    <link>${baseUrl}/icgoruler</link>
+    <title>Bahattin Yaylagül – GEO &amp; SEO İçgörüleri</title>
+    <link>${baseUrl}/geo</link>
     <description>SEO, GEO ve dijital pazarlama dünyasından en güncel stratejiler, teknik analizler ve sektörel notlar.</description>
     <language>tr</language>
     <managingEditor>noreply@bahattinyaylagul.com (Bahattin Yaylagül)</managingEditor>
@@ -77,8 +80,8 @@ export function GET() {
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>${baseUrl}/icon.png</url>
-      <title>Bahattin Yaylagül – İçgörüler</title>
-      <link>${baseUrl}/icgoruler</link>
+      <title>Bahattin Yaylagül – GEO &amp; SEO İçgörüleri</title>
+      <link>${baseUrl}/geo</link>
     </image>
     ${items}
   </channel>

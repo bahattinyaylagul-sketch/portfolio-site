@@ -403,7 +403,7 @@ export default function SEOGuideHub() {
                                     <p className="text-sm text-gray-500 leading-relaxed mt-2">AI Bot Yönetimi (llms.txt), DOM boyutu optimizasyonu ve Tarama İsrafı (Crawl Waste) önleme stratejileri.</p>
                                 </Link>
 
-                                <Link href="/core-web-vitals" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
+                                <Link href="/seo/core-web-vitals" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
                                     <div className="flex justify-between items-center mb-2">
                                         <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors text-lg">Core Web Vitals Optimizasyonu</h4>
                                         <span className="text-2xl">⚡</span>
@@ -419,7 +419,7 @@ export default function SEOGuideHub() {
                                     <p className="text-sm text-gray-500 leading-relaxed mt-2">SGE/AI Overviews için içerik formatlama, "Citation Share" artırma ve Semantik arama uyumu (LLM Optimizasyonu).</p>
                                 </Link>
 
-                                <Link href="/eeat-sinyalleri" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
+                                <Link href="/seo/eeat-sinyalleri" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
                                     <div className="flex justify-between items-center mb-2">
                                         <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors text-lg">Topikal Otorite & E-E-A-T</h4>
                                         <span className="text-2xl">📈</span>

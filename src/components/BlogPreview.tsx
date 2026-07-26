@@ -60,7 +60,7 @@ export default function BlogPreview() {
                     {latestPosts.map((post, idx) => (
                         <FadeIn key={post.slug} delay={idx * 0.2} className="h-full">
                             <article className="group relative cursor-pointer h-full">
-                                <Link href={`/icgoruler/${post.slug}`} className="block h-full">
+                                <Link href={`/geo/${post.slug}`} className="block h-full">
                                     <div className="relative aspect-[16/9] rounded-3xl overflow-hidden mb-8 border border-gray-100 shadow-sm">
                                         <Image
                                             src={post.image}
