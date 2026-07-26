@@ -538,7 +538,7 @@ export default function ArticleContent() {
 
                 {/* Back Link */}
                 <div className="border-t border-gray-100 mt-16 pt-8">
-                    <Link href="/icgoruler" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
+                    <Link href="/geo" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
                         ← Tüm İçgörülere Dön
                     </Link>
                 </div>

@@ -55,7 +55,7 @@ export default function ArticleContent() {
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                 <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
                 <span className="text-gray-200">/</span>
-                <Link href="/icgoruler" className="hover:text-blue-600 transition-colors">İçgörüler</Link>
+                <Link href="/geo" className="hover:text-blue-600 transition-colors">GEO</Link>
                 <span className="text-gray-200">/</span>
                 <span className="text-gray-600 font-bold truncate">Reddit ve Forumlardaki Mention'lar</span>
             </nav>
@@ -160,7 +160,7 @@ export default function ArticleContent() {
 
                     {/* Footer / Share / Connect */}
                     <div className="border-t border-gray-100 mt-16 pt-8">
-                        <Link href="/icgoruler" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
+                        <Link href="/geo" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
                             ← Tüm İçgörülere Dön
                         </Link>
                     </div>

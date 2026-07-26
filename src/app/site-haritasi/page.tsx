@@ -49,7 +49,7 @@ export default function SiteMapPage() {
                         <ul className="space-y-3">
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/seo" className="text-blue-600 hover:underline">SEO Danışmanlığı</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo" className="text-blue-600 hover:underline">GEO Danışmanlığı</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/teknik-seo" className="text-blue-600 hover:underline">Teknik SEO & Altyapı</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/seo/teknik-seo" className="text-blue-600 hover:underline">Teknik SEO & Altyapı</Link></li>
                         </ul>
                     </section>
 
@@ -80,9 +80,9 @@ export default function SiteMapPage() {
                     <section>
                         <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">İçgörüler & Blog</h2>
                         <ul className="space-y-3">
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/icgoruler" className="text-blue-600 hover:underline">Blog Ana Sayfa</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/icgoruler/ai-marka-mention-etkisi" className="text-gray-600 hover:text-blue-600 hover:underline">AI Marka Mention Etkisi</Link></li>
-                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/icgoruler/reddit-forum-mention-etkisi" className="text-gray-600 hover:text-blue-600 hover:underline">Reddit & Forum Etkisi</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo" className="text-blue-600 hover:underline">Blog Ana Sayfa</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/ai-marka-mention-etkisi" className="text-gray-600 hover:text-blue-600 hover:underline">AI Marka Mention Etkisi</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/reddit-forum-mention-etkisi" className="text-gray-600 hover:text-blue-600 hover:underline">Reddit & Forum Etkisi</Link></li>
                         </ul>
                     </section>
 

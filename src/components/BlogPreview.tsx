@@ -46,7 +46,7 @@ export default function BlogPreview() {
                         </h2>
                     </div>
                     <Link
-                        href="/icgoruler"
+                        href="/geo"
                         className="group flex items-center gap-2 text-foreground font-semibold hover:text-gray-600 transition-colors"
                     >
                         Tümünü Gör

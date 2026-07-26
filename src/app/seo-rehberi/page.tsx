@@ -395,7 +395,7 @@ export default function SEOGuideHub() {
                             <p className="mb-8">Bu rehberin kapsadığı her bir alan için aşağıdaki özel strateji sayfalarımıza geçiş yapabilirsiniz:</p>
 
                             <div className="grid md:grid-cols-2 gap-4 not-prose">
-                                <Link href="/teknik-seo" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
+                                <Link href="/seo/teknik-seo" className="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-lg hover:border-blue-300 transition-all group">
                                     <div className="flex justify-between items-center mb-2">
                                         <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors text-lg">Teknik SEO & Altyapı</h4>
                                         <span className="text-2xl">⚙️</span>
