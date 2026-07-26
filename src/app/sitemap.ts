@@ -42,12 +42,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     // 4. Dinamik SEO Cluster Sayfaları — yeni /seo/[slug] pathı
-    const clusterRoutes = Object.values(seoClusterData).map((post) => ({
-        url: `${baseUrl}/seo/${post.slug}`,
-        lastModified: post.publishDate ? new Date(post.publishDate).toISOString().split('T')[0] : today,
-        changeFrequency: 'weekly' as const,
-        priority: 0.8,
-    }));
+    const clusterRoutes = Object.values(seoClusterData)
+        .filter((post) => post.slug !== 'tarama' && post.slug !== 'indeksleme')
+        .map((post) => ({
+            url: `${baseUrl}/seo/${post.slug}`,
+            lastModified: post.publishDate ? new Date(post.publishDate).toISOString().split('T')[0] : today,
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+        }));
 
     return [...pillarPages, ...geoContent, ...seoHubPages, ...clusterRoutes];
 }

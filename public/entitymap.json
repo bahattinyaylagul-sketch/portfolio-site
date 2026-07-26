@@ -119,7 +119,7 @@
       "sameAs": ["https://entitymap.org/spec/v1.0"]
     },
     {
-      "id": "icgoruler-blog",
+      "id": "geo-blog",
       "type": "CreativeWork",
       "name": "İçgörüler",
       "description": "Bahattin Yaylagül'ün SEO, GEO ve yazılım üzerine data-odaklı analizleri ve stratejik notlarından oluşan blog.",
@@ -138,7 +138,7 @@
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "geo" },
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "technical-seo" },
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "ai-strategy-rag" },
-    { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "icgoruler-blog" },
+    { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "geo-blog" },
     { "subject": "bahattin-yaylagul", "predicate": "AFFILIATED_WITH", "object": "nextcode-collective" },
     { "subject": "technical-seo", "predicate": "INCLUDES", "object": "structured-data" },
     { "subject": "geo", "predicate": "DEPENDS_ON", "object": "entity-based-seo" },
