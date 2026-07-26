@@ -14,5 +14,9 @@ export const geoClusterData = {
     "chatgpt-geo": {
         title: "ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünme Rehberi",
         description: "ChatGPT'nin web tarama ve bilgi oluşturma süreçlerinde markanızı kaynak göstermesini sağlamanın tam rehberi."
+    },
+    "perplexity-geo": {
+        title: "Perplexity GEO: Yapay Zeka Arama Motorunda Görünürlük Kazanma Rehberi",
+        description: "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri."
     }
 };

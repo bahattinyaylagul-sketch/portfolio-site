@@ -26,6 +26,11 @@ const geoItems: GEOItem[] = [
         title: "ChatGPT GEO: Kaynak Gösterilme Rehberi",
         href: "/geo/chatgpt-geo",
         desc: "ChatGPT'nin yanıtlarında markanızı kaynak olarak alıntılaması için içerik ve teknik yapınızı optimize etme rehberi."
+    },
+    {
+        title: "Perplexity GEO: Görünürlük Kazanma Rehberi",
+        href: "/geo/perplexity-geo",
+        desc: "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri."
     }
 ];
 

@@ -133,6 +133,13 @@
       "url": "https://bahattinyaylagul.com/geo/chatgpt-geo"
     },
     {
+      "id": "perplexity-geo-guide",
+      "type": "CreativeWork",
+      "name": "Perplexity GEO Rehberi",
+      "description": "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri.",
+      "url": "https://bahattinyaylagul.com/geo/perplexity-geo"
+    },
+    {
       "id": "nextcode-collective",
       "type": "Organization",
       "name": "NextCode Collective",
@@ -147,6 +154,7 @@
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "ai-strategy-rag" },
     { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "geo-blog" },
     { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "chatgpt-geo-guide" },
+    { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "perplexity-geo-guide" },
     { "subject": "bahattin-yaylagul", "predicate": "AFFILIATED_WITH", "object": "nextcode-collective" },
     { "subject": "technical-seo", "predicate": "INCLUDES", "object": "structured-data" },
     { "subject": "geo", "predicate": "DEPENDS_ON", "object": "entity-based-seo" },

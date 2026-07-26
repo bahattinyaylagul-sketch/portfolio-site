@@ -6,6 +6,14 @@ const baseUrl = 'https://bahattinyaylagul.com';
 
 const posts = [
   {
+    slug: 'perplexity-geo',
+    title: 'Perplexity GEO: Yapay Zeka Arama Motorunda Görünürlük Kazanma Rehberi',
+    excerpt:
+      'Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri.',
+    date: 'Sun, 26 Jul 2026 00:00:00 +0000',
+    category: 'GEO / AI Search',
+  },
+  {
     slug: 'chatgpt-geo',
     title: 'ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünmenin Tam Rehberi',
     excerpt:

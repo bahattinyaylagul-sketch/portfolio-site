@@ -642,6 +642,51 @@ Allow: /`}
                             </div>
                         </section>
 
+                        {/* CTA */}
+                        <aside className="my-16 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative overflow-hidden" aria-label="GEO Danışmanlığı Teklifi">
+                            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-gray-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+                            <div className="relative z-10 flex-1">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Markanızı Yapay Zeka Çağına Taşıyın</h3>
+                                <p className="text-gray-600 leading-relaxed font-medium">
+                                    GEO ve AI görünürlük stratejilerinin işinize özel nasıl kurgulanabileceğini görmek ister misiniz?
+                                </p>
+                            </div>
+                            <div className="relative z-10 shrink-0 w-full md:w-auto">
+                                <Link href="/geo" className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black hover:-translate-y-1 transition-all shadow-md">
+                                    GEO Danışmanlığı Hizmetini İncele
+                                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </Link>
+                            </div>
+                        </aside>
+
+                        {/* Ayrıca Bakınız */}
+                        <div className="mt-16 border-t border-gray-100 pt-12">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
+                            <ul className="space-y-6 mb-8">
+                                <li className="list-none">
+                                    <Link href="/geo/llms-txt-nedir" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                        llms.txt Nedir?
+                                    </Link>
+                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı.</p>
+                                </li>
+                                <li className="list-none">
+                                    <Link href="/geo/ai-marka-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                        Marka Mention'ları ve AI Hafızası
+                                    </Link>
+                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri.</p>
+                                </li>
+                            </ul>
+                            <div className="pt-6 border-t border-gray-100">
+                                <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
+                                    ← GEO Danışmanlığı ana sayfasına dön
+                                </Link>
+                            </div>
+                        </div>
+
                         {/* Author Card */}
                         <section aria-labelledby="author-bio" className="mt-16 border-t border-gray-100 py-12 bg-white">
                             <article className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">

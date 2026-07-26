@@ -34,6 +34,7 @@ Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine O
 - [AI Marka Mention Etkisi](https://bahattinyaylagul.com/geo/ai-marka-mention-etkisi): Yapay zeka sistemlerinde marka anılmalarının SEO'ya etkisi
 - [Reddit & Forum Mention Etkisi](https://bahattinyaylagul.com/geo/reddit-forum-mention-etkisi): Forum ve sosyal platform atıflarının arama sıralamalarına etkisi
 - [ChatGPT GEO Rehberi](https://bahattinyaylagul.com/geo/chatgpt-geo): ChatGPT'nin yanıtlarında kaynak göstermesini sağlamanın tam rehberi
+- [Perplexity GEO Rehberi](https://bahattinyaylagul.com/geo/perplexity-geo): Perplexity AI aramalarında alıntılanmak ve kaynak olarak önerilmek için yapılması gereken optimizasyon pratikleri
 
 ## İletişim
 
