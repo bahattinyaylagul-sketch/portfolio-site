@@ -27,10 +27,13 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || window.scrollY || 0;
+            setScrolled(scrollTop > 50);
         };
         handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
+        document.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("touchmove", handleScroll, { passive: true });
         
         // Interval checks to catch asynchronous scroll restoration on mobile load
         const interval = setInterval(handleScroll, 100);
@@ -38,6 +41,8 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            document.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("touchmove", handleScroll);
             clearInterval(interval);
             clearTimeout(timeout);
         };
@@ -63,14 +68,17 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
 
     const isDarkBg = theme === "dark" && !scrolled;
 
+    const navBgClass = scrolled || mobileMenuOpen
+        ? "bg-white/95 backdrop-blur-xl py-4 shadow-sm"
+        : theme === "dark"
+            ? "bg-[#0a0a0a]/95 backdrop-blur-xl md:bg-transparent py-4 md:py-6 border-b border-white/5 md:border-b-0"
+            : "bg-white/95 backdrop-blur-xl md:bg-transparent py-4 md:py-6 border-b border-gray-100 md:border-b-0 shadow-sm md:shadow-none";
+
     return (
         <>
             {/* Main Header Bar */}
             <nav
-                className={`fixed top-0 left-0 right-0 transition-all duration-300 pointer-events-auto ${scrolled || mobileMenuOpen
-                    ? "bg-white/95 backdrop-blur-xl py-4 shadow-sm"
-                    : "bg-transparent py-6"
-                    }`}
+                className={`fixed top-0 left-0 right-0 transition-all duration-300 pointer-events-auto ${navBgClass}`}
                 style={{ zIndex: 9999 }}
                 aria-label="Main Navigation"
             >
