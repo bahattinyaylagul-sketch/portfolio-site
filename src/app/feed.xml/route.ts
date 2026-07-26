@@ -6,6 +6,14 @@ const baseUrl = 'https://bahattinyaylagul.com';
 
 const posts = [
   {
+    slug: 'chatgpt-geo',
+    title: 'ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünmenin Tam Rehberi',
+    excerpt:
+      'ChatGPT, Gemini ve Perplexity gibi yapay zeka arama motorlarının yanıtlarında markanızı kaynak olarak alıntılatmanın pratik yolları ve teknik optimizasyon rehberi.',
+    date: 'Sun, 26 Jul 2026 00:00:00 +0000',
+    category: 'GEO / AI Search',
+  },
+  {
     slug: 'llms-txt-nedir',
     title: 'llms.txt Nedir? Tanım, Format, Etkinlik Analizi ve Uygulama Rehberi',
     excerpt:

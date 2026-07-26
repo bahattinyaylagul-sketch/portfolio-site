@@ -10,5 +10,9 @@ export const geoClusterData = {
     "ai-marka-mention-etkisi": {
         title: "Marka Mention'ları ve AI Hafızası",
         description: "Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri."
+    },
+    "chatgpt-geo": {
+        title: "ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünme Rehberi",
+        description: "ChatGPT'nin web tarama ve bilgi oluşturma süreçlerinde markanızı kaynak göstermesini sağlamanın tam rehberi."
     }
 };

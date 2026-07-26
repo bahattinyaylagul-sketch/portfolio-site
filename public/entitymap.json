@@ -126,6 +126,13 @@
       "url": "https://bahattinyaylagul.com/geo"
     },
     {
+      "id": "chatgpt-geo-guide",
+      "type": "CreativeWork",
+      "name": "ChatGPT GEO Rehberi",
+      "description": "ChatGPT'nin yanıtlarında kaynak göstermesini sağlamanın tam rehberi.",
+      "url": "https://bahattinyaylagul.com/geo/chatgpt-geo"
+    },
+    {
       "id": "nextcode-collective",
       "type": "Organization",
       "name": "NextCode Collective",
@@ -139,6 +146,7 @@
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "technical-seo" },
     { "subject": "bahattin-yaylagul", "predicate": "PRACTICES", "object": "ai-strategy-rag" },
     { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "geo-blog" },
+    { "subject": "bahattin-yaylagul", "predicate": "AUTHORED", "object": "chatgpt-geo-guide" },
     { "subject": "bahattin-yaylagul", "predicate": "AFFILIATED_WITH", "object": "nextcode-collective" },
     { "subject": "technical-seo", "predicate": "INCLUDES", "object": "structured-data" },
     { "subject": "geo", "predicate": "DEPENDS_ON", "object": "entity-based-seo" },

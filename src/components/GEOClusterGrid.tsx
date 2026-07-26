@@ -21,6 +21,11 @@ const geoItems: GEOItem[] = [
         title: "Marka Mention'ları ve AI Hafızası",
         href: "/geo/ai-marka-mention-etkisi",
         desc: "Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri ve kalıcılık etkisi."
+    },
+    {
+        title: "ChatGPT GEO: Kaynak Gösterilme Rehberi",
+        href: "/geo/chatgpt-geo",
+        desc: "ChatGPT'nin yanıtlarında markanızı kaynak olarak alıntılaması için içerik ve teknik yapınızı optimize etme rehberi."
     }
 ];
 
