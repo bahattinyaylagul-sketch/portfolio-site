@@ -158,11 +158,30 @@ export default function ArticleContent() {
                         </div>
                     </div>
 
-                    {/* Footer / Share / Connect */}
-                    <div className="border-t border-gray-100 mt-16 pt-8">
-                        <Link href="/geo" className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-foreground transition-colors">
-                            ← Tüm İçgörülere Dön
-                        </Link>
+                    {/* Ayrıca Bakınız */}
+                    <div className="mt-16 border-t border-gray-100 pt-12">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
+                        <ul className="space-y-6 mb-8">
+                            <li className="list-none">
+                                <Link href="/geo/llms-txt-nedir" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                    <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                    llms.txt Nedir?
+                                </Link>
+                                <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı.</p>
+                            </li>
+                            <li className="list-none">
+                                <Link href="/geo/ai-marka-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                    <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                    Marka Mention'ları ve AI Hafızası
+                                </Link>
+                                <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri.</p>
+                            </li>
+                        </ul>
+                        <div className="pt-6 border-t border-gray-100">
+                            <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
+                                ← GEO Danışmanlığı ana sayfasına dön
+                            </Link>
+                        </div>
                     </div>
                 </article>
             </div>

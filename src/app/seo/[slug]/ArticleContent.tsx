@@ -222,13 +222,38 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                         </div>
                     )}
 
-                    {/* Related Topics */}
-                    {post.relatedLinks && post.relatedLinks.length > 0 && (
-                        <RelatedGuides
-                            posts={post.relatedLinks.map(slug => seoClusterData[slug]).filter(Boolean) as BlogPost[]}
-                            title="İlgili Diğer Başlıklar"
-                        />
-                    )}
+                    {/* Ayrıca Bakınız */}
+                    {(() => {
+                        const siblings = Object.values(seoClusterData)
+                            .filter((item) => item.parent === post.parent && item.slug !== post.slug)
+                            .slice(0, 3);
+                        if (siblings.length === 0) return null;
+
+                        return (
+                            <div className="mt-16 border-t border-gray-100 pt-12">
+                                <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
+                                <ul className="space-y-6 mb-8">
+                                    {siblings.map((sib) => (
+                                        <li key={sib.slug} className="list-none">
+                                            <Link
+                                                href={`${basePath}/${sib.slug}`}
+                                                className="inline-flex items-center text-blue-600 hover:underline font-bold group text-lg"
+                                            >
+                                                <span className="w-2 h-2 rounded-full bg-blue-600 mr-3 group-hover:scale-125 transition-all" />
+                                                {sib.title}
+                                            </Link>
+                                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">{sib.description}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="pt-6 border-t border-gray-100">
+                                    <Link href="/seo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
+                                        ← SEO Danışmanlığı ana sayfasına dön
+                                    </Link>
+                                </div>
+                            </div>
+                        );
+                    })()}
                 </article>
             </div>
         </div>

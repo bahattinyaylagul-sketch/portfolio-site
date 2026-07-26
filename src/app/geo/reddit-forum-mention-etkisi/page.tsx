@@ -18,8 +18,22 @@ import ArticleContent from "./ArticleContent";
 // ... (Metadata export remains)
 
 export default function RedditForumGEOPost() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com" },
+            { "@type": "ListItem", "position": 2, "name": "GEO Danışmanlığı", "item": "https://bahattinyaylagul.com/geo" },
+            { "@type": "ListItem", "position": 3, "name": "Reddit ve Forum Mention'ları", "item": "https://bahattinyaylagul.com/geo/reddit-forum-mention-etkisi" }
+        ]
+    };
+
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Fixed Header Wrapper */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />

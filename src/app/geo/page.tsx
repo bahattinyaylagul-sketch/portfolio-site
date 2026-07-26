@@ -11,6 +11,7 @@ import { SEOContactForm } from "../seo/SEONavigator";
 import GEOContent from "./GEOContent";
 import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 import TestimonialsSection from "../seo/TestimonialsSection";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "GEO Danışmanlığı – Bahattin Yaylagül",
@@ -214,6 +215,9 @@ export default function GEOPage() {
                 <section aria-label="GEO Danışmanlığı İçeriği" className="max-w-[1400px] mx-auto px-6 md:px-8 pb-12 mt-12">
                     <GEOContent />
                 </section>
+
+                {/* GEO Cluster Grid */}
+                <GEOClusterGrid />
 
                 {/* FAQ */}
                 <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
