@@ -21,9 +21,10 @@ interface ArticleContentProps {
     headings: Heading[];
     contentWithIds: string;
     nextPost: BlogPost | null;
+    basePath?: string;
 }
 
-export default function ArticleContent({ post, headings, contentWithIds, nextPost }: ArticleContentProps) {
+export default function ArticleContent({ post, headings, contentWithIds, nextPost, basePath = "" }: ArticleContentProps) {
     const [activeSection, setActiveSection] = useState(headings.length > 0 ? headings[0].id : "");
     const [isMobileTocOpen, setIsMobileTocOpen] = useState(false);
 
@@ -194,7 +195,7 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                     {nextPost && (
                         <div className="mb-20">
                             <Link
-                                href={`/seo/${nextPost.slug}`}
+                                href={`${basePath}/${nextPost.slug}`}
                                 className="block relative overflow-hidden bg-gray-900 rounded-2xl p-10 text-white group hover:bg-black transition-colors shadow-2xl"
                             >
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none group-hover:bg-blue-600/30 transition-all"></div>

@@ -122,7 +122,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/semantik-yazim" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/semantik-yazim" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Konu: Semantik Yazım ve NLP</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -243,7 +243,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/silo-mimarisi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/silo-mimarisi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Yapıyı Güçlendir: İç Linkleme ve Silo Mimarisi</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -364,7 +364,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/site-ici-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/site-ici-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">SEO Ana Rehberine Dön</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -478,7 +478,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/indeksleme" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/tarama-ve-indeksleme" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Aşama: İndeksleme Mantığı</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -592,7 +592,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/siralama" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/siralama" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Aşama: Sıralama Faktörleri</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -752,7 +752,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/tarama" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/tarama-ve-indeksleme" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">İlk Adım: Tarama (Crawling)</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1027,7 +1027,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/eeat-sinyalleri" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/eeat-sinyalleri" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Adım: E-E-A-T ve Güven Sinyalleri</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1147,7 +1147,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/site-ici-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/site-ici-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Bölüm Sonu: Site İçi SEO Temelleri</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1259,7 +1259,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/icerik-optimizasyonu" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/icerik-optimizasyonu" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Konuyu Tamamla: İçerik Optimizasyonu Ana Sayfası</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1372,7 +1372,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/semantik-yazim" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/semantik-yazim" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Adım: Semantik Yazım ve NLP</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1492,7 +1492,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/arama-niyeti" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/arama-niyeti" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">İlk Adım: Arama Niyeti Analizi</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1615,7 +1615,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 </section>
 
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                     <a href="/yerel-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                     <a href="/seo/yerel-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">İnceleyin: Yerel SEO ve Harita Optimizasyonu</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1727,7 +1727,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                  <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/teknik-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/teknik-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Döngüyü Tamamla: Teknik SEO Altyapısı</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -1948,7 +1948,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/tarama-butcesi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/tarama-butcesi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Adım: Tarama Bütçesi</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -2064,7 +2064,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Footer Navigation -->
                 <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/log-analizi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/log-analizi" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Sıradaki Adım: Log Analizi Teknikleri</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -2184,7 +2184,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                  <!-- Footer Navigation -->
                  <div class="mt-8 pt-8 border-t border-gray-200">
-                    <a href="/teknik-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                    <a href="/seo/teknik-seo" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
                         <span class="underline">Teknik SEO Ana Başlığına Dön</span>
                         <span class="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
@@ -2199,5 +2199,143 @@ export const seoClusterData: Record<string, BlogPost> = {
         ],
         relatedLinks: ["teknik-seo", "tarama", "indeksleme", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "siralama"],
         publishDate: "2024-01-28"
-    }
+    },
+
+    "tarama-ve-indeksleme": {
+        slug: "tarama-ve-indeksleme",
+        parent: "teknik-seo",
+        title: "Tarama ve İndeksleme (Crawl & Index)",
+        description: "Tarama (Crawling); Googlebot gibi arama motoru örümceklerinin web sitenizi ziyaret etmesi, sayfa kodlarını okuması ve linkleri takip ederek site haritanızı keşfetmesi sürecidir. İndeksleme (Indexing) ise taranan sayfaların kalitesinin değerlendirilerek, arama sonuçlarında gösterilmek üzere Google'ın veritabanına kaydedilmesi işlemidir.",
+        content: `
+            <div class="space-y-12">
+                <!-- Section 1: H1/Direct Answer -->
+                <section>
+                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Sitemi Neden Bulamıyor?</h3>
+                    <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer binlerce sayfalık sitenizde sadece birkaç yüz sayfa taranıyorsa, botlar sitenizin "teknik labirentinde" kaybolmuş demektir. Tarama (Crawling), Googlebot'un sitenizi keşfetme yolculuğudur; bu aşamadaki başarısızlık, içeriğiniz ne kadar mükemmel olursa olsun, görünmez kalması anlamına gelir.</p>
+                    
+                    <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
+                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kaçaklarını Durdurun</h4>
+                        <p class="text-indigo-800 text-sm">Çoğu site sahibi yeni içerik girmeye odaklanır ama mevcut tarama bütçesi (Crawl Budget) 500 hataları veya gereksiz filtre URL'leri tarafından tüketilmektedir. Önce bütçeyi "kapatın", sonra yeni sayfalar açın.</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Step-by-Step List -->
+                <section>
+                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Tarama Verimliliği Nasıl Artırılır?</h3>
+                    <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Botların sitenize olan ziyaretlerini kusursuz hale getirmek için şu 3 teknik kontrolü yapmalıyız:</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">01</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Robots.txt ile Yön Gösterin</h4>
+                                <p class="text-sm text-gray-600">Admin panelleri ve sepet gibi "para kazandırmayan" sayfaları Disallow ile botlara kapatın.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">02</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Sitemap Temizliği</h4>
+                                <p class="text-sm text-gray-600">Haritada sadece 200 OK kodu veren ve indekslenmesini istediğiniz en temiz kanonik URL'leri bulundurun.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">03</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Kırık Link (404) Temizliği</h4>
+                                <p class="text-sm text-gray-600">Site içindeki kırık linkler botları çıkmaz sokağa sokar ve bütçeyi boşa harcar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Indexing -->
+                <section>
+                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. İndeksleme Sorunlarını Giderme</h3>
+                    <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Taranmak, dizine eklenmeyi garanti etmez. Google, saniyede milyonlarca sayfayı tararken çok sıkı bir "kalite filtresi" uygular. Google sonuçlarında görünmeyen sayfalar varsa şu 3 stratejik adımı izleyin:</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">01</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Excluded Raporunu Analiz Edin</h4>
+                                <p class="text-sm text-gray-600">Search Console'da "Tarandı ama dizine eklenmedi" hatası kaliteye, "Bulundu ama taranmadı" hatası ise site hızına işarettir.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">02</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Meta Robots Kontrolü</h4>
+                                <p class="text-sm text-gray-600">Yanlışlıkla tüm siteye "noindex" basılmadığından emin olun. Head bölümünü kontrol edin.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
+                            <div class="text-2xl font-black text-gray-200">03</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">İçerik Kalitesi ve Kopya Kontrolü</h4>
+                                <p class="text-sm text-gray-600">Sayfanız başka bir sayfanın kopyası mı? Google 'Duplicate Content' gördüğünde genellikle orijinal olanı seçer, diğerini eler. Özgünlük sunun.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Comparison Table -->
+                <section>
+                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sayfa Tipleri İndekslenmeli, Hangileri Engellenmeli?</h3>
+                    <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                        <table class="w-full text-sm text-left leading-[1.5]">
+                            <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
+                                <tr>
+                                    <th class="px-6 py-4">Kriter</th>
+                                    <th class="px-6 py-4">Negatif Sinyal (Index Bloat)</th>
+                                    <th class="px-6 py-4">Pozitif Sinyal (Clean Index)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="bg-white hover:bg-gray-50">
+                                    <td class="px-6 py-4 font-mono font-bold text-gray-900">İçerik Derinliği</td>
+                                    <td class="px-6 py-4 text-gray-600">Zayıf içerik (Thin Content), boş sayfalar.</td>
+                                    <td class="px-6 py-4 text-gray-600">Kapsamlı ve özgün bilgi içeren sayfalar.</td>
+                                </tr>
+                                <tr class="bg-gray-50 hover:bg-gray-100">
+                                    <td class="px-6 py-4 font-mono font-bold text-gray-900">Kopya Durumu</td>
+                                    <td class="px-6 py-4 text-gray-600">Site içi kopya (Duplicate), parametreli URL'ler.</td>
+                                    <td class="px-6 py-4 text-gray-600">Kanonik etiketiyle işaretlenmiş tekil URL.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Strategic FAQ -->
+                <section>
+                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama ve İndeksleme Hakkında Stratejik Sorular</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <p class="font-bold text-gray-900 text-sm mb-1">Robots.txt ile engellediğim bir sayfa SERP'te çıkıyor, neden?</p>
+                            <p class="text-sm text-gray-600 leading-[1.6]">Çünkü Robots.txt taramayı engeller ama indekslemeyi garantilemez. Tam çözüm için noindex etiketi kullanmalısınız.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <p class="font-bold text-gray-900 text-sm mb-1">Index Request butonuna her gün basmak işe yarar mı?</p>
+                            <p class="text-sm text-gray-600 leading-[1.6]">Hayır. Eğer sayfanızın kalite sorunu varsa, istediğiniz kadar basın, Google o sayfayı dizine almayacaktır. Önce içeriği geliştirin.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Navigation -->
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <a href="/seo/siralama" class="flex items-center gap-2 text-[#3b82f6] hover:text-blue-700 font-bold text-lg group">
+                        <span class="underline">Sıradaki Aşama: Sıralama Faktörleri</span>
+                        <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+        `,
+        keyPoints: [
+            { title: "Crawl Bütçesi", desc: "Bot kaynaklarının optimum kullanımı sağlanır." },
+            { title: "SSR Desteği", desc: "Botlara hazır HTML sunularak tarama hızlandırılır." },
+            { title: "Dizin Optimizasyonu", desc: "Kaliteli sayfalar önceliklendirilir (Index Bloat Önleme)." },
+            { title: "GSC Analizi", desc: "İndeksleme hataları Search Console üzerinden çözülür." }
+        ],
+        relatedLinks: ["teknik-seo", "core-web-vitals", "yapisal-veri", "tarama-butcesi", "log-analizi", "siralama"],
+        publishDate: "2024-01-14"
+    },
 };

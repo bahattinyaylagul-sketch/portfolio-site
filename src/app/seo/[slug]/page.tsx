@@ -67,6 +67,7 @@ const getCategoryAssets = (slug: string, parent: string | null) => {
         "silo-mimarisi": "/images/silo_architecture_3d.png",
         "tarama": "/images/crawling_indexing_3d.png",
         "indeksleme": "/images/crawling_indexing_3d.png",
+        "tarama-ve-indeksleme": "/images/crawling_indexing_3d.png",
         "siralama": "/images/ranking_factors_3d.png",
         "eeat-sinyalleri": "/images/eeat_trust_3d.png",
         "topikal-otorite": "/images/topic_authority_3d.png",
@@ -160,7 +161,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function SEOBlogPostPage({ params }: { params: { slug: string } }) {
     const post = seoClusterData[params.slug];
 
     if (!post) {
@@ -203,7 +204,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 "description": post.description,
                 "inLanguage": "tr-TR"
             },
-            getBreadcrumbSchema(breadcrumbItems)
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com/" },
+                    { "@type": "ListItem", "position": 2, "name": "SEO Danışmanlığı", "item": "https://bahattinyaylagul.com/seo" },
+                    { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://bahattinyaylagul.com/seo/${post.slug}` }
+                ]
+            }
         ]
     };
 
@@ -302,6 +311,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 headings={headings}
                 contentWithIds={contentWithIds}
                 nextPost={nextPost}
+                basePath="/seo"
             />
             <Footer />
         </main>

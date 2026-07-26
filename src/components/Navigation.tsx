@@ -9,7 +9,6 @@ const navItems = [
     { label: "Hakkımda", href: "/hakkimda", ariaLabel: "Bahattin Yaylagül Hakkında Bilgi", srLabel: " - Bahattin Yaylagül Özgeçmiş ve Detaylar" },
     { label: "SEO", href: "/seo", ariaLabel: "SEO Danışmanlığı ve Organik Büyüme Hizmetleri", srLabel: " Danışmanlığı ve Organik Büyüme Hizmetleri" },
     { label: "GEO", href: "/geo", ariaLabel: "GEO (Generative Engine Optimization) Hizmetleri", srLabel: " (Generative Engine Optimization) Danışmanlığı" },
-    { label: "İçgörüler", href: "/icgoruler", ariaLabel: "SEO, GEO ve Yapay Zeka Hakkında İçgörüler", srLabel: " - SEO, GEO ve Yazılım Makaleleri" },
 ];
 
 interface NavigationProps {

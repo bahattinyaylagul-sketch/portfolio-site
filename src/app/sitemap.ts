@@ -3,41 +3,51 @@ import { seoClusterData } from '@/lib/seo-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://bahattinyaylagul.com';
+    const today = new Date().toISOString().split('T')[0];
 
-    // 1. Statik Ana Sayfalar
-    const staticPages = [
+    // 1. Ana Sayfalar (Pillar) — priority 1.0
+    const pillarPages = [
         '',
         '/seo',
         '/geo',
         '/hakkimda',
-        '/icgoruler',
         '/referanslar',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
-        lastModified: new Date(),
+        lastModified: today,
         changeFrequency: 'monthly' as const,
-        priority: route === '' ? 1 : 0.8,
+        priority: route === '' || route === '/seo' || route === '/geo' ? 1.0 : 0.8,
     }));
 
-    // 2. Statik Blog & Vaka Sayfaları (Klasör olarak var olanlar)
-    const staticContent = [
-        '/icgoruler/ai-marka-mention-etkisi',
-        '/icgoruler/reddit-forum-mention-etkisi',
+    // 2. GEO Alt Sayfaları — priority 0.8
+    const geoContent = [
+        '/geo/llms-txt-nedir',
+        '/geo/ai-marka-mention-etkisi',
+        '/geo/reddit-forum-mention-etkisi',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-    }));
-
-    // 3. Dinamik SEO Cluster Sayfaları (seo-data.ts'ten gelenler)
-    // Bu sayfalar /[slug] yapısında sunuluyor.
-    const clusterRoutes = Object.values(seoClusterData).map((post) => ({
-        url: `${baseUrl}/${post.slug}`,
-        lastModified: post.publishDate ? new Date(post.publishDate) : new Date(),
+        lastModified: today,
         changeFrequency: 'weekly' as const,
         priority: 0.8,
     }));
 
-    return [...staticPages, ...staticContent, ...clusterRoutes];
+    // 3. SEO Hub Sayfası — priority 0.9
+    const seoHubPages = [
+        '/seo/teknik-seo',
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: today,
+        changeFrequency: 'weekly' as const,
+        priority: 0.9,
+    }));
+
+    // 4. Dinamik SEO Cluster Sayfaları — yeni /seo/[slug] pathı
+    const clusterRoutes = Object.values(seoClusterData).map((post) => ({
+        url: `${baseUrl}/seo/${post.slug}`,
+        lastModified: post.publishDate ? new Date(post.publishDate).toISOString().split('T')[0] : today,
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+    }));
+
+    return [...pillarPages, ...geoContent, ...seoHubPages, ...clusterRoutes];
 }
