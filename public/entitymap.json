@@ -55,7 +55,7 @@
       "aliases": ["Technical SEO"],
       "description": "Core Web Vitals, Crawl Budget optimizasyonu, Next.js/React altyapı çözümleri, render davranışı ve structured data implementasyonu.",
       "evidence": [
-        "https://bahattinyaylagul.com/teknik-seo"
+        "https://bahattinyaylagul.com/seo/teknik-seo"
       ]
     },
     {
@@ -97,8 +97,8 @@
       "aliases": ["Brand Mention", "Unlinked Mention"],
       "description": "Bir markanın link olmadan başka bir platformda bahsedilmesi; AI modellerinin hafıza ve güven skorunda kritik bir sinyal olarak işlev görür.",
       "evidence": [
-        "https://bahattinyaylagul.com/icgoruler/ai-marka-mention-etkisi",
-        "https://bahattinyaylagul.com/icgoruler/reddit-forum-mention-etkisi"
+        "https://bahattinyaylagul.com/geo/ai-marka-mention-etkisi",
+        "https://bahattinyaylagul.com/geo/reddit-forum-mention-etkisi"
       ]
     },
     {
@@ -108,7 +108,7 @@
       "description": "Jeremy Howard tarafından Eylül 2024'te önerilen, sitelerin LLM'ler için markdown formatında bir index sunmasını sağlayan opsiyonel dosya standardı. SE Ranking'in 300.000 domainlik XGBoost analizinde AI atıf sıklığı ile istatistiksel korelasyon göstermemiştir; XGBoost modeli llms.txt değişkenini gürültü olarak sınıflandırmıştır.",
       "sameAs": ["https://llmstxt.org/"],
       "evidence": [
-        "https://bahattinyaylagul.com/icgoruler/llms-txt-nedir"
+        "https://bahattinyaylagul.com/geo/llms-txt-nedir"
       ]
     },
     {
@@ -123,7 +123,7 @@
       "type": "CreativeWork",
       "name": "İçgörüler",
       "description": "Bahattin Yaylagül'ün SEO, GEO ve yazılım üzerine data-odaklı analizleri ve stratejik notlarından oluşan blog.",
-      "url": "https://bahattinyaylagul.com/icgoruler"
+      "url": "https://bahattinyaylagul.com/geo"
     },
     {
       "id": "nextcode-collective",
