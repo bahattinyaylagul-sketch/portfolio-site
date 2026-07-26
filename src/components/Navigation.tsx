@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { seoClusterData } from "@/lib/seo-data";
+import { geoClusterData } from "@/lib/geo-data";
 
 const navItems = [
     { label: "Ana Sayfa", href: "/", ariaLabel: "Bahattin Yaylagül Portfolyo Ana Sayfası", srLabel: " - Bahattin Yaylagül Portfolyo Ana Sayfası" },
@@ -19,6 +21,9 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
+    const seoCount = Object.keys(seoClusterData).filter(key => key !== 'tarama' && key !== 'indeksleme').length + 1; // 18
+    const geoCount = Object.keys(geoClusterData).length + 1; // 4
+    const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
     const toggleMenu = useCallback(() => {
         setMobileMenuOpen(prev => !prev);
@@ -179,6 +184,50 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                                 </ul>
                             </div>
                         </li>
+
+                        {/* Rehberler with Dropdown */}
+                        <li className="group relative py-2">
+                            <button
+                                className={`text-sm transition-colors duration-200 flex items-center gap-1 focus:outline-none ${isDarkBg ? "text-gray-300 group-hover:text-white" : "text-gray-600 group-hover:text-foreground"}`}
+                            >
+                                Rehberler
+                                <svg className="w-3.5 h-3.5 opacity-60 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {/* Kompakt Dropdown Menu Panel (width ~500px, height ~180px, side-by-side cards) */}
+                            <div className="absolute top-full left-1/2 -translate-x-[75%] mt-1 w-[460px] bg-white border border-gray-100 rounded-3xl p-5 shadow-xl opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-[99999] flex gap-4">
+                                <Link
+                                    href="/seo"
+                                    className="flex-1 p-4 bg-gray-50/50 hover:bg-blue-50/20 border border-gray-100 hover:border-blue-200 rounded-2xl transition-all group/item"
+                                >
+                                    <span className="text-[9px] font-extrabold tracking-widest text-blue-600 uppercase block mb-1">
+                                        SEO REHBERLERİ
+                                    </span>
+                                    <span className="text-xs text-gray-500 font-semibold block mb-0.5">
+                                        {seoCount} içerik
+                                    </span>
+                                    <span className="text-[10px] font-bold text-gray-400 group-hover/item:text-blue-600 transition-colors">
+                                        İncele →
+                                    </span>
+                                </Link>
+                                <Link
+                                    href="/geo"
+                                    className="flex-1 p-4 bg-gray-50/50 hover:bg-violet-50/20 border border-gray-100 hover:border-violet-200 rounded-2xl transition-all group/item"
+                                >
+                                    <span className="text-[9px] font-extrabold tracking-widest text-violet-600 uppercase block mb-1">
+                                        GEO REHBERLERİ
+                                    </span>
+                                    <span className="text-xs text-gray-500 font-semibold block mb-0.5">
+                                        {geoCount} içerik
+                                    </span>
+                                    <span className="text-[10px] font-bold text-gray-400 group-hover/item:text-violet-600 transition-colors">
+                                        İncele →
+                                    </span>
+                                </Link>
+                            </div>
+                        </li>
+
                         <li>
                             <Link
                                 href="/#contact"
@@ -228,6 +277,41 @@ export default function Navigation({ theme = "light" }: NavigationProps) {
                              </Link>
                          </li>
                      ))}
+                     {/* Mobile Rehberler Accordion */}
+                     <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
+                         <button
+                             onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                             className="w-full flex items-center justify-between border-b border-gray-100 pb-3 text-gray-400 text-left font-light"
+                         >
+                             <span>Rehberler</span>
+                             <svg className={`w-5 h-5 transition-transform duration-300 ${mobileDropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                             </svg>
+                         </button>
+                         <div className={`overflow-hidden transition-all duration-300 ${mobileDropdownOpen ? "max-h-40 opacity-100 mt-2 pl-4" : "max-h-0 opacity-0"}`}>
+                             <ul className="space-y-3 pb-3">
+                                 <li>
+                                     <Link
+                                         href="/seo"
+                                         onClick={() => setMobileMenuOpen(false)}
+                                         className="block text-xl text-gray-500 hover:text-black font-light"
+                                     >
+                                         SEO Rehberleri <span className="text-xs text-gray-400 font-semibold">({seoCount})</span>
+                                     </Link>
+                                 </li>
+                                 <li>
+                                     <Link
+                                         href="/geo"
+                                         onClick={() => setMobileMenuOpen(false)}
+                                         className="block text-xl text-gray-500 hover:text-black font-light"
+                                     >
+                                         GEO Rehberleri <span className="text-xs text-gray-400 font-semibold">({geoCount})</span>
+                                     </Link>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+
                      <li className={`transform transition-all duration-500 ${mobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}>
                          <Link
                              href="/#contact"

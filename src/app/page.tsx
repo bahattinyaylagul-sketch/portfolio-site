@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Script from "next/script";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import GuideLibrary from "@/components/GuideLibrary";
 import { AUTHOR_ENTITY, WEBSITE_ENTITY } from "@/lib/schema";
 
 const ServicesBento = dynamic(() => import("@/components/ServicesBento"));
@@ -52,6 +53,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero />
+
+      {/* Guide Library Section */}
+      <GuideLibrary />
 
       {/* Services Grid */}
       <ServicesBento />
