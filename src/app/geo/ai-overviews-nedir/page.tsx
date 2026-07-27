@@ -591,51 +591,36 @@ export default function AIOverviewsPage() {
                         </section>
 
                         {/* Ayrıca Bakınız */}
-                        <div className="mt-16 border-t border-gray-100 pt-12">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
-                            <ul className="space-y-6 mb-8">
-                                <li className="list-none">
-                                    <Link href="/geo/chatgpt-geo" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        ChatGPT GEO: Kaynak Gösterilme Rehberi
+                        <div className="mt-16 border-t border-gray-100 pt-10">
+                            <h2 className="text-xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                                {[
+                                    { title: "ChatGPT GEO", href: "/geo/chatgpt-geo", desc: "Yapay zeka yanıtlarında kaynak olarak görünme rehberi." },
+                                    { title: "Perplexity GEO", href: "/geo/perplexity-geo", desc: "Perplexity AI'da alıntılanma ve görünürlük stratejileri." },
+                                    { title: "llms.txt Nedir?", href: "/geo/llms-txt-nedir", desc: "AI modelleri için kök dizin standardı ve uygulama rehberi." },
+                                    { title: "Marka Mention ve AI", href: "/geo/ai-marka-mention-etkisi", desc: "Marka anılmalarının LLM bilgi ağındaki kalıcılık etkisi." },
+                                    { title: "Reddit & Forum GEO", href: "/geo/reddit-forum-mention-etkisi", desc: "Topluluk atıflarının AI tavsiyelerine etkisi." },
+                                ].map((item, idx) => (
+                                    <Link key={idx} href={item.href} className="group bg-gray-50 p-4 rounded-xl border border-gray-100 hover:border-violet-400 hover:shadow-md transition-all duration-200 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="text-sm font-bold text-gray-900 group-hover:text-violet-600 transition-colors leading-snug mb-1.5">{item.title}</h3>
+                                            <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
+                                        </div>
+                                        <div className="pt-3 mt-auto">
+                                            <span className="text-[11px] font-bold text-violet-600 group-hover:text-violet-700 transition-colors">
+                                                Oku <span className="transition-transform inline-block group-hover:translate-x-0.5">→</span>
+                                            </span>
+                                        </div>
                                     </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">ChatGPT'nin yanıtlarında markanızı kaynak olarak alıntılaması için içerik ve teknik yapınızı optimize etme rehberi.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/perplexity-geo" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        Perplexity GEO: Görünürlük Kazanma Rehberi
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Perplexity AI aramalarında alıntılanmak ve kaynak olarak önerilmek için optimizasyon pratikleri.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/llms-txt-nedir" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        llms.txt Nedir?
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı ve uygulama rehberi.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/ai-marka-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        Marka Mention'ları ve AI Hafızası
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri ve kalıcılık etkisi.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/reddit-forum-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        Reddit ve Forum Mention'larının GEO Etkisi
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Sosyal medya ve topluluk kanallarındaki atıfların yapay zeka tavsiyelerine doğrudan etkisi.</p>
-                                </li>
-                            </ul>
-                            <div className="pt-6 border-t border-gray-100">
-                                <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
+                                ))}
+                            </div>
+                            <div className="pt-6 mt-2">
+                                <Link href="/geo" className="inline-flex items-center text-xs font-bold text-gray-400 hover:text-gray-800 transition-colors">
                                     ← GEO Danışmanlığı ana sayfasına dön
                                 </Link>
                             </div>
                         </div>
+
 
 
                         {/* Author Card */}
