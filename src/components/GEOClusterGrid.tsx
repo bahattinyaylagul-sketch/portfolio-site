@@ -31,6 +31,11 @@ const geoItems: GEOItem[] = [
         title: "Perplexity GEO: Görünürlük Kazanma Rehberi",
         href: "/geo/perplexity-geo",
         desc: "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri."
+    },
+    {
+        title: "AI Overviews Nedir? SEO'ya Etkisi ve İçerik Stratejisi",
+        href: "/geo/ai-overviews-nedir",
+        desc: "Google AI Bakışı'nın nasıl çalıştığı, organik trafiğe etkisi, Search Console ile izleme yöntemleri ve AIO'da kaynak olarak görünmek için içerik stratejisi."
     }
 ];
 

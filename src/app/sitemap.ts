@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/geo/reddit-forum-mention-etkisi',
         '/geo/chatgpt-geo',
         '/geo/perplexity-geo',
+        '/geo/ai-overviews-nedir',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: today,
