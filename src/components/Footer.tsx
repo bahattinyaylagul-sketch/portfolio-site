@@ -19,13 +19,11 @@ const footerLinks = {
         { label: "Topikal Otorite", href: "/seo/topikal-otorite" },
         { label: "E-E-A-T", href: "/seo/eeat-sinyalleri" },
         { label: "Yerel SEO", href: "/seo/yerel-seo" },
-        { label: "Tüm SEO konuları →", href: "/seo" },
     ],
     geoTopics: [
         { label: "llms.txt Rehberi", href: "/geo/llms-txt-nedir" },
         { label: "Reddit Mention Etkisi", href: "/geo/reddit-forum-mention-etkisi" },
         { label: "Marka Mention'ları", href: "/geo/ai-marka-mention-etkisi" },
-        { label: "Tüm GEO konuları →", href: "/geo" },
     ],
     social: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/bahattin-yaylagul/", icon: "linkedin" },

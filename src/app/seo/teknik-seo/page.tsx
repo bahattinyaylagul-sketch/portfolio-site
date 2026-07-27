@@ -176,6 +176,23 @@ export default function TechnicalSEOPage() {
                                 {mainData.description}
                             </p>
 
+                            {/* TL;DR Section */}
+                            <section aria-label="Özet (TL;DR)" className="mb-12 p-6 md:p-8 bg-blue-50/50 border border-blue-100/80 rounded-3xl shadow-sm">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="px-3 py-1 bg-blue-600 text-white text-xs font-black uppercase tracking-widest rounded-full">
+                                        TL;DR
+                                    </span>
+                                </div>
+                                <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0">
+                                    {mainData.keyPoints.map((point, index) => (
+                                        <li key={index} className="flex items-start gap-3">
+                                            <span className="text-blue-600 font-bold shrink-0 mt-0.5">✦</span>
+                                            <span><strong>{point.title}:</strong> {point.desc}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+
 
                             {/* Content Body */}
                             <div
