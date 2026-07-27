@@ -609,38 +609,6 @@ export default function AIOverviewsPage() {
                             </div>
                         </aside>
 
-                        {/* Ayrıca Bakınız */}
-                        <div className="mt-16 border-t border-gray-100 pt-12">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
-                            <ul className="space-y-6 mb-8">
-                                <li className="list-none">
-                                    <Link href="/geo/chatgpt-geo" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünme Rehberi
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">ChatGPT, Gemini ve Perplexity'de markanızı kaynak olarak alıntılatmanın pratik yolları.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/llms-txt-nedir" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        llms.txt Nedir?
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı.</p>
-                                </li>
-                                <li className="list-none">
-                                    <Link href="/geo/perplexity-geo" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                        Perplexity GEO
-                                    </Link>
-                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Perplexity AI'da cümle düzeyinde alıntılanma stratejileri.</p>
-                                </li>
-                            </ul>
-                            <div className="pt-6 border-t border-gray-100">
-                                <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
-                                    ← GEO Danışmanlığı ana sayfasına dön
-                                </Link>
-                            </div>
-                        </div>
 
                         {/* Author Card */}
                         <section aria-labelledby="author-bio" className="mt-16 border-t border-gray-100 py-12 bg-white">
