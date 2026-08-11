@@ -21,6 +21,9 @@ const footerLinks = {
         { label: "Yerel SEO", href: "/seo/yerel-seo" },
     ],
     geoTopics: [
+        { label: "ChatGPT GEO", href: "/geo/chatgpt-geo" },
+        { label: "Perplexity GEO", href: "/geo/perplexity-geo" },
+        { label: "AI Overviews", href: "/geo/ai-overviews-nedir" },
         { label: "llms.txt Rehberi", href: "/geo/llms-txt-nedir" },
         { label: "Reddit Mention Etkisi", href: "/geo/reddit-forum-mention-etkisi" },
         { label: "Marka Mention'ları", href: "/geo/ai-marka-mention-etkisi" },
