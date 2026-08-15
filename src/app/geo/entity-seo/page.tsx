@@ -35,13 +35,8 @@ const jsonLd = JSON.stringify({
             "isPartOf": { "@id": "https://bahattinyaylagul.com/geo#webpage" },
             "inLanguage": "tr-TR",
             "about": [
-                { "@type": "Thing", "name": "Entity SEO" },
-                { "@type": "Thing", "name": "Google Knowledge Graph" },
+                { "@type": "Thing", "name": "İçerik & Otorite" },
                 { "@type": "Thing", "name": "Generative Engine Optimization" }
-            ],
-            "mentions": [
-                { "@type": "Thing", "name": "Wikidata", "sameAs": "https://www.wikidata.org/" },
-                { "@type": "Thing", "name": "Schema.org", "sameAs": "https://schema.org/" }
             ]
         },
         {
@@ -56,58 +51,74 @@ const jsonLd = JSON.stringify({
             "@type": "FAQPage",
             "mainEntity": [
                 {
-                    "@type": "Question",
-                    "name": "Knowledge Panel nasıl alınır?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Doğrudan talep edilebilecek bir şey değil. Panel, bilgi grafiği tanınmasının görünür yan ürünüdür; Google onu yalnızca varlık iyi tanımlanmışsa, yeterli arama talebi varsa ve aynı adı taşıyan çakışan bir varlık yoksa gösterir." }
+                                "@type": "Question",
+                                "name": "Knowledge Panel nasıl alınır?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Doğrudan talep edilebilecek bir şey değil. Panel, bilgi grafiği tanınmasının görünür yan ürünüdür; Google onu yalnızca varlık iyi tanımlanmışsa, yeterli arama talebi varsa ve aynı adı taşıyan çakışan bir varlık yoksa gösterir."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Wikidata kaydı zorunlu mu?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Zorunlu değil ama en yüksek getirili adımlardan biri. Wikipedia'dan farklı olarak Wikidata'nın notability şartı yoktur, dolayısıyla küçük markalar da kayıt oluşturabilir." }
+                                "@type": "Question",
+                                "name": "Wikidata kaydı zorunlu mu?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Zorunlu değil ama en yüksek getirili adımlardan biri. Wikipedia'dan farklı olarak Wikidata'nın notability şartı yoktur, dolayısıyla küçük markalar da kayıt oluşturabilir."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Backlink mi, mention mı daha etkili?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "AI arama katmanında mention daha belirleyici. Marka bahislerinin AI Overview görünürlüğüyle korelasyonu 0,664, geri bağlantılarınki 0,218. Klasik organik sıralamada backlink etkisini sürdürüyor." }
+                                "@type": "Question",
+                                "name": "Backlink mi, mention mı daha etkili?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "AI arama katmanında mention daha belirleyici. Marka bahislerinin AI Overview görünürlüğüyle korelasyonu 0,664, geri bağlantılarınki 0,218. Klasik organik sıralamada backlink etkisini sürdürüyor."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Schema olmadan entity SEO yapılabilir mi?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Yapılabilir ama çok daha yavaş ilerler. Güçlü varlık sinyali taşımayan sayfalar AI arama alıntı katmanında pratikte görünmez kalır. Schema tanınmanın koşulu değil, hızlandırıcısıdır." }
+                                "@type": "Question",
+                                "name": "Schema olmadan entity SEO yapılabilir mi?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Yapılabilir ama çok daha yavaş ilerler. Güçlü varlık sinyali taşımayan sayfalar AI arama alıntı katmanında pratikte görünmez kalır. Schema tanınmanın koşulu değil, hızlandırıcısıdır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Küçük markalar nereden başlamalı?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Tek bir marka adı biçimi belirleyip her platformda onu kullanmaktan. Sonra Wikidata kaydı, sonra Organization schema. Bu üçü en az kaynakla en hızlı sinyal birikimini sağlar." }
+                                "@type": "Question",
+                                "name": "Küçük markalar nereden başlamalı?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Tek bir marka adı biçimi belirleyip her platformda onu kullanmaktan. Sonra Wikidata kaydı, sonra Organization schema. Bu üçü en az kaynakla en hızlı sinyal birikimini sağlar."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Entity SEO kişisel marka için de geçerli mi?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Evet, hatta daha kritik. Person varlığı ile Organization varlığı arasındaki bağ kurulduğunda ikisi birbirini besler. Kişi merkezli hizmetlerde entity çalışmasının çıkış noktası kurum değil kişi olmalıdır." }
+                                "@type": "Question",
+                                "name": "Entity SEO kişisel marka için de geçerli mi?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Evet, hatta daha kritik. Person varlığı ile Organization varlığı arasındaki bağ kurulduğunda ikisi birbirini besler. Kişi merkezli hizmetlerde entity çalışmasının çıkış noktası kurum değil kişi olmalıdır."
+                                }
                 }
-            ]
+]
         }
     ]
 });
 
-export default function EntitySEOPage() {
+export default function Page() {
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-violet-100 selection:text-violet-900">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: jsonLd }}
             />
-            {/* Fixed Header */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
-            {/* Hero */}
             <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/entity-seo-hero.png"
-                        alt="Entity SEO ve Bilgi Grafiği — Varlık İlişki Ağı"
+                        alt="Entity SEO ve Bilgi Grafiği: Arama Motorları Markanızı Nasıl Tanır?"
                         fill
                         sizes="(max-width: 768px) 1px, 100vw"
                         className="object-cover opacity-20 hidden md:block"
@@ -123,13 +134,12 @@ export default function EntitySEOPage() {
 
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Text */}
                         <div className="space-y-8 flex flex-col justify-center h-full pb-16 pt-12">
                             <div>
                                 <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
                                     <span className="text-violet-400">GEO Danışmanlığı</span>
                                     <span className="w-px h-3 bg-white/20"></span>
-                                    <span>İçerik &amp; Otorite</span>
+                                    <span>İçerik & Otorite</span>
                                 </div>
 
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
@@ -137,7 +147,7 @@ export default function EntitySEOPage() {
                                 </h1>
 
                                 <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
-                                    Google'ın bilgi grafiğinde varlık kaydı oluşturmak, Knowledge Panel tetiklemek ve AI arama katmanında alıntılanmanın ön koşulunu sağlamak için entity SEO rehberi.
+                                    Entity SEO nedir, Knowledge Graph ile Knowledge Panel farkı, markayı varlık olarak tanıtmanın dört adımı, ölçüm çerçevesi ve Türkiye'ye özel notlar.
                                 </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
@@ -151,12 +161,11 @@ export default function EntitySEOPage() {
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>10 dk okuma</span>
+                                        <span>9 dk okuma</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Author */}
                             <div className="flex items-center gap-4 pt-2">
                                 <Link href="/hakkimda" className="w-12 h-12 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-violet-400 transition-colors">
                                     <Image
@@ -189,11 +198,10 @@ export default function EntitySEOPage() {
                             </div>
                         </div>
 
-                        {/* Hero Image */}
                         <div className="relative hidden lg:block h-[500px] w-full">
                             <Image
                                 src="/images/entity-seo-hero.png"
-                                alt="Entity SEO — Bilgi Grafiği Varlık Ağı"
+                                alt="Entity SEO ve Bilgi Grafiği: Arama Motorları Markanızı Nasıl Tanır?"
                                 fill
                                 sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
@@ -205,7 +213,6 @@ export default function EntitySEOPage() {
             </header>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-12 pb-20">
-                {/* Breadcrumb */}
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                     <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
                     <span className="text-gray-200">/</span>
@@ -214,7 +221,6 @@ export default function EntitySEOPage() {
                     <span className="text-gray-600 font-bold truncate">Entity SEO ve Bilgi Grafiği</span>
                 </nav>
 
-                {/* Article Content */}
                 <ArticleContent />
             </div>
 

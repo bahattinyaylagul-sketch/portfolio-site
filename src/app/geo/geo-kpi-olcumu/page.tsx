@@ -8,10 +8,10 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır? – Bahattin Yaylagül",
-    description: "Query fan-out, tek bir sorgunun arka planda birden fazla alt sorguya bölünerek işlenmesidir. Google AI Modu ve AI Bakışı'nın çalışma mekanizması, fan-out'un tetiklendiği sorgu tipleri, alt sorgu tespiti ve içerik kümesi stratejisi.",
+    title: "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi – Bahattin Yaylagül",
+    description: "GEO performansının iki katmanı: yanıtta geçme ve atıf alma. KPI çerçevesi, yanıt–atıf çapraz matrisi, araç almadan manuel prompt seti yöntemi ve yönetime raporlama kadansı.",
     alternates: {
-        canonical: "/geo/query-fan-out",
+        canonical: "/geo/geo-kpi-olcumu",
     },
 };
 
@@ -20,22 +20,22 @@ const jsonLd = JSON.stringify({
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://bahattinyaylagul.com/geo/query-fan-out#article",
-            "headline": "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?",
-            "description": "Query fan-out, tek bir sorgunun arka planda birden fazla alt sorguya bölünerek işlenmesidir. Google AI Modu ve AI Bakışı'nın çalışma mekanizması, fan-out'un tetiklendiği sorgu tipleri, alt sorgu tespiti ve içerik kümesi stratejisi.",
+            "@id": "https://bahattinyaylagul.com/geo/geo-kpi-olcumu#article",
+            "headline": "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi",
+            "description": "GEO performansının iki katmanı: yanıtta geçme ve atıf alma. KPI çerçevesi, yanıt–atıf çapraz matrisi, araç almadan manuel prompt seti yöntemi ve yönetime raporlama kadansı.",
             "datePublished": "2026-08-15",
             "dateModified": "2026-08-15",
             "author": AUTHOR_ENTITY,
             "publisher": { "@id": "https://bahattinyaylagul.com/#organization" },
-            "url": "https://bahattinyaylagul.com/geo/query-fan-out",
+            "url": "https://bahattinyaylagul.com/geo/geo-kpi-olcumu",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://bahattinyaylagul.com/geo/query-fan-out"
+                "@id": "https://bahattinyaylagul.com/geo/geo-kpi-olcumu"
             },
             "isPartOf": { "@id": "https://bahattinyaylagul.com/geo#webpage" },
             "inLanguage": "tr-TR",
             "about": [
-                { "@type": "Thing", "name": "Temeller & Terminoloji" },
+                { "@type": "Thing", "name": "Ölçüm & Analitik" },
                 { "@type": "Thing", "name": "Generative Engine Optimization" }
             ]
         },
@@ -44,7 +44,7 @@ const jsonLd = JSON.stringify({
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com/" },
                 { "@type": "ListItem", "position": 2, "name": "GEO Danışmanlığı", "item": "https://bahattinyaylagul.com/geo" },
-                { "@type": "ListItem", "position": 3, "name": "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?", "item": "https://bahattinyaylagul.com/geo/query-fan-out" }
+                { "@type": "ListItem", "position": 3, "name": "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi", "item": "https://bahattinyaylagul.com/geo/geo-kpi-olcumu" }
             ]
         },
         {
@@ -52,58 +52,66 @@ const jsonLd = JSON.stringify({
             "mainEntity": [
                 {
                                 "@type": "Question",
-                                "name": "Query fan-out her sorgu için mi tetiklenir?",
+                                "name": "GA4 ile GEO ölçülür mü?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Hayır. Navigasyonel sorgular, işlemsel sorgular ve doğrudan gerçek tabanlı sorular genellikle fan-out sürecini başlatmaz. Asıl tetikleyiciler \"en iyi\", \"nasıl\", \"vs\" gibi terimler içeren bilgilendirici, karşılaştırmalı ya da problem çözme sorgularıdır."
+                                                "text": "Hayır. GA4 atıf oranını, görünürlük oranını ya da cevap payını göremez; bunlar sitenizde değil motorun içinde gerçekleşir. GA4'ün yaptığı iş, yapay zeka arayüzlerinden gelen yönlendirme trafiğini segmentlemek — ve bazı platformlar yönlendiren bilgisini vermediği için o rakam da eksik kalır. İkisi birbirinin yerine geçmez, birbirini tamamlar."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "Google hangi alt sorguların üretildiğini paylaşıyor mu?",
+                                "name": "Atıf payı nasıl hesaplanır?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Paylaşmıyor. Bir sorgudan kaç ve hangi alt sorgunun işlendiği kamuoyuyla paylaşılmıyor."
+                                                "text": "Sabit bir prompt setini motorlarda çalıştırıp kaç yanıtta kaynak olarak gösterildiğinizi sayarsınız; bu sayıyı toplam sorguya bölersiniz. Perplexity kaynakları açıkça listelediği için ölçüm orada en kolay. ChatGPT gibi kaynak göstermenin sorguya göre değiştiği sistemlerde ise atıf yerine metin içi anılma sıklığını taban alın."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "Query fan-out ile query expansion arasındaki fark nedir?",
+                                "name": "Kaç sorguluk bir set yeterli?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Query expansion tek bir sorguyu eş anlamlılar veya ilgili terimlerle genişletir; ortada hâlâ tek bir arama vardır. Query fan-out ise orijinal sorguyu birden fazla bağımsız alt sorguya böler ve bunları paralel çalıştırır. Birincisi sorguyu zenginleştirir, ikincisi çoğaltır."
+                                                "text": "Manuel ölçüm için 20–30 sorgu makul bir başlangıç. Araçla çalışıyorsanız 50–100 sorgu daha kararlı bir yüzde verir. Sayıdan daha önemlisi setin sabit kalması: on sorguluk sabit bir seti üç ay izlemek, her ay değiştirilen yüz sorguluk bir setten daha çok şey öğretir."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "Türkiye'de AI Modu ne zaman açıldı?",
+                                "name": "Ölçümü ne sıklıkla tekrarlamalıyım?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "18 Şubat 2026'da. Duyuruyu Google Türkiye Ülke Direktörü Mehmet Keteloğlu yaptı. Türkiye, özelliğin daha önce yayıldığı 180 ülkelik dalganın dışında kalmıştı; bu gecikme Türkçe içerik üretenler için hâlâ açık bir rekabet penceresi bırakıyor."
+                                                "text": "Aylık. Araç satıcıları haftalık öneriyor ama üretken motorların gün içindeki değişkenliği düşünüldüğünde haftalık veri çoğunlukla gürültü üretir. Yalnızca trafik tarafı haftalık izlenmeye değer."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "Fan-out performansını nasıl ölçerim?",
+                                "name": "GEO sonuçları ne zaman görülür?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Doğrudan bir metrik yok. Pratik yaklaşım, AI Modu yanıtlarında sitenizin kaç farklı sayfasının kaynak gösterildiğini izlemek. Yanıt başına birden fazla sayfa görünüyorsa içerik kümeniz fan-out sorgularını karşılıyordur."
+                                                "text": "Araç sağlayıcılarının ölçümlerine göre içerik ve otorite çalışmalarının atıf oranına yansıması 60–90 günü buluyor. Marka sorgularında iyileşme daha erken görülebilir; kategori ve \"en iyi\" sorgularında ise mesele kazanılmış medyaya bağlı olduğu için daha yavaş ilerler."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "ChatGPT ve Claude da fan-out yapıyor mu?",
+                                "name": "Hangi araç hangi metriği ölçer?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Evet. Claude, ChatGPT ve Gemini gibi yanıt motorları kapsamlı yanıt üretmek için tek bir kullanıcı promptunu birden fazla sorguya dönüştürüyor. AI Modu, Gemini'nin Deep Research özelliğine benzer biçimde çalışıyor ancak çok daha hızlı."
+                                                "text": "Kategori olarak bakmak daha sağlıklı. GEO izleme araçları görünürlük oranı, atıf frekansı ve cevap payını platform bazında raporlar; Semrush ve Ahrefs gibi yerleşik SEO platformları bu metrikleri kendi görünürlük modüllerine ekliyor; GA4 yalnızca tıklama sonrasını görür. Ürün isimleri hızla değişiyor, bu yüzden aracı değil ölçtüğü metriği seçin."
                                 }
                 },
                 {
                                 "@type": "Question",
-                                "name": "Gemini güncellemesi fan-out'u nasıl değiştirdi?",
+                                "name": "Yanıtta geçmek mi atıf almak mı daha değerli?",
                                 "acceptedAnswer": {
                                                 "@type": "Answer",
-                                                "text": "Gemini 3 güncellemesiyle AI Modu, daha önce kaçırdığı yeni içerikleri bulabiliyor. Bu, taze ve iyi yapılandırılmış içeriğin fan-out sürecinde kaynak olarak seçilme ihtimalini artırıyor."
+                                                "text": "Kısa vadede yanıtta geçmek, uzun vadede atıf. Yanıtta geçmek kullanıcının gördüğü şeydir; atıf ise o görünürlüğün model güncellemelerinden sağ çıkmasını sağlayan kanıt tabanıdır. Yalnızca birine yatırım yapacaksanız hangi hücrede olduğunuza bakın — çapraz matris bu kararı sizin yerinize verir."
+                                }
+                },
+                {
+                                "@type": "Question",
+                                "name": "GEO ile AEO ölçümü aynı mı?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Aynı değil. AEO öne çıkan snippet ve sesli yanıt yüzeyini ölçer, GEO ise sohbet arayüzlerinde yanıt ve atıf katmanlarını ölçer. Ayrımın ayrıntısı SEO, GEO ve AEO farkı sayfasında ele alınıyor."
                                 }
                 }
 ]
@@ -125,8 +133,8 @@ export default function Page() {
             <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/search_intent_3d.png"
-                        alt="Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?"
+                        src="/images/ranking_factors_3d.png"
+                        alt="GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi"
                         fill
                         sizes="(max-width: 768px) 1px, 100vw"
                         className="object-cover opacity-20 hidden md:block"
@@ -147,15 +155,15 @@ export default function Page() {
                                 <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
                                     <span className="text-violet-400">GEO Danışmanlığı</span>
                                     <span className="w-px h-3 bg-white/20"></span>
-                                    <span>Temeller & Terminoloji</span>
+                                    <span>Ölçüm & Analitik</span>
                                 </div>
 
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
-                                    Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?
+                                    GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi
                                 </h1>
 
                                 <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
-                                    Query fan-out, tek bir sorgunun arka planda birden fazla alt sorguya bölünerek işlenmesidir. Google AI Modu ve AI Bakışı'nın çalışma mekanizması, fan-out'un tetiklendiği sorgu tipleri, alt sorgu tespiti ve içerik kümesi stratejisi.
+                                    GEO performansının iki katmanı: yanıtta geçme ve atıf alma. KPI çerçevesi, yanıt–atıf çapraz matrisi, araç almadan manuel prompt seti yöntemi ve yönetime raporlama kadansı.
                                 </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
@@ -169,7 +177,7 @@ export default function Page() {
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>13 dk okuma</span>
+                                        <span>15 dk okuma</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +216,8 @@ export default function Page() {
 
                         <div className="relative hidden lg:block h-[500px] w-full">
                             <Image
-                                src="/images/search_intent_3d.png"
-                                alt="Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?"
+                                src="/images/ranking_factors_3d.png"
+                                alt="GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi"
                                 fill
                                 sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
@@ -226,7 +234,7 @@ export default function Page() {
                     <span className="text-gray-200">/</span>
                     <Link href="/geo" className="hover:text-violet-600 transition-colors">GEO Danışmanlığı</Link>
                     <span className="text-gray-200">/</span>
-                    <span className="text-gray-600 font-bold truncate">Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?</span>
+                    <span className="text-gray-600 font-bold truncate">GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi</span>
                 </nav>
 
                 <ArticleContent />

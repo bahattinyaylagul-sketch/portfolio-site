@@ -62,31 +62,37 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>Wikidata ve Bilgi Paneli: Markanız İçin Google Bilgi Paneli Nasıl Alınır?</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     Bilgi paneli satın alınmaz, başvurulmaz, talep edilmez. Google, markanızı
     ayrı bir varlık olarak tanıdığına yeterince ikna olduğunda paneli kendisi
     üretir. Bu ikna sürecinin en somut aracı Wikidata: markanızın adını, sektörünü,
     kuruluş yılını ve resmi sitesini makine tarafından okunabilir biçimde,
     kaynaklarıyla birlikte kayda geçiren açık veri tabanı.
   </p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>Panelin ön koşulu Wikipedia maddesi değil, Google'ın markanızı benzersiz bir varlık olarak ayırt edebilmesidir.</strong></p>
-    <ul>
-      <li>Wikidata'ya kayıt açmak için ünlü olmanız gerekmiyor; ciddi ve doğrulanabilir kaynaklarla tarif edilebilir olmanız yetiyor.</li>
-      <li>Kaynaksız girilen iddialar silinir. Wikidata'da işi bitiren şey property'ler değil, referanslardır.</li>
-      <li>Kendi şirketiniz hakkında Wikipedia maddesi açmayın — çıkar çatışması kuralı bunu açıkça sınırlıyor ve geri tepiyor.</li>
-      <li>Türk markalarının büyük çoğunluğunun Wikidata kaydı yok. Rekabetin bu kadar seyrek olduğu başka bir görünürlük alanı kalmadı.</li>
-    </ul>
-  </aside>
-
-
-  <h2 id="uc-sistem">Üç sistem, tek zincir: Wikidata, Wikipedia, bilgi paneli</h2>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>Panelin ön koşulu Wikipedia maddesi değil, Google'ın markanızı benzersiz bir varlık olarak ayırt edebilmesidir.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Wikidata'ya kayıt açmak için ünlü olmanız gerekmiyor; ciddi ve doğrulanabilir kaynaklarla tarif edilebilir olmanız yetiyor.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Kaynaksız girilen iddialar silinir. Wikidata'da işi bitiren şey property'ler değil, referanslardır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Kendi şirketiniz hakkında Wikipedia maddesi açmayın — çıkar çatışması kuralı bunu açıkça sınırlıyor ve geri tepiyor.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Türk markalarının büyük çoğunluğunun Wikidata kaydı yok. Rekabetin bu kadar seyrek olduğu başka bir görünürlük alanı kalmadı.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <h2 id="uc-sistem">Üç sistem, tek zincir: Wikidata, Wikipedia, bilgi paneli</h2>
 
   <p className="bolum-cevap">
     Bu üçü çoğu zaman tek bir şey sanılır. Değiller. Wikidata yapılandırılmış
@@ -594,8 +600,7 @@ export default function ArticleContent() {
     Markanızın varlık altyapısını kurmak, bilgi paneli almak ya da mevcut panelin
     yanlışlarını düzeltmek için <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

@@ -94,6 +94,11 @@ const clusters: ClusterGroup[] = [
                 href: "/geo/prompt-arastirmasi",
                 desc: "Kullanıcıların yapay zeka sistemlerinde sorduğu sorguları, takip sorularını ve sorma dilini (conversational prompts) tespit etme yöntemleri."
             },
+            {
+                title: "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi",
+                href: "/geo/geo-kpi-olcumu",
+                desc: "Yanıtta geçme oranı, atıf frekansı ve cevap payı metrikleri; manuel prompt takip seti oluşturma ve KPI raporlama çerçevesi."
+            },
         ]
     },
     {

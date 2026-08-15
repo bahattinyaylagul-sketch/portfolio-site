@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Dijital PR ve \"En İyi X\" Listeleri: AI Aramada Nasıl Atıf Alınır? – Bahattin Yaylagül",
-    description: "Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.",
+    title: "Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır? – Bahattin Yaylagül",
+    description: "AI motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.",
     alternates: {
         canonical: "/geo/dijital-pr-ai-atif",
     },
@@ -21,8 +21,8 @@ const jsonLd = JSON.stringify({
         {
             "@type": "Article",
             "@id": "https://bahattinyaylagul.com/geo/dijital-pr-ai-atif#article",
-            "headline": "Dijital PR ve \"En İyi X\" Listeleri: AI Aramada Nasıl Atıf Alınır?",
-            "description": "Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.",
+            "headline": "Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır?",
+            "description": "AI motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.",
             "datePublished": "2026-08-15",
             "dateModified": "2026-08-15",
             "author": AUTHOR_ENTITY,
@@ -35,9 +35,8 @@ const jsonLd = JSON.stringify({
             "isPartOf": { "@id": "https://bahattinyaylagul.com/geo#webpage" },
             "inLanguage": "tr-TR",
             "about": [
-                { "@type": "Thing", "name": "Dijital PR" },
-                { "@type": "Thing", "name": "Generative Engine Optimization" },
-                { "@type": "Thing", "name": "Marka anılması" }
+                { "@type": "Thing", "name": "İçerik & Otorite" },
+                { "@type": "Thing", "name": "Generative Engine Optimization" }
             ]
         },
         {
@@ -45,65 +44,81 @@ const jsonLd = JSON.stringify({
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com/" },
                 { "@type": "ListItem", "position": 2, "name": "GEO Danışmanlığı", "item": "https://bahattinyaylagul.com/geo" },
-                { "@type": "ListItem", "position": 3, "name": "Dijital PR ve En İyi X Listeleri", "item": "https://bahattinyaylagul.com/geo/dijital-pr-ai-atif" }
+                { "@type": "ListItem", "position": 3, "name": "Dijital PR ve “En İyi X” Listeleri", "item": "https://bahattinyaylagul.com/geo/dijital-pr-ai-atif" }
             ]
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 {
-                    "@type": "Question",
-                    "name": "\"En iyi X\" listesine nasıl başvurulur?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Çoğunda başvuru formu yoktur. Liste sayfasının yazarını bulun ve listedeki somut bir boşluğu gösteren kısa bir mesaj yazın. Genel şablon mesajlar bu aşamada elenmenin en hızlı yoludur." }
+                                "@type": "Question",
+                                "name": "\"En iyi X\" listesine nasıl başvurulur?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Çoğunda başvuru formu yoktur. Liste sayfasının yazarını bulun ve listedeki somut bir boşluğu gösteren kısa bir mesaj yazın. Genel şablon mesajlar bu aşamada elenmenin en hızlı yoludur."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Link vermeyen bir liste işe yarar mı?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Evet, GEO açısından fazlasıyla. Marka anılmalarının AI Overview görünürlüğüyle korelasyonu 0,664, geri bağlantılarınki 0,218. Bağlantısız anılma klasik SEO'da değersiz sayılırdı; AI katmanında durum tersine döndü." }
+                                "@type": "Question",
+                                "name": "Link vermeyen bir liste işe yarar mı?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Evet, GEO açısından fazlasıyla. Marka anılmalarının AI Overview görünürlüğüyle korelasyonu 0,664, geri bağlantılarınki 0,218. Bağlantısız anılma klasik SEO'da değersiz sayılırdı; AI katmanında durum tersine döndü."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Editörler marka seçerken neye bakıyor?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Doğrulanabilirliğe. Başka bağımsız kaynaklarda anılıyor musunuz, iddialarınız kontrol edilebilir mi, kullanıcı yorumlarınız var mı. Editörün riski yanlış bir öneri yapmaktır; bu riski azaltan her şey seçilme olasılığınızı artırır." }
+                                "@type": "Question",
+                                "name": "Editörler marka seçerken neye bakıyor?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Doğrulanabilirliğe. Başka bağımsız kaynaklarda anılıyor musunuz, iddialarınız kontrol edilebilir mi, kullanıcı yorumlarınız var mı. Editörün riski yanlış bir öneri yapmaktır; bu riski azaltan her şey seçilme olasılığını artırır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Kaç listede olmak yeterli?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Tek bir eşik yoktur ama tek kaynağa bağımlı olmamak temel kuraldır. Farklı yayınlardan gelen atıflar birbirini doğrular. Beş ila sekiz farklı yayın, çoğu niş için sağlam bir tabandır." }
+                                "@type": "Question",
+                                "name": "Kaç listede olmak yeterli?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Tek bir eşik yoktur ama tek kaynağa bağımlı olmamak temel kuraldır. Farklı yayınlardan gelen atıflar birbirini doğrular. Beş ila sekiz farklı yayın, çoğu niş için sağlam bir tabandır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Basın bülteni göndermek hâlâ mantıklı mı?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "PDF formatında değil. Editörler doğrudan kullanabilecekleri malzeme ister: erişilebilir bir web sayfası, indirilebilir görsel, kopyalanabilir veri. PDF hem editör hem arama motorları tarafında kayıptır." }
+                                "@type": "Question",
+                                "name": "Basın bülteni göndermek hâlâ mantıklı mı?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "PDF formatında değil. Editörler doğrudan kullanabilecekleri malzeme ister: erişilebilir bir web sayfası, indirilebilir görsel, kopyalanabilir veri. PDF hem editör hem arama motorları tarafında kayıptır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Dijital PR sonuçları ne zaman görünür?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Atıf yayımlandıktan sonra motorların sayfayı tarayıp cevaplara yansıtması genelde birkaç hafta sürer. Anlamlı bir atıf payı değişimi için üç ila altı aylık sürekli çalışma gerekir." }
+                                "@type": "Question",
+                                "name": "Dijital PR sonuçları ne zaman görünür?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Atıf yayımlandıktan sonra motorların sayfayı tarayıp cevaplara yansıtması genelde birkaç hafta sürer. Anlamlı bir atıf payı değişimi için üç ila altı aylık sürekli çalışma gerekir."
+                                }
                 }
-            ]
+]
         }
     ]
 });
 
-export default function DijitalPRPage() {
+export default function Page() {
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-violet-100 selection:text-violet-900">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: jsonLd }}
             />
-            {/* Fixed Header */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
-            {/* Hero */}
             <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/dijital-pr-hero.png"
-                        alt="Dijital PR ve En İyi X Listeleri — AI Arama Atıfları"
+                        src="/images/ai-mention-3d.png"
+                        alt="Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır?"
                         fill
                         sizes="(max-width: 768px) 1px, 100vw"
                         className="object-cover opacity-20 hidden md:block"
@@ -119,21 +134,20 @@ export default function DijitalPRPage() {
 
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Text */}
                         <div className="space-y-8 flex flex-col justify-center h-full pb-16 pt-12">
                             <div>
                                 <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
                                     <span className="text-violet-400">GEO Danışmanlığı</span>
                                     <span className="w-px h-3 bg-white/20"></span>
-                                    <span>İçerik &amp; Otorite</span>
+                                    <span>İçerik & Otorite</span>
                                 </div>
 
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
-                                    Dijital PR ve "En İyi X" Listeleri: AI Aramada Nasıl Atıf Alınır?
+                                    Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır?
                                 </h1>
 
                                 <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
-                                    Yapay zeka arama motorlarında alıntılanmak, öneri sorgularında yer almak ve üçüncü taraf karşılaştırma sayfalarında marka atıfı kazanmak için dijital PR stratejisi.
+                                    AI motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.
                                 </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
@@ -147,12 +161,11 @@ export default function DijitalPRPage() {
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>10 dk okuma</span>
+                                        <span>7 dk okuma</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Author */}
                             <div className="flex items-center gap-4 pt-2">
                                 <Link href="/hakkimda" className="w-12 h-12 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-violet-400 transition-colors">
                                     <Image
@@ -185,11 +198,10 @@ export default function DijitalPRPage() {
                             </div>
                         </div>
 
-                        {/* Hero Image */}
                         <div className="relative hidden lg:block h-[500px] w-full">
                             <Image
-                                src="/images/dijital-pr-hero.png"
-                                alt="Dijital PR — AI Arama Motoru Önerileri"
+                                src="/images/ai-mention-3d.png"
+                                alt="Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır?"
                                 fill
                                 sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
@@ -201,16 +213,14 @@ export default function DijitalPRPage() {
             </header>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-12 pb-20">
-                {/* Breadcrumb */}
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                     <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
                     <span className="text-gray-200">/</span>
                     <Link href="/geo" className="hover:text-violet-600 transition-colors">GEO Danışmanlığı</Link>
                     <span className="text-gray-200">/</span>
-                    <span className="text-gray-600 font-bold truncate">Dijital PR ve "En İyi X" Listeleri</span>
+                    <span className="text-gray-600 font-bold truncate">Dijital PR ve “En İyi X” Listeleri</span>
                 </nav>
 
-                {/* Article Content */}
                 <ArticleContent />
             </div>
 

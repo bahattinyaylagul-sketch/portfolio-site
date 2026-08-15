@@ -103,6 +103,7 @@ export default function SiteMapPage() {
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/wikidata-bilgi-paneli" className="text-gray-600 hover:text-blue-600 hover:underline">Wikidata ve Bilgi Paneli</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/ga4-ai-trafigi" className="text-gray-600 hover:text-blue-600 hover:underline">GA4'te AI Trafiği Ölçümü</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/prompt-arastirmasi" className="text-gray-600 hover:text-blue-600 hover:underline">Prompt Araştırması Rehberi</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/geo-kpi-olcumu" className="text-gray-600 hover:text-blue-600 hover:underline">GEO Nasıl Ölçülür? (KPI & Ölçüm)</Link></li>
                         </ul>
                     </section>
 

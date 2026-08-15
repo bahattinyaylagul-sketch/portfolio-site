@@ -78,30 +78,37 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>AI Botlarını robots.txt ile Yönetme: GPTBot, ClaudeBot ve Ötesi</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     AI tarayıcılarını tek bir düğmeyle değil, bot bot yönetirsiniz. En işe yarar
     hamle GPTBot'u kapatıp OAI-SearchBot'a izin vermek: model eğitimi için yapılan
     tarama durur, ChatGPT Search'teki görünürlüğünüz yerinde kalır. Ama robots.txt
     bir bariyer değil, rica. Bytespider gibi kuralı tanımayan tarayıcılar için WAF
     ya da sunucu katmanında ayrı bir engel şart.
   </p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>Eğitimi kesmek ile yapay zeka aramasından çekilmek aynı şey değil; doğru user-agent ayrımıyla birincisini yapıp ikincisinden kaçınabilirsiniz.</strong></p>
-    <ul>
-      <li><code>GPTBot: Disallow</code> + <code>OAI-SearchBot: Allow</code> — sayfadan tek bir şey alacaksanız bu iki satır.</li>
-      <li>ChatGPT-User'ı engellemek kullanıcının kendi elleriyle başlattığı getirme isteğini kırar. Neredeyse hiçbir senaryoda mantıklı değil.</li>
-      <li>Bytespider robots.txt'i tanımıyor. Sunucu ya da WAF katmanında durdurulmazsa "engelledim" cümlesi kâğıt üzerinde kalır.</li>
-      <li>Cloudflare'in yönetilen robots.txt'i dosyanızı silmez, kurallarını başa ekler; Content Signals ise izin ver/engelle ikilisinin ötesinde lisans sinyali taşır.</li>
-    </ul>
-  </aside>
-
-  <p>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>Eğitimi kesmek ile yapay zeka aramasından çekilmek aynı şey değil; doğru user-agent ayrımıyla birincisini yapıp ikincisinden kaçınabilirsiniz.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span><code>GPTBot: Disallow</code> + <code>OAI-SearchBot: Allow</code> — sayfadan tek bir şey alacaksanız bu iki satır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>ChatGPT-User'ı engellemek kullanıcının kendi elleriyle başlattığı getirme isteğini kırar. Neredeyse hiçbir senaryoda mantıklı değil.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Bytespider robots.txt'i tanımıyor. Sunucu ya da WAF katmanında durdurulmazsa "engelledim" cümlesi kâğıt üzerinde kalır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Cloudflare'in yönetilen robots.txt'i dosyanızı silmez, kurallarını başa ekler; Content Signals ise izin ver/engelle ikilisinin ötesinde lisans sinyali taşır.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <p>
     Bu sayfa <Link href="/geo">GEO danışmanlığı</Link> rehberinin teknik kolundaki
     erişim katmanını anlatıyor: hangi botun ne topladığı, hangisinin kuralı
     dinlediği ve dinlemeyeni nerede durduracağınız. İçeriğin botlar tarafından
@@ -769,8 +776,7 @@ server {"{"}
     Erişim kurallarını içerik ve ölçüm tarafıyla birlikte kurgulamak isterseniz
     <Link href="/geo">GEO danışmanlığı</Link> sayfasından başlayın.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

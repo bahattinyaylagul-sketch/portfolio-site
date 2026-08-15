@@ -74,31 +74,37 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>GA4'te AI Trafiği Nasıl Takip Edilir? Kanal Kurulumu ve Raporlama</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     GA4 varsayılan ayarlarıyla ChatGPT ve Perplexity oturumlarını Referral ya da
     Direct kanalına dağıtır; ayrı bir yapay zeka kanalınız yoksa bu trafik raporda
     kendi adıyla görünmez. Çözüm üç parçalı: Admin bölümünde regex tabanlı özel bir
     kanal grubu, bunu besleyen basit bir Looker Studio panosu ve tıklamayan bot
     etkinliği için sunucu logu okuması. Kurulum yarım saat, bakımı aylık.
   </p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>GA4 yapay zeka trafiğini ölçebilir, ama yalnızca siz ona nereye bakacağını söylerseniz.</strong></p>
-    <ul>
-      <li>Özel kanal grubunda tek bir regex satırı işi çözer; asıl kritik adım o kuralı Referral'ın <em>üstüne</em> taşımaktır.</li>
-      <li>Yapay zeka oturumlarının üçte birinden fazlası yönlendiren bilgisi taşımaz ve Direct'e düşer — kanalı kursanız da eksik ölçersiniz.</li>
-      <li>GA4 yalnızca tıklayan insanı görür. Tıklanmayan görünürlüğü ve bot çekimlerini yalnızca sunucu logu gösterir.</li>
-      <li>Dört kartlık bir Looker Studio panosu, GA4 arayüzünde her ay kaybolan kanalı kalıcı hâle getirir. <Link href="/geo">GEO</Link> raporlamanızın omurgası bu pano olabilir.</li>
-    </ul>
-  </aside>
-
-
-  <h2 id="neden-kaciriyor">GA4 yapay zeka trafiğini neden kaçırıyor?</h2>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>GA4 yapay zeka trafiğini ölçebilir, ama yalnızca siz ona nereye bakacağını söylerseniz.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Özel kanal grubunda tek bir regex satırı işi çözer; asıl kritik adım o kuralı Referral'ın <em>üstüne</em> taşımaktır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Yapay zeka oturumlarının üçte birinden fazlası yönlendiren bilgisi taşımaz ve Direct'e düşer — kanalı kursanız da eksik ölçersiniz.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>GA4 yalnızca tıklayan insanı görür. Tıklanmayan görünürlüğü ve bot çekimlerini yalnızca sunucu logu gösterir.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Dört kartlık bir Looker Studio panosu, GA4 arayüzünde her ay kaybolan kanalı kalıcı hâle getirir. <Link href="/geo">GEO</Link> raporlamanızın omurgası bu pano olabilir.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <h2 id="neden-kaciriyor">GA4 yapay zeka trafiğini neden kaçırıyor?</h2>
 
   <p className="bolum-cevap">
     GA4 bir oturumu, tarayıcının gönderdiği yönlendiren (referrer) bilgisine bakarak
@@ -635,8 +641,7 @@ export default function ArticleContent() {
     geçerliyse ek bir adım gerekmez. İzin reddedildiğinde ölçümün eksileceğini hesaba
     katın.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

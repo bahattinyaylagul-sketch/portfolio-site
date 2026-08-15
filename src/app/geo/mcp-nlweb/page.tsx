@@ -35,9 +35,8 @@ const jsonLd = JSON.stringify({
             "isPartOf": { "@id": "https://bahattinyaylagul.com/geo#webpage" },
             "inLanguage": "tr-TR",
             "about": [
-                { "@type": "Thing", "name": "Model Context Protocol" },
-                { "@type": "Thing", "name": "WebMCP" },
-                { "@type": "Thing", "name": "NLWeb" }
+                { "@type": "Thing", "name": "Teknik GEO" },
+                { "@type": "Thing", "name": "Generative Engine Optimization" }
             ]
         },
         {
@@ -52,53 +51,66 @@ const jsonLd = JSON.stringify({
             "@type": "FAQPage",
             "mainEntity": [
                 {
-                    "@type": "Question",
-                    "name": "WebMCP hangi tarayıcılarda çalışıyor?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Şu an yalnızca Chrome. Origin trial Chrome 149'da başladı ve Chrome 156'ya kadar sürüyor. Edge 147 sürüm notlarında yer almıyor; Firefox ve Safari için kamuya açık sinyal bulunmuyor." }
+                                "@type": "Question",
+                                "name": "WebMCP hangi tarayıcılarda çalışıyor?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Şu an yalnızca Chrome. Origin trial Chrome 149'da başladı ve Chrome 156'ya kadar sürüyor. Edge 147 sürüm notlarında yer almıyor; Firefox ve Safari için kamuya açık sinyal bulunmuyor."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "WebMCP API adı neden değişti?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "İki kez değişti. window.agent tasarlandı ama yayınlanmadı, navigator.modelContext geldi ve Chrome 150'de deprecated edildi, W3C taslağı document.modelContext'e taşıdı. Gerekçe araçların tarayıcıya değil sayfaya ait olmasıdır." }
+                                "@type": "Question",
+                                "name": "WebMCP API adı neden değişti?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "İki kez değişti. window.agent tasarlandı ama yayınlanmadı, navigator.modelContext geldi ve Chrome 150'de deprecated edildi, W3C taslağı document.modelContext'e taşıdı. Gerekçe araçların tarayıcıya değil sayfaya ait olmasıdır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "WebMCP'yi siteye eklemek ne kadar sürer?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Tek bir script etiketi yeterlidir; teknik entegrasyon dakikalar alır. Asıl zaman araç tanımlarını yazmakta ve izin mantığına karar vermekte geçer." }
+                                "@type": "Question",
+                                "name": "WebMCP'yi siteye eklemek ne kadar sürer?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Tek bir script etiketi yeterlidir; teknik entegrasyon dakikalar alır. Asıl zaman araç tanımlarını yazmakta ve izin mantığına karar vermekte geçer."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "NLWeb ile MCP'yi ayrı ayrı kurmak gerekir mi?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Her NLWeb örneği aynı zamanda bir MCP sunucusu olarak çalışır." }
+                                "@type": "Question",
+                                "name": "NLWeb ile MCP'yi ayrı ayrı kurmak gerekir mi?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Hayır. Her NLWeb örneği aynı zamanda bir MCP sunucusu olarak çalışır."
+                                }
                 },
                 {
-                    "@type": "Question",
-                    "name": "Ajanlar sitede hangi işlemleri yapabiliyor?",
-                    "acceptedAnswer": { "@type": "Answer", "text": "Araçlar üç tipe ayrılır: bilgi çeken read-only araçlar, sayfa üzerinde işlem yapan act araçları ve ödeme veya rezervasyon gibi süreci tamamlayan transact araçları. Risk profili bu sırayla artar." }
+                                "@type": "Question",
+                                "name": "Ajanlar sitede hangi işlemleri yapabiliyor?",
+                                "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Araçlar üç tipe ayrılır: bilgi çeken read-only araçlar, sayfa üzerinde işlem yapan act araçları ve ödeme veya rezervasyon gibi süreci tamamlayan transact araçları. Risk profili bu sırayla artar."
+                                }
                 }
-            ]
+]
         }
     ]
 });
 
-export default function McpNlwebPage() {
+export default function Page() {
     return (
         <main className="min-h-screen bg-white font-sans selection:bg-violet-100 selection:text-violet-900">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: jsonLd }}
             />
-            {/* Fixed Header */}
             <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
                 <Navigation />
             </header>
 
-            {/* Hero */}
             <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/structured_data_seo_3d.png"
-                        alt="MCP, WebMCP ve NLWeb — Yapay Zeka Ajan Protokolleri"
+                        alt="MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli"
                         fill
                         sizes="(max-width: 768px) 1px, 100vw"
                         className="object-cover opacity-20 hidden md:block"
@@ -114,7 +126,6 @@ export default function McpNlwebPage() {
 
                 <div className="max-w-[1400px] mx-auto px-6 md:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Text */}
                         <div className="space-y-8 flex flex-col justify-center h-full pb-16 pt-12">
                             <div>
                                 <div className="flex items-center gap-3 text-yellow-400 font-bold tracking-widest text-xs uppercase mb-4">
@@ -128,8 +139,7 @@ export default function McpNlwebPage() {
                                 </h1>
 
                                 <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
-                                    Yapay zeka ajanlarının web siteleriyle konuşmasını sağlayan üç protokol —
-                                    hangisinin hangi katmanda çalıştığı, hangi senaryoda hangisinin seçileceği.
+                                    MCP, WebMCP ve NLWeb protokollerinin çalıştıkları katmanlar, farkları, tarayıcı desteği ve hangi senaryoda hangisinin seçileceği.
                                 </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
@@ -143,12 +153,11 @@ export default function McpNlwebPage() {
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>7 dk okuma</span>
+                                        <span>6 dk okuma</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Author */}
                             <div className="flex items-center gap-4 pt-2">
                                 <Link href="/hakkimda" className="w-12 h-12 rounded-full border-2 border-white/10 relative overflow-hidden hover:border-violet-400 transition-colors">
                                     <Image
@@ -181,11 +190,10 @@ export default function McpNlwebPage() {
                             </div>
                         </div>
 
-                        {/* Hero Image */}
                         <div className="relative hidden lg:block h-[500px] w-full">
                             <Image
                                 src="/images/structured_data_seo_3d.png"
-                                alt="MCP, WebMCP ve NLWeb — Ajan Protokolleri"
+                                alt="MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli"
                                 fill
                                 sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
@@ -197,7 +205,6 @@ export default function McpNlwebPage() {
             </header>
 
             <div className="max-w-[1400px] mx-auto px-6 md:px-8 pt-12 pb-20">
-                {/* Breadcrumb */}
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                     <Link href="/" className="hover:text-violet-600 transition-colors">Ana Sayfa</Link>
                     <span className="text-gray-200">/</span>
@@ -206,7 +213,6 @@ export default function McpNlwebPage() {
                     <span className="text-gray-600 font-bold truncate">MCP, WebMCP ve NLWeb</span>
                 </nav>
 
-                {/* Article Content */}
                 <ArticleContent />
             </div>
 

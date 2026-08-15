@@ -70,11 +70,7 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>İçerik Chunking: AI Sistemleri Bir Sayfanın Neresinden Alıntı Yapar?</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     İçerik chunking, bir metni yapay zeka sistemlerinin tek başına işleyebileceği küçük ve
     odaklı pasajlara bölme tekniğidir. AI sistemleri bir sayfayı bütün olarak değil, bu
     pasajlar üzerinden değerlendirir. Atıf sayfanın otoritesinden değil, belirli bir alt
@@ -82,20 +78,30 @@ export default function ArticleContent() {
     {/* kaynak: K65 */}
     {/* kaynak: K59 */}
   </p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>3.000 kelimelik makaleniz tek bir rakip olarak değil, ayrı ayrı puanlanan onlarca pasaj olarak yarışır — kazanan sayfa değil, pasajdır.</strong></p>
-    <ul>
-      <li>Hedef pasaj boyutu 256–512 token. Türkçe'de bu, İngilizce'ye göre daha az kelimeye denk düşer; pratik karşılığı 50–120 kelime.</li>
-      <li>"Yukarıda belirttiğimiz gibi" ile açılan paragraf, bağlamından koparıldığı anda anlamsızlaşır ve retrieval aşamasında zaten elenir.</li>
-      <li>Corpus ve retriever sabitken bile en iyi ile en kötü chunking yöntemi arasında %9'a varan recall farkı ölçüldü.</li>
-      <li>Chunk sınırlarını siz belirlemezseniz chunker belirler — ve fikrin ortasından keser. Başlık yapısı bu yüzden biçimsel bir tercih değil.</li>
-    </ul>
-  </aside>
-
-
-  <h2 id="nedir">İçerik chunking nedir?</h2>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>3.000 kelimelik makaleniz tek bir rakip olarak değil, ayrı ayrı puanlanan onlarca pasaj olarak yarışır — kazanan sayfa değil, pasajdır.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Hedef pasaj boyutu 256–512 token. Türkçe'de bu, İngilizce'ye göre daha az kelimeye denk düşer; pratik karşılığı 50–120 kelime.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>"Yukarıda belirttiğimiz gibi" ile açılan paragraf, bağlamından koparıldığı anda anlamsızlaşır ve retrieval aşamasında zaten elenir.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Corpus ve retriever sabitken bile en iyi ile en kötü chunking yöntemi arasında %9'a varan recall farkı ölçüldü.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Chunk sınırlarını siz belirlemezseniz chunker belirler — ve fikrin ortasından keser. Başlık yapısı bu yüzden biçimsel bir tercih değil.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <h2 id="nedir">İçerik chunking nedir?</h2>
 
   <p className="bolum-cevap">
     İçeriği, yapay zeka sistemlerinin daha kolay işleyip bilgi çıkarabileceği küçük ve odaklı
@@ -551,8 +557,7 @@ export default function ArticleContent() {
     retrieval aşamasında elendiğini birlikte çıkarmak isterseniz,
     <Link href="/geo">GEO danışmanlığı</Link> sayfasından kapsam ve çalışma biçimine bakabilirsiniz.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

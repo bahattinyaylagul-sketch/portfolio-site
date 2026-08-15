@@ -74,30 +74,39 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>Copilot ve Bing İndeksleme: Copilot'ta Görünmek İçin Ne Yapmalısınız?</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     Microsoft Copilot, web'e baktığı her yanıtta Bing indeksine başvurur. Bing'de
     indekslenmemiş bir sayfa Copilot tarafından alıntılanamaz — arada başka bir yol yok.
     Bu yüzden Copilot görünürlüğü içerik işi olmadan önce indeksleme işidir: Bingbot'un
     girebildiği, Bing Webmaster Tools'a tanıtılmış ve site haritası kabul edilmiş bir site
     olmadan geri kalan her çalışma boşa gider.
   </p>
-  {/* kaynak: K177 */}
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>Copilot'ta görünmenin ön koşulu Bing indeksinde olmak; Bing'de olmanın ön koşulu da Bing'e ayrıca çalışmak, çünkü Google'daki durumunuz oraya taşınmıyor.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Copilot'un her yüzeyi web'e bakmıyor. Hedefiniz web erişimli Copilot ve Microsoft 365 içinde web temellendirmesi açık olan kurulumlar.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Bing'de indekslenen sayfa sayınız Google'dakinden düşükse sorun genellikle içerikte değil; tarama bütçesi, gönderilmemiş site haritası ve çelişkili canonical sinyallerinde.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>IndexNow, yeni ve güncellenen sayfaları beklemeden bildirmenin en kısa yolu. Cloudflare, Yoast ve Rank Math tarafında hazır entegrasyon var.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Aynı çalışma ChatGPT'yi de kazandırıyor: ChatGPT'nin web araması büyük ölçüde Bing indeksinden besleniyor.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    {/* kaynak: K177 */}
 
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>Copilot'ta görünmenin ön koşulu Bing indeksinde olmak; Bing'de olmanın ön koşulu da Bing'e ayrıca çalışmak, çünkü Google'daki durumunuz oraya taşınmıyor.</strong></p>
-    <ul>
-      <li>Copilot'un her yüzeyi web'e bakmıyor. Hedefiniz web erişimli Copilot ve Microsoft 365 içinde web temellendirmesi açık olan kurulumlar.</li>
-      <li>Bing'de indekslenen sayfa sayınız Google'dakinden düşükse sorun genellikle içerikte değil; tarama bütçesi, gönderilmemiş site haritası ve çelişkili canonical sinyallerinde.</li>
-      <li>IndexNow, yeni ve güncellenen sayfaları beklemeden bildirmenin en kısa yolu. Cloudflare, Yoast ve Rank Math tarafında hazır entegrasyon var.</li>
-      <li>Aynı çalışma ChatGPT'yi de kazandırıyor: ChatGPT'nin web araması büyük ölçüde Bing indeksinden besleniyor.</li>
-    </ul>
-    {/* kaynak: K177 */}
-  </aside>
+  
 
   <h2 id="mekanizma">Copilot yanıtını Bing indeksinden nasıl kuruyor</h2>
 
@@ -521,8 +530,7 @@ export default function ArticleContent() {
     Bing indeksindeki gerçek ayak izinizi çıkarmak ve Copilot'un alıntılayabileceği bir içerik
     yapısı kurmak için <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atabilirsiniz.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

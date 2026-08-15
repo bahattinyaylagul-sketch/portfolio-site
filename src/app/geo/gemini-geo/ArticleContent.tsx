@@ -74,24 +74,31 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">Gemini'de görünmek, sıralamada yükselmekten farklı bir iştir: model sayfanızı değil, sayfanızdaki tek bir pasajı alıntılar. Kazanan içerik, 40–60 kelimelik net cevap bloklarından kurulu, semantik HTML ile işaretlenmiş ve varlık ilişkileri açık olan içeriktir. Türkiye açısından kritik olan şu: <Link href="/geo">GEO</Link> artık teorik bir hazırlık değil, 18 Şubat 2026'dan beri ölçülebilir bir hedef.</p>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>Gemini optimizasyonu, sayfa düzeyinde sıralama yarışı değil, pasaj düzeyinde alıntılanabilirlik tasarımıdır — ve Türkiye'de artık doğrudan test edilebilir.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Gemini'nin üç ayrı yüzeyi var: sohbet uygulaması, AI Modu ve AI Bakışı. Üçü aynı model ailesinden besleniyor ama kaynak seçimi ve alıntı davranışları farklı.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Ahrefs'in 2025 çalışmasına göre yapay zeka sistemlerince alıntılanan URL'lerin yalnızca yaklaşık %12'si aynı sorgu için Google'ın ilk 10 sonucunda yer alıyor. İlk sayfa, giriş bileti değil.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Gemini içerik değişikliklerini günler içinde yansıtabiliyor; ChatGPT'de aynı değişiklik model güncellemesini bekliyor. Bu, Gemini'yi test–öğren döngüsü için en uygun platform yapıyor.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Ölçüm için marka anılması, atıf ve cevap payı üçlüsünü haftalık sabit protokolle takip edin; 10–20 sorguya kadar manuel yürütmek mümkün.</span></li></ul>
+                </aside>
                 
-
-  <h1>Gemini'de Görünür Olmak: İçerik, Teknik ve Ölçüm Rehberi</h1>
-
-  <p className="first-answer">Gemini'de görünmek, sıralamada yükselmekten farklı bir iştir: model sayfanızı değil, sayfanızdaki tek bir pasajı alıntılar. Kazanan içerik, 40–60 kelimelik net cevap bloklarından kurulu, semantik HTML ile işaretlenmiş ve varlık ilişkileri açık olan içeriktir. Türkiye açısından kritik olan şu: <Link href="/geo">GEO</Link> artık teorik bir hazırlık değil, 18 Şubat 2026'dan beri ölçülebilir bir hedef.</p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>Gemini optimizasyonu, sayfa düzeyinde sıralama yarışı değil, pasaj düzeyinde alıntılanabilirlik tasarımıdır — ve Türkiye'de artık doğrudan test edilebilir.</strong></p>
-    <ul>
-      <li>Gemini'nin üç ayrı yüzeyi var: sohbet uygulaması, AI Modu ve AI Bakışı. Üçü aynı model ailesinden besleniyor ama kaynak seçimi ve alıntı davranışları farklı.</li>
-      <li>Ahrefs'in 2025 çalışmasına göre yapay zeka sistemlerince alıntılanan URL'lerin yalnızca yaklaşık %12'si aynı sorgu için Google'ın ilk 10 sonucunda yer alıyor. İlk sayfa, giriş bileti değil.</li>
-      <li>Gemini içerik değişikliklerini günler içinde yansıtabiliyor; ChatGPT'de aynı değişiklik model güncellemesini bekliyor. Bu, Gemini'yi test–öğren döngüsü için en uygun platform yapıyor.</li>
-      <li>Ölçüm için marka anılması, atıf ve cevap payı üçlüsünü haftalık sabit protokolle takip edin; 10–20 sorguya kadar manuel yürütmek mümkün.</li>
-    </ul>
-  </aside>
-
-  <h2 id="uc-yuzey">Gemini'nin Üç Yüzeyi Aynı Şey Değil</h2>
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <h2 id="uc-yuzey">Gemini'nin Üç Yüzeyi Aynı Şey Değil</h2>
 
   <p className="bolum-cevap">Gemini adı üç farklı ürünü birden kapsıyor: gemini.google.com'daki sohbet uygulaması, Google Arama içindeki AI Modu ve klasik sonuç sayfasının tepesindeki AI Bakışı. Üçü de Gemini model ailesinden besleniyor, ancak kaynak havuzları, alıntı yoğunlukları ve tetiklenme koşulları ayrışıyor. "Gemini'de görünüyorum" cümlesi, hangi yüzeyden bahsettiğinizi söylemeden bir şey ifade etmiyor.</p>
 
@@ -299,8 +306,7 @@ export default function ArticleContent() {
   {/* kaynak: K139 */}
 
   <p className="cta"><Link href="/geo">GEO rehberinin tamamını inceleyin</Link> — platform bazlı sayfaların hepsi orada bağlanıyor.</p>
-
-
+                </div>
             </article>
         </div>
     );

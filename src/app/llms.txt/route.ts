@@ -71,6 +71,8 @@ Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine O
 - [Wikidata ve Bilgi Paneli](https://bahattinyaylagul.com/geo/wikidata-bilgi-paneli): Markaların Knowledge Graph ve Wikidata varlık kaydını kurma rehberi
 - [GA4'te AI Trafiği Ölçümü](https://bahattinyaylagul.com/geo/ga4-ai-trafigi): Yapay zeka motorlarından gelen organik yönlendirme trafiğini GA4'te ayrıştırma
 - [Prompt Araştırması Rehberi](https://bahattinyaylagul.com/geo/prompt-arastirmasi): Kullanıcıların yapay zeka sistemlerinde sorduğu sorguları ve sorma dilini tespit etme
+- [GEO Nasıl Ölçülür?](https://bahattinyaylagul.com/geo/geo-kpi-olcumu): GEO performansının iki katmanı: yanıtta geçme, atıf alma, KPI çerçevesi ve raporlama kadansı
+
 
 
 ## İletişim

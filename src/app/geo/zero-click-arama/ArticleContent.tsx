@@ -74,11 +74,7 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                
-
-  <h1>Zero-Click Arama: 2026 Verileri, Gerçek Etkisi ve Ne Yapmalı</h1>
-
-  <p className="first-answer">
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">
     Zero-click arama, kullanıcının aradığı yanıtı sonuç sayfasında alıp hiçbir siteye
     tıklamadan ayrılmasıdır. 2026 clickstream ölçümlerinde Google aramalarının yaklaşık
     %68'i böyle bitiyor. Bu oran tek başına gelir kaybı demek değil: tıklama sayısı
@@ -86,20 +82,30 @@ export default function ArticleContent() {
     türünde kaybettiğiniz.
     {/* kaynak: K81 */}
   </p>
-
-  <aside className="tldr">
-    <h2 className="tldr-baslik">TL;DR — Kısaca</h2>
-    <p><strong>Tıklama kaybı gerçek ama tekdüze değil; kaybı doğrudan gelir kaybına çevirmek 2026'nın en pahalı ölçüm hatası.</strong></p>
-    <ul>
-      <li>Google aramalarının %68'i tıklamasız kapanıyor. İki yılda 7,5 puanlık artış var, mobilde oran %77'ye çıkıyor.</li>
-      <li>Risk sektöre göre dağılıyor: B2B teknoloji ve sağlıkta ağır, e-ticaret ve yerel işletmede şimdilik sınırlı.</li>
-      <li>AI Modu'nun kullanıcı sayısı ile sorgu payı arasındaki uçurum, tehdidi hem abartmanın hem küçümsemenin kapısını açıyor. İkisi de yanlış.</li>
-      <li>Bu rakamların hiçbiri Türkiye ölçümü değil. AI Bakışı ve AI Modu ülkeye 18 Şubat 2026'da geldi; Türk siteleri eğrinin çok daha erken bir noktasında.</li>
-    </ul>
-  </aside>
-
-
-  <h2 id="nedir">Zero-click arama nedir, ne değildir</h2>
+                <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
+                        <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
+                    </div>
+                    <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>Tıklama kaybı gerçek ama tekdüze değil; kaybı doğrudan gelir kaybına çevirmek 2026'nın en pahalı ölçüm hatası.</strong></p>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Google aramalarının %68'i tıklamasız kapanıyor. İki yılda 7,5 puanlık artış var, mobilde oran %77'ye çıkıyor.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Risk sektöre göre dağılıyor: B2B teknoloji ve sağlıkta ağır, e-ticaret ve yerel işletmede şimdilik sınırlı.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>AI Modu'nun kullanıcı sayısı ile sorgu payı arasındaki uçurum, tehdidi hem abartmanın hem küçümsemenin kapısını açıyor. İkisi de yanlış.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Bu rakamların hiçbiri Türkiye ölçümü değil. AI Bakışı ve AI Modu ülkeye 18 Şubat 2026'da geldi; Türk siteleri eğrinin çok daha erken bir noktasında.</span></li></ul>
+                </aside>
+                
+                <div className="prose prose-lg max-w-none 
+                        prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground
+                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight
+                        prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+                        prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
+                        prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6
+                        prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2
+                        prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2
+                        prose-li:text-gray-600 prose-li:leading-relaxed
+                        prose-strong:font-bold prose-strong:text-gray-900
+                        prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+                        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
+                        prose-table:text-sm
+                        mb-16">
+                    <h2 id="nedir">Zero-click arama nedir, ne değildir</h2>
 
   <p className="bolum-cevap">
     Bir arama, kullanıcı hiçbir organik veya ücretli sonuca tıklamadan sona eriyorsa
@@ -610,8 +616,7 @@ export default function ArticleContent() {
     Doğru yaklaşım, o tarihi kırılma noktası kabul edip Search Console'da kendi
     öncesi–sonrası karşılaştırmanızı çıkarmak.
   </p>
-
-
+                </div>
             </article>
         </div>
     );

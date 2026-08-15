@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/geo/wikidata-bilgi-paneli',
         '/geo/ga4-ai-trafigi',
         '/geo/prompt-arastirmasi',
+        '/geo/geo-kpi-olcumu',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: today,
