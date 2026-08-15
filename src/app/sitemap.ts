@@ -27,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/geo/chatgpt-geo',
         '/geo/perplexity-geo',
         '/geo/ai-overviews-nedir',
+        '/geo/entity-seo',
+        '/geo/dijital-pr-ai-atif',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: today,

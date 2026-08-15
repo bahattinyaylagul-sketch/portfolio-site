@@ -27,7 +27,7 @@ const items = [
     {
         title: "Teknik SEO & Altyapı",
         desc: "Core Web Vitals, Crawl Budget optimizasyonu ve Next.js/React altyapı çözümleri.",
-        link: "/teknik-seo",
+        link: "/seo/teknik-seo",
         col: "md:col-span-2",
         delay: 0.4,
     },

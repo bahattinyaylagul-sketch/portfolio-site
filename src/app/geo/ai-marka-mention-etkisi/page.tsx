@@ -408,6 +408,20 @@ export default function BlogPost() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
                             <ul className="space-y-6 mb-8">
                                 <li className="list-none">
+                                    <Link href="/geo/entity-seo" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                        Entity SEO ve Bilgi Grafiği
+                                    </Link>
+                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Arama motorlarının markanızı varlık olarak tanıması için Knowledge Graph kaydı ve schema mimarisi rehberi.</p>
+                                </li>
+                                <li className="list-none">
+                                    <Link href="/geo/dijital-pr-ai-atif" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                        <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
+                                        Dijital PR ve "En İyi X" Listeleri
+                                    </Link>
+                                    <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.</p>
+                                </li>
+                                <li className="list-none">
                                     <Link href="/geo/llms-txt-nedir" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
                                         <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                         llms.txt Nedir?

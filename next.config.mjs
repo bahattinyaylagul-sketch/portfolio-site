@@ -42,6 +42,8 @@ const nextConfig = {
             { source: '/icgoruler/llms-txt-nedir',               destination: '/geo/llms-txt-nedir',                 permanent: true },
             { source: '/icgoruler/reddit-forum-mention-etkisi',  destination: '/geo/reddit-forum-mention-etkisi',    permanent: true },
             { source: '/icgoruler/ai-marka-mention-etkisi',      destination: '/geo/ai-marka-mention-etkisi',        permanent: true },
+            // Catch-all: gelecekte eklenecek /icgoruler/ URL'lerini de yakala
+            { source: '/icgoruler/:slug',                        destination: '/geo/:slug',                          permanent: true },
         ];
     },
     async headers() {
