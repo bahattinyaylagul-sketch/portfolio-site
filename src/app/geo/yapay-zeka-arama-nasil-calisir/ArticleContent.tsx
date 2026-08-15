@@ -151,14 +151,14 @@ export default function ArticleContent() {
                         okunacak şekilde yazmak, her bölümün altına kendi kendine yeten bir cevap
                         paragrafı koymak — bu sayfadaki <code>.bolum-cevap</code> blokları dahil —
                         doğrudan bu adıma oynanan hamleler.{" "}
-                        <Link href="/geo/icerik-chunking" data-pending="true">İçerik chunking</Link>
+                        <Link href="/geo/icerik-chunking">İçerik chunking</Link>
                         {" "}sayfasında bunun uygulaması var.
                     </p>
                     <p>
                         Bir adım öncesi de var ve çoğu sitede asıl kayıp orada: belge sisteme hiç
                         girmiyorsa geri kalan yedi adımın hükmü yok. Botun sayfanızı çekebilmesi
                         tartışmanın giriş bileti.{" "}
-                        <Link href="/geo/ai-botlari-robots-txt" data-pending="true">AI botları ve robots.txt</Link>
+                        <Link href="/geo/ai-botlari-robots-txt">AI botları ve robots.txt</Link>
                         {" "}yönetimini ayrı bir sayfada ele alıyorum.
                     </p>
                     <p>
@@ -475,11 +475,11 @@ export default function ArticleContent() {
                             <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Terimlerin hedef yüzey, metrik ve platform farkları.</p>
                         </li>
                         <li className="list-none">
-                            <Link href="/geo/icerik-chunking" data-pending="true" className="inline-flex items-center text-gray-400 font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-gray-300 mr-3" />
+                            <Link href="/geo/icerik-chunking" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                 İçerik Chunking Rehberi
                             </Link>
-                            <p className="text-sm text-gray-400 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
+                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
                         </li>
                         <li className="list-none">
                             <Link href="/seo/bilgi-kazanci" className="inline-flex items-center text-blue-600 hover:underline font-bold group text-lg">

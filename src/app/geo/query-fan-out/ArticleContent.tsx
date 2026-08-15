@@ -180,7 +180,7 @@ export default function ArticleContent() {
                         sayfanın bütünü değil, doğrudan ilgili bölümler.
                         {/* kaynak: K54 */}
                         {" "}Bu yüzden içeriğin nasıl bölümlendiği, ne kadar uzun olduğundan daha belirleyici —{" "}
-                        <Link href="/geo/icerik-chunking" data-pending="true">içerik chunking</Link> tarafında ayrıntısıyla
+                        <Link href="/geo/icerik-chunking">içerik chunking</Link> tarafında ayrıntısıyla
                         ele alıyorum. Toplanan pasajlar son adımda birleştirilerek tek yanıt oluşturuluyor; farklı
                         kaynak ve görüş gerektiren her prompt bu mekanizmayı tetikliyor.
                         {/* kaynak: K57 */}
@@ -436,11 +436,11 @@ export default function ArticleContent() {
                             <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">AI Modu&apos;nun yanıt gövdesinde 1-3 kaynaktan biri olmanın kriterleri.</p>
                         </li>
                         <li className="list-none">
-                            <Link href="/geo/icerik-chunking" data-pending="true" className="inline-flex items-center text-gray-400 font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-gray-300 mr-3" />
+                            <Link href="/geo/icerik-chunking" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                 İçerik Chunking Rehberi
                             </Link>
-                            <p className="text-sm text-gray-400 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
+                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
                         </li>
                         <li className="list-none">
                             <Link href="/seo/arama-niyeti" className="inline-flex items-center text-blue-600 hover:underline font-bold group text-lg">

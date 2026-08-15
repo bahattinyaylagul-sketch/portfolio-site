@@ -245,7 +245,7 @@ export default function ArticleContent() {
                         Ama bu WebMCP&apos;nin llms.txt&apos;nin yerini aldığı anlamına gelmiyor. İkisi farklı
                         katmanlar. Ajanın sitenizi <em>bulması</em> hâlâ klasik GEO işi — bot erişimi,
                         yapılandırılmış veri, varlık kaydı. Bunları{" "}
-                        <Link href="/geo/ai-botlari-robots-txt" data-pending="true">bot yönetimi</Link> ve{" "}
+                        <Link href="/geo/ai-botlari-robots-txt">bot yönetimi</Link> ve{" "}
                         <Link href="/geo/yapay-zeka-schema" data-pending="true">schema</Link> sayfalarında
                         ele alıyorum.
                     </p>
@@ -322,13 +322,13 @@ export default function ArticleContent() {
                             </Link>
                             <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı ve uygulama rehberi.</p>
                         </li>
-                        {/* Kardeş C: ai-botlari-robots-txt (bekleyen) */}
+                        {/* Kardeş C: ai-botlari-robots-txt */}
                         <li className="list-none">
-                            <Link href="/geo/ai-botlari-robots-txt" data-pending="true" className="inline-flex items-center text-gray-400 font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-gray-300 mr-3" />
+                            <Link href="/geo/ai-botlari-robots-txt" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                 AI Botları ve Robots.txt Yönetimi
                             </Link>
-                            <p className="text-sm text-gray-400 ml-5 mt-1 leading-relaxed max-w-2xl">GPTBot, ClaudeBot ve diğer yapay zeka tarayıcılarına doğru erişim izinlerini vermenin rehberi.</p>
+                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">GPTBot, ClaudeBot ve diğer yapay zeka tarayıcılarına doğru erişim izinlerini vermenin rehberi.</p>
                         </li>
                         {/* Kardeş C: yapay-zeka-schema (bekleyen) */}
                         <li className="list-none">

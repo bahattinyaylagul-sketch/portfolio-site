@@ -237,7 +237,7 @@ export default function ArticleContent() {
                         Fan-out&apos;un içerik biçimine dair bir sonucu daha var: sayfanın parçalara ayrılabilir
                         olması gerekiyor. Model sayfanızın tamamını değil, alt sorguya karşılık gelen bölümünü
                         çekiyor. Uzun ve başlıksız bir metin bloğu bu işlem için kötü bir aday.{" "}
-                        <Link href="/geo/icerik-chunking" data-pending="true">İçerik chunking</Link> bu yüzden
+                        <Link href="/geo/icerik-chunking">İçerik chunking</Link> bu yüzden
                         kozmetik bir düzenleme değil, doğrudan alıntılanabilirlik meselesi.
                     </p>
 

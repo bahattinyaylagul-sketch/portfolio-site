@@ -42,6 +42,16 @@ const clusters: ClusterGroup[] = [
                 href: "/geo/google-ai-modu",
                 desc: "Google AI Modu'nun fan-out mekaniği, AI Bakışı'ndan farkı, kaynak gösterilmek için yapmanız gerekenler ve Türkçe sorgularda rekabetin neden hâlâ seyrek olduğu."
             },
+            {
+                title: "Gemini GEO Optimizasyonu: Google'ın Yapay Zeka Arayüzlerinde Öne Çıkmak",
+                href: "/geo/gemini-geo",
+                desc: "Google Gemini ve AI Modu yanıtlarında marka görünürlüğü kazanmak için yapay zeka arama optimizasyonu rehberi."
+            },
+            {
+                title: "Bing Copilot GEO: Arama ve Sohbet Entegrasyonunda Kaynak Olmak",
+                href: "/geo/bing-copilot-geo",
+                desc: "Bing Copilot ve arama entegreli sohbet yanıtlarında alıntılanmak için yapılması gereken teknik ve editoryal adımlar."
+            },
         ]
     },
     {
@@ -57,6 +67,32 @@ const clusters: ClusterGroup[] = [
                 title: "MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli",
                 href: "/geo/mcp-nlweb",
                 desc: "MCP, WebMCP ve NLWeb protokollerinin çalıştıkları katmanlar, farkları, tarayıcı desteği ve hangi senaryoda hangisinin seçileceği."
+            },
+            {
+                title: "AI Botları ve Robots.txt Yönetimi: Tarayıcılara Doğru İzinleri Vermek",
+                href: "/geo/ai-botlari-robots-txt",
+                desc: "GPTBot, ClaudeBot ve diğer yapay zeka crawler'larına robots.txt ile doğru erişim izinlerini vermenin teknik rehberi."
+            },
+            {
+                title: "JavaScript, SSR ve AI Botları: Yapay Zekaya Okunabilir Site Sunmak",
+                href: "/geo/javascript-ssr-ai-botlari",
+                desc: "Client-side rendering, server-side rendering ve yapay zeka botlarının tarama davranışı ile sayfa oluşturma (hydration) ilişkisi."
+            },
+        ]
+    },
+    {
+        code: "E",
+        label: "Ölçüm & Analitik",
+        items: [
+            {
+                title: "GA4'te AI Trafiği Ölçümü: Üretken Arama Trafiğini Ayrıştırmak",
+                href: "/geo/ga4-ai-trafigi",
+                desc: "Yapay zeka arama motorlarından ve sohbet botlarından gelen organik yönlendirme trafiğini Google Analytics 4 üzerinde filtreleme."
+            },
+            {
+                title: "Prompt Araştırması: Kullanıcıların AI Arama Motorlarında Sorma Dilini Anlamak",
+                href: "/geo/prompt-arastirmasi",
+                desc: "Kullanıcıların yapay zeka sistemlerinde sorduğu sorguları, takip sorularını ve sorma dilini (conversational prompts) tespit etme yöntemleri."
             },
         ]
     },
@@ -84,6 +120,11 @@ const clusters: ClusterGroup[] = [
                 href: "/geo/dijital-pr-ai-atif",
                 desc: "Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme ve atıf payı kazanma."
             },
+            {
+                title: "Wikidata ve Bilgi Paneli: Markanızı Bilgi Grafiğinde Tanımlamak",
+                href: "/geo/wikidata-bilgi-paneli",
+                desc: "Arama motorlarının ve modellerin markanızı bir varlık (entity) olarak tanıması için Wikidata ve Knowledge Graph kaydı."
+            },
         ]
     },
     {
@@ -104,6 +145,16 @@ const clusters: ClusterGroup[] = [
                 title: "Yapay Zeka Araması Nasıl Çalışır? RAG ve Grounding Rehberi",
                 href: "/geo/yapay-zeka-arama-nasil-calisir",
                 desc: "Modelin cevabı üretirken izlediği sekiz adımlık zincir ve içeriğinizin bu zincirin hangi halkasında elendiğini anlama rehberi."
+            },
+            {
+                title: "İçerik Chunking: AI Sistemleri Bir Sayfanın Neresinden Alıntı Yapar?",
+                href: "/geo/icerik-chunking",
+                desc: "İçeriği yapay zeka sistemlerinin daha kolay işleyebileceği parçalara (chunks) bölme, Türkçe tokenizasyon farkı ve pasaj yazımı."
+            },
+            {
+                title: "Zero-Click Arama: 2026 Verileri, Gerçek Etkisi ve Ne Yapmalı",
+                href: "/geo/zero-click-arama",
+                desc: "Google aramalarının zero-click kapanma oranları, 2026 clickstream verileri, arama niyetleri ve bu dönüşüme karşı içerik konumlandırma."
             },
         ]
     },

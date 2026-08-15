@@ -133,7 +133,7 @@ export default function ArticleContent() {
                     </p>
 
                     <p>
-                        Yani paneli takip edin, ama başarı ölçütünüz yapmayın. Detaylı süreç için <Link href="/geo/wikidata-bilgi-paneli" data-pending="true" className="text-violet-600 hover:underline font-semibold">Wikidata ve bilgi paneli rehberine</Link> bakabilirsiniz.
+                        Yani paneli takip edin, ama başarı ölçütünüz yapmayın. Detaylı süreç için <Link href="/geo/wikidata-bilgi-paneli" className="text-violet-600 hover:underline font-semibold">Wikidata ve bilgi paneli rehberine</Link> bakabilirsiniz.
                     </p>
 
 
@@ -384,13 +384,13 @@ export default function ArticleContent() {
                             </Link>
                             <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.</p>
                         </li>
-                        {/* Kardeş D: wikidata-bilgi-paneli (bekleyen) */}
+                        {/* Kardeş D: wikidata-bilgi-paneli */}
                         <li className="list-none">
-                            <Link href="/geo/wikidata-bilgi-paneli" data-pending="true" className="inline-flex items-center text-gray-400 font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-gray-300 mr-3" />
+                            <Link href="/geo/wikidata-bilgi-paneli" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                 Wikidata ve Bilgi Paneli Rehberi
                             </Link>
-                            <p className="text-sm text-gray-400 ml-5 mt-1 leading-relaxed max-w-2xl">Wikidata kaydı oluşturma, P856/P108 özellikleri ve Knowledge Panel stratejisi.</p>
+                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Wikidata kaydı oluşturma, P856/P108 özellikleri ve Knowledge Panel stratejisi.</p>
                         </li>
                         {/* Komşu cluster (SEO silo köprüsü): §4 Kural 4 */}
                         <li className="list-none">

@@ -211,7 +211,7 @@ export default function ArticleContent() {
                     </p>
 
                     <p>
-                        Ölçüm kurulumunun detayları <Link href="/geo/geo-kpi-olcumu" data-pending="true" className="text-gray-400 font-semibold">GEO ölçümü ve KPI'lar</Link> sayfasında.
+                        Ölçüm kurulumunun detayları <Link href="/geo/geo-kpi-olcumu" className="text-violet-600 hover:underline font-semibold">GEO ölçümü ve KPI'lar</Link> sayfasında.
                     </p>
 
 

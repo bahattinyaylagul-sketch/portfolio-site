@@ -396,11 +396,11 @@ export default function ArticleContent() {
                             <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Google AI Modu&apos;nun tek sorguyu onlarca alt sorguya böldüğü mekanizma.</p>
                         </li>
                         <li className="list-none">
-                            <Link href="/geo/icerik-chunking" data-pending="true" className="inline-flex items-center text-gray-400 font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-gray-300 mr-3" />
+                            <Link href="/geo/icerik-chunking" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
+                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
                                 İçerik Chunking Rehberi
                             </Link>
-                            <p className="text-sm text-gray-400 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
+                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Dil modellerinin içeriği parçalara bölme mantığı ve buna göre yazma pratiği.</p>
                         </li>
                         <li className="list-none">
                             <Link href="/seo/topikal-otorite" className="inline-flex items-center text-blue-600 hover:underline font-bold group text-lg">

@@ -94,6 +94,15 @@ export default function SiteMapPage() {
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/mcp-nlweb" className="text-gray-600 hover:text-blue-600 hover:underline">MCP, WebMCP ve NLWeb</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/query-fan-out" className="text-gray-600 hover:text-blue-600 hover:underline">Query Fan-Out Nedir?</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/yapay-zeka-arama-nasil-calisir" className="text-gray-600 hover:text-blue-600 hover:underline">Yapay Zeka Araması Nasıl Çalışır?</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/icerik-chunking" className="text-gray-600 hover:text-blue-600 hover:underline">İçerik Chunking Rehberi</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/zero-click-arama" className="text-gray-600 hover:text-blue-600 hover:underline">Zero-Click Arama Verileri</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/gemini-geo" className="text-gray-600 hover:text-blue-600 hover:underline">Gemini GEO Optimizasyonu</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/bing-copilot-geo" className="text-gray-600 hover:text-blue-600 hover:underline">Bing Copilot GEO Rehberi</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/ai-botlari-robots-txt" className="text-gray-600 hover:text-blue-600 hover:underline">AI Botları ve Robots.txt</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/javascript-ssr-ai-botlari" className="text-gray-600 hover:text-blue-600 hover:underline">JavaScript, SSR ve AI Botları</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/wikidata-bilgi-paneli" className="text-gray-600 hover:text-blue-600 hover:underline">Wikidata ve Bilgi Paneli</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/ga4-ai-trafigi" className="text-gray-600 hover:text-blue-600 hover:underline">GA4'te AI Trafiği Ölçümü</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/prompt-arastirmasi" className="text-gray-600 hover:text-blue-600 hover:underline">Prompt Araştırması Rehberi</Link></li>
                         </ul>
                     </section>
 
