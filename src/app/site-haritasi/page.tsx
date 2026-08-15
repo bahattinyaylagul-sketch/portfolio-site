@@ -89,6 +89,11 @@ export default function SiteMapPage() {
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/ai-overviews-nedir" className="text-gray-600 hover:text-blue-600 hover:underline">AI Overviews Nedir?</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/entity-seo" className="text-gray-600 hover:text-blue-600 hover:underline">Entity SEO ve Bilgi Grafiği</Link></li>
                             <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/dijital-pr-ai-atif" className="text-gray-600 hover:text-blue-600 hover:underline">Dijital PR ve "En İyi X" Listeleri</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/geo-seo-aeo-farki" className="text-gray-600 hover:text-blue-600 hover:underline">SEO, GEO, AEO ve LLMO Farkı</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/google-ai-modu" className="text-gray-600 hover:text-blue-600 hover:underline">Google AI Modu Optimizasyonu</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/mcp-nlweb" className="text-gray-600 hover:text-blue-600 hover:underline">MCP, WebMCP ve NLWeb</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/query-fan-out" className="text-gray-600 hover:text-blue-600 hover:underline">Query Fan-Out Nedir?</Link></li>
+                            <li className="list-disc ml-5 marker:text-gray-400"><Link href="/geo/yapay-zeka-arama-nasil-calisir" className="text-gray-600 hover:text-blue-600 hover:underline">Yapay Zeka Araması Nasıl Çalışır?</Link></li>
                         </ul>
                     </section>
 

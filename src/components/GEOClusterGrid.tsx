@@ -37,6 +37,11 @@ const clusters: ClusterGroup[] = [
                 href: "/geo/ai-overviews-nedir",
                 desc: "Google AI Bakışı'nın nasıl çalıştığı, organik trafiğe etkisi ve AIO'da kaynak olarak görünmek için içerik stratejisi."
             },
+            {
+                title: "Google AI Modu Optimizasyonu: Yanıttaki 1-3 Kaynaktan Biri Olmak",
+                href: "/geo/google-ai-modu",
+                desc: "Google AI Modu'nun fan-out mekaniği, AI Bakışı'ndan farkı, kaynak gösterilmek için yapmanız gerekenler ve Türkçe sorgularda rekabetin neden hâlâ seyrek olduğu."
+            },
         ]
     },
     {
@@ -47,6 +52,11 @@ const clusters: ClusterGroup[] = [
                 title: "llms.txt Nedir?",
                 href: "/geo/llms-txt-nedir",
                 desc: "Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı ve uygulama rehberi."
+            },
+            {
+                title: "MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli",
+                href: "/geo/mcp-nlweb",
+                desc: "MCP, WebMCP ve NLWeb protokollerinin çalıştıkları katmanlar, farkları, tarayıcı desteği ve hangi senaryoda hangisinin seçileceği."
             },
         ]
     },
@@ -73,6 +83,27 @@ const clusters: ClusterGroup[] = [
                 title: "Dijital PR ve \"En İyi X\" Listeleri",
                 href: "/geo/dijital-pr-ai-atif",
                 desc: "Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme ve atıf payı kazanma."
+            },
+        ]
+    },
+    {
+        code: "A",
+        label: "Temeller & Terminoloji",
+        items: [
+            {
+                title: "SEO, GEO, AEO ve LLMO Farkı: Hangi Terimi Ne Zaman Kullanmalısınız?",
+                href: "/geo/geo-seo-aeo-farki",
+                desc: "SEO, GEO, AEO, AIO ve LLMO terimlerinin hedef yüzey, metrik ve platform farkları; hangi hedefte hangi çerçevenin kullanılacağı."
+            },
+            {
+                title: "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?",
+                href: "/geo/query-fan-out",
+                desc: "Tek bir sorgunun arka planda onlarca alt sorguya bölünmesi ve içerik kümenizin bu dağılımı nasıl karşılaması gerektiği."
+            },
+            {
+                title: "Yapay Zeka Araması Nasıl Çalışır? RAG ve Grounding Rehberi",
+                href: "/geo/yapay-zeka-arama-nasil-calisir",
+                desc: "Modelin cevabı üretirken izlediği sekiz adımlık zincir ve içeriğinizin bu zincirin hangi halkasında elendiğini anlama rehberi."
             },
         ]
     },

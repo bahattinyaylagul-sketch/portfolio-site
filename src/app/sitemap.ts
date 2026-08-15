@@ -29,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/geo/ai-overviews-nedir',
         '/geo/entity-seo',
         '/geo/dijital-pr-ai-atif',
+        '/geo/geo-seo-aeo-farki',
+        '/geo/google-ai-modu',
+        '/geo/mcp-nlweb',
+        '/geo/query-fan-out',
+        '/geo/yapay-zeka-arama-nasil-calisir',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: today,
