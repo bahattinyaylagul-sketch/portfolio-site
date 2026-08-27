@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Gemini'de Görünür Olmak: İçerik, Teknik ve Ölçüm Rehberi – Bahattin Yaylagül",
-    description: "Gemini'nin üç yüzeyinde (sohbet uygulaması, AI Modu, AI Bakışı) görünür olmak için pasaj mimarisi, schema, yerel sinyaller ve haftalık manuel ölçüm protokolü.",
+    title: "Google Gemini GEO Optimizasyonu: Yanıtlarda Öne Çıkın",
+    description: "Google'ın Gemini AI modellerinde (Workspace ve arama) markanızın doğru bağlamda ve yetkin bir kaynak olarak gösterilmesi için en iyi pratikler.",
     alternates: {
         canonical: "/geo/gemini-geo",
     },

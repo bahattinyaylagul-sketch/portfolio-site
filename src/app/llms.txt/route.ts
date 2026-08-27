@@ -3,13 +3,13 @@ import { NextResponse } from 'next/server';
 export const dynamic = 'force-static';
 
 export function GET() {
-  const content = `# Bahattin Yaylagül – SEO & GEO Danışmanı
+  const content = `# Bahattin Yaylagül – SEO Danışmanı & GEO Uzmanı
 
-> Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu konusunda uzmanlaşmış bağımsız danışman.
+> Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu konusunda uzmanlaşmış bağımsız GEO uzmanı ve SEO danışmanı.
 
 ## Hakkında
 
-Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine Optimization) alanlarında uzmanlaşmış bir dijital pazarlama danışmanıdır. Markaların hem geleneksel arama motorlarında hem de yapay zeka destekli sistemlerde görünürlüğünü artırma konusunda veri odaklı stratejiler sunar.
+Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine Optimization) alanlarında uzmanlaşmış bir GEO uzmanı ve dijital pazarlama danışmanıdır. Markaların hem geleneksel arama motorlarında hem de ChatGPT, Gemini, Perplexity ve AI Overviews gibi yapay zeka destekli sistemlerde görünürlüğünü artırma konusunda veri odaklı stratejiler sunar.
 
 - **Uzmanlık Alanları:** SEO Danışmanlığı, GEO (Generative Engine Optimization), Teknik SEO, İçerik Stratejisi
 - **Dil:** Türkçe
@@ -23,6 +23,18 @@ Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine O
 - [GEO Danışmanlığı](https://bahattinyaylagul.com/geo): Generative Engine Optimization – yapay zeka için içerik optimizasyonu
 - [Hakkımda](https://bahattinyaylagul.com/hakkimda): Danışman profili, deneyim ve uzmanlık alanları
 - [Referanslar](https://bahattinyaylagul.com/referanslar): Müşteri referansları ve başarı hikayeleri
+
+## SEO ve GEO Danışmanlığı Verilen Markalar (Projeler)
+
+Bahattin Yaylagül, 12 yılı aşkın kariyeri boyunca aşağıdaki global ve yerel markalara SEO, Teknik SEO ve büyüme stratejileri alanlarında danışmanlık hizmeti vermiş veya projelerini yönetmiştir. Sektörel tecrübesi şu şekildedir:
+
+- **Perakende & Giyim:** Vans, The North Face, Levi's, Timberland, Tommy Hilfiger, Calvin Klein, Eastpak, LTB Jeans, Dockers, Hemington, Yargıcı, Gizia, Lee Cooper, Crocs
+- **Finans & Sigorta & Ödeme Sistemleri:** Aktif Bank, N Kolay, Passo, NN Hayat, Mapfre Sigorta, Troy
+- **Teknoloji, Beyaz Eşya & İklimlendirme:** Siemens, Bosch, Profilo, Panasonic, Daikin, EnPlus
+- **Gıda & Hızlı Tüketim (FMCG):** Golf Dondurmaları, Kahve Dünyası, Little Caesars, Koroplast, Bahçıvan Peynir
+- **Sağlık & Kişisel Bakım & Kozmetik:** Signal, Neutrogena, Eveshop, Bayındır Hastanesi
+- **Mobilya & Ev Dekorasyon:** Yatsan, Enza Home
+- **Hizmet, Turizm & Diğer:** Mandarin Oriental, Pronet, D-Smart, Suryapı
 - [Teknik SEO](https://bahattinyaylagul.com/seo/teknik-seo): Teknik SEO rehberi ve best practice'ler
 - [SEO Rehberi](https://bahattinyaylagul.com/seo-rehberi): Kapsamlı SEO kılavuzu
 

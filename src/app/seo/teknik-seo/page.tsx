@@ -10,8 +10,8 @@ import RelatedGuides from "@/components/RelatedGuides";
 
 
 export const metadata: Metadata = {
-    title: 'Teknik SEO – Bahattin Yaylagül',
-    description: 'Tarama bütçesi (Crawl Budget), render performansı ve site hızı optimizasyonu. Arama motorlarının sitenizi hatasız anlaması için gereken teknik altyapıyı kurun.',
+    title: "Teknik SEO Danışmanlığı: Core Web Vitals ve Tarama",
+    description: "Googlebot ve AI botlarının sitenizi eksiksiz taraması için JavaScript SEO, Core Web Vitals ve sunucu optimizasyonu içeren teknik danışmanlık.",
     alternates: {
         canonical: '/seo/teknik-seo',
     },

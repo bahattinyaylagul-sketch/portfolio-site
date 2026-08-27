@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Zero-Click Arama: 2026 Verileri, Gerçek Etkisi ve Ne Yapmalı – Bahattin Yaylagül",
-    description: "2026'da Google aramalarının %68'i tıklamasız kapanıyor. Sektöre göre risk dağılımı, AI Bakışı ile AI Modu farkı, ölçümün metodolojik sınırları ve Türkiye'nin bu eğrideki yeri.",
+    title: "Zero-Click (Sıfır Tıklamalı) Aramalar ve Web Trafiğinin Geleceği",
+    description: "Kullanıcıların siteye girmeden AI özetleriyle yanıt aldığı sıfır tıklamalı arama trendinde markaların uygulayabileceği trafiği koruma stratejileri.",
     alternates: {
         canonical: "/geo/zero-click-arama",
     },

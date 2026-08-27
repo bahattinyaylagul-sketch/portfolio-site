@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "ChatGPT GEO: Yapay Zeka Yanıtlarında Kaynak Olarak Görünmenin Tam Rehberi – Bahattin Yaylagül",
-    description: "ChatGPT, Gemini ve Perplexity gibi yapay zeka arama motorlarının yanıtlarında markanızı kaynak olarak alıntılatmanın pratik yolları ve teknik optimizasyon rehberi.",
+    title: "ChatGPT GEO: SearchGPT'de Kaynak Gösterilme Rehberi",
+    description: "ChatGPT'nin arama özelliklerinde (SearchGPT) öne çıkmak ve modelin yanıtlarında markanıza atıf yapılmasını sağlamak için taktikler.",
     alternates: {
         canonical: "/geo/chatgpt-geo",
     },

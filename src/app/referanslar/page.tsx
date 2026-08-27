@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-    title: "Referanslar – Bahattin Yaylagül",
-    description: "Aktif Bank, N Kolay ve global markalarla yürüttüğümüz SEO & GEO süreçleri. Sektör liderlerinin dijital büyüme hikayelerinde nasıl rol aldığımızı keşfedin.",
+    title: "Referanslar ve Vaka Analizleri | Bahattin Yaylagül",
+    description: "Birlikte çalıştığım markalar, başarı hikayeleri ve organik trafiği nasıl ölçeklendirdiğimize dair detaylı SEO/GEO vaka analizlerini inceleyin.",
     alternates: {
         canonical: "/referanslar",
     },

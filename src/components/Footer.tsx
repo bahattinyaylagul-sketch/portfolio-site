@@ -1,32 +1,15 @@
 import Link from "next/link";
 
 const footerLinks = {
-    services: [
+    navigation: [
+        { label: "Ana Sayfa", href: "/" },
+        { label: "Hakkımda", href: "/hakkimda" },
+        { label: "İletişim", href: "mailto:bahattinyaylagul@gmail.com" },
+    ],
+    servicesAndResources: [
         { label: "SEO Danışmanlığı", href: "/seo" },
         { label: "GEO Danışmanlığı", href: "/geo" },
-        { label: "Teknik SEO & Altyapı", href: "/seo#uc-temel-alan" },
-        { label: "Semantik İçerik Stratejisi", href: "/seo#seo-kapsami" },
-    ],
-    resources: [
-        { label: "GEO & SEO İçgörüleri", href: "/geo" },
         { label: "Site Haritası", href: "/site-haritasi" },
-        { label: "EntityMap", href: "/entitymap.html" },
-    ],
-    seoTopics: [
-        { label: "Teknik SEO", href: "/seo/teknik-seo" },
-        { label: "Core Web Vitals", href: "/seo/core-web-vitals" },
-        { label: "Arama Niyeti", href: "/seo/arama-niyeti" },
-        { label: "Topikal Otorite", href: "/seo/topikal-otorite" },
-        { label: "E-E-A-T", href: "/seo/eeat-sinyalleri" },
-        { label: "Yerel SEO", href: "/seo/yerel-seo" },
-    ],
-    geoTopics: [
-        { label: "ChatGPT GEO", href: "/geo/chatgpt-geo" },
-        { label: "Perplexity GEO", href: "/geo/perplexity-geo" },
-        { label: "AI Overviews", href: "/geo/ai-overviews-nedir" },
-        { label: "llms.txt Rehberi", href: "/geo/llms-txt-nedir" },
-        { label: "Reddit Mention Etkisi", href: "/geo/reddit-forum-mention-etkisi" },
-        { label: "Marka Mention'ları", href: "/geo/ai-marka-mention-etkisi" },
     ],
     social: [
         { label: "LinkedIn", href: "https://www.linkedin.com/in/bahattin-yaylagul/", icon: "linkedin" },
@@ -40,7 +23,7 @@ export default function Footer() {
         <footer className="bg-foreground text-white py-12">
             <div className="max-w-[1400px] mx-auto px-6 md:px-8">
                 {/* Top Section */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
                     {/* Brand */}
                     <div className="col-span-2 md:col-span-1">
                         <Link
@@ -56,74 +39,45 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Services */}
+                    {/* Gezinti */}
                     <div>
                         <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
-                            Hizmetler
+                            Gezinti
                         </h3>
                         <ul className="space-y-2.5">
-                            {footerLinks.services.map((link) => (
+                            {footerLinks.navigation.map((link) => (
+                                <li key={link.label}>
+                                    {link.href.startsWith('mailto:') ? (
+                                        <a
+                                            href={link.href}
+                                            className="text-gray-400 hover:text-white text-sm transition-colors"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            href={link.href}
+                                            className="text-gray-400 hover:text-white text-sm transition-colors"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Hizmetler & Kaynaklar */}
+                    <div>
+                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
+                            Hizmetler & Kaynaklar
+                        </h3>
+                        <ul className="space-y-2.5">
+                            {footerLinks.servicesAndResources.map((link) => (
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
                                         className="text-gray-400 hover:text-white text-sm transition-colors"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Resources */}
-                    <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
-                            Kaynaklar
-                        </h3>
-                        <ul className="space-y-2.5">
-                            {footerLinks.resources.map((link) => (
-                                <li key={link.label}>
-                                    <Link
-                                        href={link.href}
-                                        className="text-gray-400 hover:text-white text-sm transition-colors"
-                                    >
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* SEO Topics */}
-                    <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
-                            SEO Konuları
-                        </h3>
-                        <ul className="space-y-2.5">
-                            {footerLinks.seoTopics.map((link) => (
-                                <li key={link.label}>
-                                    <Link
-                                        href={link.href}
-                                        className={`text-sm transition-colors ${link.label.includes('→') ? 'text-blue-400 hover:text-blue-300 font-bold' : 'text-gray-400 hover:text-white'}`}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* GEO Topics */}
-                    <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
-                            GEO Konuları
-                        </h3>
-                        <ul className="space-y-2.5">
-                            {footerLinks.geoTopics.map((link) => (
-                                <li key={link.label}>
-                                    <Link
-                                        href={link.href}
-                                        className={`text-sm transition-colors ${link.label.includes('→') ? 'text-violet-400 hover:text-violet-300 font-bold' : 'text-gray-400 hover:text-white'}`}
                                     >
                                         {link.label}
                                     </Link>

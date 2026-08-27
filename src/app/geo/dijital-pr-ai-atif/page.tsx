@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Dijital PR ve “En İyi X” Listeleri: AI Aramada Nasıl Atıf Alınır? – Bahattin Yaylagül",
-    description: "AI motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme, o listelere girme ve atıfı ölçülebilir GEO sinyaline çevirme rehberi.",
+    title: "Dijital PR ile AI Alıntı Oranını (Atıf) Artırmak",
+    description: "Üçüncü taraf liste içerikleri ve dijital PR kampanyalarıyla yapay zeka arama motorlarındaki marka referanslarınızı nasıl maksimize edersiniz?",
     alternates: {
         canonical: "/geo/dijital-pr-ai-atif",
     },

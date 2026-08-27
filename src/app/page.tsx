@@ -11,8 +11,8 @@ const Footer = dynamic(() => import("@/components/Footer"));
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bahattin Yaylagül – Yapay Zeka, GEO ve SEO Uzmanı",
-  description: "SEO ve GEO (Generative Engine Optimization) danışmanlığı ile markanızı geleceğe hazırlayın. Veri odaklı stratejilerle organik trafiğinizi ve otoritenizi artırın.",
+  title: "GEO Uzmanı, Yapay Zeka SEO Hizmetleri - Bahattin Yaylagül",
+  description: "GEO uzmanı Bahattin Yaylagül ile markanızı ChatGPT, Gemini ve AI Overviews'da görünür kılın. SEO ve GEO danışmanlığı için iletişime geçin.",
   alternates: {
     canonical: "/",
   },

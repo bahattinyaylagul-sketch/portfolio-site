@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli – Bahattin Yaylagül",
-    description: "MCP, WebMCP ve NLWeb protokollerinin çalıştıkları katmanlar, farkları, tarayıcı desteği ve hangi senaryoda hangisinin seçileceği.",
+    title: "MCP ve NLWeb: Model Context Protocol ile Web Entegrasyonu",
+    description: "Anthropic'in MCP (Model Context Protocol) mimarisi ve NLWeb protokolünün yapay zeka aracılarının internet ile etkileşimini nasıl dönüştürdüğünü inceleyin.",
     alternates: {
         canonical: "/geo/mcp-nlweb",
     },

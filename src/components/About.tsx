@@ -123,9 +123,25 @@ export default function About() {
                                 Projeler
                             </h2>
                             <p className="text-sm text-gray-500 mb-6 leading-relaxed">
-                                Bugüne kadar çalıştığım markalar.
+                                Bugüne kadar SEO, Teknik SEO ve büyüme stratejileri danışmanlığı verdiğim markalar.
                             </p>
-                            <ul className="flex flex-wrap gap-x-2 gap-y-1 text-sm text-gray-500 font-medium">
+
+                            {/* SR-Only & LLM Semantic Block: Visually hidden but readable by screen readers and AI crawlers */}
+                            <div className="sr-only">
+                                <h3>Sektörel Deneyimler ve Danışmanlık Verilen Markalar</h3>
+                                <ul>
+                                    <li><strong>Perakende & Giyim:</strong> Vans, The North Face, Levi's, Timberland, Tommy Hilfiger, Calvin Klein, Eastpak, LTB Jeans, Dockers, Hemington, Yargıcı, Gizia, Lee Cooper, Crocs</li>
+                                    <li><strong>Finans & Sigorta & Ödeme Sistemleri:</strong> Aktif Bank, N Kolay, Passo, NN Hayat, Mapfre Sigorta, Troy</li>
+                                    <li><strong>Teknoloji, Beyaz Eşya & İklimlendirme:</strong> Siemens, Bosch, Profilo, Panasonic, Daikin, EnPlus</li>
+                                    <li><strong>Gıda & Hızlı Tüketim (FMCG):</strong> Golf Dondurmaları, Kahve Dünyası, Little Caesars, Koroplast, Bahçıvan Peynir</li>
+                                    <li><strong>Sağlık & Kişisel Bakım & Kozmetik:</strong> Signal, Neutrogena, Eveshop, Bayındır Hastanesi</li>
+                                    <li><strong>Mobilya & Ev Dekorasyon:</strong> Yatsan, Enza Home</li>
+                                    <li><strong>Hizmet, Turizm & Diğer:</strong> Mandarin Oriental, Pronet, D-Smart, Suryapı</li>
+                                </ul>
+                            </div>
+
+                            {/* Visual Block for normal users */}
+                            <ul className="flex flex-wrap gap-x-2 gap-y-1 text-sm text-gray-500 font-medium" aria-hidden="true">
                                 {projects.map((proj, idx) => (
                                     <li key={idx} className="after:content-['•'] after:ml-2 last:after:content-none flex items-center">
                                         <span>{proj}</span>

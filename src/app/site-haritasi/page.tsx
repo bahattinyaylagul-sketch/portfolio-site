@@ -6,8 +6,8 @@ import FadeIn from '@/components/FadeIn';
 import { seoClusterData } from '@/lib/seo-data';
 
 export const metadata: Metadata = {
-    title: 'Site Haritası – Bahattin Yaylagül',
-    description: 'Web sitemizdeki tüm hizmetlere, teknik rehberlere ve blog içeriklerine tek noktadan ulaşın. SEO ve GEO konularındaki kapsamlı site hiyerarşisini inceleyin.',
+    title: "Site Haritası | Bahattin Yaylagül İçerik Dizini",
+    description: "Sitede yer alan tüm GEO rehberleri, SEO makaleleri ve danışmanlık hizmeti detaylarına site haritası üzerinden kolayca ulaşın.",
     alternates: {
         canonical: '/site-haritasi',
     },

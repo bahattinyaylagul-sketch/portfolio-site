@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Prompt Araştırması: Müşteriniz Yapay Zekaya Ne Soruyor? – Bahattin Yaylagül",
-    description: "GEO'da anahtar kelime araştırmasının yerini alan disiplin. Müşteri prompt'larını satış kayıtlarından, Search Console'dan ve forumlardan çıkarma yöntemi, 20–30 sorguluk sabit set kurma, dört kategori dengesi ve Türkçe prompt'ların kendine özgü davranışı.",
+    title: "Prompt (İstem) Araştırması: Kullanıcıların AI Sorgu Dili",
+    description: "Anahtar kelime araştırmasının yerini alan prompt araştırması ile kullanıcıların yapay zeka sohbet botlarına sorduğu kompleks soruları keşfedin.",
     alternates: {
         canonical: "/geo/prompt-arastirmasi",
     },

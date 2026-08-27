@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Google AI Modu Optimizasyonu: Yanıttaki 1-3 Kaynaktan Biri Olmak – Bahattin Yaylagül",
-    description: "Google AI Modu (AI Mode) Türkiye'de 18 Şubat 2026'da açıldı. Fan-out mekaniği, AI Bakışı ile farkı, kaynak gösterilmek için şema ve varlık taktikleri, Türkçe SERP fırsatı ve yeni KPI çerçevesi.",
+    title: "Google AI Modu Optimizasyonu: İlk 3 Kaynak Arasına Girmek",
+    description: "Google AI arama modunda yanıt kutusu içindeki referans linklerden biri olmak için içerik parçalama (chunking) ve intent uyumu stratejileri.",
     alternates: {
         canonical: "/geo/google-ai-modu",
     },

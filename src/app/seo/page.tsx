@@ -13,8 +13,8 @@ import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 import SEOClusterGrid from "@/components/SEOClusterGrid";
 
 export const metadata: Metadata = {
-    title: "SEO Danışmanlığı – Bahattin Yaylagül",
-    description: "Google'da organik trafiğinizi ve satışlarınızı artırmak için profesyonel SEO danışmanlığı. Teknik SEO, semantik içerik ve otorite inşası.",
+    title: "Kapsamlı SEO Danışmanlığı | E-Ticaret ve Kurumsal SEO",
+    description: "Sürdürülebilir organik büyüme için teknik altyapı, içerik mimarisi ve otorite inşasını kapsayan 360 derece kurumsal SEO danışmanlık hizmetleri.",
     openGraph: {
         title: "SEO Danışmanlığı – Bahattin Yaylagül",
         description: "Google'da organik trafiğinizi artırın",

@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "JavaScript, SSR ve AI Tarayıcıları: Siteniz Yapay Zekaya Görünüyor mu? – Bahattin Yaylagül",
-    description: "Büyük yapay zeka tarayıcılarının çoğu JavaScript çalıştırmıyor. Hangi botun ne yaptığı, hydration gap'in pratik sonuçları, SSR/ISR/pre-rendering seçimi, Türkiye'deki e-ticaret ve headless kurulumlarında sorunun nerede biriktiği ve sitenizi test etmenin yolları.",
+    title: "JavaScript (CSR/SSR) Sitelerde AI Bot Erişilebilirliği",
+    description: "Client-side rendering kullanan (React/Vue) web sitelerinde ChatGPT ve Claude tarayıcılarının içerik okuma sorunları ve Server-Side çözümler.",
     alternates: {
         canonical: "/geo/javascript-ssr-ai-botlari",
     },

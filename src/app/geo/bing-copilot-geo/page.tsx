@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Copilot ve Bing İndeksleme: Copilot'ta Görünmek İçin Ne Yapmalısınız? – Bahattin Yaylagül",
-    description: "Copilot yanıtlarını Bing indeksinden nasıl kurar, Copilot'un hangi yüzeyi web'e bakar, Bing ile Google arasındaki indeksleme farkları, IndexNow kurulumu, Bing Webmaster Tools raporları ve B2B için Copilot görünürlüğü.",
+    title: "Bing Copilot GEO Stratejisi: Arama ve AI Entegrasyonu",
+    description: "Bing'in Copilot (GPT-4) sohbet arayüzünde markanızın güvenilir kaynak olarak gösterilmesi için gerekli teknik ve içerik optimizasyonları.",
     alternates: {
         canonical: "/geo/bing-copilot-geo",
     },

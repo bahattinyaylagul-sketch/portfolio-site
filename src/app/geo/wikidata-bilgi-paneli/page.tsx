@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Wikidata ve Bilgi Paneli: Markanız İçin Google Bilgi Paneli Nasıl Alınır? – Bahattin Yaylagül",
-    description: "Marka sahipleri ve SEO danışmanları için Wikidata rehberi: Q kimliğiyle kayıt açma, zorunlu property'ler, kaynak zorunluluğu, Organization schema sameAs bağlantısı, Wikipedia çıkar çatışması uyarısı ve panel gelmediğinde teşhis adımları.",
+    title: "Wikidata Varlık Kaydı ve Bilgi Paneli Optimizasyonu",
+    description: "Markanızı Wikidata'da (Knowledge Graph) tanımlayarak Google Bilgi Paneli (Knowledge Panel) kazanma ve LLM güvenilirliği oluşturma adımları.",
     alternates: {
         canonical: "/geo/wikidata-bilgi-paneli",
     },

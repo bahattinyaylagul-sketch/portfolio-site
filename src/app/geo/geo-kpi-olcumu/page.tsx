@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi – Bahattin Yaylagül",
-    description: "GEO performansının iki katmanı: yanıtta geçme ve atıf alma. KPI çerçevesi, yanıt–atıf çapraz matrisi, araç almadan manuel prompt seti yöntemi ve yönetime raporlama kadansı.",
+    title: "GEO KPI Belirleme: Cevap Payı ve Görünürlük Ölçümü",
+    description: "Generative Engine Optimization (GEO) stratejinizin başarısını ölçmek için Share of Answer (Cevap Payı) ve model duyarlılığı metriklerini kullanın.",
     alternates: {
         canonical: "/geo/geo-kpi-olcumu",
     },

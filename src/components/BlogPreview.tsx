@@ -28,6 +28,14 @@ const latestPosts = [
         slug: "ai-marka-mention-etkisi",
         image: "/images/blog/ai-mention.png"
     },
+    {
+        title: "Entity SEO ve Bilgi Grafiği",
+        excerpt: "Arama motorlarının markanızı varlık olarak tanıması için Knowledge Graph kaydı, schema mimarisi ve ölçüm çerçevesi.",
+        date: "15 Şubat 2026",
+        category: "GEO / AI Search",
+        slug: "entity-seo",
+        image: "/images/entity-seo-hero.png"
+    },
     // Future posts can be added here
 ];
 

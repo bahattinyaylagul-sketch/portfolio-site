@@ -6,8 +6,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Perplexity GEO: Yapay Zeka Arama Motorunda Görünürlük Kazanma Rehberi – Bahattin Yaylagül",
-    description: "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için yapılması gereken optimizasyon pratikleri.",
+    title: "Perplexity GEO: Yanıt Motorunda (Answer Engine) Görünürlük",
+    description: "Araştırma odaklı yapay zeka arama motoru Perplexity'de alıntı ve dipnot olarak gösterilme (citation) olasılığını artıracak içerik yöntemleri.",
     alternates: {
         canonical: "/geo/perplexity-geo",
     },

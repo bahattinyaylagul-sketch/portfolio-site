@@ -51,7 +51,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    // 3. SEO Hub Sayfası — priority 0.9
+    // 3. GEO Hub Sayfaları — priority 0.9
+    const geoHubPages = [
+        '/geo/rehberler',
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: today,
+        changeFrequency: 'weekly' as const,
+        priority: 0.9,
+    }));
+
+    // 4. SEO Hub Sayfası — priority 0.9
     const seoHubPages = [
         '/seo/teknik-seo',
     ].map((route) => ({
@@ -71,5 +81,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         }));
 
-    return [...pillarPages, ...geoContent, ...seoHubPages, ...clusterRoutes];
+    return [...pillarPages, ...geoContent, ...geoHubPages, ...seoHubPages, ...clusterRoutes];
 }

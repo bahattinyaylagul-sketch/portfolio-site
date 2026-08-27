@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "İçerik Chunking: AI Sistemleri Bir Sayfanın Neresinden Alıntı Yapar? – Bahattin Yaylagül",
-    description: "İçerik chunking, metni yapay zeka sistemlerinin tek başına işleyebileceği pasajlara bölme tekniğidir. Pasaj boyutu, Türkçe tokenizasyon farkı, alıntılanabilir pasaj yazımı, RAG retrieval hattı ve chunking denetimi.",
+    title: "İçerik Chunking (Bölümleme): Yapay Zeka İçin Semantik Yapı",
+    description: "Büyük dil modellerinin içeriğinizi eksiksiz anlaması ve Retrieval-Augmented Generation (RAG) sistemlerinde kullanması için chunking (parçalama) teknikleri.",
     alternates: {
         canonical: "/geo/icerik-chunking",
     },

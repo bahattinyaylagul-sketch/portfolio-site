@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "AI Bakışı (AI Overviews) Nedir? Nasıl Çalışır, Türkiye'de Ne Değişti? – Bahattin Yaylagül",
-    description: "AI Bakışı nedir, nasıl çalışır, hangi sorgularda görünür, Türkiye'de 18 Şubat 2026'da ne değişti; organik trafiğe etkisi, görünürlük kriterleri, Search Console ile ölçüm ve çıkış seçenekleri.",
+    title: "Google AI Overviews (AI Bakışı) Nedir? Optimizasyon Rehberi",
+    description: "Google'ın AI Bakışı özelliğinde sitenizin nasıl yer alabileceğini, organik trafiğe etkilerini ve optimizasyon (AIO) tekniklerini inceleyin.",
     alternates: {
         canonical: "/geo/ai-overviews-nedir",
     },

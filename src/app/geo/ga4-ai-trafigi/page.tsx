@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "GA4'te AI Trafiği Nasıl Takip Edilir? Kanal Kurulumu ve Raporlama – Bahattin Yaylagül",
-    description: "GA4'te ChatGPT ve Perplexity trafiğini ayrı bir kanalda toplama: regex tabanlı özel kanal grubu kurulumu, dört kartlık Looker Studio panosu, sunucu logunda yapay zeka bot user-agent'larının izlenmesi ve Türkiye'ye özgü Direct şişmesi sorunu.",
+    title: "GA4'te Yapay Zeka (AI) Trafiği Nasıl Ölçülür?",
+    description: "Google Analytics 4 kullanarak Perplexity, ChatGPT ve Copilot'tan gelen yönlendirme trafiklerini ayrıştırma ve GEO performansını ölçme rehberi.",
     alternates: {
         canonical: "/geo/ga4-ai-trafigi",
     },

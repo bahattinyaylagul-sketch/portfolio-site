@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Yapay Zeka Araması Nasıl Çalışır? RAG ve Grounding Rehberi – Bahattin Yaylagül",
-    description: "Yapay zeka arama motorlarının cevabı nasıl ürettiği: RAG zincirinin sekiz adımı, grounding ile RAG farkı, RAG'ın yetersiz kaldığı durumlar ve Türkçe içerikte getirmenin nasıl farklı çalıştığı.",
+    title: "Yapay Zeka Araması Nasıl Çalışır? RAG ve Grounding Sistemi",
+    description: "Retrieval-Augmented Generation (RAG) mimarisinin büyük dil modellerindeki halüsinasyonları nasıl azalttığını ve kaynaklandırmayı (grounding) nasıl yaptığını öğrenin.",
     alternates: {
         canonical: "/geo/yapay-zeka-arama-nasil-calisir",
     },

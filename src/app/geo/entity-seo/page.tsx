@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Entity SEO ve Bilgi Grafiği: Arama Motorları Markanızı Nasıl Tanır? – Bahattin Yaylagül",
-    description: "Entity SEO nedir, Knowledge Graph ile Knowledge Panel farkı, markayı varlık olarak tanıtmanın dört adımı, ölçüm çerçevesi ve Türkiye'ye özel notlar.",
+    title: "Entity SEO: Varlık Tabanlı Optimizasyon ve Bilgi Grafiği",
+    description: "Google ve yapay zeka modelleri için anahtar kelime yerine varlık (entity) temelli içerik inşa ederek algoritmik güven (E-E-A-T) oluşturun.",
     alternates: {
         canonical: "/geo/entity-seo",
     },

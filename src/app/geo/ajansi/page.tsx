@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
@@ -8,10 +7,10 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Query Fan-Out (Sorgu Çoğaltma) Nedir? Arama Niyeti Dağılımı",
-    description: "Google AI'ın kullanıcının tek bir sorgusunu arka planda birden çok alt sorguya bölerek (Query Fan-Out) nasıl daha derinlemesine sonuç ürettiğini anlayın.",
+    title: "GEO Ajansı Nedir, Nasıl Seçilir? (2026 Rehberi)",
+    description: "GEO ajansı tam olarak ne yapar? SEO'dan farkı nedir? Yapay zeka görünürlüğünü nasıl ölçer ve bir GEO projesi hangi aşamalardan oluşur? Seçim rehberini inceleyin.",
     alternates: {
-        canonical: "/geo/query-fan-out",
+        canonical: "/geo/ajansi",
     },
 };
 
@@ -20,23 +19,23 @@ const jsonLd = JSON.stringify({
     "@graph": [
         {
             "@type": "Article",
-            "@id": "https://bahattinyaylagul.com/geo/query-fan-out#article",
-            "headline": "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?",
-            "description": "Query fan-out, tek bir sorgunun arka planda birden fazla alt sorguya bölünerek işlenmesidir. Google AI Modu ve AI Bakışı'nın çalışma mekanizması, fan-out'un tetiklendiği sorgu tipleri, alt sorgu tespiti ve içerik kümesi stratejisi.",
-            "datePublished": "2026-08-15",
-            "dateModified": "2026-08-15",
+            "@id": "https://bahattinyaylagul.com/geo/ajansi#article",
+            "headline": "GEO Ajansı Nedir, Nasıl Seçilir? (2026 Rehberi)",
+            "description": "GEO ajansı; markaların ChatGPT, Gemini, Perplexity, Google AI Overviews ve AI Mode gibi yapay zeka tabanlı arama deneyimlerinde görünür olmasına yardımcı olur.",
+            "datePublished": "2026-08-21",
+            "dateModified": "2026-08-21",
             "author": AUTHOR_ENTITY,
             "publisher": { "@id": "https://bahattinyaylagul.com/#organization" },
-            "url": "https://bahattinyaylagul.com/geo/query-fan-out",
+            "url": "https://bahattinyaylagul.com/geo/ajansi",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://bahattinyaylagul.com/geo/query-fan-out"
+                "@id": "https://bahattinyaylagul.com/geo/ajansi"
             },
             "isPartOf": { "@id": "https://bahattinyaylagul.com/geo#webpage" },
             "inLanguage": "tr-TR",
             "about": [
-                { "@type": "Thing", "name": "Temeller & Terminoloji" },
-                { "@type": "Thing", "name": "Generative Engine Optimization" }
+                { "@type": "Thing", "name": "Generative Engine Optimization" },
+                { "@type": "Thing", "name": "SEO Danışmanlığı" }
             ]
         },
         {
@@ -44,69 +43,53 @@ const jsonLd = JSON.stringify({
             "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://bahattinyaylagul.com/" },
                 { "@type": "ListItem", "position": 2, "name": "GEO Danışmanlığı", "item": "https://bahattinyaylagul.com/geo" },
-                { "@type": "ListItem", "position": 3, "name": "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?", "item": "https://bahattinyaylagul.com/geo/query-fan-out" }
+                { "@type": "ListItem", "position": 3, "name": "GEO Ajansı Nedir?", "item": "https://bahattinyaylagul.com/geo/ajansi" }
             ]
         },
         {
             "@type": "FAQPage",
             "mainEntity": [
                 {
-                                "@type": "Question",
-                                "name": "Query fan-out her sorgu için mi tetiklenir?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Hayır. Navigasyonel sorgular, işlemsel sorgular ve doğrudan gerçek tabanlı sorular genellikle fan-out sürecini başlatmaz. Asıl tetikleyiciler \"en iyi\", \"nasıl\", \"vs\" gibi terimler içeren bilgilendirici, karşılaştırmalı ya da problem çözme sorgularıdır."
-                                }
+                    "@type": "Question",
+                    "name": "GEO ajansı ne kadar sürede sonuç alır?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Her proje için geçerli sabit bir süre yoktur. Bot erişimi gibi teknik sorunlar kısa sürede giderilebilir. Marka hakkında yeni ve güvenilir kaynakların oluşması, konu otoritesinin gelişmesi ve öneri bağlamının değişmesi daha uzun sürer. İlk 90 günü kesin sonuç dönemi değil; ölçüm sisteminin kurulduğu ve etkili müdahalelerin belirlendiği dönem olarak görmek daha doğrudur."
+                    }
                 },
                 {
-                                "@type": "Question",
-                                "name": "Google hangi alt sorguların üretildiğini paylaşıyor mu?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Paylaşmıyor. Bir sorgudan kaç ve hangi alt sorgunun işlendiği kamuoyuyla paylaşılmıyor."
-                                }
+                    "@type": "Question",
+                    "name": "GEO, SEO'nun yerini alır mı?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hayır. GEO, SEO'nun üzerine kurulur ve onu tamamlar. Sayfa taranamıyor, indekslenmiyor veya kullanıcıya anlamlı bir değer vermiyorsa üretken yapay zeka sistemlerinde görünürlük kazanma ihtimali de sınırlanır."
+                    }
                 },
                 {
-                                "@type": "Question",
-                                "name": "Query fan-out ile query expansion arasındaki fark nedir?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Query expansion tek bir sorguyu eş anlamlılar veya ilgili terimlerle genişletir; ortada hâlâ tek bir arama vardır. Query fan-out ise orijinal sorguyu birden fazla bağımsız alt sorguya böler ve bunları paralel çalıştırır. Birincisi sorguyu zenginleştirir, ikincisi çoğaltır."
-                                }
+                    "@type": "Question",
+                    "name": "Hangi sektörlerde GEO daha anlamlıdır?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Özellikle insanların seçenekleri araştırdığı ve markaları karşılaştırdığı alanlarda önem kazanır. Finans, sağlık, yazılım, eğitim, e-ticaret ve B2B hizmetler bunlara örnek verilebilir. Yine de sırf sektör popüler diye yatırım kararı verilmemeli; gerçek kullanıcı sorguları ve markanın mevcut görünürlüğü önce ölçülmelidir."
+                    }
                 },
                 {
-                                "@type": "Question",
-                                "name": "Türkiye'de AI Modu ne zaman açıldı?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "18 Şubat 2026'da. Duyuruyu Google Türkiye Ülke Direktörü Mehmet Keteloğlu yaptı. Türkiye, özelliğin daha önce yayıldığı 180 ülkelik dalganın dışında kalmıştı; bu gecikme Türkçe içerik üretenler için hâlâ açık bir rekabet penceresi bırakıyor."
-                                }
+                    "@type": "Question",
+                    "name": "Yapay zeka görünürlüğü elle takip edilebilir mi?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Az sayıda sorgu için evet. Sorguyu, platformu, tarihi, dili, marka mention'ını ve kullanılan kaynakları düzenli kaydetmek gerekir. Sorgu ve rakip sayısı büyüdükçe manuel takip zorlaşır; tutarlılık sorunu ve karşılaştırma hataları artar."
+                    }
                 },
                 {
-                                "@type": "Question",
-                                "name": "Fan-out performansını nasıl ölçerim?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Doğrudan bir metrik yok. Pratik yaklaşım, AI Modu yanıtlarında sitenizin kaç farklı sayfasının kaynak gösterildiğini izlemek. Yanıt başına birden fazla sayfa görünüyorsa içerik kümeniz fan-out sorgularını karşılıyordur."
-                                }
-                },
-                {
-                                "@type": "Question",
-                                "name": "ChatGPT ve Claude da fan-out yapıyor mu?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Evet. Claude, ChatGPT ve Gemini gibi yanıt motorları kapsamlı yanıt üretmek için tek bir kullanıcı promptunu birden fazla sorguya dönüştürüyor. AI Modu, Gemini'nin Deep Research özelliğine benzer biçimde çalışıyor ancak çok daha hızlı."
-                                }
-                },
-                {
-                                "@type": "Question",
-                                "name": "Gemini güncellemesi fan-out'u nasıl değiştirdi?",
-                                "acceptedAnswer": {
-                                                "@type": "Answer",
-                                                "text": "Gemini 3 güncellemesiyle AI Modu, daha önce kaçırdığı yeni içerikleri bulabiliyor. Bu, taze ve iyi yapılandırılmış içeriğin fan-out sürecinde kaynak olarak seçilme ihtimalini artırıyor."
-                                }
+                    "@type": "Question",
+                    "name": "Structured data kullanmak görünürlüğü garanti eder mi?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hayır. Structured data, arama sistemlerinin sayfadaki bilgileri daha net anlamasına yardımcı olur ve görünür içerikle aynı şeyi söylemelidir. Tek başına sıralama, kaynak gösterilme veya önerilme garantisi sunmaz."
+                    }
                 }
-]
+            ]
         }
     ]
 });
@@ -125,8 +108,8 @@ export default function Page() {
             <header className="w-full bg-gray-900 pt-16 pb-0 relative overflow-hidden mt-20">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/search_intent_3d.png"
-                        alt="Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?"
+                        src="/images/entity-seo-hero.png"
+                        alt="GEO Ajansı Nedir?"
                         fill
                         sizes="(max-width: 768px) 1px, 100vw"
                         className="object-cover opacity-20 hidden md:block"
@@ -151,11 +134,11 @@ export default function Page() {
                                 </div>
 
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
-                                    Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?
+                                    GEO Ajansı Nedir, Nasıl Seçilir? (2026 Rehberi)
                                 </h1>
 
                                 <p className="lead-text text-gray-300 text-lg leading-relaxed font-medium max-w-xl mb-8">
-                                    Query fan-out, tek bir sorgunun arka planda birden fazla alt sorguya bölünerek işlenmesidir. Google AI Modu ve AI Bakışı'nın çalışma mekanizması, fan-out'un tetiklendiği sorgu tipleri, alt sorgu tespiti ve içerik kümesi stratejisi.
+                                    GEO ajansı; markaların ChatGPT, Gemini, Perplexity, Google AI Overviews ve AI Mode gibi yapay zeka tabanlı arama deneyimlerinde görünür olmasına yardımcı olur. 
                                 </p>
 
                                 <div className="border-t border-white/10 pt-6 flex flex-wrap items-center gap-4 text-sm font-medium text-gray-400">
@@ -163,13 +146,13 @@ export default function Page() {
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
-                                        <span>15 Ağustos 2026</span>
+                                        <span>21 Ağustos 2026</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <svg className="w-4 h-4 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                         </svg>
-                                        <span>13 dk okuma</span>
+                                        <span>7 dk okuma</span>
                                     </div>
                                 </div>
                             </div>
@@ -208,8 +191,8 @@ export default function Page() {
 
                         <div className="relative hidden lg:block h-[500px] w-full">
                             <Image
-                                src="/images/search_intent_3d.png"
-                                alt="Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?"
+                                src="/images/entity-seo-hero.png"
+                                alt="GEO Ajansı Nedir?"
                                 fill
                                 sizes="(max-width: 1024px) 1px, 50vw"
                                 className="object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
@@ -226,7 +209,7 @@ export default function Page() {
                     <span className="text-gray-200">/</span>
                     <Link href="/geo" className="hover:text-violet-600 transition-colors">GEO Danışmanlığı</Link>
                     <span className="text-gray-200">/</span>
-                    <span className="text-gray-600 font-bold truncate">Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?</span>
+                    <span className="text-gray-600 font-bold truncate">GEO Ajansı Nedir, Nasıl Seçilir? (2026 Rehberi)</span>
                 </nav>
 
                 <ArticleContent />

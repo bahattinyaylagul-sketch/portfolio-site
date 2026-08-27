@@ -11,8 +11,8 @@ import Breadcrumb, { getBreadcrumbSchema } from "@/components/Breadcrumb";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "Hakkımda – Bahattin Yaylagül",
-    description: "12+ yıllık deneyimle sunulan SEO ve GEO danışmanlığı. Ajans ve kurumsal projelerdeki başarı hikayeleri, stratejik yaklaşım ve yetkinlikler hakkında bilgi alın.",
+    title: "Hakkımda | Bahattin Yaylagül - SEO & GEO Danışmanı",
+    description: "10 yılı aşkın süredir SEO ve teknik danışmanlık hizmeti veriyorum. Markanızı Google ve yapay zeka arama motorlarında organik olarak büyütüyorum.",
     alternates: {
         canonical: "/hakkimda",
     },

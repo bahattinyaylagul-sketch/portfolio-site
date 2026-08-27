@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "SEO, GEO, AEO ve LLMO Farkı: Hangi Terimi Ne Zaman Kullanmalısınız? – Bahattin Yaylagül",
-    description: "SEO, GEO, AEO, AIO ve LLMO terimlerinin hedef yüzey, metrik ve platform farkları; hangi hedefte hangi çerçevenin kullanılacağı ve ölçüm karşılıkları.",
+    title: "SEO, GEO ve AEO Farkları: Doğru Terimi Seçmek",
+    description: "Arama Motoru Optimizasyonu (SEO) ile Yapay Zeka Cevap Optimizasyonu (AEO ve GEO) arasındaki mekanik farkları ve uygulama senaryolarını öğrenin.",
     alternates: {
         canonical: "/geo/geo-seo-aeo-farki",
     },

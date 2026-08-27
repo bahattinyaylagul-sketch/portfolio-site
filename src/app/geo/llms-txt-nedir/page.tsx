@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "llms.txt Nedir? Format, Analiz ve Uygulama Rehberi",
-    description: "llms.txt nedir, nasıl oluşturulur ve gerçekten işe yarıyor mu? 300.000 domain analizi, robots.txt farkı, format rehberi ve maliyet-fayda değerlendirmesi.",
+    title: "llms.txt Dosyası Nedir? Yapay Zeka Botları İçin Site Haritası",
+    description: "Web sitenize /llms.txt ekleyerek büyük dil modellerine okunabilir bir özet sunmanın yolları, avantajları ve standart Markdown kullanımı.",
     alternates: {
         canonical: "/geo/llms-txt-nedir",
     },

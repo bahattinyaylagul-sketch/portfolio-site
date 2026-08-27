@@ -1,169 +1,5 @@
 import Link from 'next/link';
-
-interface GEOItem {
-    title: string;
-    href: string;
-    desc: string;
-}
-
-interface ClusterGroup {
-    code: string;
-    label: string;
-    items: GEOItem[];
-}
-
-/*
- * Grup sırası §6.1: B → C → D → E → A
- * (platform ve teknik önce; ticari niyet yukarıda kalsın)
- * A ve E cluster henüz spoke içermiyor — aktif olduğunda eklenecek.
- */
-const clusters: ClusterGroup[] = [
-    {
-        code: "B",
-        label: "Platform Bazlı GEO",
-        items: [
-            {
-                title: "ChatGPT GEO: Kaynak Gösterilme Rehberi",
-                href: "/geo/chatgpt-geo",
-                desc: "ChatGPT'nin yanıtlarında markanızı kaynak olarak alıntılaması için içerik ve teknik yapınızı optimize etme rehberi."
-            },
-            {
-                title: "Perplexity GEO: Görünürlük Kazanma Rehberi",
-                href: "/geo/perplexity-geo",
-                desc: "Perplexity AI aramalarında alıntılanmak, kaynak olarak önerilmek ve organik AI trafiğinizi artırmak için optimizasyon pratikleri."
-            },
-            {
-                title: "AI Overviews Nedir? SEO'ya Etkisi ve İçerik Stratejisi",
-                href: "/geo/ai-overviews-nedir",
-                desc: "Google AI Bakışı'nın nasıl çalıştığı, organik trafiğe etkisi ve AIO'da kaynak olarak görünmek için içerik stratejisi."
-            },
-            {
-                title: "Google AI Modu Optimizasyonu: Yanıttaki 1-3 Kaynaktan Biri Olmak",
-                href: "/geo/google-ai-modu",
-                desc: "Google AI Modu'nun fan-out mekaniği, AI Bakışı'ndan farkı, kaynak gösterilmek için yapmanız gerekenler ve Türkçe sorgularda rekabetin neden hâlâ seyrek olduğu."
-            },
-            {
-                title: "Gemini GEO Optimizasyonu: Google'ın Yapay Zeka Arayüzlerinde Öne Çıkmak",
-                href: "/geo/gemini-geo",
-                desc: "Google Gemini ve AI Modu yanıtlarında marka görünürlüğü kazanmak için yapay zeka arama optimizasyonu rehberi."
-            },
-            {
-                title: "Bing Copilot GEO: Arama ve Sohbet Entegrasyonunda Kaynak Olmak",
-                href: "/geo/bing-copilot-geo",
-                desc: "Bing Copilot ve arama entegreli sohbet yanıtlarında alıntılanmak için yapılması gereken teknik ve editoryal adımlar."
-            },
-        ]
-    },
-    {
-        code: "C",
-        label: "Teknik GEO",
-        items: [
-            {
-                title: "llms.txt Nedir?",
-                href: "/geo/llms-txt-nedir",
-                desc: "Yapay zeka modellerinin sitenizi doğru taraması için kök dizin standardı ve uygulama rehberi."
-            },
-            {
-                title: "MCP, WebMCP ve NLWeb: Farkları ve Hangisini Seçmeli",
-                href: "/geo/mcp-nlweb",
-                desc: "MCP, WebMCP ve NLWeb protokollerinin çalıştıkları katmanlar, farkları, tarayıcı desteği ve hangi senaryoda hangisinin seçileceği."
-            },
-            {
-                title: "AI Botları ve Robots.txt Yönetimi: Tarayıcılara Doğru İzinleri Vermek",
-                href: "/geo/ai-botlari-robots-txt",
-                desc: "GPTBot, ClaudeBot ve diğer yapay zeka crawler'larına robots.txt ile doğru erişim izinlerini vermenin teknik rehberi."
-            },
-            {
-                title: "JavaScript, SSR ve AI Botları: Yapay Zekaya Okunabilir Site Sunmak",
-                href: "/geo/javascript-ssr-ai-botlari",
-                desc: "Client-side rendering, server-side rendering ve yapay zeka botlarının tarama davranışı ile sayfa oluşturma (hydration) ilişkisi."
-            },
-        ]
-    },
-    {
-        code: "E",
-        label: "Ölçüm & Analitik",
-        items: [
-            {
-                title: "GA4'te AI Trafiği Ölçümü: Üretken Arama Trafiğini Ayrıştırmak",
-                href: "/geo/ga4-ai-trafigi",
-                desc: "Yapay zeka arama motorlarından ve sohbet botlarından gelen organik yönlendirme trafiğini Google Analytics 4 üzerinde filtreleme."
-            },
-            {
-                title: "Prompt Araştırması: Kullanıcıların AI Arama Motorlarında Sorma Dilini Anlamak",
-                href: "/geo/prompt-arastirmasi",
-                desc: "Kullanıcıların yapay zeka sistemlerinde sorduğu sorguları, takip sorularını ve sorma dilini (conversational prompts) tespit etme yöntemleri."
-            },
-            {
-                title: "GEO Nasıl Ölçülür? KPI, Cevap Payı ve Atıf Ölçümü Rehberi",
-                href: "/geo/geo-kpi-olcumu",
-                desc: "Yanıtta geçme oranı, atıf frekansı ve cevap payı metrikleri; manuel prompt takip seti oluşturma ve KPI raporlama çerçevesi."
-            },
-        ]
-    },
-    {
-        code: "D",
-        label: "İçerik & Otorite",
-        items: [
-            {
-                title: "Entity SEO ve Bilgi Grafiği",
-                href: "/geo/entity-seo",
-                desc: "Arama motorlarının markanızı varlık olarak tanıması için Knowledge Graph kaydı, schema mimarisi ve ölçüm çerçevesi."
-            },
-            {
-                title: "Marka Mention'ları ve AI Hafızası",
-                href: "/geo/ai-marka-mention-etkisi",
-                desc: "Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri ve kalıcılık etkisi."
-            },
-            {
-                title: "Reddit ve Forum Mention'larının GEO Etkisi",
-                href: "/geo/reddit-forum-mention-etkisi",
-                desc: "Sosyal medya ve topluluk kanallarındaki atıfların yapay zeka tavsiyelerine doğrudan etkisi."
-            },
-            {
-                title: "Dijital PR ve \"En İyi X\" Listeleri",
-                href: "/geo/dijital-pr-ai-atif",
-                desc: "Yapay zeka arama motorlarının öneri sorgularında hangi editöryel listeleri okuduğunu tespit etme ve atıf payı kazanma."
-            },
-            {
-                title: "Wikidata ve Bilgi Paneli: Markanızı Bilgi Grafiğinde Tanımlamak",
-                href: "/geo/wikidata-bilgi-paneli",
-                desc: "Arama motorlarının ve modellerin markanızı bir varlık (entity) olarak tanıması için Wikidata ve Knowledge Graph kaydı."
-            },
-        ]
-    },
-    {
-        code: "A",
-        label: "Temeller & Terminoloji",
-        items: [
-            {
-                title: "SEO, GEO, AEO ve LLMO Farkı: Hangi Terimi Ne Zaman Kullanmalısınız?",
-                href: "/geo/geo-seo-aeo-farki",
-                desc: "SEO, GEO, AEO, AIO ve LLMO terimlerinin hedef yüzey, metrik ve platform farkları; hangi hedefte hangi çerçevenin kullanılacağı."
-            },
-            {
-                title: "Query Fan-Out Nedir? Google AI Modu Tek Sorguyu Nasıl Çoğaltır?",
-                href: "/geo/query-fan-out",
-                desc: "Tek bir sorgunun arka planda onlarca alt sorguya bölünmesi ve içerik kümenizin bu dağılımı nasıl karşılaması gerektiği."
-            },
-            {
-                title: "Yapay Zeka Araması Nasıl Çalışır? RAG ve Grounding Rehberi",
-                href: "/geo/yapay-zeka-arama-nasil-calisir",
-                desc: "Modelin cevabı üretirken izlediği sekiz adımlık zincir ve içeriğinizin bu zincirin hangi halkasında elendiğini anlama rehberi."
-            },
-            {
-                title: "İçerik Chunking: AI Sistemleri Bir Sayfanın Neresinden Alıntı Yapar?",
-                href: "/geo/icerik-chunking",
-                desc: "İçeriği yapay zeka sistemlerinin daha kolay işleyebileceği parçalara (chunks) bölme, Türkçe tokenizasyon farkı ve pasaj yazımı."
-            },
-            {
-                title: "Zero-Click Arama: 2026 Verileri, Gerçek Etkisi ve Ne Yapmalı",
-                href: "/geo/zero-click-arama",
-                desc: "Google aramalarının zero-click kapanma oranları, 2026 clickstream verileri, arama niyetleri ve bu dönüşüme karşı içerik konumlandırma."
-            },
-        ]
-    },
-];
+import { clusters } from '@/lib/geo-data';
 
 export default function GEOClusterGrid() {
     return (
@@ -180,12 +16,14 @@ export default function GEOClusterGrid() {
 
                 {clusters.map((cluster) => (
                     <div key={cluster.code} className="rehber-grubu mb-12 last:mb-0" data-cluster={cluster.code}>
-                        <h3 className="text-lg font-bold text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-3">
-                            <span className="w-8 h-0.5 bg-violet-400 rounded-full"></span>
-                            {cluster.label}
-                        </h3>
+                        <div className="flex items-center justify-between mb-6">
+                            <h3 className="text-lg font-bold text-gray-500 uppercase tracking-widest flex items-center gap-3">
+                                <span className="w-8 h-0.5 bg-violet-400 rounded-full"></span>
+                                {cluster.label}
+                            </h3>
+                        </div>
                         <div className="rehber-kartlari grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                            {cluster.items.map((item, idx) => (
+                            {cluster.items.slice(0, 3).map((item, idx) => (
                                 <article
                                     key={idx}
                                     className="rehber-kart group bg-white p-8 rounded-3xl border border-gray-200/60 hover:border-violet-500 hover:shadow-xl hover:shadow-violet-500/[0.04] transition-all duration-300 flex flex-col justify-between"
@@ -212,6 +50,18 @@ export default function GEOClusterGrid() {
                         </div>
                     </div>
                 ))}
+                
+                <div className="mt-16 text-center">
+                    <Link 
+                        href="/geo/rehberler" 
+                        className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-bold text-white bg-violet-600 rounded-full hover:bg-violet-700 hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300"
+                    >
+                        Tüm GEO Rehberlerini Keşfet
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </Link>
+                </div>
             </div>
         </section>
     );

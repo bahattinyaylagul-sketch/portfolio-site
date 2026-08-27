@@ -8,8 +8,8 @@ import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
 
 export const metadata: Metadata = {
-    title: "AI Botlarını robots.txt ile Yönetme: GPTBot, ClaudeBot ve Ötesi – Bahattin Yaylagül",
-    description: "GPTBot, OAI-SearchBot, ClaudeBot, Google-Extended, CCBot, Bytespider ve Perplexity-User için robots.txt yapılandırması. Eğitimi kesip ChatGPT Search'te kalma yöntemi, kopya-yapıştır bloklar, Cloudflare Content Signals ve uyumsuz botlar için WAF önlemleri.",
+    title: "AI Botları ve Robots.txt Yönetimi: Tarama İzinleri",
+    description: "GPTBot ve ClaudeBot gibi yapay zeka tarayıcılarına robots.txt üzerinden nasıl erişim izni vereceğinizi veya kısıtlayacağınızı detaylı öğrenin.",
     alternates: {
         canonical: "/geo/ai-botlari-robots-txt",
     },

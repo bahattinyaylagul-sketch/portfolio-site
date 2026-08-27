@@ -7,8 +7,10 @@ export const AUTHOR_ENTITY = {
   "@type": "Person",
   "@id": "https://bahattinyaylagul.com/#bahattin-yaylagul",
   "name": "Bahattin Yaylagül",
+  "alternateName": "Bahattin Yaylagül GEO Uzmanı",
   "url": "https://bahattinyaylagul.com",
-  "jobTitle": "SEO & GEO Danışmanı",
+  "jobTitle": "SEO & GEO Consultant",
+  "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
   "sameAs": [
     "https://www.linkedin.com/in/bahattin-yaylagul/",
     "https://medium.com/@bahattinyaylagl"
@@ -39,8 +41,8 @@ export const WEBSITE_ENTITY = {
   "@type": "WebSite",
   "@id": "https://bahattinyaylagul.com/#website",
   "url": "https://bahattinyaylagul.com",
-  "name": "Bahattin Yaylagül | SEO & GEO Danışmanı",
-  "description": "SEO ve GEO (Generative Engine Optimization) danışmanlığı. Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu.",
+  "name": "Bahattin Yaylagül | SEO Danışmanı & GEO Uzmanı",
+  "description": "SEO danışmanlığı ve GEO (Generative Engine Optimization) uzmanlığı. Arama motorları ve yapay zeka sistemleri için içerik optimizasyonu.",
   "publisher": { "@id": "https://bahattinyaylagul.com/#bahattin-yaylagul" },
   "inLanguage": "tr-TR"
 } as const;
