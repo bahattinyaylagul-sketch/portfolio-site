@@ -133,43 +133,48 @@ export default function ArticleContent() {
                         İyi bir GEO projesi “Ayda kaç içerik yazacağız?” sorusuyla başlamaz. Önce markanın bugünkü durumu ölçülür. Aksi halde üç ay sonra neyin değiştiğini gösterecek güvenilir bir başlangıç noktası olmaz.
                     </p>
 
-                    <figure className="my-10 not-prose" role="img" aria-label="GEO ajansı iş akışı diyagramı: 1) Sorgu evreni belirleme, 2) Teknik erişim kontrolü, 3) İçerik optimizasyonu, 4) Dış kaynak analizi, 5) Düzenli ölçüm ve raporlama adımlarından oluşan 5 aşamalı süreç.">
-                        <svg viewBox="0 0 620 400" className="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <circle cx="36" cy="40" r="20" fill="#7c3aed"/>
-                            <text x="36" y="46" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">1</text>
-                            <text x="70" y="36" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Sorgu Evreni Belirleme</text>
-                            <text x="70" y="54" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Kullanıcıların yapay zekaya sorduğu soruları tespit et</text>
+                    <figure className="my-10 not-prose" role="img" aria-label="GEO ajansı iş akışı diyagramı: 1) Talep ve sorgu analizi, 2) Görünürlük ve gap analizi, 3) Konu ve içerik stratejisi, 4) Teknik, içerik ve otorite aksiyonları, 5) Ölçüm ve sürekli optimizasyon adımlarından oluşan 5 aşamalı süreç.">
+                        <svg viewBox="0 0 750 500" className="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="36" cy="45" r="20" fill="#7c3aed"/>
+                            <text x="36" y="51" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">1</text>
+                            <text x="70" y="37" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Talep ve Sorgu Analizi</text>
+                            <text x="70" y="55" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Google ve AI platformlarındaki kullanıcı taleplerini,</text>
+                            <text x="70" y="69" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">sorguları ve soru kalıplarını belirleme.</text>
 
-                            <line x1="36" y1="60" x2="36" y2="100" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
+                            <line x1="36" y1="65" x2="36" y2="115" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
 
-                            <circle cx="36" cy="120" r="20" fill="#7c3aed"/>
-                            <text x="36" y="126" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">2</text>
-                            <text x="70" y="116" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Teknik Erişim Kontrolü</text>
-                            <text x="70" y="134" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Bot izinleri, WAF, JS rendering ve indekslenme denetimi</text>
+                            <circle cx="36" cy="135" r="20" fill="#7c3aed"/>
+                            <text x="36" y="141" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">2</text>
+                            <text x="70" y="127" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Görünürlük ve Gap Analizi</text>
+                            <text x="70" y="145" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Markanın mention, citation, rakip görünürlüğü ve topic coverage</text>
+                            <text x="70" y="159" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">açısından eksik olduğu alanları tespit etme.</text>
 
-                            <line x1="36" y1="140" x2="36" y2="180" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
+                            <line x1="36" y1="155" x2="36" y2="205" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
 
-                            <circle cx="36" cy="200" r="20" fill="#7c3aed"/>
-                            <text x="36" y="206" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">3</text>
-                            <text x="70" y="196" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">İçerik Optimizasyonu</text>
-                            <text x="70" y="214" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">İçeriği kaynak ve cevap niteliği kazanacak biçimde düzenle</text>
+                            <circle cx="36" cy="225" r="20" fill="#7c3aed"/>
+                            <text x="36" y="231" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">3</text>
+                            <text x="70" y="217" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Konu ve İçerik Stratejisi</text>
+                            <text x="70" y="235" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Topic → subtopic → intent → specialized content yapısıyla</text>
+                            <text x="70" y="249" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">hangi bilgi alanlarının güçlendirilmesi gerektiğini belirleme.</text>
 
-                            <line x1="36" y1="220" x2="36" y2="260" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
+                            <line x1="36" y1="245" x2="36" y2="295" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
 
-                            <circle cx="36" cy="280" r="20" fill="#7c3aed"/>
-                            <text x="36" y="286" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">4</text>
-                            <text x="70" y="276" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Dış Kaynak Analizi</text>
-                            <text x="70" y="294" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Site dışındaki güvenilir referansları ve marka izlerini değerlendir</text>
+                            <circle cx="36" cy="315" r="20" fill="#7c3aed"/>
+                            <text x="36" y="321" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">4</text>
+                            <text x="70" y="307" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Teknik, İçerik ve Otorite Aksiyonları</text>
+                            <text x="70" y="325" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">İçerik optimizasyonu, teknik erişilebilirlik, internal linking</text>
+                            <text x="70" y="339" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">ve dış kaynak/citation çalışmalarını uygulama.</text>
 
-                            <line x1="36" y1="300" x2="36" y2="340" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
+                            <line x1="36" y1="335" x2="36" y2="385" stroke="#c4b5fd" strokeWidth="2" strokeDasharray="4,3"/>
 
-                            <circle cx="36" cy="360" r="20" fill="#7c3aed"/>
-                            <text x="36" y="366" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">5</text>
-                            <text x="70" y="356" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Düzenli Ölçüm ve Raporlama</text>
-                            <text x="70" y="374" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Aynı sorgu setini periyodik olarak çalıştır ve eğilimi izle</text>
+                            <circle cx="36" cy="405" r="20" fill="#7c3aed"/>
+                            <text x="36" y="411" textAnchor="middle" fontSize="14" fontWeight="700" fill="#fff" fontFamily="system-ui,sans-serif">5</text>
+                            <text x="70" y="397" fontSize="13" fontWeight="700" fill="#1f2937" fontFamily="system-ui,sans-serif">Ölçüm ve Sürekli Optimizasyon</text>
+                            <text x="70" y="415" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">AI görünürlüğü, citation, recommendation ve rakip değişimlerini</text>
+                            <text x="70" y="429" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">düzenli olarak takip edip stratejiyi güncelleme.</text>
                         </svg>
                         <figcaption className="text-center text-sm text-gray-500 mt-3 italic">
-                            Şekil 2 — GEO ajansının 5 aşamalı çalışma süreci. Her adım bir öncekinin çıktısına dayanır ve süreç döngüsel olarak tekrar eder.
+                            Şekil — GEO ajansının 5 aşamalı çalışma süreci. Her adım bir öncekinin çıktısına dayanır ve süreç döngüsel olarak tekrar eder.
                         </figcaption>
                     </figure>
 
