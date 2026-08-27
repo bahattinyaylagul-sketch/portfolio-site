@@ -10,7 +10,6 @@ const headings = [
     { "id": "sorulmasi-gerekenler", "text": "GEO ajansı seçerken hangi sorular sorulmalı?" },
     { "id": "maliyet", "text": "GEO ajansı maliyeti neye göre değişir?" },
     { "id": "basari-olcum", "text": "GEO başarısı hangi metriklerle ölçülür?" },
-    { "id": "llmstxt-sart-mi", "text": "llms.txt kullanmak şart mı?" },
     { "id": "sinirlar", "text": "GEO’nun sınırları neler?" },
     { "id": "sss", "text": "Sıkça Sorulan Sorular" }
 ];
@@ -337,13 +336,6 @@ export default function ArticleContent() {
                         Üstelik yapay zeka platformlarından gelen her ziyaret doğru referrer bilgisini taşımayabilir. Bu nedenle GA4’te görünen oturum sayısını bütün AI görünürlüğü gibi değerlendirmek hatalı olur. Site analitiğini kontrollü sorgu takibiyle beraber okumak gerekir.
                     </p>
 
-                    <h2 id="llmstxt-sart-mi">llms.txt kullanmak şart mı?</h2>
-                    <p>
-                        Hayır. llms.txt, sitenin önemli içeriklerini dil modelleri ve agent’lar için düzenlenmiş bir Markdown listesiyle sunmayı amaçlayan topluluk temelli bir öneridir. Botların erişimini yönetmez, robots.txt’in yerini tutmaz ve görünürlük garantisi vermez.
-                    </p>
-                    <p>
-                        Dokümantasyonu geniş olan sitelerde yardımcı bir içerik haritası olarak kullanılabilir. Fakat öncelik sırası değişmez: taranabilir HTML, doğru indeksleme, anlaşılır site mimarisi, özgün bilgi ve güvenilir kaynaklar. Google da AI Overviews ve AI Mode’da görünmek için özel bir AI dosyasına ihtiyaç olmadığını belirtiyor.
-                    </p>
 
                     <h2 id="sinirlar">GEO’nun sınırları neler?</h2>
                     <p>
