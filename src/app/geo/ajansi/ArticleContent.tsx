@@ -121,29 +121,6 @@ export default function ArticleContent() {
                         </table>
                     </div>
 
-                    <figure className="my-10 not-prose" role="img" aria-label="SEO, AEO, LLMO ve GEO arasındaki katmanlı ilişki diyagramı. SEO altyapıyı oluşturur, AEO soruya doğrudan cevap vermeyi hedefler, LLMO teknik erişilebilirliği sağlar ve GEO yapay zeka yanıtlarında görünürlük kazandırır.">
-                        <svg viewBox="0 0 700 290" className="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <rect x="200" y="20" width="300" height="52" rx="10" fill="#7c3aed" fillOpacity={0.1} stroke="#7c3aed" strokeWidth="1.5"/>
-                            <text x="220" y="51" fontSize="14" fontWeight="700" fill="#7c3aed" fontFamily="system-ui,sans-serif">GEO</text>
-                            <text x="265" y="51" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Üretken AI cevaplarında görünür olmak</text>
-
-                            <rect x="145" y="82" width="410" height="52" rx="10" fill="#10b981" fillOpacity={0.1} stroke="#10b981" strokeWidth="1.5"/>
-                            <text x="165" y="113" fontSize="14" fontWeight="700" fill="#10b981" fontFamily="system-ui,sans-serif">LLMO</text>
-                            <text x="218" y="113" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">İçeriğin dil modelleri için erişilebilir ve anlaşılır olması</text>
-
-                            <rect x="90" y="144" width="520" height="52" rx="10" fill="#3b82f6" fillOpacity={0.1} stroke="#3b82f6" strokeWidth="1.5"/>
-                            <text x="110" y="175" fontSize="14" fontWeight="700" fill="#3b82f6" fontFamily="system-ui,sans-serif">AEO</text>
-                            <text x="155" y="175" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Kullanıcının sorusuna doğrudan cevap verebilecek içerik yapısı</text>
-
-                            <rect x="35" y="206" width="630" height="52" rx="10" fill="#f59e0b" fillOpacity={0.1} stroke="#f59e0b" strokeWidth="1.5"/>
-                            <text x="55" y="237" fontSize="14" fontWeight="700" fill="#d97706" fontFamily="system-ui,sans-serif">SEO</text>
-                            <text x="95" y="237" fontSize="11.5" fill="#6b7280" fontFamily="system-ui,sans-serif">Taranabilirlik · İndeksleme · Otorite · Organik görünürlük temeli</text>
-                        </svg>
-                        <figcaption className="text-center text-sm text-gray-500 mt-3 italic">
-                            Şekil 1 — SEO, AEO, LLMO ve GEO arasındaki katmanlı ilişki. Her yaklaşım farklı bir odağa sahiptir; ancak hepsi SEO temeli üzerine kurulur.
-                        </figcaption>
-                    </figure>
-
                     <p>
                         Pratikte bu çalışmalar çoğu projede iç içe geçer. Örneğin taranamayan bir sayfa hem SEO hem LLMO sorunudur. Sorunun cevabını üç paragraf sonra veren bir içerik ise hem kullanıcı deneyimi hem AEO açısından zayıftır.
                     </p>
