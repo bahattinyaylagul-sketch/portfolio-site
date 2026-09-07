@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 2. GEO Alt Sayfaları — priority 0.8
     const geoContent = [
+        '/geo/ajansi',
         '/geo/llms-txt-nedir',
         '/geo/ai-marka-mention-etkisi',
         '/geo/reddit-forum-mention-etkisi',

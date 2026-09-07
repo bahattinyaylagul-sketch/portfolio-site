@@ -4,17 +4,20 @@ import { Inter, Instrument_Serif } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,
+  weight: ["400", "500", "700", "900"],
+  preload: false,
 });
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
-  style: ["normal", "italic"],
+  style: "normal",
   variable: "--font-serif",
   display: "swap",
   preload: false,
@@ -67,32 +70,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <head>
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      </head>
       <body className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased`}>
         {children}
-
-        {/* Google Analytics (GA4) - G-SFFCG8SZYN */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SFFCG8SZYN"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17973771680"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-SFFCG8SZYN');
-            gtag('config', 'AW-17973771680');
-          `}
-        </Script>
       </body>
+      <GoogleTagManager gtmId="G-SFFCG8SZYN" />
     </html>
   );
 }
+

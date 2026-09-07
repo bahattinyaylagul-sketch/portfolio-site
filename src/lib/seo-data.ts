@@ -20,38 +20,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Hangi Kelimede Sıralama Almalıyım?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Hangi Kelimede Sıralama Almalıyım?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer sayfanız binlerce kelimeye rağmen sıralama almıyorsa, muhtemelen "hacim" peşinde koşarken "niyeti" ıskaladınız. SEO'da başarı, en çok aranan kelimeyi bulmak değil; kullanıcının o sorguyu yaparken kredi kartını mı çıkaracağını yoksa sadece bilgi mi aradığını (Search Intent) doğru tahmin edip ona göre sayfa kurgulamaktır.</p>
                      
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Operasyonel Detay: Hacim Tuzağı</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Operasyonel Detay: Hacim Tuzağı</h3>
                         <p class="text-indigo-800 text-sm">Aylık 100.000 aranması olan "Ayakkabı" kelimesine blog yazısı ile girmek, okyanusta kürek çekmektir. Google, bu sorguda ürün listesi görmek ister. Karar anındaki kullanıcıyı yakalamak için hacmi düşük ama niyeti net "En iyi su geçirmez trekking botu" gibi mikro-niyetlere odaklanın.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Niyet Haritası Nasıl Çıkarılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Niyet Haritası Nasıl Çıkarılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sadece tool'lara güvenmeyin; Google'ın canlı sonuçlarını (SERP) bir veri kaynağı olarak okuyun. İşte karar verici bir içerik için izlediğimiz 3 adım:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">SERP Dominansını Ölçün</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">SERP Dominansını Ölçün</h3>
                                 <p class="text-sm text-gray-600">Gizli sekmede sorguyu yapın. İlk sayfada reklamlar, haritalar veya videolar mı baskın? Eğer reklamlar fazlaysa, o kelime "para harcanan" bir işlem kelimesidir.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">İçerik İskeletini Seçin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">İçerik İskeletini Seçin</h3>
                                 <p class="text-sm text-gray-600">Kullanıcı karşılaştırma mı istiyor? Bölüm bölüm liste mi? Formatı Google belirler, biz uygularız.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Kullanıcı Yolculuğunu (User Journey) Eşleştirin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Kullanıcı Yolculuğunu (User Journey) Eşleştirin</h3>
                                 <p class="text-sm text-gray-600">Bu sorguyu yapan kişi bir sonraki adımda ne isteyecek? İçeriğinize, kullanıcıyı hunide bir alt basamağa taşıyacak (Örn: Bilgiden Ürüne) tetikleyici butonlar (CTA) ekleyin.</p>
                             </div>
                         </div>
@@ -60,7 +60,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: If / But / Exception Scenarios -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Ya Niyet Değişirse?" İstisnalar</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Ya Niyet Değişirse?" İstisnalar</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Arama niyeti statik değildir; mevsime, cihaz tipine ve hatta güncel olaylara göre değişebilir.</p>
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="p-4 bg-gray-50 rounded-xl text-sm border border-gray-100">
@@ -74,7 +74,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sorgu Türü İçin Hangi İçerik Formatı Seçilmelidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sorgu Türü İçin Hangi İçerik Formatı Seçilmelidir?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -107,7 +107,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Arama Niyeti ve Dönüşüm Optimizasyonu Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Arama Niyeti ve Dönüşüm Optimizasyonu Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Peki, rakibim hem bilgi hem ürün sayfasında aynı içerikle sıralama alıyorsa ne yapmalıyım?</p>
@@ -147,38 +147,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Yazdıklarımı Nasıl Anlıyor?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Yazdıklarımı Nasıl Anlıyor?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google artık metinleri sadece kelime dizileri olarak değil, bir kavramlar haritası olarak okuyor. Semantik yazım, içeriği makineler için robotik anahtar kelimelerle doldurmak değil; konuyu "Varlıklar" (Entities) ve "Bağlam" (Context) üzerinden kurgulayarak Google'ın sizi o konunun uzmanı olarak kodlamasını sağlamaktır.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: "Anlam" Skoru</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: "Anlam" Skoru</h3>
                         <p class="text-indigo-800 text-sm">Google artık %2 anahtar kelime yoğunluğuna bakmıyor. Yazınızın içinde ana konuyla ilişkili "ikincil terimlerin" (örn: Araba yerine tork, şanzıman, yakıt tüketimi) ne kadar doğal geçtiğine bakıyor.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Semantik Kurgu Nasıl Yapılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Semantik Kurgu Nasıl Yapılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sıradan bir blog yazısını semantik bir otorite içeriğine dönüştürmek için şu süreci işletiyoruz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Varlık Tespiti (Entity Mapping)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Varlık Tespiti (Entity Mapping)</h3>
                                 <p class="text-sm text-gray-600">Konunuzla ilgili somut kavramları listeleyin. (Örn: Kahve yerine 'Arabica', 'Demleme Sıcaklığı', 'Mahlkönig öğütücü').</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Doğal Dil Yapısı (Chunking)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Doğal Dil Yapısı (Chunking)</h3>
                                 <p class="text-sm text-gray-600">Metni, Google'ın NLP modellerinin kolayca parselleyebileceği net, özne-yüklem ilişkisi güçlü bloklara bölün.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Bağlamsal Vektörler (Context Vectors)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Bağlamsal Vektörler (Context Vectors)</h3>
                                 <p class="text-sm text-gray-600">Ana konuyu destekleyen yan konuları (LSI) belirleyin. 'Elma' yazıyorsanız; meyve mi, teknoloji şirketi mi olduğunu 'vitamin', 'hasat' veya 'iPhone', 'Mac' kelimeleriyle netleştirin.</p>
                             </div>
                         </div>
@@ -187,7 +187,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: If / But / Exception Scenarios -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Her Terimi Kullanmalı mıyım?" İstisnalar</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Her Terimi Kullanmalı mıyım?" İstisnalar</h2>
                     <div class="p-6 bg-amber-50 rounded-xl border border-amber-100">
                         <p class="text-sm text-amber-900 leading-relaxed"><strong>Dikkat:</strong> Her LSI terimini yazıya tıkıştırmak "Semantic Stuffing" hatasına yol açar. Eğer bir terim okuyucunun akışını bozuyorsa, onu kullanmayın. Google'ın NLP algoritmaları zorlama bağlantıları tespit edebilir.</p>
                     </div>
@@ -195,7 +195,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Kelime Odaklı SEO ile Semantik SEO Arasındaki Temel Farklar Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Kelime Odaklı SEO ile Semantik SEO Arasındaki Temel Farklar Nelerdir?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -228,7 +228,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Semantik Yazım ve NLP Teknolojileri Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Semantik Yazım ve NLP Teknolojileri Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Peki, AI (ChatGPT) ile yazdığım içerik neden düşük "semantik değer" alıyor?</p>
@@ -268,38 +268,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Dağınık Bir Siteden Nasıl Otorite Kurulur?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Dağınık Bir Siteden Nasıl Otorite Kurulur?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer içerikleriniz rastgele kategorilere dağılmışsa, Google sizin hangi konuda uzman olduğunuzu anlamaz. Silo Mimarisi, sitenizi devasa bir kütüphane gibi düzenleyerek; otoritenin (Link Juice) sızmasını önleyen ve Googlebot'un "bu site bu konunun erbabıdır" demesini sağlayan teknik hiyerarşi modelidir.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Gerçek Süreç Bilgisi: Otorite Sızıntısı</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Gerçek Süreç Bilgisi: Otorite Sızıntısı</h3>
                         <p class="text-indigo-800 text-sm">Operasyonel hataların başında, "Ayakkabı" kategorisindeki bir yazıdan alakasız bir "Yemek Tarifi"ne link vermek gelir. Bu, silonun duvarlarını yıkar. Otoriteyi bir yerde toplamak için dikeyde kalmalısınız.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Silo Yapısı Nasıl İnşa Edilir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Silo Yapısı Nasıl İnşa Edilir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sitenizi bölümlere ayırırken "karar verici" bir yapı kurmak için şu 3 adımı izliyoruz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Pillar (Çatı) Sayfa Seçimi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Pillar (Çatı) Sayfa Seçimi</h3>
                                 <p class="text-sm text-gray-600">En geniş kavramı kapsayan, yüksek otorite beklediğimiz sayfayı silonun tepesine koyun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Destekleyici Cluster İçerikler</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Destekleyici Cluster İçerikler</h3>
                                 <p class="text-sm text-gray-600">Her bir alt soruyu derinlemesine inceleyin ve sadece kendi siloları içinde birbirlerine bağlayın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Entegrasyon Linklemesi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Entegrasyon Linklemesi</h3>
                                 <p class="text-sm text-gray-600">Tüm alt (Cluster) içeriklerden, ana (Pillar) sayfaya döngüyü tamamlayan bir link vererek otoriteyi yukarı doğru geri pompalayın.</p>
                             </div>
                         </div>
@@ -308,7 +308,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: If / But / Exception Scenarios -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Silolar Arası Geçiş Olur mu?" İstisnalar</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Silolar Arası Geçiş Olur mu?" İstisnalar</h2>
                     <div class="p-6 bg-gray-50 rounded-xl border border-gray-100">
                         <p class="text-sm text-gray-600">Normalde silolar arası linkleme yapısı bozar, ancak kullanıcı deneyimi için kritikse (örn: Bir ayakkabı rehberinden, ilgili çanta kombinine geçiş) link verilebilir. Bu durumda linki ana menüden değil, metin içinden (contextual) vermelisiniz.</p>
                     </div>
@@ -316,7 +316,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Düz Bir Liste mi Yoksa Hiyerarşik Silo Mimarisi mi Daha Güçlüdür?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Düz Bir Liste mi Yoksa Hiyerarşik Silo Mimarisi mi Daha Güçlüdür?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -349,7 +349,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İç Linkleme ve Mimari Yapı Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İç Linkleme ve Mimari Yapı Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Peki, mevcut sitemi Silo'ya geçirirken URL değişimi yapmalı mıyım?</p>
@@ -389,38 +389,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Sitemi Neden Bulamıyor?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Sitemi Neden Bulamıyor?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer binlerce sayfalık sitenizde sadece birkaç yüz sayfa taranıyorsa, botlar sitenizin "teknik labirentinde" kaybolmuş demektir. Tarama (Crawling), Googlebot'un sitenizi keşfetme yolculuğudur. Bu aşamadaki başarısızlık, içeriğiniz ne kadar mükemmel olursa olsun, görünmez kalması anlamına gelir.</p>
                      
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kaçaklarını Durdurun</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kaçaklarını Durdurun</h3>
                         <p class="text-indigo-800 text-sm">Çoğu site sahibi yeni içerik girmeye odaklanır ama mevcut tarama bütçesi (Crawl Budget) 500 hataları veya gereksiz filtre URL'leri tarafından tüketilmektedir. Önce bütçeyi "kapatın", sonra yeni sayfalar açın.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Tarama Verimliliği Nasıl Artırılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Tarama Verimliliği Nasıl Artırılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Botların sitenize olan ziyaretlerini kusursuz hale getirmek için şu 3 teknik kontrolü yapmalıyız:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Robots.txt ile Yön Gösterin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Robots.txt ile Yön Gösterin</h3>
                                 <p class="text-sm text-gray-600">Admin panelleri ve sepet gibi "para kazandırmayan" sayfaları Disallow ile botlara kapatın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Sitemap Temizliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Sitemap Temizliği</h3>
                                 <p class="text-sm text-gray-600">Haritada sadece 200 OK kodu veren ve indekslenmesini istediğiniz en temiz kanonik URL'leri bulundurun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Kırık Link (404) Temizliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Kırık Link (404) Temizliği</h3>
                                 <p class="text-sm text-gray-600">Site içindeki kırık linkler botları çıkmaz sokağa sokar ve bütçeyi boşa harcar. Tüm iç linklerinizin çalışan (200 OK) sayfalara gittiğinden emin olun.</p>
                             </div>
                         </div>
@@ -429,13 +429,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Ya Sitem JavaScript ile Yapıldıysa?"</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Ya Sitem JavaScript ile Yapıldıysa?"</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Modern frameworkler (React, Next.js) botlar için zorlayıcı olabilir. Eğer içeriğiniz client-side render ediliyorsa Googlebot içeriği "boş" görür. Bu durumda <strong>Server-Side Rendering (SSR)</strong> veya <strong>Static Site Generation (SSG)</strong> kullanmak kaçınılmazdır. Aksi takdirde tarama gerçekleşse de anlamlandırma (Rendering) başarısız olur.</p>
                 </section>
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Teknik Sorun Taramayı Nasıl Erişilemez Kılar?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Teknik Sorun Taramayı Nasıl Erişilemez Kılar?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -463,7 +463,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama Süreci Hakkında Stratejik Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama Süreci Hakkında Stratejik Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Robots.txt ile engellediğim bir sayfa SERP'te "açıklama mevcut değil" diye çıkıyor, neden?</p>
@@ -503,38 +503,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Her Yazdığım Neden Google'da Çıkmıyor?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Her Yazdığım Neden Google'da Çıkmıyor?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Taranmak, dizine eklenmeyi garanti etmez. Google, saniyede milyonlarca sayfayı tararken çok sıkı bir "kalite filtresi" uygular. Eğer içeriğiniz diğerleriyle aynıysa (Duplicate) veya yeterince derin değilse (Thin Content), Google onu veritabanına almayarak "kaynak israfı" yapmamayı seçer.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Dizin Şişkinliği (Index Bloat)</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Dizin Şişkinliği (Index Bloat)</h3>
                         <p class="text-indigo-800 text-sm">Sitenizdeki her şeyi (etiket sayfaları, boş sonuçlar) indeksletmek sitenizin genel "Kalite Skorunu" düşürür. Amacımız nicelik değil, nitelikli bir dizin (Clean Index) oluşturmaktır.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. İndeksleme Sorunlarını Giderme</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. İndeksleme Sorunlarını Giderme</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google sonuçlarında görünmeyen sayfalar varsa şu 3 stratejik adımı izleyin:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Excluded Raporunu Analiz Edin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Excluded Raporunu Analiz Edin</h3>
                                 <p class="text-sm text-gray-600">Search Console'da "Tarandı ama dizine eklenmedi" hatası kaliteye, "Bulundu ama taranmadı" hatası ise site hızına işarettir.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Meta Robots Kontrolü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Meta Robots Kontrolü</h3>
                                 <p class="text-sm text-gray-600">Yanlışlıkla tüm siteye "noindex" basılmadığından emin olun. Head bölümünü kontrol edin.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">İçerik Kalitesi ve Kopya Kontrolü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">İçerik Kalitesi ve Kopya Kontrolü</h3>
                                 <p class="text-sm text-gray-600">Sayfanız başka bir sayfanın kopyası mı? Google 'Duplicate Content' gördüğünde genellikle orijinal olanı (veya otoriter olanı) seçer, diğerini eler. Özgünlük sunun.</p>
                             </div>
                         </div>
@@ -543,13 +543,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Sayfam Özgün Ama Yine de İndekslenmiyor?"</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Sayfam Özgün Ama Yine de İndekslenmiyor?"</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Bazen içerik özgün olsa da, Google sitemizin genel otoritesini o konuyu kapsamaya yetersiz bulabilir. Eğer "YMYL" (Sağlık, Finans) gibi kritik bir alandaysanız, sadece yazı yazmak yetmez; yazarın uzmanlığını (EEAT) kanıtlayan sinyalleri de sayfaya eklemelisiniz. Aksi halde Google güvenli tarafta kalmayı seçer ve sizi dizine almaz.</p>
                 </section>
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sayfa Tipleri İndekslenmeli, Hangileri Engellenmeli?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sayfa Tipleri İndekslenmeli, Hangileri Engellenmeli?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -577,7 +577,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İndeksleme ve Kalite Filtreleri Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İndeksleme ve Kalite Filtreleri Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Index Request (Dizin Oluşturma İsteği) butonuna her gün basmak işe yarar mı?</p>
@@ -618,40 +618,40 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Teknik Altyapı Neden Sıralamayı Doğrudan Etkiler?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Teknik Altyapı Neden Sıralamayı Doğrudan Etkiler?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Teknik SEO, binanın temeli gibidir; temel çürükse ne kadar güzel içerik (kat) çıkarsanız çıkın o bina yıkılır. Google için teknik altyapı, içeriğin "erişilebilir" ve "hızlı" olduğunu kanıtlayan bir mühendislik standartıdır. Teknik sorunları çözmediğiniz bir sitede sıralama almak, delik bir kovaya su doldurmaya benzer.</p>
                     
 
 
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Tarama vs Performans</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Tarama vs Performans</h3>
                         <p class="text-indigo-800 text-sm">Çoğu kişi teknik SEO'yu sadece site hızı sanır. Oysa teknik SEO, botların siteyi "hatasız" (Error-free) ve "verimli" (Efficient) taramasını sağlamaktır. Hızlı ama taranmayan bir site sıralama alamaz.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Teknik Sağlık Denetimi Nasıl Yapılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Teknik Sağlık Denetimi Nasıl Yapılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Her SEO projesinin başında yaptığımız 3 kritik teknik denetim adımı:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Status Code Analizi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Status Code Analizi</h3>
                                 <p class="text-sm text-gray-600">Screaming Frog gibi araçlarla 404, 5xx ve 3xx zincirlerini tespit edip kökten çözün.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Core Web Vitals Ölçümü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Core Web Vitals Ölçümü</h3>
                                 <p class="text-sm text-gray-600">LCP ve CLS değerlerini sadece skor olarak değil, kullanıcıyı rahatsız eden unsurlar olarak görün.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Log ve Tarama Analizi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Log ve Tarama Analizi</h3>
                                 <p class="text-sm text-gray-600">Botların sitenizi ne sıklıkla ziyaret ettiğini ve bütçenizi verimli kullanıp kullanmadığını sunucu loglarından (Server Logs) kontrol edin.</p>
                             </div>
                         </div>
@@ -660,13 +660,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "JS Framework Kullanıyorum,SEO Bitecek mi?"</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "JS Framework Kullanıyorum,SEO Bitecek mi?"</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">React, Angular veya Vue kullanılan projelerde "Server-Side Rendering" (SSR) teknik bir lüks değil, SEO için zorunluluktur. Eğer site sadece client'da yükleniyorsa Googlebot içeriği okuyana kadar timeout yiyebilir veya eksik içerik indeksleyebilir. Bu gibi durumlarda teknik SEO, kod mimarisini Next.js gibi hibrit yapılara taşımayı kapsar.</p>
                 </section>
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Botlar ve Kullanıcılar Siteyi Nasıl Farklı Deneyimler?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Botlar ve Kullanıcılar Siteyi Nasıl Farklı Deneyimler?</h2>
                     <div class="not-prose overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-900 font-bold uppercase text-xs text-white">
@@ -694,7 +694,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Teknik SEO Altyapısı Hakkında Merak Edilen Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Teknik SEO Altyapısı Hakkında Merak Edilen Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Yazılımcı olmadan teknik SEO problemlerini çözebilir miyim?</p>
@@ -709,11 +709,11 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 6: Technical SEO Resources -->
                 <section>
-                    <h3 class="font-sans font-bold text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">6. Kaynaklar: Resmi Teknik SEO Rehberleri</h3>
+                    <h2 class="font-sans font-bold text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">6. Kaynaklar: Resmi Teknik SEO Rehberleri</h2>
                     <div class="grid md:grid-cols-2 gap-4">
                         <a href="https://developers.google.com/search/docs/fundamentals/how-search-works?hl=tr" target="_blank" rel="noopener noreferrer" class="block p-6 bg-[#0f172a] border border-gray-800 rounded-xl hover:border-blue-600 transition-colors group">
                              <div class="flex items-start justify-between mb-3">
-                                <h4 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">Google Arama Nasıl Çalışır? (Teknik Rehber)</h4>
+                                <h3 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">Google Arama Nasıl Çalışır? (Teknik Rehber)</h3>
                                 <svg class="w-5 h-5 text-gray-500 group-hover:text-blue-400 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -722,7 +722,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                         </a>
                         <a href="https://web.dev/articles/vitals?hl=tr" target="_blank" rel="noopener noreferrer" class="block p-6 bg-[#0f172a] border border-gray-800 rounded-xl hover:border-blue-600 transition-colors group">
                             <div class="flex items-start justify-between mb-3">
-                                <h4 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">Core Web Vitals Ölçümleme Kılavuzu</h4>
+                                <h3 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">Core Web Vitals Ölçümleme Kılavuzu</h3>
                                 <svg class="w-5 h-5 text-gray-500 group-hover:text-blue-400 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -731,7 +731,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                         </a>
                         <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics?hl=tr" target="_blank" rel="noopener noreferrer" class="block p-6 bg-[#0f172a] border border-gray-800 rounded-xl hover:border-blue-600 transition-colors group">
                              <div class="flex items-start justify-between mb-3">
-                                <h4 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">JavaScript ve Arama Motoru Optimizasyonu</h4>
+                                <h3 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">JavaScript ve Arama Motoru Optimizasyonu</h3>
                                 <svg class="w-5 h-5 text-gray-500 group-hover:text-blue-400 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -740,7 +740,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                         </a>
                          <a href="https://developers.google.com/search/docs/crawling-indexing/https/https-security?hl=tr" target="_blank" rel="noopener noreferrer" class="block p-6 bg-[#0f172a] border border-gray-800 rounded-xl hover:border-blue-600 transition-colors group">
                              <div class="flex items-start justify-between mb-3">
-                                <h4 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">HTTPS ile Sitenizi Güvende Tutun</h4>
+                                <h3 class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">HTTPS ile Sitenizi Güvende Tutun</h3>
                                 <svg class="w-5 h-5 text-gray-500 group-hover:text-blue-400 transition-colors shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
@@ -777,38 +777,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. İçeriğim Neden Rakiplerin Gerisinde Kalıyor?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. İçeriğim Neden Rakiplerin Gerisinde Kalıyor?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google artık metinleri sadece kelime bazlı değil, "anlamsal derinlik" ve "bilgi kazancı" (Information Gain) üzerinden değerlendiriyor. Rakiplerinizin yazdığı genel geçer bilgileri tekrar etmek sizi öne çıkarmaz. Başarı, kullanıcının o sayfadan ayrıldığında başka hiçbir siteye bakma ihtiyacı duymamasını sağlamaktır.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Yardımcı İçerik Sistemi</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Yardımcı İçerik Sistemi</h3>
                         <p class="text-indigo-800 text-sm">Google'ın "Helpful Content Update" sistemi, AI tarafından üretilmiş düşük değerli içerikleri cezalandırır. İçeriğinize "İnsan Deneyimi" (Expert Knowledge) eklemek, bugün en büyük sıralama sinyalidir.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Bilgi Kazancı Sağlayan İçerik Nasıl Hazırlanır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Bilgi Kazancı Sağlayan İçerik Nasıl Hazırlanır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sıradan bir içeriği "otorite" seviyesine taşımak için izlediğimiz 3 adım:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Birincil Veri Kullanımı</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Birincil Veri Kullanımı</h3>
                                 <p class="text-sm text-gray-600">Herkesin bildiği teorileri değil, kendi vaka analizlerinizi (Case Study) veya anket sonuçlarınızı paylaşın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Chunking (Parçalara Bölme)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Chunking (Parçalara Bölme)</h3>
                                 <p class="text-sm text-gray-600">Uzun metinleri NLP modellerinin kolayca anlayabileceği, net alt başlıklara ve listelere bölün.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Medya Zenginleştirmesi & UX</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Medya Zenginleştirmesi & UX</h3>
                                 <p class="text-sm text-gray-600">Dümdüz metin okumak zordur. Mesajınızı güçlendirmek için infografikler, videolar ve ekran görüntüleri ekleyin. Kullanıcıyı sayfada tutan her saniye, bir SEO sinyalidir.</p>
                             </div>
                         </div>
@@ -817,7 +817,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Çok Teknik mi yoksa Çok Basit mi?"</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. "Çok Teknik mi yoksa Çok Basit mi?"</h2>
                     <div class="p-6 bg-gray-50 rounded-xl border border-gray-100">
                         <p class="text-sm text-gray-600">Doğru tonu belirlemek "Arama Niyeti" ile ilgilidir. "SEO Nedir" diye arayan birine kod örnekleri vermeyin, "Search Console API Kullanımı" arayan birine de temel tanımlar anlatmayın. Niyet, içeriğin teknik seviyesini belirler.</p>
                     </div>
@@ -825,7 +825,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Klasik SEO ile Modern İçerik Optimizasyonu Arasındaki Farklar Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Klasik SEO ile Modern İçerik Optimizasyonu Arasındaki Farklar Nelerdir?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -853,7 +853,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Bilgi Kazancı ve İçerik Kalitesi Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Bilgi Kazancı ve İçerik Kalitesi Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Kelime sayısı (Word Count) hala bir sıralama faktörü müdür?</p>
@@ -885,16 +885,16 @@ export const seoClusterData: Record<string, BlogPost> = {
              <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Topikal Otorite Nedir ve SEO Stratejinizi Nasıl Dönüştürür?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Topikal Otorite Nedir ve SEO Stratejinizi Nasıl Dönüştürür?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google, tekil sayfaların başarısından ziyade, domainin genelindeki bilgi birikimine odaklanır. Topikal Otorite; bir konuyu sadece yüzeysel tanımlarla değil, tüm alt başlıkları, yan kavramları ve detaylarıyla (Entity Coverage) ele alarak, o konuda internetteki "nihai referans noktası" olma stratejisidir.</p>
                     
                     <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
-                            <h4 class="font-bold text-purple-900 mb-3">Boşluk Bırakmamak</h4>
+                            <h3 class="font-bold text-purple-900 mb-3">Boşluk Bırakmamak</h3>
                             <p class="text-sm text-purple-800">Kullanıcının o konuyla ilgili sorabileceği en basit sorudan en teknik detaya kadar her şeyi yanıtlamak (Zero Void Strategy).</p>
                         </div>
                         <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
-                            <h4 class="font-bold text-indigo-900 mb-3">İçerik Ağı</h4>
+                            <h3 class="font-bold text-indigo-900 mb-3">İçerik Ağı</h3>
                             <p class="text-sm text-indigo-800">Rastgele yazılar yerine, birbiriyle bağlantılı ve hiyerarşik (Bölüm -> Konu -> Alt Konu) bir semantik ağ örmek.</p>
                         </div>
                     </div>
@@ -902,7 +902,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Standart Bir Blog mu Yoksa Otoriter Bir Bilgi Kaynağı mı?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Standart Bir Blog mu Yoksa Otoriter Bir Bilgi Kaynağı mı?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Topikal otorite, rastgele yazılar yazmakla değil, bir konunun tüm katmanlarını bilinçli bir şekilde kapsamakla elde edilir. Bu fark, sitenizin Google gözündeki itibarını belirler.</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -936,27 +936,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Topikal Otorite Haritası Nasıl Oluşturulur?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Topikal Otorite Haritası Nasıl Oluşturulur?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Belli bir dikeyde uzmanlığınızı kanıtlamak için izlemeniz gereken stratejik yol haritası şu temel adımlardan oluşur:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Konu Haritası (Topic Mapping)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Konu Haritası (Topic Mapping)</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Merkeze "Ana Konuyu" (Seed Keyword) koyun ve etrafındaki tüm alt soruları (5W1H) çıkarıp bir harita oluşturun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Entity Gap Analizi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Entity Gap Analizi</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Rakiplerinizin değinmediği ama konunun parçası olan "eksik varlıkları" (Missing Entities) tespit edin.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Pillar & Cluster Üretimi</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Pillar & Cluster Üretimi</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Önce her şeyi özetleyen dev bir "Pillar Page" yazın, sonra detayları anlatan onlarca "Cluster Page" ile onu besleyin.</p>
                             </div>
                         </div>
@@ -965,7 +965,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Visualizing the Map (Topic Map) -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. İdeal Bir Konu Kümesi (Cluster) Yapısı Nasıl Görünmelidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. İdeal Bir Konu Kümesi (Cluster) Yapısı Nasıl Görünmelidir?</h2>
                     <p class="text-gray-600 mb-8 leading-[1.6] tracking-[-0.01em]">Topikal otorite, rastgele yazılarla değil, bir "merkez" etrafında örülen bilgi ağıyla kurulur. Aşağıdaki model, bir e-ticaret sitesinin "Kahve" dikeyinde nasıl otorite inşa edebileceğinin görsel simülasyonudur:</p>
                     
                     <div class="relative p-8 bg-gray-50 rounded-3xl border border-gray-100 overflow-hidden">
@@ -988,7 +988,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 5: Measuring Authority -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Otoritenizin Arttığını Gösteren Gizli Algoritma Sinyalleren Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Otoritenizin Arttığını Gösteren Gizli Algoritma Sinyalleren Nelerdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Topikal otorite sadece bir SEO metriği değil, bir marka algısıdır. Google'ın sizi o konuda "güvenli liman" olarak görüp görmediğini şu sinyallerden takip edebilirsiniz:</p>
                     <div class="space-y-4">
                         <div class="flex items-start gap-4 p-5 bg-white border border-gray-100 rounded-xl">
@@ -1008,7 +1008,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 6: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">6. Topikal Otorite ve İçerik Ağları Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">6. Topikal Otorite ve İçerik Ağları Hakkında Sorular</h2>
                     <div class="space-y-4">
                          <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Niş bir konudayım, yazacak alt başlık bulamıyorum, ne yapmalıyım?</p>
@@ -1052,18 +1052,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Web Sitelerini Hangi Kriterlere Göre Sıralar?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Web Sitelerini Hangi Kriterlere Göre Sıralar?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sıralama algoritması statik bir liste değil, dinamik bir yarış pistidir. Google, yüzlerce sinyali (Hız, Güven, İçerik) anlık olarak işleyerek "o an" kullanıcıyı en çok mutlu edecek sonucu arar. Bu yarışta kalıcı olmak, algoritmayı değil, kullanıcıyı memnun etmekten geçer.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Sıralama Dinamiktir</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Sıralama Dinamiktir</h3>
                         <p class="text-indigo-800 text-sm">SEO'da "sıralamayı korumak" diye bir şey yoktur. Rakipleriniz sürekli iyileşiyor ve Google sürekli güncelleniyor. Durduğunuz an, gerilemeye başlarsınız.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. En Önemli Sıralama Faktörleri ve Etki Düzeyleri Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. En Önemli Sıralama Faktörleri ve Etki Düzeyleri Nelerdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google'ın bir sayfayı nerede konumlandıracağına karar verirken baktığı yüzlerce sinyal vardır. Başarılı bir strateji için bu sinyalleri gruplandırarak her birine doğru ağırlığı vermek gerekir.</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1097,27 +1097,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Sıralama Kaybı Durumunda İzlenmesi Gereken Acil Eylem Planı</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Sıralama Kaybı Durumunda İzlenmesi Gereken Acil Eylem Planı</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer sitenizde ani bir sıralama kaybı yaşıyorsanız, panik yapmadan önce veriye dayalı bir teşhis süreci işletmelisiniz. Sorunun kaynağını bulmak için bu üç adımı izleyin:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Algoritma Güncellemesi Kontrolü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Algoritma Güncellemesi Kontrolü</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Google bir çekirdek güncelleme (Core Update) yayınladı mı? Eğer öyleyse, kayıp genel bir trend olabilir ve sitenize özgü olmayabilir.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Teknik Sağlık Taraması</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Teknik Sağlık Taraması</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Search Console'da ani artan 404 hataları veya sunucu problemleri (5xx) var mı? Teknik bir arıza botları engelliyor olabilir.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Rakip Analizi (Gap Analysis)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Rakip Analizi (Gap Analysis)</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Sizi geçen rakip neyi daha iyi yaptı? Daha iyi bir başlık mı, daha hızlı bir site mi, yoksa daha kapsamlı bir tablo mu?</p>
                             </div>
                         </div>
@@ -1126,13 +1126,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Sitem Küçük, Rekabet Dev" - Düşük Otoriteyle Sıralanmak Mümkün mü?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Sitem Küçük, Rekabet Dev" - Düşük Otoriteyle Sıralanmak Mümkün mü?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer devasa bütçeli rakiplerle yarışıyorsanız, onlarla aynı kelimelerde doğrudan çarpışmak yerine "Long Tail" (Uzun Kuyruklu) ve "Zero Volume" (Sıfır Hacimli) kelimelere odaklanmalısınız. Google, spesifik ve derinlemesine yanıt veren küçük siteleri, o konudaki yüzeysel büyük sitelerin önüne geçirebilir. Bu "Topikal Otorite" ile "Genel Otoritenin" savaşıdır ve doğru semantik kurguyla küçük olan kazanabilir.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Algoritma Güncellemeleri ve Sıralama Kararlılığı Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Algoritma Güncellemeleri ve Sıralama Kararlılığı Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Sıralamam düştü, hemen yeni backlink mi almalıyım?</p>
@@ -1172,17 +1172,17 @@ export const seoClusterData: Record<string, BlogPost> = {
              <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Güven (Trust) Neden En Önemli Sıralama Sinyalidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Güven (Trust) Neden En Önemli Sıralama Sinyalidir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">İnternetteki bilgi kirliliği, arama motorlarını "kaynağın güvenilirliğini" sorgulamaya itmiştir. E-E-A-T çerçevesi; içeriği üreten kişinin yetkinliğini, sitenin genel itibarını ve sunulan bilginin doğruluğunu (Factuality) analiz eder. Güven, diğer tüm faktörlerin (Uzmanlık, Otorite) çatısıdır.</p>
                     <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-amber-900 font-bold mb-2">Kritik Uyarı: YMYL (Your Money or Your Life)</h4>
+                        <h3 class="text-amber-900 font-bold mb-2">Kritik Uyarı: YMYL (Your Money or Your Life)</h3>
                         <p class="text-amber-800 text-sm">Sağlık ve Finans gibi konularda Google'ın toleransı sıfırdır. Bu alanlarda içerik üretenler, akademik referanslar ve doğrulanabilir yazar kimlikleri sunmak <strong>zorundadır</strong>.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Checklist Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. E-E-A-T Sinyallerini Güçlendiren Teknik Kontrol Listesi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. E-E-A-T Sinyallerini Güçlendiren Teknik Kontrol Listesi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sitenizin güvenilirliğini artırmak için sadece "doğru" yazmanız yetmez, Google'ın bu doğruluğu teyit etmesini sağlayacak kanıtlar sunmalısınız. İşte düşük ve yüksek kaliteli güven sinyalleri arasındaki farklar:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1216,20 +1216,20 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Dijital Dünyada Güven İnşa Etmek İçin Atılması Gereken Adımlar</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Dijital Dünyada Güven İnşa Etmek İçin Atılması Gereken Adımlar</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">E-E-A-T sinyallerini güçlendirmek uzun vadeli bir süreçtir. Markanızın itibarını dijital dünyada sağlamlaştırmak için bu temel adımlarla başlayabilirsiniz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Yazar Kutusu Ekleyin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Yazar Kutusu Ekleyin</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Her yazının altına, yazarın uzmanlığını kanıtlayan kısa bir biyografi ve sosyal medya linklerini ekleyin.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Hakkımızda Sayfasını Güncelleyin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Hakkımızda Sayfasını Güncelleyin</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Şeffaf olun. Ekibinizi tanıtın, ofis fotoğraflarınızı koyun ve markanızın hikayesini anlatın.</p>
                             </div>
                         </div>
@@ -1238,13 +1238,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yazarım Uzman Değil" - Otorite Sinyalleri Nasıl Oluşturulur?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yazarım Uzman Değil" - Otorite Sinyalleri Nasıl Oluşturulur?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer içeriği üreten kişi sektörde tanınan bir isim değilse, "Experience" (Deneyim) faktörüne odaklanın. Kendi çekimleriniz, vaka analizleriniz veya ürün kullanım testleriniz gibi AI'nın taklit edemeyeceği "birinci elden" veriler, yazarın isminden daha güçlü bir güven sinyali oluşturabilir. Ayrıca, içeriği bir dış uzmana inceletip "Expert Reviewed" (Uzman Tarafından İncelendi) ibaresi eklemek EEAT puanınızı hızla artıracaktır.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Güven Sinyalleri ve E-E-A-T Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Güven Sinyalleri ve E-E-A-T Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Yazar profili için gerçek kişi bulamazsam ne olur?</p>
@@ -1284,18 +1284,18 @@ export const seoClusterData: Record<string, BlogPost> = {
              <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Bilgi Kazancı (Information Gain) Neden SEO'nun Yeni Altın Kuralıdır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Bilgi Kazancı (Information Gain) Neden SEO'nun Yeni Altın Kuralıdır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Arama motorları, dizinlerinde (Index) zaten var olan bilgiyi tekrar eden "kopya" içerikleri (Duplicate/Thin Content) filtreler. "Helpful Content" güncellemesi ile birlikte, kullanıcıya daha önce okumadığı bir şeyi sunmak (orijinal veri, uzman görüşü, yapısal farklılık) bir sıralama faktörü haline gelmiştir.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Konsensüsün Ötesine Geçmek</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Konsensüsün Ötesine Geçmek</h3>
                         <p class="text-indigo-800 text-sm">Google artık "mutabakat" (consensus) bilgilerini, yani herkesin aynı şeyi söylediği verileri 'temel bilgi' olarak görüyor. Sıralama almak için bu temel bilginin üzerine ya yeni bir veri (vaka analizi) ya da farklı bir perspektif (eleştirel bakış) eklemelisiniz.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Standart İçerik ile Yüksek Bilgi Kazancı Sağlayan İçerik Arasındaki Fark Nedir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Standart İçerik ile Yüksek Bilgi Kazancı Sağlayan İçerik Arasındaki Fark Nedir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google artık her yerde bulabileceği genel bilgileri (Consensus) ödüllendirmek yerine, üzerine yeni bir şey ekleyen içerikleri öne çıkarıyor. Aşağıdaki tablo, standart bir içerik ile yüksek bilgi kazancı sağlayan içerik arasındaki farkları göstermektedir.</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1329,20 +1329,20 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Bilgi Kazancı Odaklı İçerik Üretme Rehberi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Bilgi Kazancı Odaklı İçerik Üretme Rehberi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">İçeriğinizi "aranmaya değer" kılan o eşsiz değeri (Unique Value Proposition) yaratmak için bu stratejik yaklaşımları uygulayabilirsiniz:</p>
                      <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Orijinal Veri Madenciliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Orijinal Veri Madenciliği</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Sektör raporları, kendi anketleriniz veya vaka analizlerinizle daha önce internette olmayan bir veri seti oluşturun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Kontrarian Yaklaşım</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Kontrarian Yaklaşım</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Herkesin "A" dediği yerde, "neden B olabileceğini" kanıtlarıyla sunarak konsensüs dışı, dikkat çekici bir perspektif yaratın.</p>
                             </div>
                         </div>
@@ -1351,13 +1351,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Konu Zaten Binlerce Kez Yazıldı" - Yeni Ne Denebilir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Konu Zaten Binlerce Kez Yazıldı" - Yeni Ne Denebilir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer çok yazılmış bir konuda içerik üretiyorsanız, "karşılaştırma" (vs) veya "gerçek maliyet" (cost) gibi kullanıcıların en çok merak ettiği ama kimsenin net rakam vermediği alanlara odaklanın. Kendi deneyimlerinizden süzülen "yapılmaması gerekenler" listesi bile, binlerce "nasıl yapılır" rehberinden daha fazla bilgi kazancı sağlar.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İçerik Özgünlüğü ve Yardımcı İçerik Sistemi Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. İçerik Özgünlüğü ve Yardımcı İçerik Sistemi Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Rakibimden esinlenip kelimeleri değiştirsem özgün olur mu?</p>
@@ -1397,18 +1397,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. On-Page SEO Neden Kontrol Edebileceğiniz En Güçlü Kalenizdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. On-Page SEO Neden Kontrol Edebileceğiniz En Güçlü Kalenizdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google algoritmasını değiştiremezsiniz, rakiplerin ne yaptığına müdahale edemezsiniz. Ancak kendi sitenizin içeriğini (%100) kontrol edebilirsiniz. Site İçi SEO, dış faktörlerden bağımsız olarak, sitenizi "konunun en iyi kaynağı" haline getirme sanatıdır ve başarının en sağlam basamağıdır.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Kontrol Edebildiğiniz Tek Alan</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Kontrol Edebildiğiniz Tek Alan</h3>
                         <p class="text-indigo-800 text-sm">Google algoritmasını değiştiremezsiniz, rakiplerin backlink almasını engelleyemezsiniz. Ancak kendi sitenizin içeriğini ve kod yapısını tamamen kontrol edebilirsiniz. On-Page SEO, sizin "kalenizi" tahkim etmenizdir.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Site İçi Optimizasyon ile Site Dışı SEO Arasındaki Temel Farklar Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Site İçi Optimizasyon ile Site Dışı SEO Arasındaki Temel Farklar Nelerdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">SEO çalışmalarını iki ana kola ayırdığımızda; biri kendi mülkünüzde yaptıklarınız (On-Page), diğeri ise dış dünyada markanızın nasıl algılandığıdır (Off-Page). İşte bu iki yaklaşımın temel farkları:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1442,27 +1442,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Teknik On-Page SEO İçin Kritik Kontrol Listesi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Teknik On-Page SEO İçin Kritik Kontrol Listesi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Her yeni sayfa yayımladığınızda veya mevcutları güncellerken, botların içeriği tam olarak anlayabilmesi için bu temel elementleri kontrol etmelisiniz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Başlık (Title) & H1 Uyumu</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Başlık (Title) & H1 Uyumu</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Sayfanızın SEO başlığı (SERP'te görünen) ile ana başlığınızın (H1) aynı mesajı verdiğinden, ancak birebir kopya olmadığından emin olun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">URL Yapısı (Slug)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">URL Yapısı (Slug)</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Kısa, açıklayıcı ve anahtar kelime içeren URL'ler kullanın. (Örn: /site-ici-seo yerine /seo-nedir-nasil-yapilir değil).</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Görsel Optimizasyonu</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Görsel Optimizasyonu</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Resimlerinizin dosya adlarını (silo-mimarisi.jpg) ve Alt etiketlerini (Silo Mimarisi Şeması) mutlaka doldurun.</p>
                             </div>
                         </div>
@@ -1471,13 +1471,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "İçeriğim İyi Ama Sıralama Almıyor" - Eksik Parça Nedir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "İçeriğim İyi Ama Sıralama Almıyor" - Eksik Parça Nedir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer metniniz mükemmel ama hala sıralama almıyorsa, muhtemelen "Semantic Entities" (Anlamsal Varlıklar) veya "Internal Link" (İç Linkleme) dengesinde sorun vardır. Sayfanın sadece kendisini değil, sitemizdeki diğer sayfalarla olan bağını ve Google'ın o sayfayı hangi 'cluster' içinde konumlandırdığını analiz etmelisiniz. Bazen çözüm metinde değil, navigasyon yapısındadır.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Site İçi Optimizasyon ve Sayfa Alakası Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Site İçi Optimizasyon ve Sayfa Alakası Hakkında Sorular</h2>
                     <div class="space-y-4">
                          <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Anahtar kelimeyi H1'in en başında mı geçirmeliyim?</p>
@@ -1516,16 +1516,16 @@ export const seoClusterData: Record<string, BlogPost> = {
              <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Site Dışı SEO ve Backlinkler Neden Dijital Otoritenin Temelidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Site Dışı SEO ve Backlinkler Neden Dijital Otoritenin Temelidir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google'ın kurucuları (PageRank), web'i akademik bir dünya gibi modeller. Nasıl ki bir makale ne kadar çok ve saygın kaynaktan atıf alırsa o kadar değerlise, bir web sitesi de dış dünyadan aldığı kaliteli referanslarla (Backlink) yükselir. Bu, sizin değil, "başkasının" size kefil olmasıdır ve en güçlü güven sinyalidir.</p>
                     
                     <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
-                            <h4 class="font-bold text-emerald-900 mb-3">Doğal Referanslar</h4>
+                            <h3 class="font-bold text-emerald-900 mb-3">Doğal Referanslar</h3>
                             <p class="text-sm text-emerald-800">İçeriğinizin kalitesi sayesinde, sektördeki diğer otoritelerin size kendiliğinden atıfta bulunması (Editorial Links). En değerli backlink türüdür.</p>
                         </div>
                         <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                            <h4 class="font-bold text-gray-900 mb-3">Digital PR</h4>
+                            <h3 class="font-bold text-gray-900 mb-3">Digital PR</h3>
                             <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Markanızın haber sitelerinde, bültenlerde ve röportajlarda yer alması. Link verilmese bile (Unlinked Mentions) Google bunu bir otorite sinyali olarak işler.</p>
                         </div>
                     </div>
@@ -1533,7 +1533,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 2 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Kaliteli Bir Backlink Profilini Tanımlayan Temel Metrikler Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Kaliteli Bir Backlink Profilini Tanımlayan Temel Metrikler Nelerdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Her link sitenize aynı değeri katmaz; bazen bir link sizi zirveye taşırken, kalitesiz bir referans sitenize zarar verebilir. Google, linkin geldiği kaynağın otoritesini ve konusal alakasını (Relevance) bu kriterlere göre ölçer:</p>
 
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
@@ -1568,13 +1568,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. E-E-A-T ve Marka Sinyalleri Nasıl Güçlendirilir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. E-E-A-T ve Marka Sinyalleri Nasıl Güçlendirilir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Google Güven (Trust) faktörünü hesaplarken sadece linklere değil, markanızın dijital dünyadaki genel duruşuna da bakar.</p>
                     
                     <div class="p-6 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-xl shadow-lg">
                         <div class="flex items-center gap-4 mb-4">
                             <span class="text-3xl">🛡️</span>
-                            <h4 class="text-xl font-bold">Güven (Trust) İnşası</h4>
+                            <h3 class="text-xl font-bold">Güven (Trust) İnşası</h3>
                         </div>
                         <ul class="space-y-3 text-gray-300">
                             <li class="flex gap-2">
@@ -1595,13 +1595,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Negatif SEO Atakları" - Zararlı Linklerden Nasıl Korunulur?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Negatif SEO Atakları" - Zararlı Linklerden Nasıl Korunulur?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Rakipleriniz tarafından sitenize yönlendirilen binlerce düşük kaliteli (Spam) link, otoritenizi zedeleyebilir. Bu durumda panik yapmadan Search Console üzerinden zararlı link analizini yapmalı ve Google'ın "Disavow Tool" aracını kullanarak bu linkleri reddetmelisiniz. Ancak unutmayın, Google artık çoğu spam linki otomatik olarak göz ardı edebiliyor.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Link İnşası ve Dijital PR Hakkında Stratejik Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Link İnşası ve Dijital PR Hakkında Stratejik Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Rakibim spam backlink alıp 1. sıraya çıkmış, ben de yapmalı mıyım?</p>
@@ -1641,18 +1641,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Yerel SEO Nedir ve İşletmenizi Haritalarda Nasıl Öne Çıkarır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Yerel SEO Nedir ve İşletmenizi Haritalarda Nasıl Öne Çıkarır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Kullanıcıların %46'sı Google'ı yerel bir işletme bulmak için kullanır. "Yakınımdaki restoran" aramasında çıkmıyorsanız, o müşteriyi fiziksel olarak da kaybetmişsinizdir. Yerel SEO, sadece tıklama almak değil, kapıdan içeri müşteri sokmak (Foot Traffic) için yapılan en doğrudan pazarlama yatırımıdır.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: NAP-W Uyumu</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: NAP-W Uyumu</h3>
                         <p class="text-indigo-800 text-sm">Yerel SEO'da en büyük hata, işletme bilgilerinin (Name, Address, Phone, Website) farklı platformlarda farklı formatlarda olmasıdır. Google bu tutarsızlığı bir 'güven sorunu' olarak görür. Bilgilerinizi bir virgülüne kadar her yerde aynı tutun.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Genel SEO ile Yerel SEO Optimizasyonu Arasındaki Farklar Nelerdir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Genel SEO ile Yerel SEO Optimizasyonu Arasındaki Farklar Nelerdir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Yerel aramalar, kullanıcıların satın alma niyetinin en yüksek olduğu anlardır. Standart bir SEO stratejisi ile yerel odaklı bir çalışma arasındaki en büyük farkları buradan inceleyebilirsiniz:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1686,19 +1686,19 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Yerel Otorite ve Harita Görünürlüğü Artırma Rehberi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Yerel Otorite ve Harita Görünürlüğü Artırma Rehberi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Harita sonuçlarında üst sıralarda yer almak ve yerel müşterilerin güvenini kazanmak için bu üç kritik basamağı eksiksiz tamamlamanız gerekir:</p>
                     <div class="space-y-4">
                         <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl">
-                            <h4 class="font-bold text-blue-900 mb-2">Adım 1: Google İşletme Profili (GBP)</h4>
+                            <h3 class="font-bold text-blue-900 mb-2">Adım 1: Google İşletme Profili (GBP)</h3>
                             <p class="text-sm text-blue-800">Profilinizi %100 doldurun. Sadece adres değil; hizmet bölgeleri, ürün katalogları ve işletme açıklamasını (Keyword Focus) eksiksiz girin.</p>
                         </div>
                         <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl">
-                            <h4 class="font-bold text-emerald-900 mb-2">Adım 2: NAP Tutarlılığı</h4>
+                            <h3 class="font-bold text-emerald-900 mb-2">Adım 2: NAP Tutarlılığı</h3>
                             <p class="text-sm text-emerald-800">İşletmenizin adı, adresi ve telefonunun internetin her yerinde (Web sitesi, Facebook, Yellow Pages) "birebir aynı" olduğundan emin olun.</p>
                         </div>
                         <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl">
-                            <h4 class="font-bold text-amber-900 mb-2">Adım 3: Yorum Yönetimi</h4>
+                            <h3 class="font-bold text-amber-900 mb-2">Adım 3: Yorum Yönetimi</h3>
                             <p class="text-sm text-amber-800">Yorumlara (olumlu ya da olumsuz) mutlaka anahtar kelime içeren, çözüme odaklı ve nazik yanıtlar verin.</p>
                         </div>
                     </div>
@@ -1706,13 +1706,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Fiziksel Mağazam Yok" - Hizmet Bölgeleri Nasıl Optimize Edilir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Fiziksel Mağazam Yok" - Hizmet Bölgeleri Nasıl Optimize Edilir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer fiziksel bir ofisiniz yoksa (temizlik şirketi, tesisatçı vb.), Google İşletme Profilinizde adresinizi gizleyip "Hizmet Bölgeleri" seçeneğini kullanmalısınız. Bu durumda otoriteniz, web sitenizdeki yerel içeriklerin kalitesi ve o bölgelerden aldığınız müşteri yorumlarıyla belirlenecektir. Çevrimiçi hizmet veren ama fiziksel ofisi olmayan işletmeler için anahtar, 'konum' odaklı landing page'ler oluşturmaktır.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Yerel Arama ve Google İşletme Profili Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Yerel Arama ve Google İşletme Profili Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Fiziki ofisim yok, ev adresimi göstersem sorun olur mu?</p>
@@ -1752,18 +1752,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Core Web Vitals Neden Modern SEO'nun Teknik Temelidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Core Web Vitals Neden Modern SEO'nun Teknik Temelidir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Kullanıcılar 3 saniyeden geç yüklenen bir siteyi terk eder. Core Web Vitals, sadece Google'ın bir sıralama faktörü değil; kullanıcı tutma (Retention) ve dönüşüm (Conversion) oranlarının temel belirleyicisidir. Hızlı bir site, kullanıcıya "profesyonel ve güvenilir" olduğunuzu hissettirir.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Gerçek Kullanıcı Verileri (CrUX)</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Gerçek Kullanıcı Verileri (CrUX)</h3>
                         <p class="text-indigo-800 text-sm">Lighthouse skorlarına takılmayın. Google sıralamada sizin laboratuvar verilerinize (Lab Data) değil, Chrome kullanıcılarından gelen gerçek saha verilerine (Field Data) bakar. 28 günlük periyottaki gerçek kullanıcı deneyimi her şeydir.</p>
                     </div>
                 </section>
 
                 <!-- Section 2 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. LCP, CLS ve INP Metrikleri İçin Kritik Performans Karşılaştırması</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. LCP, CLS ve INP Metrikleri İçin Kritik Performans Karşılaştırması</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Browser'ın bir sayfayı render ederken izlediği "Kritik Render Yolu" üzerinde her metriğin farklı bir ağırlığı vardır. İyi bir kullanıcı deneyimi için bu metotların dengeli uygulanması gerekir:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -1797,18 +1797,18 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Sayfa Hızı ve Kullanıcı Deneyimi Optimizasyonu Rehberi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Sayfa Hızı ve Kullanıcı Deneyimi Optimizasyonu Rehberi</h2>
                     <div class="space-y-6">
                         <div class="p-5 border-l-4 border-blue-500 bg-blue-50 rounded-r-xl">
-                            <h4 class="font-bold text-blue-900 mb-2">LCP ve TTFB Yönetimi</h4>
+                            <h3 class="font-bold text-blue-900 mb-2">LCP ve TTFB Yönetimi</h3>
                             <p class="text-sm text-blue-800 leading-relaxed">Görsel varlıklar için <code>fetchpriority="high"</code> kullanın. CDN ve sunucu tarafı önbellekleme ile ilk bayt ulaşım süresini (TTFB) 200ms altına çekin.</p>
                         </div>
                         <div class="p-5 border-l-4 border-purple-500 bg-purple-50 rounded-r-xl">
-                            <h4 class="font-bold text-purple-900 mb-2">CLS ve Görsel Stabilite</h4>
+                            <h3 class="font-bold text-purple-900 mb-2">CLS ve Görsel Stabilite</h3>
                             <p class="text-sm text-purple-800 leading-relaxed">Görüntülere 'aspect-ratio' veya sabit width/height değerleri atayarak layout kaymalarını engelleyin. Reklam alanlarını önceden rezerve edin.</p>
                         </div>
                         <div class="p-5 border-l-4 border-amber-500 bg-amber-50 rounded-r-xl">
-                            <h4 class="font-bold text-amber-900 mb-2">INP ve Main Thread Optimizasyonu</h4>
+                            <h3 class="font-bold text-amber-900 mb-2">INP ve Main Thread Optimizasyonu</h3>
                             <p class="text-sm text-amber-800 leading-relaxed">Uzun süren JavaScript görevlerini (Long Tasks) parçalara bölün veya Web Workers kullanarak ana iş parçacığını rahatlatın.</p>
                         </div>
                     </div>
@@ -1816,13 +1816,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "JS Framework Kullanımı" - SPA Sitelerde Performans Nasıl Korunur?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "JS Framework Kullanımı" - SPA Sitelerde Performans Nasıl Korunur?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">React veya Next.js gibi frameworkler kullanırken en büyük risk, ana iş parçacığının (Main Thread) aşırı yüklenmesidir. Bu durumda 'Hydration' maliyetini düşürmek için 'Streaming SSR' veya 'Partial Hydration' gibi ileri seviye tekniklere odaklanmalısınız. Aksi halde teknik skorlarınız iyi olsa bile, kullanıcının hissettiği 'etkileşim gecikmesi' (INP) sıralamanızı aşağı çekecektir.</p>
                 </section>
 
                 <!-- Section 5 -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Web Core Vitals ve Sayfa Deneyimi Hakkında Teknik Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Web Core Vitals ve Sayfa Deneyimi Hakkında Teknik Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Mobil ve masaüstü skorlarım neden bu kadar farklı?</p>
@@ -1854,18 +1854,18 @@ export const seoClusterData: Record<string, BlogPost> = {
              <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Yapısal Veri (Schema) Google'ın Sitenizi Anlamasını Nasıl Sağlar?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Yapısal Veri (Schema) Google'ın Sitenizi Anlamasını Nasıl Sağlar?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Googlebot ne kadar zeki olursa olsun, hala bir bilgisayar programıdır. Yapısal veri, içeriğinizi onun "anadilinde" (JSON-LD) sunarak, hiçbir belirsizliğe yer bırakmadan içeriğinizi anlatmanızı sağlar. Bu netlik, sizi rakiplerinizden ayırarak "Zengin Sonuçlar" (Rich Snippets) ile ödüllendirilmenizi sağlar.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Anlamsal Web'in Dili</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Anlamsal Web'in Dili</h3>
                         <p class="text-indigo-800 text-sm">Google artık bir "Arama Motoru" değil, bir "Cevap Motoru"dur. Schema işaretlemeleri, içeriğinizi Google'ın Bilgi Grafiği'ne (Knowledge Graph) bağlayan köprülerdir.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. En Çok Kullanılan Şema Türleri ve SERP Üzerindeki Etkileri</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. En Çok Kullanılan Şema Türleri ve SERP Üzerindeki Etkileri</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -1903,26 +1903,26 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım JSON-LD İşaretleme ve Hata Denetimi Süreci</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım JSON-LD İşaretleme ve Hata Denetimi Süreci</h2>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">JSON-LD Kodunu Oluşturun</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">JSON-LD Kodunu Oluşturun</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Google Markup Helper veya teknikseo.com gibi araçları kullanarak, sayfanıza uygun JSON-LD kod bloğunu hazırlayın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Kodu Sayfaya Ekleyin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Kodu Sayfaya Ekleyin</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Oluşturduğunuz script'i HTML'inizin <code>&lt;head&gt;</code> veya <code>&lt;body&gt;</code> bölümüne yapıştırın. WordPress kullanıyorsanız eklenti (Yoast/RankMath) kullanın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Rich Results Test ile Doğrulayın</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Rich Results Test ile Doğrulayın</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Kodun hatasız çalıştığını ve Google tarafından okunabildiğini "Rich Results Test" aracıyla mutlaka kontrol edin.</p>
                             </div>
                         </div>
@@ -1931,13 +1931,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yanlış Şema Kullanımı" - Manuel İşlemlerden Nasıl Kaçınılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yanlış Şema Kullanımı" - Manuel İşlemlerden Nasıl Kaçınılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">İçinde bulunmadığınız bir özelliği (örn: stokta olmayan bir ürünü var gibi göstermek) şema ile işaretlemek 'Spammy Structured Data' cezasına yol açabilir. Her zaman kullanıcıya gösterilen içerik ile kodda sunulan içeriğin %100 örtüştüğünden emin olun. Yanıltıcı şemalar kısa vadede Rich Snippet getirse de uzun vadede domain güvenini bitirir.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Yapısal Veri ve Zengin Sonuçlar Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Yapısal Veri ve Zengin Sonuçlar Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Şema ekledim ama yıldızlarım hala çıkmıyor, neden?</p>
@@ -1973,18 +1973,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Tarama Bütçesi (Crawl Budget) Neden Büyük Siteler İçin Hayatidir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Tarama Bütçesi (Crawl Budget) Neden Büyük Siteler İçin Hayatidir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Googlebot'un vakti kısıtlıdır. Eğer bu değerli vakti gereksiz teknolojik çöpleri taramakla harcarsa, asıl para kazandıracak ürünlerinize veya makalelerinize sıra gelmeyebilir. Tarama bütçesi yönetimi, Googlebot'u "en değerli" sayfalarınıza yönlendirme sanatıdır.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kimin İçin Kritik?</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kimin İçin Kritik?</h3>
                         <p class="text-indigo-800 text-sm">1.000 sayfadan az içeriği olan küçük siteler için tarama bütçesi genelde sorun değildir. Ancak milyonlarca URL'e sahip e-ticaret siteleri veya haber portalları için "hayati" bir metriktir.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Bütçe Dostu Mimari ile Bütçe Katili Teknik Hatalar Arasındaki Fark</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Bütçe Dostu Mimari ile Bütçe Katili Teknik Hatalar Arasındaki Fark</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Botların sitenizde ne kadar süre kalacağını belirleyen sadece sizin bütçeniz değil, sitenizin teknik hantallığıdır. İşte tarama bütçesini verimli kullanan ve tüketen temel farklar:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -2018,27 +2018,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Tarama Bütçesi Verimliliği Artırma Stratejisi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Tarama Bütçesi Verimliliği Artırma Stratejisi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Googlebot'un sitenizden "mutlu" ayrılmasını ve en önemli sayfalarınızı keşfetmesini sağlamak için bu stratejik temizlik adımlarını izlemelisiniz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Log Analizi Yapın</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Log Analizi Yapın</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Botların hangi sayfaları en çok ziyaret ettiğini, hangilerini "pas geçtiğini" sunucu loglarından çıkarın. (Örn: Gereksiz admin sayfaları taranıyor olabilir).</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Robots.txt ile Yönlendirin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Robots.txt ile Yönlendirin</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Sitenizde taranması gerekmeyen (Sepet, Kullanıcı Profili, Arama Sonuçları) alanları "Disallow" komutuyla botlara kapatın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Orphan Page (Yetim Sayfa) Temizliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Orphan Page (Yetim Sayfa) Temizliği</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Hiçbir yerden link almayan sayfalar, botlar için çıkmaz sokaktır. Ya link verin ya da kaldırın.</p>
                             </div>
                         </div>
@@ -2047,13 +2047,13 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yeni İçerik İndekslenmiyor" - Bütçe Sorunu Nasıl Tespit Edilir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Yeni İçerik İndekslenmiyor" - Bütçe Sorunu Nasıl Tespit Edilir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Eğer yeni yayınladığınız sayfalar günler geçmesine rağmen taranmıyorsa, Search Console 'Tarama İstatistikleri' raporuna bakın. Eğer bot her gün binlerce 404 sayfasına veya gereksiz filtre URL'sine gidiyorsa, bütçeniz orada tükeniyor demektir. Çözüm, Robots.txt ile bu alanları kesin olarak kapatmaktır.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama Bütçesi ve Bot Yönetimi Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama Bütçesi ve Bot Yönetimi Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Indexing API kullanmak tarama bütçesi için riskli mi?</p>
@@ -2089,18 +2089,18 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Sunucu Log Analizi ile Bot Davranışları Nasıl Çözümlenir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Sunucu Log Analizi ile Bot Davranışları Nasıl Çözümlenir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Search Console verileri (örneklendirilmiş/sampled) size sadece Google'ın "göstermek istediği" kadarını sunar. Oysa teknik SEO'da başarı, tahminlere değil kesin verilere dayanır. Log kayıtları, botların sitenizde attığı her adımı, milisaniye cinsinden ve %100 doğrulukla (Exact Match Data) görmenizi sağlayan tek yerdir. Görünmez hataları ve bütçe kaçaklarını yakalamak için vitrine değil, bu kara kutuya bakmalısınız.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Görünmeyeni Görmek</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Görünmeyeni Görmek</h3>
                         <p class="text-indigo-800 text-sm">Çoğu SEO projesi sadece arayüze odaklanır. Oysa 500 hataları, sonsuz yönlendirme döngüleri (Redirect Loops) ve bütçe yiyen parametre tuzakları (Spider Traps) sadece loglarda görünür.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Table (Comparison) -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Search Console Verileri ile Ham Sunucu Logları Arasındaki Farklar</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Search Console Verileri ile Ham Sunucu Logları Arasındaki Farklar</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Çoğu SEO uzmanı sadece Google Search Console verilerine güvenir, ancak teknik sorunları kökünden çözmek için sunucu seviyesindeki ham veriye ihtiyacınız vardır. İşte bu iki veri kaynağı arasındaki temel farklar:</p>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
@@ -2134,27 +2134,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Teknik SEO Denetimi ve Log Dosyası İşleme Rehberi</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. Adım Adım Teknik SEO Denetimi ve Log Dosyası İşleme Rehberi</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Sunucu loglarını anlamlandırarak teknik bir avantaj elde etmek için şu iş akışını takip edebilirsiniz:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Veri Toplama (Collection)</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Veri Toplama (Collection)</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Sunucudan (Nginx/Apache) <code>access.log</code> dosyalarını son 30 günlük periyot için dışarı aktarın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">User-Agent Filtreleme</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">User-Agent Filtreleme</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">Dosyayı Excel veya Screaming Frog Log Analyzer ile açın. Sadece "Googlebot" içeren satırları filtreleyin (Spoofing kontrolü yapmayı unutmayın).</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg hover:shadow-md transition-shadow bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Anomali Tespiti</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Anomali Tespiti</h3>
                                 <p class="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">En çok taranan sayfalar ile en önemli sayfalarınız örtüşüyor mu? Önemsiz etiket sayfaları bütçeyi mi yiyor?</p>
                             </div>
                         </div>
@@ -2163,13 +2163,13 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Scenarios / Exceptions -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Ani Tarama Düşüşü" - Botların Siteden Uzaklaşma Sebebi Nedir?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. "Ani Tarama Düşüşü" - Botların Siteden Uzaklaşma Sebebi Nedir?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6]">Loglarda bot trafiğinin aniden kesildiğini görüyorsanız, sunucu tarafında bir güvenlik duvarının (WAF/Cloudflare) Googlebot IP'lerini yanlışlıkla 'spam' olarak işaretleyip bloklamış olma ihtimali yüksektir. Bu durumu manuel olarak kontrol edip 'Google Verified Bot' listesini beyaz listeye (allowlist) almalısınız.</p>
                 </section>
 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Log Analizi ve Teknik Hata Ayıklama Hakkında Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Log Analizi ve Teknik Hata Ayıklama Hakkında Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Log dosyam çok büyük, nasıl açabilirim?</p>
@@ -2210,38 +2210,38 @@ export const seoClusterData: Record<string, BlogPost> = {
             <div class="space-y-12">
                 <!-- Section 1: H1/Direct Answer -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Sitemi Neden Bulamıyor?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">1. Google Sitemi Neden Bulamıyor?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Eğer binlerce sayfalık sitenizde sadece birkaç yüz sayfa taranıyorsa, botlar sitenizin "teknik labirentinde" kaybolmuş demektir. Tarama (Crawling), Googlebot'un sitenizi keşfetme yolculuğudur; bu aşamadaki başarısızlık, içeriğiniz ne kadar mükemmel olursa olsun, görünmez kalması anlamına gelir.</p>
                     
                     <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-r-xl my-6">
-                        <h4 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kaçaklarını Durdurun</h4>
+                        <h3 class="text-indigo-900 font-bold mb-2">Uzman Görüşü: Bütçe Kaçaklarını Durdurun</h3>
                         <p class="text-indigo-800 text-sm">Çoğu site sahibi yeni içerik girmeye odaklanır ama mevcut tarama bütçesi (Crawl Budget) 500 hataları veya gereksiz filtre URL'leri tarafından tüketilmektedir. Önce bütçeyi "kapatın", sonra yeni sayfalar açın.</p>
                     </div>
                 </section>
 
                 <!-- Section 2: Step-by-Step List -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Tarama Verimliliği Nasıl Artırılır?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">2. Tarama Verimliliği Nasıl Artırılır?</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Botların sitenize olan ziyaretlerini kusursuz hale getirmek için şu 3 teknik kontrolü yapmalıyız:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Robots.txt ile Yön Gösterin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Robots.txt ile Yön Gösterin</h3>
                                 <p class="text-sm text-gray-600">Admin panelleri ve sepet gibi "para kazandırmayan" sayfaları Disallow ile botlara kapatın.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Sitemap Temizliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Sitemap Temizliği</h3>
                                 <p class="text-sm text-gray-600">Haritada sadece 200 OK kodu veren ve indekslenmesini istediğiniz en temiz kanonik URL'leri bulundurun.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Kırık Link (404) Temizliği</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Kırık Link (404) Temizliği</h3>
                                 <p class="text-sm text-gray-600">Site içindeki kırık linkler botları çıkmaz sokağa sokar ve bütçeyi boşa harcar.</p>
                             </div>
                         </div>
@@ -2250,27 +2250,27 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 3: Indexing -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. İndeksleme Sorunlarını Giderme</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">3. İndeksleme Sorunlarını Giderme</h2>
                     <p class="text-gray-600 mb-6 leading-[1.6] tracking-[-0.01em]">Taranmak, dizine eklenmeyi garanti etmez. Google, saniyede milyonlarca sayfayı tararken çok sıkı bir "kalite filtresi" uygular. Google sonuçlarında görünmeyen sayfalar varsa şu 3 stratejik adımı izleyin:</p>
                     <div class="space-y-4">
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">01</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Excluded Raporunu Analiz Edin</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Excluded Raporunu Analiz Edin</h3>
                                 <p class="text-sm text-gray-600">Search Console'da "Tarandı ama dizine eklenmedi" hatası kaliteye, "Bulundu ama taranmadı" hatası ise site hızına işarettir.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">02</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">Meta Robots Kontrolü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">Meta Robots Kontrolü</h3>
                                 <p class="text-sm text-gray-600">Yanlışlıkla tüm siteye "noindex" basılmadığından emin olun. Head bölümünü kontrol edin.</p>
                             </div>
                         </div>
                         <div class="flex gap-6 p-6 border border-gray-100 rounded-lg bg-white">
                             <div class="text-2xl font-black text-gray-200">03</div>
                             <div>
-                                <h4 class="font-bold text-gray-900 mb-2">İçerik Kalitesi ve Kopya Kontrolü</h4>
+                                <h3 class="font-bold text-gray-900 mb-2">İçerik Kalitesi ve Kopya Kontrolü</h3>
                                 <p class="text-sm text-gray-600">Sayfanız başka bir sayfanın kopyası mı? Google 'Duplicate Content' gördüğünde genellikle orijinal olanı seçer, diğerini eler. Özgünlük sunun.</p>
                             </div>
                         </div>
@@ -2279,7 +2279,7 @@ export const seoClusterData: Record<string, BlogPost> = {
 
                 <!-- Section 4: Comparison Table -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sayfa Tipleri İndekslenmeli, Hangileri Engellenmeli?</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">4. Hangi Sayfa Tipleri İndekslenmeli, Hangileri Engellenmeli?</h2>
                     <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table class="w-full text-sm text-left leading-[1.5]">
                             <thead class="bg-gray-800 text-white font-bold uppercase text-xs">
@@ -2307,7 +2307,7 @@ export const seoClusterData: Record<string, BlogPost> = {
                 
                 <!-- Section 5: Strategic FAQ -->
                 <section>
-                    <h3 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama ve İndeksleme Hakkında Stratejik Sorular</h3>
+                    <h2 class="font-serif text-2xl mt-12 mb-6 text-foreground border-b border-gray-200 pb-2">5. Tarama ve İndeksleme Hakkında Stratejik Sorular</h2>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-6 rounded-lg">
                             <p class="font-bold text-gray-900 text-sm mb-1">Robots.txt ile engellediğim bir sayfa SERP'te çıkıyor, neden?</p>

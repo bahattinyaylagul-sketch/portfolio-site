@@ -41,9 +41,9 @@ export default function Footer() {
 
                     {/* Gezinti */}
                     <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
+                        <p className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
                             Gezinti
-                        </h3>
+                        </p>
                         <ul className="space-y-2.5">
                             {footerLinks.navigation.map((link) => (
                                 <li key={link.label}>
@@ -69,9 +69,9 @@ export default function Footer() {
 
                     {/* Hizmetler & Kaynaklar */}
                     <div>
-                        <h3 className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
+                        <p className="text-xs font-bold uppercase tracking-wider mb-4 text-gray-500">
                             Hizmetler & Kaynaklar
-                        </h3>
+                        </p>
                         <ul className="space-y-2.5">
                             {footerLinks.servicesAndResources.map((link) => (
                                 <li key={link.label}>

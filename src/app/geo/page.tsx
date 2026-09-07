@@ -29,26 +29,32 @@ export const metadata: Metadata = {
 
 const faqData = [
     {
+        id: "faq-geo-seo-farki",
         q: "GEO ile SEO arasındaki fark nedir?",
         a: "Klasik SEO, arama motorunun algoritmasını hedefler; GEO ise yapay zeka modellerinin markanızı tanımasını, anlamasını ve güvenmesini hedefler. Google'da üst sıraya çıkmak için bağlantı ve anahtar kelime yeterliyken, ChatGPT veya Perplexity'de anılmak için modelin sizi bir otorite olarak 'öğrenmesi' gerekir — bu farklı bir sinyal seti demektir."
     },
     {
+        id: "faq-geo-ajans",
         q: "Mevcut SEO ajansım varken ayrıca GEO danışmanı almam gerekir mi?",
         a: "Evet, genellikle gerekir. GEO danışmanlığı mevcut SEO ajansı çalışmalarıyla çelişmez; aksine teknik SEO altyapınız güçlüyse GEO stratejisi daha hızlı sonuç verir. Ajansınıza şunu sorabilirsiniz: 'Hangi yapay zeka platformlarında anılıyoruz ve bunu nasıl ölçüyoruz?' Cevap alamıyorsanız o boşluğu dolduracak bir uzmana ihtiyacınız var demektir."
     },
     {
+        id: "faq-geo-aeo-fark",
         q: "GEO ile AEO aynı şey midir?",
         a: "Hayır, ama ikisi birbirini tamamlar. AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO ise modelin bakışını yönetir. AEO'yu 'yapay zekaya okunabilir içerik üretmek' olarak, GEO'yu ise 'yapay zekanın sizi güvenilir kaynak olarak kodlaması' olarak düşünebilirsiniz."
     },
     {
+        id: "faq-geo-sure",
         q: "GEO sonuçları ne kadar sürede görülür?",
         a: "Yapay zeka modellerinde önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir. LLM'ler çelişkili bilgilerle karşılaştığında belirsizliği çözmek yerine o konuyu tamamen geçer; tutarsız marka anlatısı bu süreyi ciddi ölçüde uzatır."
     },
     {
+        id: "faq-geo-altyapi",
         q: "SEO altyapım yoksa GEO'ya başlayabilir miyim?",
         a: "Başlayabilirsiniz, ancak teknik SEO ve GEO çalışmalarını paralel yürütmek en verimli yöntemdir; biri diğerini beklesin diye vakit kaybetmeyin."
     },
     {
+        id: "faq-geo-ymyl",
         q: "YMYL sektöründe GEO çalışır mı?",
         a: "Çalışır, ancak sağlık, finans ve hukuk gibi alanlarda modeller belirsiz veya çelişkili kaynaklara dayanmak yerine sessiz kalmayı tercih eder; dolayısıyla entity (varlık) otoritesi ve kaynak güvenilirliği diğer sektörlere kıyasla çok daha belirleyici hale gelir."
     }
@@ -62,41 +68,146 @@ export default function GEOPage() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@graph": [
+            // ── WebSite ──
+            {
+                "@type": "WebSite",
+                "@id": "https://bahattinyaylagul.com/#website",
+                "url": "https://bahattinyaylagul.com",
+                "name": "Bahattin Yaylagül",
+                "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
+                "inLanguage": "tr-TR"
+            },
+            // ── WebPage ──
+            {
+                "@type": "WebPage",
+                "@id": "https://bahattinyaylagul.com/geo/#webpage",
+                "url": "https://bahattinyaylagul.com/geo",
+                "name": "GEO Danışmanlığı – Bahattin Yaylagül",
+                "isPartOf": { "@id": "https://bahattinyaylagul.com/#website" },
+                "mainEntity": { "@id": "https://bahattinyaylagul.com/geo/#service" },
+                "dateModified": "2026-09-06",
+                "inLanguage": "tr-TR",
+                "speakable": {
+                    "@type": "SpeakableSpecification",
+                    "cssSelector": ["#geo-nedir p:first-of-type", "#ne-zaman-sonuc-verir p:first-of-type"]
+                },
+                "hasPart": [
+                    { "@id": "https://bahattinyaylagul.com/geo/#faq" },
+                    { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                ],
+                "about": [
+                    {
+                        "@type": "Thing",
+                        "name": "Generative Engine Optimization",
+                        "alternateName": ["GEO", "Üretken Motor Optimizasyonu"],
+                        "sameAs": ["https://en.wikipedia.org/wiki/Generative_engine_optimization"]
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Answer Engine Optimization",
+                        "alternateName": "AEO",
+                        "sameAs": "https://www.wikidata.org/wiki/Q111812904"
+                    }
+                ],
+                "mentions": [
+                    {
+                        "@type": "Thing",
+                        "name": "ChatGPT",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/ChatGPT"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Perplexity",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/Perplexity_AI"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Gemini",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/Gemini_(chatbot)"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Large language model",
+                        "alternateName": "LLM",
+                        "sameAs": "https://en.wikipedia.org/wiki/Large_language_model"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Retrieval-augmented generation",
+                        "alternateName": "RAG",
+                        "sameAs": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Schema.org",
+                        "sameAs": "https://en.wikipedia.org/wiki/Schema.org"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Wikidata",
+                        "sameAs": "https://en.wikipedia.org/wiki/Wikidata"
+                    }
+                ]
+            },
+            // ── Person ──
             {
                 "@type": "Person",
                 "@id": "https://bahattinyaylagul.com/#person",
                 "name": "Bahattin Yaylagül",
                 "url": "https://bahattinyaylagul.com",
-                "jobTitle": "SEO Consultant",
+                "jobTitle": ["SEO Danışmanı", "GEO Uzmanı"],
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "sameAs": ["https://linkedin.com/in/bahattin-yaylagul"]
+                "sameAs": [
+                    "https://linkedin.com/in/bahattin-yaylagul",
+                    "https://medium.com/@bahattinyaylagl",
+                    "https://bahattinyaylagul.com/hakkimda"
+                ],
+                "knowsAbout": [
+                    "Generative Engine Optimization",
+                    "Answer Engine Optimization",
+                    "Technical SEO",
+                    "Entity SEO",
+                    "Schema.org",
+                    "Large Language Model Optimization"
+                ],
+                "knowsLanguage": ["tr", "en"],
+                "hasOccupation": {
+                    "@type": "Occupation",
+                    "name": "SEO Danışmanı",
+                    "occupationLocation": { "@type": "Country", "name": "TR" }
+                },
+                "subjectOf": { "@id": "https://bahattinyaylagul.com/geo/#webpage" }
             },
+            // ── Service ──
             {
-                "@type": "ProfessionalService",
+                "@type": "Service",
                 "@id": "https://bahattinyaylagul.com/geo/#service",
-                "name": "GEO Danışmanlığı (Generative Engine Optimization)",
+                "serviceType": "Generative Engine Optimization Consulting",
+                "name": "GEO Danışmanlığı",
                 "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak önerilmesini sağlayan optimizasyon hizmeti.",
                 "url": "https://bahattinyaylagul.com/geo",
                 "image": "https://bahattinyaylagul.com/images/bahattin-yaylagul.jpg",
-                "priceRange": "$$$",
+                "provider": { "@id": "https://bahattinyaylagul.com/#person" },
                 "areaServed": [
-                    {
-                        "@type": "Country",
-                        "name": "TR"
-                    },
-                    {
-                        "@type": "AdministrativeArea",
-                        "name": "İstanbul"
-                    },
-                    {
-                        "@type": "AdministrativeArea",
-                        "name": "Ankara"
-                    },
-                    {
-                        "@type": "AdministrativeArea",
-                        "name": "İzmir"
-                    }
+                    { "@type": "Country", "name": "TR" },
+                    { "@type": "AdministrativeArea", "name": "İstanbul" },
+                    { "@type": "AdministrativeArea", "name": "Ankara" },
+                    { "@type": "AdministrativeArea", "name": "İzmir" }
                 ],
+                "inLanguage": "tr",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "GEO Danışmanlığı Kapsamı",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entity Otoritesi İnşası" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Schema.org İşaretlemeleri" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Co-citation ve Dijital PR" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otoriter İçerik Üretimi" } }
+                    ]
+                },
                 "potentialAction": {
                     "@type": "CommunicateAction",
                     "name": "Ücretsiz GEO Analizi Talebi",
@@ -109,21 +220,23 @@ export default function GEOPage() {
                             "http://schema.org/MobileWebPlatform"
                         ]
                     }
-                },
-                "founder": { "@id": "https://bahattinyaylagul.com/#person" }
+                }
             },
+            // ── FAQPage ──
             {
                 "@type": "FAQPage",
                 "@id": "https://bahattinyaylagul.com/geo/#faq",
                 "mainEntity": faqData.map(item => ({
                     "@type": "Question",
                     "name": item.q,
+                    "url": `https://bahattinyaylagul.com/geo#${item.id}`,
                     "acceptedAnswer": {
                         "@type": "Answer",
                         "text": item.a
                     }
                 }))
             },
+            // ── Article ──
             {
                 "@type": "Article",
                 "@id": "https://bahattinyaylagul.com/geo/#article",
@@ -131,9 +244,112 @@ export default function GEOPage() {
                 "author": { "@id": "https://bahattinyaylagul.com/#person" },
                 "publisher": { "@id": "https://bahattinyaylagul.com/#person" },
                 "datePublished": "2026-07-18T10:00:00Z",
-                "dateModified": "2026-07-18T10:00:00Z",
+                "dateModified": "2026-09-06T00:00:00Z",
                 "description": "Markanızın ChatGPT, Gemini ve Perplexity gibi üretken yapay zekâ motorlarında atıf alması, kaynak gösterilmesi ve önerilmesi için stratejik optimizasyon rehberi.",
-                "inLanguage": "tr-TR"
+                "inLanguage": "tr-TR",
+                "wordCount": 2499,
+                "keywords": ["GEO danışmanlığı", "Generative Engine Optimization", "yapay zeka arama optimizasyonu", "ChatGPT görünürlük", "LLM SEO"],
+                "mainEntityOfPage": { "@id": "https://bahattinyaylagul.com/geo/#webpage" },
+                "about": [
+                    {
+                        "@type": "Thing",
+                        "name": "Generative Engine Optimization",
+                        "alternateName": ["GEO", "Üretken Motor Optimizasyonu"],
+                        "sameAs": ["https://en.wikipedia.org/wiki/Generative_engine_optimization"]
+                    }
+                ],
+                "mentions": [
+                    {
+                        "@type": "Thing",
+                        "name": "ChatGPT",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/ChatGPT"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Perplexity",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/Perplexity_AI"
+                    },
+                    {
+                        "@type": "Thing",
+                        "name": "Gemini",
+                        "additionalType": "https://schema.org/SoftwareApplication",
+                        "sameAs": "https://en.wikipedia.org/wiki/Gemini_(chatbot)"
+                    }
+                ],
+                "citation": {
+                    "@type": "ScholarlyArticle",
+                    "name": "GEO: Generative Engine Optimization",
+                    "author": "Aggarwal et al.",
+                    "datePublished": "2023-11",
+                    "url": "https://arxiv.org/abs/2311.09735"
+                }
+            },
+            // ── DefinedTermSet (Sözlük) ──
+            {
+                "@type": "DefinedTermSet",
+                "@id": "https://bahattinyaylagul.com/geo/#glossary",
+                "name": "GEO Terimleri Sözlüğü",
+                "hasDefinedTerm": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Entity Otoritesi",
+                        "description": "Markanızın veya ürününüzün, arama motorları ve büyük dil modelleri tarafından eşsiz, çelişkisiz ve doğrulanabilir bir varlık olarak algılanması durumudur.",
+                        "url": "https://bahattinyaylagul.com/geo#entity-otoritesi",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "RAG (Retrieval-Augmented Generation)",
+                        "description": "RAG, yapay zeka modellerinin kullanıcı sorgusuna yanıt hazırlarken yalnızca statik eğitim verilerini değil; web indeksinden anlık olarak çektikleri en güvenilir verileri sentezleyerek kaynaklı ve güncel cevap üretme teknolojisidir.",
+                        "url": "https://bahattinyaylagul.com/geo#rag",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Co-Citation",
+                        "alternateName": "Birlikte Anılma Skoru",
+                        "description": "Co-citation, web genelindeki farklı bağımsız ve otoriter platformlarda markanızın sektörünüzdeki anahtar kelimelerle aynı metin bloğu içinde doğal olarak geçmesidir.",
+                        "url": "https://bahattinyaylagul.com/geo#co-citation",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "Information Gain",
+                        "alternateName": "Bilgi Kazancı",
+                        "description": "Information Gain, bir web sayfasının internetteki diğer tüm benzer sayfalardan farklı olarak sunduğu benzersiz veri dikeyidir.",
+                        "url": "https://bahattinyaylagul.com/geo#information-gain",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "AEO (Answer Engine Optimization)",
+                        "description": "AEO, içeriklerin yapay zeka cevap motorları ve sesli asistanlar tarafından kolayca okunup doğrudan çekilebilmesi için soru-cevap formunda biçimlendirilip sunulması optimizasyonudur.",
+                        "url": "https://bahattinyaylagul.com/geo#aeo",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    },
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "LLM SEO",
+                        "alternateName": "Large Language Model SEO",
+                        "description": "LLM SEO, büyük dil modellerinin eğitim veri setlerinde yer alabilmek ve modellerin markanızı öncelikli tavsiye etmesini sağlamak amacıyla uygulanan yeni nesil semantik SEO yöntemleridir.",
+                        "url": "https://bahattinyaylagul.com/geo#llm-seo",
+                        "inDefinedTermSet": { "@id": "https://bahattinyaylagul.com/geo/#glossary" }
+                    }
+                ]
+            },
+            // ── ItemList (Danışmanlık Süreci) ──
+            {
+                "@type": "ItemList",
+                "name": "GEO Danışmanlığı Süreci",
+                "itemListOrder": "ItemListOrderAscending",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Entity Denetimi ve Tutarlılık Analizi" },
+                    { "@type": "ListItem", "position": 2, "name": "Semantik Yapı ve Schema Kurulumu" },
+                    { "@type": "ListItem", "position": 3, "name": "Co-Citation ve Dijital PR Yayılımı" },
+                    { "@type": "ListItem", "position": 4, "name": "LLM Önerilme ve Atıf Raporlama" }
+                ]
             },
             getBreadcrumbSchema(breadcrumbItems)
         ]
@@ -223,23 +439,21 @@ export default function GEOPage() {
                 <section aria-labelledby="faq-section" className="py-16 bg-gray-50/50 border-t border-gray-100">
                     <div className="max-w-4xl mx-auto px-4 md:px-6">
                         <h2 id="faq-section" className="text-3xl md:text-4xl font-black text-gray-900 mb-8 tracking-tight text-center">Sıkça Sorulan Sorular</h2>
-                        <ul className="space-y-4 max-w-3xl mx-auto">
+                        <div className="space-y-4 max-w-3xl mx-auto">
                             {faqData.map((item, i) => (
-                                <li key={i} className="list-none">
-                                    <details className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
-                                        <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
-                                            <span className="font-bold text-gray-950 text-base pr-4">{item.q}</span>
-                                            <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                                            </svg>
-                                        </summary>
-                                        <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
-                                            {item.a}
-                                        </div>
-                                    </details>
-                                </li>
+                                <details key={i} id={item.id} className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+                                    <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors list-none font-sans">
+                                        <h3 className="inline font-bold text-gray-950 text-base pr-4">{item.q}</h3>
+                                        <svg className="w-5 h-5 text-gray-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </summary>
+                                    <div className="px-6 pb-6 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-5 bg-white">
+                                        <p>{item.a}</p>
+                                    </div>
+                                </details>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 </section>
 
@@ -264,7 +478,7 @@ export default function GEOPage() {
                                     <Link href="/hakkimda" aria-label="Bahattin Yaylagül Özgeçmiş ve Hakkında" className="hover:text-violet-600 transition-colors">
                                         <h3 id="author-bio" className="text-2xl font-sans font-bold text-gray-900">Bahattin Yaylagül</h3>
                                     </Link>
-                                    <span className="px-3 py-1 bg-violet-50 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">SEO Consultant</span>
+                                    <span className="px-3 py-1 bg-violet-50 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">GEO Uzmanı</span>
                                 </div>
                                 <div className="flex items-center gap-4 justify-center md:justify-start">
                                     <Link href="/hakkimda" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-200 text-gray-700 hover:text-gray-950 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm rounded-full transition-all">
@@ -285,3 +499,5 @@ export default function GEOPage() {
         </main>
     );
 }
+
+

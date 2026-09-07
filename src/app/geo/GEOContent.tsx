@@ -269,12 +269,12 @@ export default function GEOContent() {
                         aria-label="Rehber İçindekiler"
                     >
                         <div>
-                            <h3 className="text-xs font-bold text-gray-950 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2">
+                            <p className="text-xs font-bold text-gray-950 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2" aria-hidden="true">
                                 <svg className="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
                                 </svg>
                                 REHBER BAŞLIKLARI
-                            </h3>
+                            </p>
                             <nav className="space-y-1 border-l-2 border-gray-100">
                                 {headings.map((heading, i) => (
                                     <a
@@ -299,13 +299,16 @@ export default function GEOContent() {
                                 GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir. Klasik SEO'dan temel farkı şudur: arama motoru algoritması değil, AI modelinin markanızı tanıması, anlaması ve güvenmesi hedeflenir.
                             </p>
                             <p>
-                                Generative Engine Optimization (GEO) kavramı 2023'te Princeton ve Columbia üniversitelerinin araştırmalarıyla akademik zemine oturdu. GEO üç temel katman üzerine kurulur: entity tutarlılığı, otorite ve kaynak sinyalleri, makine okunabilir bilgi mimarisi. AEO, GEO ve LLM SEO sık sık birbirinin yerine kullanılsa da aralarında iş bölümü vardır: AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO modelin bakışını yönetir — biri olmadan diğeri yarım kalır.
+                                Generative Engine Optimization (GEO) kavramı 2023'te <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">Princeton ve Columbia üniversitelerinin araştırmalarıyla</a> akademik zemine oturdu. GEO üç temel katman üzerine kurulur: entity tutarlılığı, otorite ve kaynak sinyalleri, makine okunabilir bilgi mimarisi. AEO, GEO ve LLM SEO sık sık birbirinin yerine kullanılsa da aralarında iş bölümü vardır: AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO modelin bakışını yönetir — biri olmadan diğeri yarım kalır.
                             </p>
                         </section>
 
                         <section className={`${proseBase} mb-16`} id="geo-danismani-ne-yapar" aria-labelledby="geo-danismani-title">
                             <h2 id="geo-danismani-title">GEO Danışmanı Ne Yapar?</h2>
-                            
+                            <p>
+                                GEO danışmanı dört temel iş yapar: <strong>entity tutarlılığı</strong> kurarak markanızın dijital kimliğini tüm platformlarda çelişkisiz hale getirir; <strong>Schema.org işaretlemeleri</strong> tasarlayarak yapay zeka sistemlerinin içeriği doğrudan anlamlandırmasını sağlar; <strong>co-citation ve dijital PR</strong> yürüterek markanızı sektörün doğru isimleriyle birlikte otoriter kaynaklarda anılır konuma taşır; <strong>otoriter içerik</strong> üreterek modellerin eğitim verisine ve RAG indeksine girilecek referans materyali oluşturur.
+                            </p>
+
                             <h3>Entity Tutarlılığı Kurma</h3>
                             <p>
                                 Yapay zeka bir markayı değerlendirirken yalnızca o markanın kendi sitesine değil, dışarıdan referans gösteren güvenilir kaynaklara da bakar. Danışmanın ilk işi, markanın dijital kimliğini — entity adı, sektör, konum, hizmet kapsamı — farklı platformlarda çelişkisiz hale getirmektir. Wikipedia, Wikidata, sektör dizinleri, sosyal profiller: bunların hepsinde aynı bilgi duruyorsa model güven puanını yüksek tutar. Tek bir çelişkili kayıt bile modelin markayla ilgili belirsizlik yaşamasına yol açabilir.
@@ -332,86 +335,56 @@ export default function GEOContent() {
                         <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
                             <h2 id="platform-bazli-title">Platform Bazlı GEO Stratejisi</h2>
                             <p>
-                                "AI görünürlüğü" deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity and Gemini'nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
+                                &quot;AI görünürlüğü&quot; deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity ve Gemini&apos;nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
                             </p>
 
-                            {/* Mobil: kart görünümü */}
-                            <div className="not-prose my-8 md:hidden space-y-4">
-                                {[
-                                    {
-                                        platform: "ChatGPT",
-                                        mechanism: "Eğitim verisi + RAG ile güncel web taraması",
-                                        signal: "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma",
-                                        tactic: "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi",
-                                    },
-                                    {
-                                        platform: "Perplexity",
-                                        mechanism: "Gerçek zamanlı web indeksi",
-                                        signal: "Anlık indekslenebilirlik ve yapılandırılmış veri",
-                                        tactic: "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri",
-                                    },
-                                    {
-                                        platform: "Gemini",
-                                        mechanism: "Google Knowledge Graph + arama ekosistemi",
-                                        signal: "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri",
-                                        tactic: "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu",
-                                    },
-                                ].map(({ platform, mechanism, signal, tactic }) => (
-                                    <div key={platform} className="rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                                        <div className="bg-gray-900 px-4 py-3">
-                                            <span className="font-bold text-white text-base">{platform}</span>
-                                        </div>
-                                        <div className="divide-y divide-gray-100">
-                                            <div className="px-4 py-3">
-                                                <p className="text-xs font-semibold text-violet-600 uppercase tracking-wide mb-1">Çalışma Mekanizması</p>
-                                                <p className="text-sm text-gray-700">{mechanism}</p>
-                                            </div>
-                                            <div className="px-4 py-3">
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Kritik Optimizasyon Sinyali</p>
-                                                <p className="text-sm text-gray-700">{signal}</p>
-                                            </div>
-                                            <div className="px-4 py-3">
-                                                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">Öncelikli Taktik</p>
-                                                <p className="text-sm text-gray-700">{tactic}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Masaüstü: tablo görünümü */}
-                            <div className="not-prose my-8 hidden md:block overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-                                <table className="w-full text-sm">
+                            {/* Tek responsive tablo — CSS ile mobilede blok görünüm */}
+                            <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                                <table className="w-full text-sm platform-table">
+                                    <caption className="sr-only">ChatGPT, Perplexity ve Gemini için GEO sinyalleri ve taktikler</caption>
                                     <thead>
                                         <tr className="bg-gray-900 text-white">
-                                            <th className="text-left px-5 py-4 font-bold">Platform</th>
-                                            <th className="text-left px-5 py-4 font-bold text-violet-400">Çalışma Mekanizması</th>
-                                            <th className="text-left px-5 py-4 font-bold text-gray-300">Kritik Optimizasyon Sinyali</th>
-                                            <th className="text-left px-5 py-4 font-bold text-gray-300">Öncelikli Taktik</th>
+                                            <th className="text-left px-5 py-4 font-bold" scope="col">Platform</th>
+                                            <th className="text-left px-5 py-4 font-bold text-violet-400" scope="col">Çalışma Mekanizması</th>
+                                            <th className="text-left px-5 py-4 font-bold text-gray-300" scope="col">Kritik Optimizasyon Sinyali</th>
+                                            <th className="text-left px-5 py-4 font-bold text-gray-300" scope="col">Öncelikli Taktik</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {[
-                                            ["ChatGPT", "Eğitim verisi + RAG ile güncel web taraması", "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma", "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi"],
-                                            ["Perplexity", "Gerçek zamanlı web indeksi", "Anlık indekslenebilirlik ve yapılandırılmış veri", "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri"],
-                                            ["Gemini", "Google Knowledge Graph + arama ekosistemi", "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri", "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu"],
-                                        ].map(([platform, mechanism, signal, tactic]) => (
+                                            {
+                                                platform: "ChatGPT",
+                                                mechanism: "Eğitim verisi + RAG ile güncel web taraması",
+                                                signal: "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma",
+                                                tactic: "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi",
+                                            },
+                                            {
+                                                platform: "Perplexity",
+                                                mechanism: "Gerçek zamanlı web indeksi",
+                                                signal: "Anlık indekslenebilirlik ve yapılandırılmış veri",
+                                                tactic: "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri",
+                                            },
+                                            {
+                                                platform: "Gemini",
+                                                mechanism: "Google Knowledge Graph + arama ekosistemi",
+                                                signal: "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri",
+                                                tactic: "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu",
+                                            },
+                                        ].map(({ platform, mechanism, signal, tactic }) => (
                                             <tr key={platform} className="hover:bg-gray-50 transition-colors">
-                                                <td className="px-5 py-4 font-bold text-gray-900">{platform}</td>
-                                                <td className="px-5 py-4 text-gray-700">{mechanism}</td>
-                                                <td className="px-5 py-4 text-gray-700">{signal}</td>
-                                                <td className="px-5 py-4 text-gray-700">{tactic}</td>
+                                                <th scope="row" className="px-5 py-4 font-bold text-gray-900" data-label="Platform">{platform}</th>
+                                                <td className="px-5 py-4 text-gray-700" data-label="Çalışma Mekanizması">{mechanism}</td>
+                                                <td className="px-5 py-4 text-gray-700" data-label="Kritik Optimizasyon Sinyali">{signal}</td>
+                                                <td className="px-5 py-4 text-gray-700" data-label="Öncelikli Taktik">{tactic}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
 
-
                             <p>
-                                Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity'de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
+                                Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity&apos;de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
                             </p>
-
 
                         </section>
 
@@ -456,7 +429,7 @@ export default function GEOContent() {
                                 GEO'nun getirisi anlık dönüşüm değil, erişim genişliği üzerinden ölçülür: kaç platformda, kaç sorgu tipinde, kaç farklı kaynak üzerinden görünürsünüz.
                             </p>
                             <ul>
-                                <li><strong>AI bahis oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günleşmiş formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
+                                <li><strong>AI bahsedilme oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günleşmiş formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
                                 <li><strong>Entity güç skoru:</strong> Markanızın Knowledge Graph'ta ne kadar iyi tanımlandığını, hangi kavramlarla ilişkilendirildiğini ve bu ilişkilerin kaç farklı kaynakta teyit edildiğini ölçer.</li>
                                 <li><strong>LLM önerilme oranı:</strong> "Bu kategoride hangi markayı önerirsin?" türü sorgularda markanızın öneri listesine girme sıklığını rakiplerinizle kıyaslayarak izleyin.</li>
                                 <li><strong>Kaynak çeşitliliği:</strong> Tek bir otoriter site değil, birden fazla farklı domain üzerinden co-citation örüntüsü oluşturulmuşsa LLM'ler sizi daha güvenilir buluyor.</li>
@@ -488,39 +461,39 @@ export default function GEOContent() {
                             </p>
                             <dl className="space-y-6 mt-8">
                                 <div className="border-b border-gray-100 pb-4">
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">Entity (Varlık) Otoritesi</dt>
+                                    <dt id="entity-otoritesi" className="text-lg font-bold text-gray-900 mb-1"><dfn>Entity (Varlık) Otoritesi</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Markanızın veya ürününüzün, arama motorları ve büyük dil modelleri (LLM) tarafından eşsiz, çelişkisiz ve doğrulanabilir bir "varlık" (entity) olarak algılanması durumudur. Bilgi grafikleri ve Wikidata eşleşmeleri ile ölçümlenir.
+                                        Entity (Varlık) Otoritesi, markanızın veya ürününüzün arama motorları ve büyük dil modelleri (LLM) tarafından eşsiz, çelişkisiz ve doğrulanabilir bir &quot;varlık&quot; olarak algılanması durumudur. Bilgi grafikleri ve Wikidata eşleşmeleri ile ölçümlenir.
                                     </dd>
                                 </div>
                                 <div className="border-b border-gray-100 pb-4">
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">RAG (Retrieval-Augmented Generation)</dt>
+                                    <dt id="rag" className="text-lg font-bold text-gray-900 mb-1"><dfn>RAG (Retrieval-Augmented Generation)</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Yapay zeka modellerinin kullanıcı sorgusuna yanıt hazırlarken yalnızca statik eğitim verilerini değil; web indeksinden anlık olarak çektikleri en güvenilir verileri sentezleyerek kaynaklı ve güncel cevap üretme teknolojisidir.
+                                        RAG (Retrieval-Augmented Generation), yapay zeka modellerinin kullanıcı sorgusuna yanıt hazırlarken yalnızca statik eğitim verilerini değil; web indeksinden anlık olarak çektikleri en güvenilir verileri sentezleyerek kaynaklı ve güncel cevap üretme teknolojisidir.
                                     </dd>
                                 </div>
                                 <div className="border-b border-gray-100 pb-4">
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">Co-Citation (Birlikte Anılma Skoru)</dt>
+                                    <dt id="co-citation" className="text-lg font-bold text-gray-900 mb-1"><dfn>Co-Citation (Birlikte Anılma Skoru)</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Web genelindeki farklı bağımsız ve otoriter platformlarda markanızın, sektörünüzdeki anahtar kelimelerle veya doğrudan rakiplerinizle aynı metin bloğu içinde doğal olarak geçmesidir. AI modellerinin en güvendiği semantik referans desenlerinden biridir.
+                                        Co-citation, web genelindeki farklı bağımsız ve otoriter platformlarda markanızın sektörünüzdeki anahtar kelimelerle veya doğrudan rakiplerinizle aynı metin bloğu içinde doğal olarak geçmesidir. AI modellerinin en güvendiği semantik referans desenlerinden biridir.
                                     </dd>
                                 </div>
                                 <div className="border-b border-gray-100 pb-4">
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">Information Gain (Bilgi Kazancı)</dt>
+                                    <dt id="information-gain" className="text-lg font-bold text-gray-900 mb-1"><dfn>Information Gain (Bilgi Kazancı)</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Bir web sayfasının, internetteki diğer tüm benzer sayfalardan farklı olarak sunduğu benzersiz veri dikeyidir. LLM'ler ve AI arama motorları, tekrarlanan makaleler yerine orijinal vaka çalışmaları ve yeni veriler barındıran sayfaları kaynak göstermeyi tercih eder.
+                                        Information Gain, bir web sayfasının internetteki diğer tüm benzer sayfalardan farklı olarak sunduğu benzersiz veri dikeyidir. LLM&apos;ler ve AI arama motorları, tekrarlanan makaleler yerine orijinal vaka çalışmaları ve yeni veriler barındıran sayfaları kaynak göstermeyi tercih eder.
                                     </dd>
                                 </div>
                                 <div className="border-b border-gray-100 pb-4">
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">AEO (Answer Engine Optimization)</dt>
+                                    <dt id="aeo" className="text-lg font-bold text-gray-900 mb-1"><dfn>AEO (Answer Engine Optimization)</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        İçeriklerin yapay zeka cevap motorları ve sesli asistanlar tarafından kolayca okunup doğrudan çekilebilmesi için soru-cevap formunda (FAQPage şemasıyla) biçimlendirilip sunulması optimizasyonudur.
+                                        AEO (Answer Engine Optimization), içeriklerin yapay zeka cevap motorları ve sesli asistanlar tarafından kolayca okunup doğrudan çekilebilmesi için soru-cevap formunda (FAQPage şemasıyla) biçimlendirilip sunulması optimizasyonudur.
                                     </dd>
                                 </div>
                                 <div>
-                                    <dt className="text-lg font-bold text-gray-900 mb-1">LLM SEO (Large Language Model SEO)</dt>
+                                    <dt id="llm-seo" className="text-lg font-bold text-gray-900 mb-1"><dfn>LLM SEO (Large Language Model SEO)</dfn></dt>
                                     <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Büyük dil modellerinin eğitim veri setlerinde yer alabilmek ve bu modellerin çıkarım yaparken (inference) markanızı öncelikli tavsiye etmesini sağlamak amacıyla uygulanan yeni nesil semantik SEO yöntemleridir.
+                                        LLM SEO, büyük dil modellerinin eğitim veri setlerinde yer alabilmek ve bu modellerin çıkarım yaparken (inference) markanızı öncelikli tavsiye etmesini sağlamak amacıyla uygulanan yeni nesil semantik SEO yöntemleridir.
                                     </dd>
                                 </div>
                             </dl>

@@ -26,7 +26,7 @@ Bahattin Yaylagül, SEO (Search Engine Optimization) ve GEO (Generative Engine O
 
 ## SEO ve GEO Danışmanlığı Verilen Markalar (Projeler)
 
-Bahattin Yaylagül, 12 yılı aşkın kariyeri boyunca aşağıdaki global ve yerel markalara SEO, Teknik SEO ve büyüme stratejileri alanlarında danışmanlık hizmeti vermiş veya projelerini yönetmiştir. Sektörel tecrübesi şu şekildedir:
+Bahattin Yaylagül, 14 yılı aşkın kariyeri boyunca aşağıdaki global ve yerel markalara SEO, Teknik SEO ve büyüme stratejileri alanlarında danışmanlık hizmeti vermiş veya projelerini yönetmiştir. Sektörel tecrübesi şu şekildedir:
 
 - **Perakende & Giyim:** Vans, The North Face, Levi's, Timberland, Tommy Hilfiger, Calvin Klein, Eastpak, LTB Jeans, Dockers, Hemington, Yargıcı, Gizia, Lee Cooper, Crocs
 - **Finans & Sigorta & Ödeme Sistemleri:** Aktif Bank, N Kolay, Passo, NN Hayat, Mapfre Sigorta, Troy

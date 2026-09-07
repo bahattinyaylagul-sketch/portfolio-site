@@ -180,9 +180,9 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                     <section className="grid md:grid-cols-2 gap-4 mb-12">
                         {post.keyPoints.map((point, index) => (
                             <div key={index} className="p-8 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors border border-gray-100">
-                                <h3 className="font-sans font-bold text-lg text-gray-900 mb-2">
+                                <p className="font-sans font-bold text-lg text-gray-900 mb-2">
                                     {point.title}
-                                </h3>
+                                </p>
                                 <p className="text-sm text-gray-600 leading-[1.6] tracking-[-0.01em]">
                                     {point.desc}
                                 </p>
@@ -199,7 +199,6 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                         prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold
                         prose-p:font-sans prose-p:text-gray-700 prose-p:text-lg prose-p:leading-relaxed prose-p:mb-8
                         prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-8 prose-ul:space-y-3
-                        prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
                         prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
                         prose-img:rounded-2xl prose-img:shadow-lg prose-img:w-full prose-img:h-auto prose-img:block
                         prose-strong:font-bold prose-strong:text-gray-900
@@ -222,9 +221,9 @@ export default function ArticleContent({ post, headings, contentWithIds, nextPos
                                         <span className="inline-block px-3 py-1 rounded-full bg-blue-600/20 text-blue-300 text-xs font-bold tracking-widest uppercase mb-3 border border-blue-500/30">
                                             SIRADAKİ ADIM
                                         </span>
-                                        <h3 className="text-3xl font-bold mb-2 group-hover:translate-x-1 transition-transform">
+                                        <p className="text-3xl font-bold mb-2 group-hover:translate-x-1 transition-transform">
                                             {nextPost.title}
-                                        </h3>
+                                        </p>
                                         <p className="text-gray-400 max-w-xl text-lg opacity-80">
                                             {nextPost.description}
                                         </p>

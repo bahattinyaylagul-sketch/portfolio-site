@@ -157,7 +157,6 @@ export default function TestimonialsSection() {
                                                 fill
                                                 className="object-cover object-top"
                                                 sizes="256px"
-                                                priority={idx === 0}
                                             />
                                         </div>
                                         {/* Şirket Logo Rozeti */}
