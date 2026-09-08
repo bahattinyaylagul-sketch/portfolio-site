@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "Perplexity GEO: Yanıt Motorunda (Answer Engine) Görünürlük",
@@ -586,6 +587,7 @@ export default function BlogPost() {
                 </div>
             </div>
 
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

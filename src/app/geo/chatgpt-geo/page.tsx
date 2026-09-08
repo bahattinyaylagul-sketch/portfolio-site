@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "ChatGPT GEO: SearchGPT'de Kaynak Gösterilme Rehberi",
@@ -725,6 +726,7 @@ Allow: /`}
                 </div>
             </div>
 
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

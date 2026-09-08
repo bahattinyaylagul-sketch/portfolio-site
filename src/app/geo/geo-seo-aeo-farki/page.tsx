@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "SEO, GEO ve AEO Farkları: Doğru Terimi Seçmek",
@@ -224,6 +225,7 @@ export default function Page() {
                 <ArticleContent />
             </div>
 
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

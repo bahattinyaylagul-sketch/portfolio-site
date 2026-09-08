@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 import ArticleContent from "./ArticleContent";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 // ... (Metadata export remains)
 
@@ -121,6 +122,7 @@ export default function RedditForumGEOPost() {
             </div>
 
             <ArticleContent />
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

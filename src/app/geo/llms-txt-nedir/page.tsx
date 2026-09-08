@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "llms.txt Dosyası Nedir? Yapay Zeka Botları İçin Site Haritası",
@@ -255,6 +256,7 @@ export default function LlmsTxtPage() {
                 <ArticleContent />
             </div>
 
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

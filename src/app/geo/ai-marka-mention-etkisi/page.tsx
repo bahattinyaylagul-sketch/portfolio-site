@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import GEOClusterGrid from "@/components/GEOClusterGrid";
 
 export const metadata: Metadata = {
     title: "Marka Mention'ları ve AI Hafızası (Co-occurrence)",
@@ -445,6 +446,7 @@ export default function BlogPost() {
                     </article>
                 </div>
             </div>
+            <GEOClusterGrid />
             <Footer />
         </main>
     );

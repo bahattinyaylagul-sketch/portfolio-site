@@ -6,10 +6,8 @@ const headings = [
     { id: "geo-danismani-ne-yapar", text: "GEO Danışmanı Ne Yapar?" },
     { id: "platform-bazli-strateji", text: "Platform Bazlı GEO Stratejisi" },
     { id: "ne-zaman-sonuc-verir", text: "GEO Çalışması Ne Zaman Sonuç Verir?" },
-    { id: "sektorel-vakalar", text: "Sektör Bazlı GEO Vakaları" },
     { id: "geo-basarisi", text: "GEO Başarısı Nasıl Ölçülür?" },
     { id: "danisman-secimi", text: "GEO Danışmanı Seçerken 6 Soru" },
-    { id: "geo-terimler", text: "GEO Terimleri & Sözlüğü" },
     { id: "faq-section", text: "Sıkça Sorulan Sorular" }
 ];
 
@@ -404,24 +402,7 @@ export default function GEOContent() {
                             </ul>
                         </section>
 
-                        <section className={`${proseBase} mb-16`} id="sektorel-vakalar" aria-labelledby="sektorel-vakalar-title">
-                            <h2 id="sektorel-vakalar-title">Sektör Bazlı GEO Vakaları</h2>
 
-                            <h3>Hukuk: YMYL Kısıtını Schema.org/Person ile Aşmak</h3>
-                            <p>
-                                Hukuk, finans ve sağlık YMYL (Your Money Your Life) kapsamına girer; bu kategoride LLM'ler çok temkinli davranır. Avukat profillerini Schema.org/Person yapısıyla işaretlemekten geçti: her avukat için uzmanlık alanı, yayınlar ve baro bilgisi yapılandırılmış veriyle tanımlandı. Sonuç: 3 avukat içerikleri Google AI Overviews'ta kaynak olarak alınmaya başladı.
-                            </p>
-
-                            <h3>E-Ticaret: Sıfırdan 27 Sorguda Referans</h3>
-                            <p>
-                                Başlangıçta 40'tan fazla hedef sorguda hiç görünmeyen marka, altı aylık entity mimarisi ve dijital PR çalışmasının ardından 27 sorguda referans alınır hale geldi. E-ticarette en büyük engel ince içerik sorunudur: modeller yalnızca "fiyat + özellik" listesi sunan sayfaları atıf kaynağı olarak seçmez. Kategori sayfaları gerçek rehber içeriğiyle zenginleştirildiğinde Perplexity'de ilgili sorularda kaynak gösterilmeye başlandı.
-                            </p>
-
-                            <h3>SaaS/B2B: Co-Citation ile Rakip Geçme</h3>
-                            <p>
-                                Co-citation bağlamı değiştirilerek — markanın hangi kavramlar ve hangi markalarla birlikte anıldığı yeniden şekillendirilerek — 4 ay içinde marka, LLM sıralamalarında rakibinin önüne geçti. Rakip marka sürekli "kurumsal ölçekli ve pahalı" bağlamında geçerken, hedef marka "orta ölçekli ekipler için" ve "hızlı kurulum" bağlamında konumlandırıldı. LLM'ler bu bağlamsal farkı zamanla modellerine işledi.
-                            </p>
-                        </section>
 
                         <section className={`${proseBase} mb-16`} id="geo-basarisi" aria-labelledby="geo-basarisi-title">
                             <h2 id="geo-basarisi-title">GEO Başarısı Nasıl Ölçülür?</h2>
@@ -454,50 +435,7 @@ export default function GEOContent() {
 
                         </section>
 
-                        <section className={`${proseBase} mb-16`} id="geo-terimler" aria-labelledby="geo-terimler-title">
-                            <h2 id="geo-terimler-title">GEO Terimleri &amp; Sözlüğü</h2>
-                            <p>
-                                Yapay zeka odaklı arama optimizasyonu (GEO) süreçlerinde sıkça kullanılan teknik terimler, kısaltmalar ve anlamları:
-                            </p>
-                            <dl className="space-y-6 mt-8">
-                                <div className="border-b border-gray-100 pb-4">
-                                    <dt id="entity-otoritesi" className="text-lg font-bold text-gray-900 mb-1"><dfn>Entity (Varlık) Otoritesi</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Entity (Varlık) Otoritesi, markanızın veya ürününüzün arama motorları ve büyük dil modelleri (LLM) tarafından eşsiz, çelişkisiz ve doğrulanabilir bir &quot;varlık&quot; olarak algılanması durumudur. Bilgi grafikleri ve Wikidata eşleşmeleri ile ölçümlenir.
-                                    </dd>
-                                </div>
-                                <div className="border-b border-gray-100 pb-4">
-                                    <dt id="rag" className="text-lg font-bold text-gray-900 mb-1"><dfn>RAG (Retrieval-Augmented Generation)</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        RAG (Retrieval-Augmented Generation), yapay zeka modellerinin kullanıcı sorgusuna yanıt hazırlarken yalnızca statik eğitim verilerini değil; web indeksinden anlık olarak çektikleri en güvenilir verileri sentezleyerek kaynaklı ve güncel cevap üretme teknolojisidir.
-                                    </dd>
-                                </div>
-                                <div className="border-b border-gray-100 pb-4">
-                                    <dt id="co-citation" className="text-lg font-bold text-gray-900 mb-1"><dfn>Co-Citation (Birlikte Anılma Skoru)</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Co-citation, web genelindeki farklı bağımsız ve otoriter platformlarda markanızın sektörünüzdeki anahtar kelimelerle veya doğrudan rakiplerinizle aynı metin bloğu içinde doğal olarak geçmesidir. AI modellerinin en güvendiği semantik referans desenlerinden biridir.
-                                    </dd>
-                                </div>
-                                <div className="border-b border-gray-100 pb-4">
-                                    <dt id="information-gain" className="text-lg font-bold text-gray-900 mb-1"><dfn>Information Gain (Bilgi Kazancı)</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        Information Gain, bir web sayfasının internetteki diğer tüm benzer sayfalardan farklı olarak sunduğu benzersiz veri dikeyidir. LLM&apos;ler ve AI arama motorları, tekrarlanan makaleler yerine orijinal vaka çalışmaları ve yeni veriler barındıran sayfaları kaynak göstermeyi tercih eder.
-                                    </dd>
-                                </div>
-                                <div className="border-b border-gray-100 pb-4">
-                                    <dt id="aeo" className="text-lg font-bold text-gray-900 mb-1"><dfn>AEO (Answer Engine Optimization)</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        AEO (Answer Engine Optimization), içeriklerin yapay zeka cevap motorları ve sesli asistanlar tarafından kolayca okunup doğrudan çekilebilmesi için soru-cevap formunda (FAQPage şemasıyla) biçimlendirilip sunulması optimizasyonudur.
-                                    </dd>
-                                </div>
-                                <div>
-                                    <dt id="llm-seo" className="text-lg font-bold text-gray-900 mb-1"><dfn>LLM SEO (Large Language Model SEO)</dfn></dt>
-                                    <dd className="text-gray-600 leading-relaxed text-sm">
-                                        LLM SEO, büyük dil modellerinin eğitim veri setlerinde yer alabilmek ve bu modellerin çıkarım yaparken (inference) markanızı öncelikli tavsiye etmesini sağlamak amacıyla uygulanan yeni nesil semantik SEO yöntemleridir.
-                                    </dd>
-                                </div>
-                            </dl>
-                        </section>
+
 
                     </div>
                 </div>
