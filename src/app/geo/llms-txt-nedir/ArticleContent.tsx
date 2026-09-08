@@ -439,23 +439,6 @@ export default function ArticleContent() {
                     </div>
                 </div>
 
-                {/* Sector Priority */}
-                <div className="not-prose my-8 space-y-3">
-                    <h3 className="font-bold text-gray-900 text-lg mb-4">Sektöre Göre Öncelik Sırası</h3>
-                    {[
-                        { icon: "📚", rank: "1.", title: "Dokümantasyon Siteleri", desc: "API referansları, teknik kılavuzlar — AI'ın en sık çektiği içerik türleri.", isBlue: true },
-                        { icon: "🛒", rank: "2.", title: "E-ticaret & SaaS", desc: "Ürün sayfaları ve özellik açıklamaları LLM'ler için değerli, ama öncelik düşük.", isBlue: false },
-                        { icon: "📰", rank: "3.", title: "Blog & İçerik Siteleri", desc: "Kişisel siteler ve bloglar için fayda şu an sınırlı.", isBlue: false },
-                    ].map(({ icon, rank, title, desc, isBlue }) => (
-                        <div key={rank} className={`flex items-center gap-4 p-4 border rounded-xl ${isBlue ? "bg-blue-50 border-blue-100" : "bg-gray-50 border-gray-200"}`}>
-                            <span className="text-2xl">{icon}</span>
-                            <div>
-                                <div className={`font-bold ${isBlue ? "text-blue-900" : "text-gray-900"}`}>{rank} {title}</div>
-                                <div className={`text-sm ${isBlue ? "text-blue-700" : "text-gray-600"}`}>{desc}</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
 
                 {/* Section 7 — FAQ */}
                 <div className={`${proseBase} mb-8`}>
@@ -476,24 +459,6 @@ export default function ArticleContent() {
                             </div>
                         </details>
                     ))}
-                </div>
-
-                {/* Topical Cluster Recommendation & Internal Links */}
-                <div className="not-prose my-12 p-6 bg-blue-50/50 border border-blue-100 rounded-2xl">
-                    <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span className="text-blue-600">💡</span> AI &amp; Arama Stratejinizi Genişletin
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                        llms.txt standardı LLM tarayıcılarına doğrudan hitap ederken, markanızın yapay zeka sonuçlarında asıl konumlanması ve atıf alması için GEO (Yapay Zeka Arama Optimizasyonu) temellerini iyi oturtmanız gerekir. 
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">GEO Danışmanlığı →</h4>
-                            <p className="text-xs text-gray-500">Yapay zeka arama motorlarında görünürlük ve marka atıf stratejileri.</p>
-                        <Link href="/seo" className="p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group">
-                            <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">Semantik SEO Çalışmaları →</h4>
-                            <p className="text-xs text-gray-500">Google ve yapay zeka botlarının sitenizi tam anlamıyla anlaması için semantik yapılandırma.</p>
-                        </Link>
-                    </div>
                 </div>
 
                 {/* Sources */}
