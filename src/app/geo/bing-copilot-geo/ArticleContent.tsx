@@ -133,7 +133,7 @@ export default function ArticleContent() {
     biçimde yazmak. Bir bölümü bağlamından koparıp Copilot'un yanıtına yapıştırdığınızda anlamlı
     kalıyorsa doğru yazılmış demektir. Bu yaklaşımın ayrıntısı
     <Link href="/geo/icerik-chunking">içerik chunking</Link> sayfasında;
-    tüm yüzeyler için ortak çerçeveyi <Link href="/geo">GEO danışmanlığı</Link> sayfasında topladım.
+    tüm yüzeyler için ortak çerçeveyi GEO danışmanlığı sayfasında topladım.
   </p>
 
   <h2 id="yuzeyler">Hangi Copilot web'e bakıyor, hangisi bakmıyor</h2>
@@ -528,7 +528,7 @@ export default function ArticleContent() {
 
   <p className="sayfa-cta">
     Bing indeksindeki gerçek ayak izinizi çıkarmak ve Copilot'un alıntılayabileceği bir içerik
-    yapısı kurmak için <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atabilirsiniz.
+    yapısı kurmak için GEO danışmanlığı sayfasına göz atabilirsiniz.
   </p>
                 </div>
             </article>

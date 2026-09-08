@@ -143,7 +143,7 @@ export default function ArticleContent() {
     Bu ikili yapı, iki disiplini birbirinin rakibi yapmıyor. SEO klasik arama yüzeyindeki
     görünürlüğü korurken GEO, yanıt yüzeyindeki atıf payını inşa ediyor ve büyük ölçüde
     aynı altyapının üstüne kuruluyor. Konunun bütününü
-    <Link href="/geo">GEO danışmanlığı sayfasında</Link> ele aldım; burada yalnızca ChatGPT
+    GEO danışmanlığı sayfasında ele aldım; burada yalnızca ChatGPT
     yüzeyine odaklanıyorum.
   </p>
 
@@ -805,7 +805,7 @@ Allow: /</code></pre>
   <p className="sayfa-cta">
     Sitenizin ChatGPT'ye açık olup olmadığını, hangi sorgularda kaynak gösterildiğinizi
     ve öncelik listenizin nereden başlaması gerektiğini birlikte çıkarmak için
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atabilirsiniz.
+    GEO danışmanlığı sayfasına göz atabilirsiniz.
   </p>
                 </div>
             </article>

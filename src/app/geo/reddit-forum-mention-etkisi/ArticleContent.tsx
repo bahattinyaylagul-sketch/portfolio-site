@@ -55,7 +55,7 @@ export default function ArticleContent() {
             <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                 <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
                 <span className="text-gray-200">/</span>
-                <Link href="/geo" className="hover:text-blue-600 transition-colors">GEO</Link>
+                GEO
                 <span className="text-gray-200">/</span>
                 <span className="text-gray-600 font-bold truncate">Reddit ve Forumlardaki Mention'lar</span>
             </nav>
@@ -192,9 +192,7 @@ export default function ArticleContent() {
                             </li>
                         </ul>
                         <div className="pt-6 border-t border-gray-100">
-                            <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
-                                ← GEO Danışmanlığı ana sayfasına dön
-                            </Link>
+                            ← GEO Danışmanlığı ana sayfasına dön
                         </div>
                     </div>
                 </article>

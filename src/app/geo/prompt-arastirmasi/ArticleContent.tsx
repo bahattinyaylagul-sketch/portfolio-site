@@ -99,7 +99,7 @@ export default function ArticleContent() {
     Ayrıldıkları yer o kelimelerin biçimi. Arama kutusuna yazılan ifade kısadır,
     dilbilgisi zayıftır, bağlam taşımaz. Yapay zekaya sorulan cümle ise uzundur,
     kısıt içerir, çoğu zaman birden fazla soruyu tek nefeste sorar.
-    <Link href="/geo">GEO çalışmasının</Link> girdisi artık bu ikinci biçim.
+    GEO çalışmasının girdisi artık bu ikinci biçim.
   </p>
 
   <p>
@@ -548,7 +548,7 @@ export default function ArticleContent() {
   <p className="sayfa-cta">
     Prompt setini kurmak GEO çalışmasının ilk adımı; asıl iş o sorularda görünür
     hâle gelmek. Markanızın yapay zeka cevaplarındaki konumunu baştan sona ele
-    almak isterseniz <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    almak isterseniz GEO danışmanlığı sayfasına göz atın.
   </p>
                 </div>
             </article>

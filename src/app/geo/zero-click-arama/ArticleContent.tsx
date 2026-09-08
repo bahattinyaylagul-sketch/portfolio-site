@@ -122,7 +122,7 @@ export default function ArticleContent() {
     artık "hangi CRM'i seçmeliyim", "şu iki ilaç birlikte kullanılır mı", "bu hatayı nasıl
     çözerim" gibi, cevabı tek bir olgu olmayan sorulara da paragraf yazıyor. Bu sorular
     tam olarak içerik üreticilerinin trafik kazandığı sorulardı.
-    <Link href="/geo">GEO tarafında</Link> yaptığımız işin çıkış noktası da bu kayma.
+    GEO tarafında yaptığımız işin çıkış noktası da bu kayma.
   </p>
 
   <p>
@@ -546,7 +546,7 @@ export default function ArticleContent() {
   <p className="cta">
     Kendi sitenizde kaybın nerede yapısal, nerede geri kazanılabilir olduğunu görmek
     istiyorsanız
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    GEO danışmanlığı sayfasına göz atın.
   </p>
 
 

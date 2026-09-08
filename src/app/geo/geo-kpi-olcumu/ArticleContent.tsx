@@ -109,7 +109,7 @@ export default function ArticleContent() {
 
   <p>
     Geleneksel aramada sıralama pozisyonu her şeyi özetliyordu. Onuncu sıradaysanız
-    onuncu sıradaydınız; tartışacak bir şey yoktu. <Link href="/geo">GEO tarafında</Link>
+    onuncu sıradaydınız; tartışacak bir şey yoktu. GEO tarafında
     o tek sayının yerini iki ayrı dinamik aldı: yanıtın parçası olmak ve atıf almak.
     {/* kaynak: K131 */}
     Marka görünürlüğü artık bir tabloda değil, modelin ürettiği metnin içinde ölçülüyor.
@@ -630,7 +630,7 @@ export default function ArticleContent() {
   <p className="cta">
     Ölçüm çerçevesini kurmak, GEO çalışmasının başlangıcı değil bir parçası.
     Markanızın yapay zeka yanıtlarındaki konumunu baştan sona ele almak isterseniz
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    GEO danışmanlığı sayfasına göz atın.
   </p>
 
 

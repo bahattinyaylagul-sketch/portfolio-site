@@ -74,7 +74,7 @@ export default function ArticleContent() {
             </aside>
 
             <article className="min-w-0 geo-rehber">
-                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">Gemini'de görünmek, sıralamada yükselmekten farklı bir iştir: model sayfanızı değil, sayfanızdaki tek bir pasajı alıntılar. Kazanan içerik, 40–60 kelimelik net cevap bloklarından kurulu, semantik HTML ile işaretlenmiş ve varlık ilişkileri açık olan içeriktir. Türkiye açısından kritik olan şu: <Link href="/geo">GEO</Link> artık teorik bir hazırlık değil, 18 Şubat 2026'dan beri ölçülebilir bir hedef.</p>
+                <p className="first-answer text-xl text-gray-700 leading-relaxed font-light mb-12 pl-6 border-l-4 border-violet-600">Gemini'de görünmek, sıralamada yükselmekten farklı bir iştir: model sayfanızı değil, sayfanızdaki tek bir pasajı alıntılar. Kazanan içerik, 40–60 kelimelik net cevap bloklarından kurulu, semantik HTML ile işaretlenmiş ve varlık ilişkileri açık olan içeriktir. Türkiye açısından kritik olan şu: GEO artık teorik bir hazırlık değil, 18 Şubat 2026'dan beri ölçülebilir bir hedef.</p>
                 <aside className="tldr mb-12 p-6 md:p-8 bg-violet-50/50 border border-violet-100/80 rounded-3xl shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
                         <span className="px-3 py-1 bg-violet-600 text-white text-xs font-black uppercase tracking-widest rounded-full">TL;DR</span>
@@ -305,7 +305,7 @@ export default function ArticleContent() {
   <p>10–20 sorgu yeterli. %30'u markalı, %70'i markasız kategori sorgusu olsun ve listeyi en az bir çeyrek boyunca değiştirmeyin.</p>
   {/* kaynak: K139 */}
 
-  <p className="cta"><Link href="/geo">GEO rehberinin tamamını inceleyin</Link> — platform bazlı sayfaların hepsi orada bağlanıyor.</p>
+  <p className="cta">GEO rehberinin tamamını inceleyin — platform bazlı sayfaların hepsi orada bağlanıyor.</p>
                 </div>
             </article>
         </div>

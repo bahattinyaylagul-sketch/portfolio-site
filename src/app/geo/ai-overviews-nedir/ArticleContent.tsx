@@ -139,7 +139,7 @@ export default function ArticleContent() {
   </p>
 
   <p>
-    Bu ayrım, <Link href="/geo">GEO danışmanlığı</Link> tarafında ilk yapılan işi belirliyor:
+    Bu ayrım, GEO danışmanlığı tarafında ilk yapılan işi belirliyor:
     hedef sorgu listenizin hangi kısmının AIO tetiklediğini bilmeden bütçe ayırmak, ekranda
     olmayan bir yarışa yatırım yapmak demek.
   </p>
@@ -792,7 +792,7 @@ export default function ArticleContent() {
       Hedef sorgularınızda AI Bakışı çıkıyor mu, çıkıyorsa kim kaynak gösteriliyor —
       bunu ölçmeden atılan her adım tahmin. Türkçe pencerenin açık olduğu bu dönemde
       durum tespitiyle başlamak istiyorsanız
-      <Link href="/geo">GEO danışmanlığı sayfasından</Link> ulaşabilirsiniz.
+      GEO danışmanlığı sayfasından ulaşabilirsiniz.
     </p>
   </aside>
                 </div>

@@ -131,7 +131,7 @@ export default function BlogPost() {
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-gray-400 mb-8 font-medium tracking-wide font-sans">
                     <Link href="/" className="hover:text-blue-600 transition-colors">Ana Sayfa</Link>
                     <span className="text-gray-200">/</span>
-                    <Link href="/geo" className="hover:text-blue-600 transition-colors">GEO Danışmanlığı</Link>
+                    <span className="text-gray-600 font-medium">GEO Danışmanlığı</span>
                     <span className="text-gray-200">/</span>
                     <span className="text-gray-600 font-bold truncate">Marka İsminin Mention Olarak Geçmesi</span>
                 </nav>

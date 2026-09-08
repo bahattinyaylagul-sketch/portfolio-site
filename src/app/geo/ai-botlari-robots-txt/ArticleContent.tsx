@@ -109,7 +109,7 @@ export default function ArticleContent() {
                         prose-table:text-sm
                         mb-16">
                     <p>
-    Bu sayfa <Link href="/geo">GEO danışmanlığı</Link> rehberinin teknik kolundaki
+    Bu sayfa GEO danışmanlığı rehberinin teknik kolundaki
     erişim katmanını anlatıyor: hangi botun ne topladığı, hangisinin kuralı
     dinlediği ve dinlemeyeni nerede durduracağınız. İçeriğin botlar tarafından
     <em>okunabilir</em> olması ayrı bir konu — orası
@@ -774,7 +774,7 @@ server {"{"}
 
   <p className="cta">
     Erişim kurallarını içerik ve ölçüm tarafıyla birlikte kurgulamak isterseniz
-    <Link href="/geo">GEO danışmanlığı</Link> sayfasından başlayın.
+    GEO danışmanlığı sayfasından başlayın.
   </p>
                 </div>
             </article>

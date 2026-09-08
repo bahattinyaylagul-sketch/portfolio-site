@@ -112,7 +112,7 @@ export default function ArticleContent() {
   {/* kaynak: blog.google/intl/tr-tr — 18 Şubat 2026, doğrulandı 15 Ağustos 2026 */}
 
   <p>
-    Tarihin neden bu kadar önemli olduğu, <Link href="/geo">GEO danışmanlığı</Link> tarafında
+    Tarihin neden bu kadar önemli olduğu, GEO danışmanlığı tarafında
     Şubat'tan bu yana bakılan her projede aynı biçimde ortaya çıkıyor. Google, AI Modu'nu
     180'i aşkın ülkeye açtığı dalgada Türkiye'yi kapsam dışında bırakmıştı. Türkçe konuşan
     kullanıcı, dünyanın geri kalanı bu arayüzü aylardır kullanırken geleneksel sonuç
@@ -653,7 +653,7 @@ export default function ArticleContent() {
   <p className="sayfa-cta">
     AI Modu'nda hangi sorgularda görünüp hangilerinde görünmediğinizi ölçmek ve içerik
     yapınızı bu yüzeye göre kurmak için
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atabilirsiniz.
+    GEO danışmanlığı sayfasına göz atabilirsiniz.
   </p>
                 </div>
             </article>

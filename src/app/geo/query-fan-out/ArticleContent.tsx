@@ -128,7 +128,7 @@ export default function ArticleContent() {
   </p>
 
   <p>
-    Bu, <Link href="/geo">AI aramada görünürlük</Link> çalışmasının neden klasik anahtar kelime
+    Bu, AI aramada görünürlük çalışmasının neden klasik anahtar kelime
     hedeflemesinden ayrıldığını açıklayan tek mekanizma. Sayfanız asıl sorgu için mükemmel
     yazılmış olabilir; fan-out o sorgudan türeyen alt sorguların hiçbirine karşılık gelmiyorsa
     yanıta girmiyor.
@@ -580,7 +580,7 @@ export default function ArticleContent() {
   <p className="cta">
     Fan-out'un sizin konunuzda hangi alt sorguları ürettiğini ve mevcut içeriğinizin kaçını
     karşıladığını birlikte çıkarmak isterseniz,
-    <Link href="/geo">GEO danışmanlığı</Link> sayfasından kapsam ve çalışma biçimine bakabilirsiniz.
+    GEO danışmanlığı sayfasından kapsam ve çalışma biçimine bakabilirsiniz.
   </p>
                 </div>
             </article>

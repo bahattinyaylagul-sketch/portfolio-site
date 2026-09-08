@@ -121,7 +121,7 @@ export default function ArticleContent() {
     yazıldığının bir önemi kalmıyor. Arama adımında dönmezse okunmuyor. Okunurken içeriği
     JavaScript'in arkasındaysa boş geliyor. Boş gelmese bile cevabı paragrafların içine
     gömülmüşse model onu çıkarmakta zorlanıyor. Bu üç eleme noktası
-    <Link href="/geo">GEO çalışmasının</Link> tamamında aynı sırayla karşınıza çıkıyor;
+    GEO çalışmasının tamamında aynı sırayla karşınıza çıkıyor;
     Perplexity yalnızca en görünür örneği.
   </p>
 
@@ -157,7 +157,7 @@ export default function ArticleContent() {
     <Link href="/geo/chatgpt-geo">ChatGPT GEO</Link> ve
     <Link href="/geo/google-ai-modu">Google AI Modu</Link> sayfaları bu
     sayfayla birlikte okunmak üzere yazıldı. Genel çerçeve ve önceliklendirme
-    <Link href="/geo">GEO danışmanlığı</Link> tarafında duruyor.
+    GEO danışmanlığı tarafında duruyor.
   </p>
 
   <h2 id="kaynak-secimi">Perplexity hangi kaynakları seçer?</h2>
@@ -675,7 +675,7 @@ export default function ArticleContent() {
 
   <p className="sayfa-cta">
     Hangi sorgularda atıf aldığınızı ölçmek ve içerik yapınızı bu yüzeye göre kurmak için
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atabilirsiniz.
+    GEO danışmanlığı sayfasına göz atabilirsiniz.
   </p>
                 </div>
             </article>

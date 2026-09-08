@@ -135,7 +135,7 @@ export default function ArticleContent() {
     hangi kaynağı alıntılayacağına karar veriyorsa, kaynağın kim olduğunu bilmesi gerekir.
     Kimliği belirsiz bir alan adı, aynı bilgiyi veren tanınmış bir varlığın yanında
     sistematik olarak eleniyor. Entity SEO'nun GEO ile kesiştiği nokta burası:
-    <Link href="/geo">AI aramada görünürlük</Link> çalışmasının teknik tarafı schema ise, kimlik
+    AI aramada görünürlük çalışmasının teknik tarafı schema ise, kimlik
     tarafı entity SEO'dur.
   </p>
 

@@ -150,7 +150,7 @@ export default function ArticleContent() {
     göstereceği zaman, kartın içindeki alanları dolduracak yapılandırılmış bir
     kaynağa ihtiyacı var. Web sitenizdeki "Hakkımızda" sayfası bunu tam olarak
     karşılamaz — orada yazan bilgi doğru olabilir ama teyit edilmemiştir.
-    <Link href="/geo">GEO çalışmasının</Link> varlık katmanı tam olarak bu boşluğu kapatma
+    GEO çalışmasının varlık katmanı tam olarak bu boşluğu kapatma
     işidir: markayı, hakkında konuşulan bir kelime olmaktan çıkarıp tanımlı bir
     varlığa dönüştürmek.
   </p>
@@ -598,7 +598,7 @@ export default function ArticleContent() {
 
   <p className="cta">
     Markanızın varlık altyapısını kurmak, bilgi paneli almak ya da mevcut panelin
-    yanlışlarını düzeltmek için <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    yanlışlarını düzeltmek için GEO danışmanlığı sayfasına göz atın.
   </p>
                 </div>
             </article>

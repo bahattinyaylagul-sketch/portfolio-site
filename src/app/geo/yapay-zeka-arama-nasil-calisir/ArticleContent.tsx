@@ -107,7 +107,7 @@ export default function ArticleContent() {
   </p>
 
   <p>
-    Bu yüzden <Link href="/geo">GEO danışmanlığı</Link> tarafında müşteriyle ilk konuştuğum
+    Bu yüzden GEO danışmanlığı tarafında müşteriyle ilk konuştuğum
     konu araç seçimi değil, bu akış oluyor. "ChatGPT'de nasıl çıkarım" sorusunun
     cevabı bir hile değil; sorunun kendisi yanlış kurulmuş. Doğru soru şu: bu sekiz
     adımlık zincirin hangi adımında benim içeriğim düşüyor?
@@ -594,7 +594,7 @@ export default function ArticleContent() {
     <p>
       Bu zincirin hangi adımında kaybettiğinizi ölçmeden taktik seçmek zaman kaybı.
       Sitenizin hangi halkada elendiğini birlikte çıkaralım:
-      <Link href="/geo">GEO danışmanlığı</Link>.
+      GEO danışmanlığı.
     </p>
   </aside>
                 </div>

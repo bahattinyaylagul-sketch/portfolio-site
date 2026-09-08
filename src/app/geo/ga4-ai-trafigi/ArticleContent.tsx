@@ -87,7 +87,7 @@ export default function ArticleContent() {
                         <span className="tldr-baslik text-sm font-bold text-violet-800">Kısaca</span>
                     </div>
                     <p className="text-gray-800 font-bold text-[15px] leading-relaxed mb-4"><strong>GA4 yapay zeka trafiğini ölçebilir, ama yalnızca siz ona nereye bakacağını söylerseniz.</strong></p>
-                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Özel kanal grubunda tek bir regex satırı işi çözer; asıl kritik adım o kuralı Referral'ın <em>üstüne</em> taşımaktır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Yapay zeka oturumlarının üçte birinden fazlası yönlendiren bilgisi taşımaz ve Direct'e düşer — kanalı kursanız da eksik ölçersiniz.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>GA4 yalnızca tıklayan insanı görür. Tıklanmayan görünürlüğü ve bot çekimlerini yalnızca sunucu logu gösterir.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Dört kartlık bir Looker Studio panosu, GA4 arayüzünde her ay kaybolan kanalı kalıcı hâle getirir. <Link href="/geo">GEO</Link> raporlamanızın omurgası bu pano olabilir.</span></li></ul>
+                    <ul className="space-y-3.5 text-gray-700 text-[15px] leading-relaxed list-none pl-0 my-0"><li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Özel kanal grubunda tek bir regex satırı işi çözer; asıl kritik adım o kuralı Referral'ın <em>üstüne</em> taşımaktır.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Yapay zeka oturumlarının üçte birinden fazlası yönlendiren bilgisi taşımaz ve Direct'e düşer — kanalı kursanız da eksik ölçersiniz.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>GA4 yalnızca tıklayan insanı görür. Tıklanmayan görünürlüğü ve bot çekimlerini yalnızca sunucu logu gösterir.</span></li> <li className="flex items-start gap-3"><span className="text-violet-600 font-bold shrink-0 mt-0.5">✦</span><span>Dört kartlık bir Looker Studio panosu, GA4 arayüzünde her ay kaybolan kanalı kalıcı hâle getirir. GEO raporlamanızın omurgası bu pano olabilir.</span></li></ul>
                 </aside>
                 
                 <div className="prose prose-lg max-w-none 
@@ -554,7 +554,7 @@ export default function ArticleContent() {
   <p className="sayfa-cta">
     Kanalı kurmak ölçümün ilk adımı; asıl soru asistanların markanızı hangi sorgularda
     kaynak gösterdiği. Bu tarafı baştan sona ele almak isterseniz
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    GEO danışmanlığı sayfasına göz atın.
   </p>
 
 

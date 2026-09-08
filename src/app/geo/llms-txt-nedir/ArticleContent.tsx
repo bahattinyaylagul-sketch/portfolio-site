@@ -487,10 +487,8 @@ export default function ArticleContent() {
                         llms.txt standardı LLM tarayıcılarına doğrudan hitap ederken, markanızın yapay zeka sonuçlarında asıl konumlanması ve atıf alması için GEO (Yapay Zeka Arama Optimizasyonu) temellerini iyi oturtmanız gerekir. 
                     </p>
                     <div className="grid md:grid-cols-2 gap-4">
-                        <Link href="/geo" className="p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group">
-                            <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">GEO Danışmanlığı →</h4>
+                        <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">GEO Danışmanlığı →</h4>
                             <p className="text-xs text-gray-500">Yapay zeka arama motorlarında görünürlük ve marka atıf stratejileri.</p>
-                        </Link>
                         <Link href="/seo" className="p-4 bg-white border border-gray-100 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group">
                             <h4 className="font-bold text-gray-900 text-sm mb-1 group-hover:text-blue-600 transition-colors">Semantik SEO Çalışmaları →</h4>
                             <p className="text-xs text-gray-500">Google ve yapay zeka botlarının sitenizi tam anlamıyla anlaması için semantik yapılandırma.</p>
@@ -527,12 +525,10 @@ export default function ArticleContent() {
                         </p>
                     </div>
                     <div className="relative z-10 shrink-0 w-full md:w-auto">
-                        <Link href="/geo" className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black hover:-translate-y-1 transition-all shadow-md">
-                            GEO Danışmanlığı Hizmetini İncele
+                        GEO Danışmanlığı Hizmetini İncele
                             <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
-                        </Link>
                     </div>
                 </aside>
 
@@ -556,9 +552,7 @@ export default function ArticleContent() {
                         </li>
                     </ul>
                     <div className="pt-6 border-t border-gray-100">
-                        <Link href="/geo" className="inline-flex items-center text-sm font-bold text-gray-400 hover:text-gray-800 transition-colors">
-                            ← GEO Danışmanlığı ana sayfasına dön
-                        </Link>
+                        ← GEO Danışmanlığı ana sayfasına dön
                     </div>
                 </div>
             </article>

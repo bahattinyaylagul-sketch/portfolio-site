@@ -113,7 +113,7 @@ export default function ArticleContent() {
   </p>
 
   <p>
-    Buradan çıkan pratik sonuç, <Link href="/geo">AI aramada görünürlük</Link> çalışmasının
+    Buradan çıkan pratik sonuç, AI aramada görünürlük çalışmasının
     klasik sayfa optimizasyonundan ayrıldığı yerdir: 3.000 kelimelik bir makale tek bir rakip
     olarak değil, ayrı ayrı değerlendirilen pasajlar kümesi olarak rekabet eder. Güçlü bir
     alan adına sahip olmak tek başına bunu değiştirmiyor — otorite sayfa düzeyinde birikir,
@@ -555,7 +555,7 @@ export default function ArticleContent() {
   <p className="cta">
     Mevcut sayfalarınızın hangi pasajlarının alıntılanabilir durumda olduğunu ve hangilerinin
     retrieval aşamasında elendiğini birlikte çıkarmak isterseniz,
-    <Link href="/geo">GEO danışmanlığı</Link> sayfasından kapsam ve çalışma biçimine bakabilirsiniz.
+    GEO danışmanlığı sayfasından kapsam ve çalışma biçimine bakabilirsiniz.
   </p>
                 </div>
             </article>

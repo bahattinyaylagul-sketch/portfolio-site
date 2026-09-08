@@ -103,7 +103,7 @@ export default function ArticleContent() {
     yapay zeka tarayıcılarının (crawler) %69'u JavaScript çalıştıramıyor. İçeriğiniz
     yalnızca JavaScript çalıştıktan sonra ekrana geliyorsa bu botlar gerçek anlamda
     boş bir sayfa görür — hata almazlar, 404 dönmez, sadece okuyacak bir şey bulamazlar.
-    Bu eşiği geçmeden <Link href="/geo">GEO</Link> tarafında yaptığınız içerik çalışmasının
+    Bu eşiği geçmeden GEO tarafında yaptığınız içerik çalışmasının
     karşılığını almanız mümkün değil.
     {/* kaynak: K150 */}
   </p>
@@ -611,7 +611,7 @@ export default function ArticleContent() {
     Render katmanı, yapay zeka görünürlüğünün en somut ve en hızlı düzelen kısmı —
     ama tek başına yeterli değil. Sitenizin yapay zeka yanıtlarındaki konumunu içerik,
     varlık ve teknik taraflarıyla birlikte ele almak isterseniz
-    <Link href="/geo">GEO danışmanlığı sayfasına</Link> göz atın.
+    GEO danışmanlığı sayfasına göz atın.
   </p>
 
 
