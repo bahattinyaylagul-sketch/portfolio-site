@@ -137,7 +137,7 @@ export default function GEORehberlerPage() {
                     <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/40 mb-8 font-medium">
                         <Link href="/" className="hover:text-white/70 transition-colors">Ana Sayfa</Link>
                         <span>/</span>
-                        <span className="text-gray-600 font-medium">GEO Danışmanlığı</span>
+                        <Link href="/geo" className="hover:text-violet-600 transition-colors">GEO Danışmanlığı</Link>
                         <span>/</span>
                         <span className="text-white/80">GEO Rehberleri</span>
                     </nav>
