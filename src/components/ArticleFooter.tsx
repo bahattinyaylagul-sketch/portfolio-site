@@ -23,31 +23,41 @@ export default function ArticleFooter({ currentSlug }: { currentSlug: string }) 
     }
 
     return (
-        <>
-            {/* CTA Banner */}
-            <aside className="my-16 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative overflow-hidden" aria-label="GEO Danışmanlığı Teklifi">
-                <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-gray-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-                <div className="relative z-10 flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Markanızı Yapay Zeka Çağına Taşıyın</h3>
-                    <p className="text-gray-600 leading-relaxed font-medium">
-                        GEO ve AI görünürlük stratejilerinin işinize özel nasıl kurgulanabileceğini görmek ister misiniz?
-                    </p>
-                </div>
-                <div className="relative z-10 shrink-0 w-full md:w-auto">
-                    <Link href="/geo" className="inline-flex items-center justify-center w-full px-8 py-4 bg-gray-900 text-white font-semibold rounded-xl hover:bg-black hover:-translate-y-1 transition-all shadow-md">
-                        GEO Danışmanlığı Hizmetini İncele
-                        <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </Link>
-                </div>
-            </aside>
+        <div className="mt-16">
+            {/* Next Step CTA Banner */}
+            <div className="mb-20">
+                <Link
+                    href="/geo"
+                    className="block relative overflow-hidden bg-gray-900 rounded-2xl p-10 text-white group hover:bg-black transition-colors shadow-2xl"
+                >
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none group-hover:bg-violet-600/30 transition-all"></div>
+
+                    <div className="relative z-10 flex items-center justify-between gap-6">
+                        <div>
+                            <span className="inline-block px-3 py-1 rounded-full bg-violet-600/20 text-violet-300 text-xs font-bold tracking-widest uppercase mb-3 border border-violet-500/30">
+                                SIRADAKİ ADIM
+                            </span>
+                            <p className="text-3xl font-bold mb-2 group-hover:translate-x-1 transition-transform">
+                                GEO Danışmanlığı: Kapsamlı Rehber
+                            </p>
+                            <p className="text-gray-400 max-w-xl text-lg opacity-80">
+                                Yapay zeka arama motorları ve dil modellerinde marka bilinirliğini ve atıfları artırmaya yönelik derinlemesine stratejiler.
+                            </p>
+                        </div>
+                        <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-violet-600 group-hover:scale-110 transition-all duration-300 shrink-0">
+                            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </Link>
+            </div>
 
             {/* Ayrıca Bakınız (İlgili Makaleler) */}
             {relatedArticles.length > 0 && (
                 <div className="mt-16 border-t border-gray-100 pt-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
-                    <ul className="space-y-6 mb-8">
+                    <ul className="space-y-6 mb-12">
                         {relatedArticles.map((article, idx) => (
                             <li key={idx} className="list-none">
                                 <Link href={article.href} className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
@@ -60,6 +70,12 @@ export default function ArticleFooter({ currentSlug }: { currentSlug: string }) 
                     </ul>
                 </div>
             )}
-        </>
+            
+            <div className="pb-16 text-sm text-gray-400 font-medium font-sans">
+                <Link href="/geo" className="hover:text-violet-600 transition-colors">
+                    ← GEO Danışmanlığı ana sayfasına dön
+                </Link>
+            </div>
+        </div>
     );
 }

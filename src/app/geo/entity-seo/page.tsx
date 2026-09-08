@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
-import GEOClusterGrid from "@/components/GEOClusterGrid";
+import ArticleFooter from "@/components/ArticleFooter";
 
 export const metadata: Metadata = {
     title: "Entity SEO: Varlık Tabanlı Optimizasyon ve Bilgi Grafiği",
@@ -225,7 +225,7 @@ export default function Page() {
                 <ArticleContent />
             </div>
 
-            <GEOClusterGrid />
+            <ArticleFooter currentSlug="entity-seo" />
             <Footer />
         </main>
     );

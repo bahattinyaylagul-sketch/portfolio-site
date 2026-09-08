@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import ArticleContent from "./ArticleContent";
 import { AUTHOR_ENTITY } from "@/lib/schema";
-import GEOClusterGrid from "@/components/GEOClusterGrid";
+import ArticleFooter from "@/components/ArticleFooter";
 
 export const metadata: Metadata = {
     title: "MCP ve NLWeb: Model Context Protocol ile Web Entegrasyonu",
@@ -217,7 +217,7 @@ export default function Page() {
                 <ArticleContent />
             </div>
 
-            <GEOClusterGrid />
+            <ArticleFooter currentSlug="mcp-nlweb" />
             <Footer />
         </main>
     );

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 import ArticleContent from "./ArticleContent";
-import GEOClusterGrid from "@/components/GEOClusterGrid";
+import ArticleFooter from "@/components/ArticleFooter";
 
 // ... (Metadata export remains)
 
@@ -122,7 +122,7 @@ export default function RedditForumGEOPost() {
             </div>
 
             <ArticleContent />
-            <GEOClusterGrid />
+            <ArticleFooter currentSlug="reddit-forum-mention-etkisi" />
             <Footer />
         </main>
     );
