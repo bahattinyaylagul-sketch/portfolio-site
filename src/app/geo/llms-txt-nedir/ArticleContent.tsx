@@ -515,46 +515,6 @@ export default function ArticleContent() {
                     </ul>
                 </aside>
 
-                {/* CTA */}
-                <aside className="my-16 p-8 bg-gray-50 border border-gray-100 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative overflow-hidden" aria-label="GEO Danışmanlığı Teklifi">
-                    <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-gray-200 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-                    <div className="relative z-10 flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">Markanızı Yapay Zeka Çağına Taşıyın</h3>
-                        <p className="text-gray-600 leading-relaxed font-medium">
-                            GEO ve AI görünürlük stratejilerinin işinize özel nasıl kurgulanabileceğini görmek ister misiniz?
-                        </p>
-                    </div>
-                    <div className="relative z-10 shrink-0 w-full md:w-auto">
-                        GEO Danışmanlığı Hizmetini İncele
-                            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                    </div>
-                </aside>
-
-                {/* Ayrıca Bakınız */}
-                <div className="mt-16 border-t border-gray-100 pt-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Ayrıca Bakınız</h2>
-                    <ul className="space-y-6 mb-8">
-                        <li className="list-none">
-                            <Link href="/geo/reddit-forum-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                Reddit ve Forum Mention'larının GEO Etkisi
-                            </Link>
-                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Reddit ve forumlardaki mention'ların (bahsedilmeler) yapay zeka tavsiyelerine doğrudan etkisi.</p>
-                        </li>
-                        <li className="list-none">
-                            <Link href="/geo/ai-marka-mention-etkisi" className="inline-flex items-center text-violet-600 hover:underline font-bold group text-lg">
-                                <span className="w-2 h-2 rounded-full bg-violet-600 mr-3 group-hover:scale-125 transition-all" />
-                                Marka Mention'ları ve AI Hafızası
-                            </Link>
-                            <p className="text-sm text-gray-500 ml-5 mt-1 leading-relaxed max-w-2xl">Link içermeyen marka anılmalarının LLM modellerinin bilgi ağındaki yeri.</p>
-                        </li>
-                    </ul>
-                    <div className="pt-6 border-t border-gray-100">
-                        ← GEO Danışmanlığı ana sayfasına dön
-                    </div>
-                </div>
             </article>
         </div>
     );
