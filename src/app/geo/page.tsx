@@ -381,11 +381,7 @@ export default function GEOPage() {
                                     className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-5 leading-[1.05] tracking-tight"
                                     style={{ fontWeight: 900 }}
                                 >
-                                    <span
-                                        style={{
-                                            textShadow: "0 0 80px rgba(255,255,255,0.12), 0 0 160px rgba(139,92,246,0.08)"
-                                        }}
-                                    >
+                                    <span>
                                         GEO{" "}
                                         <span className="text-white">
                                             Danışmanlığı
@@ -394,11 +390,11 @@ export default function GEOPage() {
                                 </h1>
 
                                 <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl leading-relaxed font-medium">
-                                    Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity aramalarında markanızın güvenilir bir kaynak olarak önerilmesini sağlayın.
+                                    Müşterileriniz artık yapay zekâya soruyor. ChatGPT, Gemini ve Perplexity gibi araçlarda markanızın ne kadar görünür olduğunu birlikte analiz ediyor, iyileştirme fırsatlarını belirliyoruz.
                                 </p>
 
                                 <p className="text-sm text-white/50 mb-8 max-w-xl leading-relaxed">
-                                    Yapay zekâ motorlarında kaynak gösterilmek, marka atıflarını artırmak ve semantik görünürlük kazanmak için stratejik optimizasyon hizmeti.
+                                    Yapay zekâ destekli arama motorlarında markanızın mevcut durumunu değerlendirmek ve görünürlük potansiyelini artırmak için danışmanlık hizmeti.
                                 </p>
 
                                 {/* Trust Stats Bar */}
@@ -420,7 +416,7 @@ export default function GEOPage() {
                             {/* Sağ Kolon: Form */}
                             <aside aria-label="Hızlı GEO Denetimi Formu" className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
                                 <p className="text-xl font-bold text-white mb-2">Ücretsiz GEO Denetimi</p>
-                                <p className="text-sm text-white/60 mb-6">Sitenizin LLM ve yapay zeka arama motorları gözündeki görünürlüğünü denetleyelim.</p>
+                                <p className="text-sm text-white/60 mb-6">Sitenizin yapay zeka arama araçlarındaki mevcut durumunu birlikte değerlendirelim.</p>
                                 <SEOContactForm />
                             </aside>
                         </div>
