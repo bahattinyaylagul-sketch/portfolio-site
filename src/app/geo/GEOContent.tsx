@@ -1,12 +1,7 @@
 import Link from "next/link";
 import TestimonialsSection from "../seo/TestimonialsSection";
 
-const headings = [
-    { id: "geo-nedir", text: "GEO Danışmanlığı Nedir?" },
-    { id: "platform-bazli-strateji", text: "Platform Bazlı GEO Stratejisi" },
-    { id: "ne-zaman-sonuc-verir", text: "GEO Çalışması Ne Zaman Sonuç Verir?" },
-    { id: "faq-section", text: "Sıkça Sorulan Sorular" }
-];
+
 
 const expertiseAreas = [
     {
@@ -90,8 +85,7 @@ const consultancySteps = [
     }
 ];
 
-const proseBase =
-    "prose prose-lg max-w-none prose-headings:font-sans prose-headings:font-bold prose-headings:text-foreground prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:leading-tight prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800 prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:text-gray-900 prose-h4:font-bold prose-p:font-sans prose-p:text-gray-600 prose-p:leading-8 prose-p:mb-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-ul:space-y-2 prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-6 prose-ol:space-y-2 prose-li:text-gray-600 prose-li:leading-relaxed prose-strong:font-bold prose-strong:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800 prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6";
+
 
 export default function GEOContent() {
     return (
@@ -256,128 +250,7 @@ export default function GEOContent() {
                 </div>
             </section>
 
-            {/* ── 4. Semantik Rehber Bölümü (TOC Sidebar ile) ── */}
-            <section id="geo-rehberi" className="max-w-6xl mx-auto px-4 md:px-6 py-12 border-t border-gray-100">
-                <div className="grid lg:grid-cols-[250px_1fr] gap-12 items-start relative">
-                    <aside
-                        className="hidden lg:block sticky top-32 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4 custom-scrollbar"
-                        aria-label="Rehber İçindekiler"
-                    >
-                        <div>
-                            <p className="text-xs font-bold text-gray-950 uppercase tracking-widest mb-4 flex items-center gap-2 pl-2" aria-hidden="true">
-                                <svg className="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
-                                </svg>
-                                REHBER BAŞLIKLARI
-                            </p>
-                            <nav className="space-y-1 border-l-2 border-gray-100">
-                                {headings.map((heading, i) => (
-                                    <a
-                                        key={i}
-                                        href={heading.id === "faq-section" ? `#${heading.id}` : `#${heading.id}`}
-                                        className="block py-3 pl-4 text-sm text-gray-600 hover:text-violet-700 hover:border-l-2 hover:border-violet-700 -ml-0.5 transition-all leading-relaxed"
-                                    >
-                                        <span className="font-mono text-xs text-gray-400 mr-2 font-medium">
-                                            {(i + 1).toString().padStart(2, "0")}
-                                        </span>
-                                        {heading.text}
-                                    </a>
-                                ))}
-                            </nav>
-                        </div>
-                    </aside>
 
-                    <div className="min-w-0">
-                        <section className={`${proseBase} mb-16`} id="geo-nedir" aria-labelledby="geo-nedir-title">
-                            <h2 id="geo-nedir-title">GEO Danışmanlığı Nedir?</h2>
-                            <p>
-                                GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir.
-                            </p>
-                        </section>
-
-
-
-                        <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
-                            <h2 id="platform-bazli-title">Platform Bazlı GEO Stratejisi</h2>
-                            <p>
-                                &quot;AI görünürlüğü&quot; deyip tek bir stratejiyle üç platformu kazanmaya çalışmak işe yaramaz. ChatGPT, Perplexity ve Gemini&apos;nin bilgiye ulaşma mekanizmaları birbirinden temelden farklıdır.
-                            </p>
-
-                            {/* Tek responsive tablo — CSS ile mobilede blok görünüm */}
-                            <div className="not-prose my-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-                                <table className="w-full text-sm platform-table">
-                                    <caption className="sr-only">ChatGPT, Perplexity ve Gemini için GEO sinyalleri ve taktikler</caption>
-                                    <thead>
-                                        <tr className="bg-gray-900 text-white">
-                                            <th className="text-left px-5 py-4 font-bold" scope="col">Platform</th>
-                                            <th className="text-left px-5 py-4 font-bold text-violet-400" scope="col">Çalışma Mekanizması</th>
-                                            <th className="text-left px-5 py-4 font-bold text-gray-300" scope="col">Kritik Optimizasyon Sinyali</th>
-                                            <th className="text-left px-5 py-4 font-bold text-gray-300" scope="col">Öncelikli Taktik</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-gray-100">
-                                        {[
-                                            {
-                                                platform: "ChatGPT",
-                                                mechanism: "Eğitim verisi + RAG ile güncel web taraması",
-                                                signal: "Eğitim setine girmiş yüksek otoriteli kaynaklarda yer alma",
-                                                tactic: "Köklü yayınlarda atıf, co-citation, uzun soluklu içerik birikimi",
-                                            },
-                                            {
-                                                platform: "Perplexity",
-                                                mechanism: "Gerçek zamanlı web indeksi",
-                                                signal: "Anlık indekslenebilirlik ve yapılandırılmış veri",
-                                                tactic: "Schema.org işaretlemeleri, hızlı yayın döngüsü, robots.txt erişim izinleri",
-                                            },
-                                            {
-                                                platform: "Gemini",
-                                                mechanism: "Google Knowledge Graph + arama ekosistemi",
-                                                signal: "Entity uyumu; Knowledge Graph, Wikipedia, Search Console sinyalleri",
-                                                tactic: "Google entity profilini güçlendirme, Wikipedia varlığı, Search Console optimizasyonu",
-                                            },
-                                        ].map(({ platform, mechanism, signal, tactic }) => (
-                                            <tr key={platform} className="hover:bg-gray-50 transition-colors">
-                                                <th scope="row" className="px-5 py-4 font-bold text-gray-900" data-label="Platform">{platform}</th>
-                                                <td className="px-5 py-4 text-gray-700" data-label="Çalışma Mekanizması">{mechanism}</td>
-                                                <td className="px-5 py-4 text-gray-700" data-label="Kritik Optimizasyon Sinyali">{signal}</td>
-                                                <td className="px-5 py-4 text-gray-700" data-label="Öncelikli Taktik">{tactic}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <p>
-                                Hedef kitlesi ChatGPT kullanan B2B karar vericilerden oluşan bir marka için öncelik otoriter sektör yayınlarında atıf birikmesidir. Perplexity&apos;de görünmek istiyorsanız yapılandırılmış veri ve indekslenebilirlik önce gelir; Gemini söz konusuysa Google ekosistemindeki entity otoriteniz belirleyicidir.
-                            </p>
-
-                        </section>
-
-                        <section className={`${proseBase} mb-16`} id="ne-zaman-sonuc-verir" aria-labelledby="ne-zaman-sonuc-title">
-                            <h2 id="ne-zaman-sonuc-title">GEO Çalışması Ne Zaman Sonuç Verir?</h2>
-                            <p>
-                                Yapay zeka modellerinde önerilmeye başlamak 3 ile 9 ay arasında sinyal birikimi gerektirir.
-                            </p>
-                            <p>
-                                <strong>Neden bu kadar uzun sürer?</strong> ChatGPT, Gemini veya Perplexity gibi modeller web genelinde birbirine tutarlı, birbirini destekleyen sinyallerin birikmesini bekler. Bir kaynakta "X alanında uzman" olarak geçiyorsunuz ama başka bir kaynakta farklı bir tanım varsa, model bu çelişkiyi sizin lehinize yorumlamaz — o konuyu tamamen atlar. Güçlü bir teknik SEO temeli varsa GEO stratejisi bu zemin üzerine inşa edilir ve sinyal birikimi daha erken kritik kütleye ulaşır.
-                            </p>
-                            <p><strong>Pratikte ne beklemelisiniz?</strong></p>
-                            <ul>
-                                <li><strong>1-3. aylar:</strong> Entity tutarlılığını sağlama, içerik sinyallerini yayma, teknik altyapıyı hazırlama dönemi. Ölçülebilir LLM atıfı beklenmez.</li>
-                                <li><strong>3-6. aylar:</strong> Perplexity gibi gerçek zamanlı indeksleme yapan platformlarda ilk atıflar görünmeye başlayabilir.</li>
-                                <li><strong>6-9. aylar:</strong> ChatGPT ve Gemini gibi daha yavaş güncellenen modellerde görünürlük netleşir.</li>
-                            </ul>
-                        </section>
-
-
-
-
-
-
-
-                    </div>
-                </div>
-            </section>
         </div>
 
         <section className="py-20 bg-gray-50/50 border-b border-gray-100" id="vaka-calismalari" aria-labelledby="geo-cases-heading">
