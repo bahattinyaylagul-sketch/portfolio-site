@@ -2,6 +2,7 @@ import Link from "next/link";
 import TestimonialsSection from "../seo/TestimonialsSection";
 import GEOReadinessAnalyzer from "./GEOReadinessAnalyzer";
 import GEOConsultancyProcess from "./GEOConsultancyProcess";
+import GEOTimeline from "./GEOTimeline";
 import GEOProofSection from "./GEOProofSection";
 
 export default function GEOContent() {
@@ -56,7 +57,10 @@ export default function GEOContent() {
             {/* ── 3. 4 Aşamalı Danışmanlık Süreci ── */}
             <GEOConsultancyProcess />
 
-            {/* ── 4. Kanıt Alanı ── */}
+            {/* ── 4. 90 Günlük Yol Haritası ── */}
+            <GEOTimeline />
+
+            {/* ── 5. Kanıt Alanı ── */}
             <GEOProofSection />
 
         </div>

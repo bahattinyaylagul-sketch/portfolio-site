@@ -84,7 +84,7 @@ export default function GEOReadinessAnalyzer() {
                         onClick={handleAnalyze}
                         className="w-full mt-6 bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                     >
-                        Ücretsiz GEO Analizi Al
+                        Ücretsiz GEO Ön Analizi Al
                     </button>
                 </div>
             )}

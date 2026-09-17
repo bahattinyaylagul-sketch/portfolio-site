@@ -42,109 +42,89 @@ export default function GEOTimeline() {
     const [activePhase, setActivePhase] = useState(1);
 
     return (
-        <section id="geo-zaman-cizelgesi" className="max-w-5xl mx-auto px-4 md:px-6 scroll-mt-32">
-            <div className="mb-8">
-                <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">90 Günde Ne Yapıyoruz?</h2>
-                <p className="text-sm text-gray-500">Üç aylık çalışma planının özeti.</p>
+        <section id="geo-zaman-cizelgesi" className="max-w-6xl mx-auto px-4 md:px-6 scroll-mt-32">
+            <div className="text-center mb-16 relative z-10">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-violet-50 text-violet-600 font-bold text-xs uppercase tracking-widest mb-4">
+                    Zaman Çizelgesi
+                </span>
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+                    90 Günlük Yol Haritası
+                </h2>
+                <div className="w-16 h-1.5 bg-violet-600 mx-auto mt-6 rounded-full"></div>
             </div>
 
-            {/* Desktop: Visual Timeline */}
-            <div className="hidden md:block">
-                {/* Timeline bar */}
-                <div className="relative mb-10">
-                    <div className="absolute top-4 left-0 right-0 h-0.5 bg-gray-200"></div>
-                    <div className="absolute top-4 left-0 h-0.5 bg-violet-500 transition-all duration-500" style={{ width: `${((activePhase - 1) / 2) * 100}%` }}></div>
-                    <div className="flex justify-between relative">
-                        {phases.map((phase) => (
-                            <button
-                                key={phase.id}
-                                onClick={() => setActivePhase(phase.id)}
-                                className="flex flex-col items-center group"
-                            >
-                                <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center text-xs font-bold transition-all z-10 ${
-                                    phase.id <= activePhase 
-                                        ? 'bg-violet-600 border-violet-600 text-white' 
-                                        : 'bg-white border-gray-300 text-gray-400 group-hover:border-violet-300'
-                                }`}>
-                                    {phase.id}
-                                </div>
-                                <span className={`mt-3 text-xs font-bold uppercase tracking-wider transition-colors ${
-                                    phase.id === activePhase ? 'text-violet-600' : 'text-gray-400'
-                                }`}>
-                                    {phase.month}
-                                </span>
-                                <span className={`text-xs mt-1 max-w-[160px] text-center transition-colors ${
-                                    phase.id === activePhase ? 'text-gray-700' : 'text-gray-400'
-                                }`}>
-                                    {phase.title}
-                                </span>
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Active phase detail */}
-                {phases.map((phase) => (
-                    <div key={phase.id} className={phase.id === activePhase ? "block" : "hidden"}>
-                        <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="px-2.5 py-1 bg-violet-50 text-violet-700 text-[10px] font-bold uppercase tracking-wider rounded-md">{phase.month}</span>
-                                <h3 className="text-lg font-bold text-gray-900">{phase.title}</h3>
-                            </div>
-                            <ul className="grid grid-cols-2 gap-3">
-                                {phase.items.map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-2.5 text-sm text-gray-600 p-3 bg-gray-50 rounded-lg">
-                                        <svg className="w-4 h-4 text-violet-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                                        </svg>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {/* Mobile: Compact accordion */}
-            <div className="md:hidden space-y-3">
-                {phases.map((phase) => (
-                    <div key={phase.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+            <div className="flex flex-col md:flex-row gap-8">
+                {/* Navigation (Single DOM, responsive flex direction) */}
+                <div className="w-full md:w-1/3 flex flex-row md:flex-col gap-3 overflow-x-auto md:overflow-visible pb-4 md:pb-0 hide-scrollbar">
+                    {phases.map((phase) => (
                         <button
-                            onClick={() => setActivePhase(phase.id === activePhase ? 0 : phase.id)}
-                            className="w-full flex items-center gap-3 p-4 text-left"
+                            key={phase.id}
+                            onClick={() => setActivePhase(phase.id)}
+                            className={`flex items-center md:items-start gap-4 p-4 rounded-2xl border text-left min-w-[240px] md:min-w-0 transition-all ${
+                                activePhase === phase.id
+                                    ? "bg-violet-600 border-violet-600 shadow-lg shadow-violet-200"
+                                    : "bg-white border-gray-100 hover:border-violet-200 hover:bg-violet-50/50"
+                            }`}
                         >
-                            <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                                phase.id === activePhase ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-500'
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-black text-sm shrink-0 transition-colors ${
+                                activePhase === phase.id ? "bg-white text-violet-600" : "bg-gray-100 text-gray-500"
                             }`}>
                                 {phase.id}
                             </div>
-                            <div className="flex-1 min-w-0">
-                                <span className="text-xs font-bold text-violet-600 uppercase tracking-wider">{phase.month}</span>
-                                <p className="text-sm font-bold text-gray-900 truncate">{phase.title}</p>
+                            <div className="flex-1">
+                                <span className={`text-xs font-bold uppercase tracking-wider block mb-1 ${
+                                    activePhase === phase.id ? "text-violet-100" : "text-gray-400"
+                                }`}>
+                                    {phase.month}
+                                </span>
+                                <span className={`text-sm md:text-base font-bold leading-tight block ${
+                                    activePhase === phase.id ? "text-white" : "text-gray-900"
+                                }`}>
+                                    {phase.title}
+                                </span>
                             </div>
-                            <svg className={`w-4 h-4 text-gray-400 shrink-0 transition-transform ${phase.id === activePhase ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
                         </button>
-                        {phase.id === activePhase && (
-                            <div className="px-4 pb-4 pt-0">
-                                <ul className="space-y-2">
+                    ))}
+                </div>
+
+                {/* Content Area (Single DOM, only active phase is shown) */}
+                <div className="w-full md:w-2/3">
+                    {phases.map((phase) => (
+                        <div key={phase.id} className={activePhase === phase.id ? "block h-full" : "hidden"}>
+                            <div className="bg-white border border-gray-100 rounded-3xl p-8 md:p-10 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] h-full">
+                                <div className="flex items-center gap-3 mb-8">
+                                    <span className="px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">
+                                        {phase.month} İçeriği
+                                    </span>
+                                </div>
+                                
+                                <ul className="grid sm:grid-cols-2 gap-4">
                                     {phase.items.map((item, idx) => (
-                                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 p-2.5 bg-gray-50 rounded-lg">
-                                            <svg className="w-3.5 h-3.5 text-violet-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                                            </svg>
-                                            {item}
+                                        <li key={idx} className="flex items-start gap-3 p-4 bg-gray-50 rounded-2xl">
+                                            <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm text-violet-600">
+                                                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <span className="text-sm font-medium text-gray-700 mt-0.5">{item}</span>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                        )}
-                    </div>
-                ))}
+                        </div>
+                    ))}
+                </div>
             </div>
+            
+            <style jsx>{`
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+            `}</style>
         </section>
     );
 }
