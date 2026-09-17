@@ -1,6 +1,8 @@
 import Link from "next/link";
 import TestimonialsSection from "../seo/TestimonialsSection";
-
+import GEOReadinessAnalyzer from "./GEOReadinessAnalyzer";
+import GEOTimeline from "./GEOTimeline";
+import GEOProofSection from "./GEOProofSection";
 
 
 const expertiseAreas = [
@@ -149,6 +151,9 @@ export default function GEOContent() {
                 </div>
             </section>
 
+            {/* ── INTERACTIVE ANALYZER ── */}
+            <GEOReadinessAnalyzer />
+
             {/* ── 2. Danışmanlık Süreci ── */}
             <section id="surec-yapisi" className="scroll-mt-32 relative w-full max-w-6xl mx-auto px-4 md:px-6 py-16" aria-labelledby="consultancy-process-heading">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-violet-100/50 rounded-full blur-[60px] pointer-events-none"></div>
@@ -250,6 +255,11 @@ export default function GEOContent() {
                 </div>
             </section>
 
+            {/* ── TIMELINE ── */}
+            <GEOTimeline />
+
+            {/* ── PROOF SECTION ── */}
+            <GEOProofSection />
 
         </div>
 
