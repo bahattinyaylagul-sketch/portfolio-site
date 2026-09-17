@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-export function SEOContactForm({ buttonText = "Ücretsiz SEO Ön Analizi Al" }: { buttonText?: string }) {
+export function SEOContactForm() {
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -102,7 +102,7 @@ export function SEOContactForm({ buttonText = "Ücretsiz SEO Ön Analizi Al" }: 
                                 </svg>
                                 Gönderiliyor...
                             </span>
-                        ) : buttonText}
+                        ) : "Ücretsiz SEO Ön Analizi Al"}
                     </button>
                 </form>
             )}
