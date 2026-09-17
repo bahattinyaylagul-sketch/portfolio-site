@@ -21,32 +21,46 @@ export default function GEOContent() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 bg-violet-50/50 border border-violet-100 rounded-xl">
-                        <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <svg className="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-                            Danışmanlık Kapsamı
-                        </h3>
-                        <ul className="space-y-3 text-sm text-gray-600">
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-violet-400 rounded-full mt-2 shrink-0"></span>Entity (varlık) tutarlılığı analizi</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-violet-400 rounded-full mt-2 shrink-0"></span>Schema.org ve yapısal veri değerlendirmesi</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-violet-400 rounded-full mt-2 shrink-0"></span>İçerik biçimi ve yanıtlanabilirlik incelemesi</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-violet-400 rounded-full mt-2 shrink-0"></span>Web genelinde atıf (co-citation) durumu</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-violet-400 rounded-full mt-2 shrink-0"></span>Platform bazlı görünürlük takibi ve raporlama</li>
-                        </ul>
+                <div className="grid md:grid-cols-2 gap-6 mt-12">
+                    {/* Danışmanlık Kapsamı */}
+                    <div className="group relative bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full">
+                        <div className="relative z-10 flex-col flex h-full">
+                            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 shadow-sm bg-violet-50 text-violet-600">
+                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                            </div>
+                            
+                            <h3 className="text-2xl font-black text-gray-900 mb-6 leading-tight">
+                                Danışmanlık Kapsamı
+                            </h3>
+                            
+                            <ul className="space-y-4 text-[15px] text-gray-600 flex-1">
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-violet-500 rounded-full mt-2 shrink-0"></span><span>Entity (varlık) tutarlılığı analizi</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-violet-500 rounded-full mt-2 shrink-0"></span><span>Schema.org ve yapısal veri değerlendirmesi</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-violet-500 rounded-full mt-2 shrink-0"></span><span>İçerik biçimi ve yanıtlanabilirlik incelemesi</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-violet-500 rounded-full mt-2 shrink-0"></span><span>Web genelinde atıf (co-citation) durumu</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-violet-500 rounded-full mt-2 shrink-0"></span><span>Platform bazlı görünürlük takibi ve raporlama</span></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div className="p-6 bg-gray-50 border border-gray-100 rounded-xl">
-                        <h3 className="text-base font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <svg className="w-4 h-4 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                            Kimler İçin Uygun?
-                        </h3>
-                        <ul className="space-y-3 text-sm text-gray-600">
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-gray-400 rounded-full mt-2 shrink-0"></span>Karar vericileri AI araçlarıyla araştırma yapan B2B firmaları</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-gray-400 rounded-full mt-2 shrink-0"></span>YMYL (hukuk, finans, sağlık) kategorisindeki markalar</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-gray-400 rounded-full mt-2 shrink-0"></span>Yapay zeka aramalarında görünürlüğünü değerlendirmek isteyenler</li>
-                            <li className="flex items-start gap-2.5"><span className="w-1 h-1 bg-gray-400 rounded-full mt-2 shrink-0"></span>Mevcut SEO altyapısını AI kanallarına genişletmek isteyenler</li>
-                        </ul>
+                    {/* Kimler İçin Uygun? */}
+                    <div className="group relative bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full">
+                        <div className="relative z-10 flex-col flex h-full">
+                            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 shadow-sm bg-violet-50 text-violet-600">
+                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            
+                            <h3 className="text-2xl font-black text-gray-900 mb-6 leading-tight">
+                                Kimler İçin Uygun?
+                            </h3>
+                            
+                            <ul className="space-y-4 text-[15px] text-gray-600 flex-1">
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 shrink-0"></span><span>Karar vericileri AI araçlarıyla araştırma yapan B2B firmaları</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 shrink-0"></span><span>YMYL (hukuk, finans, sağlık) kategorisindeki markalar</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 shrink-0"></span><span>Yapay zeka aramalarında görünürlüğünü değerlendirmek isteyenler</span></li>
+                                <li className="flex items-start gap-3"><span className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 shrink-0"></span><span>Mevcut SEO altyapısını AI kanallarına genişletmek isteyenler</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
