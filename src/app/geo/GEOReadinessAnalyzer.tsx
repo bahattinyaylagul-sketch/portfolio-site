@@ -17,7 +17,6 @@ export default function GEOReadinessAnalyzer() {
             alert("Lütfen URL girin ve tüm soruları yanıtlayın.");
             return;
         }
-
         setIsScanning(true);
         setStep(2);
 
@@ -34,7 +33,6 @@ export default function GEOReadinessAnalyzer() {
                 body: JSON.stringify({ url })
             });
             const data = await res.json();
-            
             setTimeout(() => {
                 setResults({ opportunity: oppScore, readiness: data });
                 setIsScanning(false);
@@ -48,31 +46,34 @@ export default function GEOReadinessAnalyzer() {
     };
 
     return (
-        <section id="geo-analiz" className="max-w-4xl mx-auto px-4 md:px-6 scroll-mt-32">
-            {/* Static HTML content visible to crawlers */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Markanız GEO İçin Hazır mı?</h2>
-            <p className="text-sm text-gray-600 mb-1">
-                İki ayrı değerlendirme yapıyoruz: <strong>GEO Opportunity</strong> (bu işletme için GEO ne kadar anlamlı?) ve <strong>Website Readiness</strong> (site teknik olarak ne kadar hazır?). Skorlar birbirinden bağımsızdır.
-            </p>
-            <p className="text-xs text-gray-400 mb-8">
-                Bu skorlar bir Google veya AI sıralama faktörü değildir. Danışmanlık öncesi bir hazırlık göstergesidir.
-            </p>
+        <section id="geo-analiz" className="max-w-5xl mx-auto px-4 md:px-6 scroll-mt-32">
+            {/* Static HTML */}
+            <div className="mb-6">
+                <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">Markanız GEO İçin Hazır mı?</h2>
+                <p className="text-sm text-gray-600 max-w-2xl">
+                    İki ayrı değerlendirme: <strong className="text-gray-900">GEO Opportunity</strong> (bu işletme için GEO ne kadar anlamlı?) ve <strong className="text-gray-900">Website Readiness</strong> (site teknik olarak ne kadar hazır?). Skorlar birbirinden bağımsızdır.
+                </p>
+                <p className="text-xs text-gray-400 mt-2">
+                    Bu skorlar bir Google veya AI sıralama faktörü değildir. Danışmanlık öncesi bir hazırlık göstergesidir.
+                </p>
+            </div>
 
             {step === 1 && (
-                <div className="border border-gray-200 bg-white p-6">
+                <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
                     <div className="mb-6">
                         <label className="block text-sm font-bold text-gray-900 mb-2">Web Siteniz</label>
                         <input 
                             type="url" 
                             placeholder="https://ornek.com"
-                            className="w-full px-4 py-3 border border-gray-300 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-gray-400"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400 transition-all"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
                         />
                     </div>
                     
-                    <div className="space-y-3 pt-4 border-t border-gray-100">
-                        <p className="font-bold text-gray-900 text-sm mb-2">Fırsat Soruları (GEO Opportunity):</p>
+                    <div className="space-y-3 pt-5 border-t border-gray-100">
+                        <p className="font-bold text-gray-900 text-sm mb-3">Fırsat Soruları (GEO Opportunity):</p>
                         <QuestionRow label="Müşterileriniz satın almadan önce araştırma (kıyaslama, inceleme) yapıyor mu?" val={q1} setVal={setQ1} />
                         <QuestionRow label="Sektörünüzde uzman görüşü veya otorite kritik bir güven faktörü mü?" val={q2} setVal={setQ2} />
                         <QuestionRow label="Hedef kitleniz 'nedir, nasıl yapılır' gibi soru tabanlı aramalar kullanır mı?" val={q3} setVal={setQ3} />
@@ -81,16 +82,16 @@ export default function GEOReadinessAnalyzer() {
 
                     <button 
                         onClick={handleAnalyze}
-                        className="w-full mt-6 bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 text-sm transition-colors"
+                        className="w-full mt-6 bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                     >
-                        Analizi Başlat
+                        Ücretsiz GEO Analizi Al
                     </button>
                 </div>
             )}
 
             {step === 2 && (
-                <div className="border border-gray-200 bg-white p-6 py-16 text-center">
-                    <div className="inline-block w-10 h-10 border-2 border-gray-200 border-t-gray-900 rounded-full animate-spin mb-4"></div>
+                <div className="bg-white border border-gray-200 rounded-xl p-6 py-16 text-center shadow-sm">
+                    <div className="inline-block w-12 h-12 border-2 border-gray-200 border-t-violet-600 rounded-full animate-spin mb-4"></div>
                     <p className="text-sm font-bold text-gray-900">Siteniz taranıyor...</p>
                     <p className="text-xs text-gray-500 mt-1">HTTP durumu, Schema, canonical ve içerik yapısı kontrol ediliyor.</p>
                 </div>
@@ -98,16 +99,17 @@ export default function GEOReadinessAnalyzer() {
 
             {step === 3 && results && (
                 <div className="space-y-6">
-                    {/* Two separate score cards */}
+                    {/* Two score cards with ring visualization */}
                     <div className="grid md:grid-cols-2 gap-6">
-                        <div className="border border-gray-200 bg-white p-6">
-                            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">GEO Opportunity</p>
-                            <p className="text-xs text-gray-400 mb-3">Bu işletme için GEO ne kadar anlamlı?</p>
-                            <div className="flex items-baseline gap-1 mb-3">
-                                <span className="text-4xl font-bold text-gray-900">{results.opportunity}</span>
-                                <span className="text-base text-gray-400">/100</span>
+                        <div className="bg-white border border-violet-200 rounded-xl p-6 shadow-sm">
+                            <div className="flex items-start justify-between">
+                                <div>
+                                    <p className="text-xs font-bold text-violet-600 uppercase tracking-wider mb-1">GEO Opportunity</p>
+                                    <p className="text-xs text-gray-500 mb-3">Bu işletme için GEO ne kadar anlamlı?</p>
+                                </div>
+                                <ScoreRing score={results.opportunity} color="violet" />
                             </div>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 mt-2">
                                 {results.opportunity >= 70
                                     ? "Sektörünüz ve müşteri davranışlarınız GEO çalışması için güçlü bir potansiyele işaret ediyor."
                                     : results.opportunity >= 40
@@ -116,17 +118,18 @@ export default function GEOReadinessAnalyzer() {
                             </p>
                         </div>
 
-                        <div className="border border-gray-200 bg-white p-6">
-                            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Website Readiness</p>
-                            <p className="text-xs text-gray-400 mb-3">Site teknik olarak ne kadar hazır?</p>
-                            <div className="flex items-baseline gap-1 mb-3">
-                                <span className="text-4xl font-bold text-gray-900">{results.readiness?.total || 0}</span>
-                                <span className="text-base text-gray-400">/100</span>
+                        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                            <div className="flex items-start justify-between">
+                                <div>
+                                    <p className="text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Website Readiness</p>
+                                    <p className="text-xs text-gray-500 mb-3">Site teknik olarak ne kadar hazır?</p>
+                                </div>
+                                <ScoreRing score={results.readiness?.total || 0} color="gray" />
                             </div>
                             {results.readiness?.error ? (
-                                <p className="text-sm text-red-600">{results.readiness.error}</p>
+                                <p className="text-sm text-red-600 mt-2">{results.readiness.error}</p>
                             ) : (
-                                <p className="text-sm text-gray-600">
+                                <p className="text-sm text-gray-600 mt-2">
                                     {(results.readiness?.total || 0) >= 70
                                         ? "Teknik altyapınız iyi durumda. İçerik ve atıf çalışmalarına odaklanılabilir."
                                         : "Bazı teknik iyileştirmeler gerekiyor. Detaylar aşağıda."}
@@ -135,23 +138,21 @@ export default function GEOReadinessAnalyzer() {
                         </div>
                     </div>
 
-                    {/* Readiness breakdown */}
+                    {/* Four metric cards */}
                     {!results.readiness?.error && (
-                        <div className="border border-gray-200 bg-white p-6">
-                            <h4 className="text-sm font-bold text-gray-900 mb-4">Site Hazırlık Detayları</h4>
-                            <div className="space-y-3">
-                                <ScoreBar label="Teknik Erişilebilirlik" score={results.readiness.accessibility} max={25} />
-                                <ScoreBar label="Entity Netliği" score={results.readiness.entityClarity} max={20} />
-                                <ScoreBar label="İçerik & Yanıtlanabilirlik" score={results.readiness.contentAnswerability} max={30} />
-                                <ScoreBar label="Güven & Kanıt" score={results.readiness.trustEvidence} max={25} />
-                            </div>
-                            <p className="text-xs text-gray-400 mt-4">Bu değerler basit site taramalarına dayalı tahmini göstergelerdir.</p>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <MetricCard label="Teknik Erişilebilirlik" score={results.readiness.accessibility} max={25} />
+                            <MetricCard label="Entity Netliği" score={results.readiness.entityClarity} max={20} />
+                            <MetricCard label="İçerik & Yanıtlanabilirlik" score={results.readiness.contentAnswerability} max={30} />
+                            <MetricCard label="Güven & Kanıt" score={results.readiness.trustEvidence} max={25} />
                         </div>
                     )}
 
+                    <p className="text-xs text-gray-400 text-center">Bu değerler basit site taramalarına dayalı tahmini göstergelerdir.</p>
+
                     <div className="text-center">
-                        <button onClick={() => { setStep(1); setResults(null); }} className="text-sm text-gray-500 hover:text-gray-900 underline">
-                            Yeni analiz yap
+                        <button onClick={() => { setStep(1); setResults(null); }} className="text-sm text-violet-600 hover:text-violet-800 font-medium">
+                            ← Yeni analiz yap
                         </button>
                     </div>
                 </div>
@@ -162,18 +163,18 @@ export default function GEOReadinessAnalyzer() {
 
 function QuestionRow({ label, val, setVal }: { label: string, val: boolean | null, setVal: (v: boolean) => void }) {
     return (
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-2 border-b border-gray-50">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-2.5 border-b border-gray-50">
             <span className="text-sm text-gray-700 flex-1">{label}</span>
             <div className="flex items-center gap-2 shrink-0">
                 <button 
                     onClick={() => setVal(true)} 
-                    className={`px-3 py-1 text-xs font-bold border transition-colors ${val === true ? 'bg-gray-900 border-gray-900 text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'}`}
+                    className={`px-4 py-1.5 text-xs font-bold rounded-md transition-colors ${val === true ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
                 >
                     Evet
                 </button>
                 <button 
                     onClick={() => setVal(false)} 
-                    className={`px-3 py-1 text-xs font-bold border transition-colors ${val === false ? 'bg-gray-900 border-gray-900 text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'}`}
+                    className={`px-4 py-1.5 text-xs font-bold rounded-md transition-colors ${val === false ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
                 >
                     Hayır
                 </button>
@@ -182,20 +183,38 @@ function QuestionRow({ label, val, setVal }: { label: string, val: boolean | nul
     );
 }
 
-function ScoreBar({ label, score, max }: { label: string, score: number, max: number }) {
+function ScoreRing({ score, color }: { score: number, color: "violet" | "gray" }) {
+    const radius = 28;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (score / 100) * circumference;
+    const strokeColor = color === "violet" ? "#7c3aed" : "#374151";
+    const bgColor = color === "violet" ? "#ede9fe" : "#f3f4f6";
+
+    return (
+        <div className="relative w-16 h-16 shrink-0">
+            <svg className="w-16 h-16 -rotate-90" viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r={radius} fill="none" stroke={bgColor} strokeWidth="5" />
+                <circle cx="32" cy="32" r={radius} fill="none" stroke={strokeColor} strokeWidth="5"
+                    strokeDasharray={circumference} strokeDashoffset={offset}
+                    strokeLinecap="round" className="transition-all duration-1000" />
+            </svg>
+            <span className="absolute inset-0 flex items-center justify-center text-sm font-black text-gray-900">{score}</span>
+        </div>
+    );
+}
+
+function MetricCard({ label, score, max }: { label: string, score: number, max: number }) {
     const percentage = Math.round((score / max) * 100) || 0;
     return (
-        <div>
-            <div className="flex justify-between text-xs text-gray-700 mb-1">
-                <span>{label}</span>
-                <span className="font-bold">{score}/{max}</span>
-            </div>
-            <div className="h-1.5 w-full bg-gray-100 overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-sm">
+            <div className="text-2xl font-black text-gray-900 mb-0.5">{score}<span className="text-sm font-bold text-gray-300">/{max}</span></div>
+            <div className="h-1 w-full bg-gray-100 rounded-full overflow-hidden mb-2">
                 <div 
-                    className={`h-full transition-all duration-700 ${percentage > 70 ? 'bg-gray-900' : percentage > 30 ? 'bg-gray-500' : 'bg-gray-300'}`}
+                    className={`h-full rounded-full transition-all duration-700 ${percentage > 70 ? 'bg-violet-500' : percentage > 30 ? 'bg-amber-400' : 'bg-gray-300'}`}
                     style={{ width: `${percentage}%` }}
                 />
             </div>
+            <p className="text-[11px] text-gray-500 font-medium leading-tight">{label}</p>
         </div>
     );
 }

@@ -415,7 +415,7 @@ export default function GEOPage() {
 
                             {/* Sağ Kolon: Form */}
                             <aside aria-label="Hızlı GEO Denetimi Formu" className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-xl w-full">
-                                <p className="text-xl font-bold text-white mb-2">Ücretsiz GEO Denetimi</p>
+                                <p className="text-xl font-bold text-white mb-2">Ücretsiz GEO Analizi Al</p>
                                 <p className="text-sm text-white/60 mb-6">Sitenizin yapay zeka arama araçlarındaki mevcut durumunu birlikte değerlendirelim.</p>
                                 <SEOContactForm />
                             </aside>
