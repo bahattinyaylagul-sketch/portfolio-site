@@ -7,21 +7,18 @@ export default function GEOProofSection() {
                 <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 tracking-tight">Gerçek Dünya Kanıtları</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto text-[15px] leading-relaxed">
-                    Yapay zeka platformlarındaki görünürlüğün nasıl ölçüldüğünü ve kullanıcılara nasıl yansıdığını gösteren gerçek metrikler ve arama motoru sonuçları.
+                    150 ticari ve bilgilendirici sorguda ChatGPT, Gemini, Google AI Overview ve AI Mode görünürlüğünü zaman içinde takip ediyoruz.
                 </p>
             </div>
 
             <div className="space-y-8">
                 {/* Büyük Ana Kart: Visibility Score */}
                 <div className="bg-white rounded-3xl border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] overflow-hidden">
-                    <div className="p-6 md:p-8 border-b border-gray-50 flex items-center justify-between bg-gray-50/50">
+                    <div className="p-6 md:p-8 border-b border-gray-50 bg-gray-50/50">
                         <div>
                             <h3 className="text-xl font-bold text-gray-900">AI Visibility Score</h3>
                             <p className="text-sm text-gray-500 mt-1">Platformlara göre markanın yapay zeka görünürlük trendi</p>
                         </div>
-                        <span className="hidden sm:inline-block px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold uppercase tracking-wider rounded-full">
-                            Canlı Veri
-                        </span>
                     </div>
                     <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-50">
                         <Image 
@@ -45,7 +42,7 @@ export default function GEOProofSection() {
                             </h3>
                             <p className="text-sm text-gray-500 mt-1">Sektörel aramalarda AI destekli özet sonuçları</p>
                         </div>
-                        <div className="relative w-full aspect-[4/3] bg-gray-900 p-2">
+                        <div className="relative w-full aspect-[4/3] bg-gray-50 p-2">
                             <Image 
                                 src="/images/geo-proof/ai-overview.png" 
                                 alt="Google AI Overview Sonucu" 

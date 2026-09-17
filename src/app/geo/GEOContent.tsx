@@ -10,11 +10,11 @@ export default function GEOContent() {
         <>
         <div className="space-y-20">
             {/* ── 1. Kapsam ── */}
-            <section id="geo-kapsami" className="scroll-mt-32 max-w-5xl mx-auto px-4 md:px-6" aria-labelledby="kapsam-heading">
+            <section id="geo-kapsami" className="scroll-mt-32 max-w-6xl mx-auto px-4 md:px-6" aria-labelledby="kapsam-heading">
                 <div className="mb-6">
                     <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
                     <h2 id="kapsam-heading" className="text-3xl font-bold text-gray-900 mb-4">
-                        Birlikte Ne Yapıyoruz?
+                        GEO Danışmanlığı Kapsamı
                     </h2>
                     <p className="text-gray-600 leading-relaxed max-w-3xl">
                         GEO danışmanlığında sitenizin ve markanızın yapay zeka destekli arama araçlarındaki mevcut durumunu birlikte analiz ediyoruz. Entity tutarlılığı, yapısal veri kullanımı, içerik biçimi ve web genelindeki atıf durumu gibi faktörleri değerlendirip iyileştirme önerileri sunuyoruz. Bunların her biri kesin bir sıralama faktörü değildir; ancak yapay zeka modellerinin kaynak seçiminde etkili olabilecek sinyaller arasında sayılmaktadır.
@@ -67,7 +67,7 @@ export default function GEOContent() {
 
         {/* ── Vaka Çalışmaları ── */}
         <section className="py-16 border-t border-gray-100 mt-16" id="vaka-calismalari" aria-labelledby="geo-cases-heading">
-            <div className="max-w-5xl mx-auto px-4 md:px-6">
+            <div className="max-w-6xl mx-auto px-4 md:px-6">
                 <div className="mb-8">
                     <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
                     <h2 id="geo-cases-heading" className="text-3xl font-bold text-gray-900">Vaka Çalışmaları</h2>

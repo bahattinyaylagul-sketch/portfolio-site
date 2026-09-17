@@ -46,7 +46,7 @@ export default function GEOReadinessAnalyzer() {
     };
 
     return (
-        <section id="geo-analiz" className="max-w-5xl mx-auto px-4 md:px-6 scroll-mt-32">
+        <section id="geo-analiz" className="max-w-6xl mx-auto px-4 md:px-6 scroll-mt-32">
             {/* Static HTML */}
             <div className="mb-6">
                 <span className="inline-block w-8 h-0.5 bg-violet-500 mb-4"></span>
@@ -60,20 +60,20 @@ export default function GEOReadinessAnalyzer() {
             </div>
 
             {step === 1 && (
-                <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
+                <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)]">
                     <div className="mb-6">
                         <label className="block text-sm font-bold text-gray-900 mb-2">Web Siteniz</label>
                         <input 
                             type="url" 
                             placeholder="https://ornek.com"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500/20 focus:border-violet-400 transition-all"
+                            className="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-violet-300 focus:ring-4 focus:ring-violet-500/10 text-sm transition-all"
                             value={url}
                             onChange={(e) => setUrl(e.target.value)}
                         />
                     </div>
                     
-                    <div className="space-y-3 pt-5 border-t border-gray-100">
-                        <p className="font-bold text-gray-900 text-sm mb-3">Fırsat Soruları (GEO Opportunity):</p>
+                    <div className="space-y-3 pt-6 border-t border-gray-50">
+                        <p className="font-bold text-gray-900 text-sm mb-4">Fırsat Soruları (GEO Opportunity):</p>
                         <QuestionRow label="Müşterileriniz satın almadan önce araştırma (kıyaslama, inceleme) yapıyor mu?" val={q1} setVal={setQ1} />
                         <QuestionRow label="Sektörünüzde uzman görüşü veya otorite kritik bir güven faktörü mü?" val={q2} setVal={setQ2} />
                         <QuestionRow label="Hedef kitleniz 'nedir, nasıl yapılır' gibi soru tabanlı aramalar kullanır mı?" val={q3} setVal={setQ3} />
@@ -82,7 +82,7 @@ export default function GEOReadinessAnalyzer() {
 
                     <button 
                         onClick={handleAnalyze}
-                        className="w-full mt-6 bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
+                        className="w-full mt-8 bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 rounded-xl text-sm shadow-lg shadow-violet-600/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
                     >
                         Ücretsiz GEO Ön Analizi Al
                     </button>
