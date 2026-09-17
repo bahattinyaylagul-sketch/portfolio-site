@@ -21,23 +21,48 @@ export default function GEOReadinessAnalyzer() {
         setStep(2);
 
         setTimeout(() => {
-            // GEO Opportunity: Only based on questions
+            // GEO Opportunity: Only based on questions (0 to 100)
             const oppScore = [q1, q2, q3, q4].filter(Boolean).length * 25;
 
-            // Website Readiness: Pseudo-random based on URL hash (keeps it realistic and < 100)
+            // Strict URL validation
+            let isValidUrl = false;
+            try {
+                const parsedUrl = new URL(url.startsWith('http') ? url : `https://${url}`);
+                isValidUrl = parsedUrl.hostname.includes('.');
+            } catch (e) {
+                isValidUrl = false;
+            }
+
+            if (!isValidUrl) {
+                setResults({
+                    opportunity: oppScore,
+                    readiness: {
+                        error: "Bağlantı kurulamadı veya geçersiz URL. Lütfen geçerli bir adres (örn: https://siteniz.com) girin."
+                    }
+                });
+                setStep(3);
+                return;
+            }
+
+            // Website Readiness: Pseudo-random based on URL length/chars, made harsher to avoid automatic high scores
             const hash = url.trim().toLowerCase().split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+            const domainLength = url.replace(/https?:\/\//, '').length;
             
-            const accessibility = 15 + (hash % 10); // max 24
-            const entityClarity = 8 + (hash % 11); // max 18
-            const contentAnswerability = 15 + (hash % 13); // max 27
-            const trustEvidence = 10 + (hash % 14); // max 23
+            // max 25, average around 12-18
+            const accessibility = 8 + (hash % 12) + (domainLength % 3); 
+            // max 20, average around 8-14
+            const entityClarity = 5 + (hash % 9) + (domainLength % 4); 
+            // max 30, average around 12-20
+            const contentAnswerability = 10 + (hash % 11) + (domainLength % 5); 
+            // max 25, average around 10-18
+            const trustEvidence = 8 + (hash % 10) + (domainLength % 4); 
 
             const readScore = accessibility + entityClarity + contentAnswerability + trustEvidence;
 
             setResults({
                 opportunity: oppScore,
                 readiness: {
-                    total: readScore,
+                    total: readScore > 100 ? 98 : readScore, // safeguard
                     accessibility,
                     entityClarity,
                     contentAnswerability,
@@ -45,10 +70,13 @@ export default function GEOReadinessAnalyzer() {
                 }
             });
             setStep(3);
-        }, 3000);
+        }, 2500);
     };
 
-    const getDynamicMessage = (opp: number, read: number) => {
+    const getDynamicMessage = (opp: number, read: number | null) => {
+        if (read === null) {
+            return "GEO Opportunity skorunuz sorularınıza göre hesaplandı. Ancak web siteniz tarandığında teknik olarak ulaşılamadığı için Readiness skoru hesaplanamadı. URL'yi kontrol edip tekrar deneyebilirsiniz.";
+        }
         if (opp >= 75 && read >= 70) {
             return "Harika! Sektörünüz yapay zeka aramaları için çok uygun (yüksek fırsat) ve web siteniz teknik olarak güçlü bir temele sahip. GEO (Generative Engine Optimization) stratejilerine hemen başlayarak rakiplerinizden hızlıca sıyrılabilirsiniz.";
         } else if (opp >= 75 && read < 70) {
@@ -128,7 +156,7 @@ export default function GEOReadinessAnalyzer() {
                         <div className="flex flex-col items-center text-center relative">
                             {/* Divider for desktop */}
                             <div className="hidden md:block absolute -left-5 md:-left-8 top-0 bottom-0 w-px bg-gray-100"></div>
-                            <ScoreRing score={results.readiness?.total || 0} color="gray" />
+                            <ScoreRing score={results.readiness?.error ? null : (results.readiness?.total || 0)} color="gray" />
                             <h3 className="text-lg font-black text-gray-900 mt-6 mb-2">Website Readiness</h3>
                             <p className="text-sm text-gray-500 mb-0">Sitenizin teknik GEO hazırlığı</p>
                         </div>
@@ -137,9 +165,16 @@ export default function GEOReadinessAnalyzer() {
                     {/* Dynamic Text Box */}
                     <div className="mt-10 mb-10 bg-violet-50/50 border border-violet-100 rounded-2xl p-6 md:p-8 text-center">
                         <p className="text-gray-800 text-[15px] md:text-base leading-relaxed font-medium">
-                            {getDynamicMessage(results.opportunity, results.readiness?.total || 0)}
+                            {getDynamicMessage(results.opportunity, results.readiness?.error ? null : (results.readiness?.total || 0))}
                         </p>
                     </div>
+
+                    {/* Readiness error message if any */}
+                    {results.readiness?.error && (
+                        <div className="mt-4 mb-8 bg-red-50 border border-red-100 rounded-2xl p-4 text-center">
+                            <p className="text-sm text-red-600 font-medium">{results.readiness.error}</p>
+                        </div>
+                    )}
 
                     {/* Four metric cards */}
                     {!results.readiness?.error && (
@@ -185,12 +220,19 @@ function QuestionRow({ label, val, setVal }: { label: string, val: boolean | nul
     );
 }
 
-function ScoreRing({ score, color }: { score: number, color: "violet" | "gray" }) {
+function ScoreRing({ score, color }: { score: number | string | null, color: "violet" | "gray" }) {
     const radius = 28;
     const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (score / 100) * circumference;
+    
+    // Calculate numeric score for ring
+    const numericScore = typeof score === 'number' ? score : 0;
+    const offset = circumference - (numericScore / 100) * circumference;
+    
     const strokeColor = color === "violet" ? "#7c3aed" : "#374151";
     const bgColor = color === "violet" ? "#ede9fe" : "#f3f4f6";
+
+    // Text to display inside the ring
+    const displayScore = typeof score === 'number' ? score : "?";
 
     return (
         <div className="relative w-16 h-16 shrink-0">
@@ -200,7 +242,7 @@ function ScoreRing({ score, color }: { score: number, color: "violet" | "gray" }
                     strokeDasharray={circumference} strokeDashoffset={offset}
                     strokeLinecap="round" className="transition-all duration-1000" />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-sm font-black text-gray-900">{score}</span>
+            <span className="absolute inset-0 flex items-center justify-center text-sm font-black text-gray-900">{displayScore}</span>
         </div>
     );
 }
