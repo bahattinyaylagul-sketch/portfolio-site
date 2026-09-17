@@ -3,11 +3,8 @@ import TestimonialsSection from "../seo/TestimonialsSection";
 
 const headings = [
     { id: "geo-nedir", text: "GEO Danışmanlığı Nedir?" },
-    { id: "geo-danismani-ne-yapar", text: "GEO Danışmanı Ne Yapar?" },
     { id: "platform-bazli-strateji", text: "Platform Bazlı GEO Stratejisi" },
     { id: "ne-zaman-sonuc-verir", text: "GEO Çalışması Ne Zaman Sonuç Verir?" },
-    { id: "geo-basarisi", text: "GEO Başarısı Nasıl Ölçülür?" },
-    { id: "danisman-secimi", text: "GEO Danışmanı Seçerken 6 Soru" },
     { id: "faq-section", text: "Sıkça Sorulan Sorular" }
 ];
 
@@ -294,41 +291,11 @@ export default function GEOContent() {
                         <section className={`${proseBase} mb-16`} id="geo-nedir" aria-labelledby="geo-nedir-title">
                             <h2 id="geo-nedir-title">GEO Danışmanlığı Nedir?</h2>
                             <p>
-                                GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir. Klasik SEO'dan temel farkı şudur: arama motoru algoritması değil, AI modelinin markanızı tanıması, anlaması ve güvenmesi hedeflenir.
-                            </p>
-                            <p>
-                                Generative Engine Optimization (GEO) kavramı 2023'te <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">Princeton ve Columbia üniversitelerinin araştırmalarıyla</a> akademik zemine oturdu. GEO üç temel katman üzerine kurulur: entity tutarlılığı, otorite ve kaynak sinyalleri, makine okunabilir bilgi mimarisi. AEO, GEO ve LLM SEO sık sık birbirinin yerine kullanılsa da aralarında iş bölümü vardır: AEO içeriği biçimlendirir, GEO bağlamı inşa eder, LLM SEO modelin bakışını yönetir — biri olmadan diğeri yarım kalır.
+                                GEO danışmanlığı, markanızın ChatGPT, Gemini ve Perplexity gibi yapay zeka modellerinde kaynak olarak gösterilmesi ve önerilmesi için strateji geliştiren uzmanlık hizmetidir.
                             </p>
                         </section>
 
-                        <section className={`${proseBase} mb-16`} id="geo-danismani-ne-yapar" aria-labelledby="geo-danismani-title">
-                            <h2 id="geo-danismani-title">GEO Danışmanı Ne Yapar?</h2>
-                            <p>
-                                GEO danışmanı dört temel iş yapar: <strong>entity tutarlılığı</strong> kurarak markanızın dijital kimliğini tüm platformlarda çelişkisiz hale getirir; <strong>Schema.org işaretlemeleri</strong> tasarlayarak yapay zeka sistemlerinin içeriği doğrudan anlamlandırmasını sağlar; <strong>co-citation ve dijital PR</strong> yürüterek markanızı sektörün doğru isimleriyle birlikte otoriter kaynaklarda anılır konuma taşır; <strong>otoriter içerik</strong> üreterek modellerin eğitim verisine ve RAG indeksine girilecek referans materyali oluşturur.
-                            </p>
 
-                            <h3>Entity Tutarlılığı Kurma</h3>
-                            <p>
-                                Yapay zeka bir markayı değerlendirirken yalnızca o markanın kendi sitesine değil, dışarıdan referans gösteren güvenilir kaynaklara da bakar. Danışmanın ilk işi, markanın dijital kimliğini — entity adı, sektör, konum, hizmet kapsamı — farklı platformlarda çelişkisiz hale getirmektir. Wikipedia, Wikidata, sektör dizinleri, sosyal profiller: bunların hepsinde aynı bilgi duruyorsa model güven puanını yüksek tutar. Tek bir çelişkili kayıt bile modelin markayla ilgili belirsizlik yaşamasına yol açabilir.
-                            </p>
-
-
-
-                            <h3>Schema.org İşaretlemeleri</h3>
-                            <p>
-                                Schema.org yapılandırmaları, yapay zeka sistemlerinin içeriği anlamlandırma sürecinde en güçlü sinyal olarak tanımlanmaktadır. Danışman Organization, Product, Service, BreadcrumbList şemaları ve — özellikle AEO açısından kritik olan — FAQPage işaretlemeleri üretir. FAQPage şeması, modelin soru-cevap formatındaki içeriği doğrudan alıntılamasını kolaylaştırır.
-                            </p>
-
-                            <h3>Co-citation ve Dijital PR</h3>
-                            <p>
-                                Co-citation stratejisi, markanın sektörün doğru isimleriyle — rakipler, düzenleyiciler, sektör liderleri — birlikte anılmasını sağlayan dijital PR yöntemidir. Pratik çıktı: sektör yayınlarına, bağımsız platformlara, akademik veya kurumsal kaynaklara marka adının geçtiği içerik yerleştirmek. Bu yerleştirmeler yapay zeka tarafından güven sinyali olarak işlenir.
-                            </p>
-
-                            <h3>Otoriter İçerik Üretimi</h3>
-                            <p>
-                                Modellerin eğitim verisine girebilmek için açık lisanslı ve otoriter içerik üretmek gerekir. Danışman hangi soruların model tarafından sorulduğunu analiz eder, bu sorulara kaynak gösterilebilir yanıtlar yazar. Teknik makale, metodoloji belgesi, vaka çalışması — bunlar hem eğitim verisine aday olur hem de co-citation için zemin hazırlar.
-                            </p>
-                        </section>
 
                         <section className={`${proseBase} mb-16`} id="platform-bazli-strateji" aria-labelledby="platform-bazli-title">
                             <h2 id="platform-bazli-title">Platform Bazlı GEO Stratejisi</h2>
@@ -404,36 +371,7 @@ export default function GEOContent() {
 
 
 
-                        <section className={`${proseBase} mb-16`} id="geo-basarisi" aria-labelledby="geo-basarisi-title">
-                            <h2 id="geo-basarisi-title">GEO Başarısı Nasıl Ölçülür?</h2>
-                            <p>
-                                GEO'nun getirisi anlık dönüşüm değil, erişim genişliği üzerinden ölçülür: kaç platformda, kaç sorgu tipinde, kaç farklı kaynak üzerinden görünürsünüz.
-                            </p>
-                            <ul>
-                                <li><strong>AI bahsedilme oranı ve marka mention sıklığı:</strong> Aynı soruyu farklı günleşmiş formülasyonlarla 20-30 kez sorun; kaç kez anıldığınızı kaydedin. Bu oran zamanla artıyorsa GEO çalışması somut etki yaratıyor demektir.</li>
-                                <li><strong>Entity güç skoru:</strong> Markanızın Knowledge Graph'ta ne kadar iyi tanımlandığını, hangi kavramlarla ilişkilendirildiğini ve bu ilişkilerin kaç farklı kaynakta teyit edildiğini ölçer.</li>
-                                <li><strong>LLM önerilme oranı:</strong> "Bu kategoride hangi markayı önerirsin?" türü sorgularda markanızın öneri listesine girme sıklığını rakiplerinizle kıyaslayarak izleyin.</li>
-                                <li><strong>Kaynak çeşitliliği:</strong> Tek bir otoriter site değil, birden fazla farklı domain üzerinden co-citation örüntüsü oluşturulmuşsa LLM'ler sizi daha güvenilir buluyor.</li>
-                                <li><strong>Google AI Overviews görünürlüğü:</strong> Yapılandırılmış içerik, Schema.org işaretlemeleri ve otorite sinyalleri doğru kurulduğunda AI Overviews kutusuna girme ihtimali artar.</li>
-                            </ul>
 
-
-                        </section>
-
-                        <section className={`${proseBase} mb-16`} id="danisman-secimi" aria-labelledby="danisman-secimi-title">
-                            <h2 id="danisman-secimi-title">GEO Danışmanı Seçerken Sormanız Gereken 6 Soru</h2>
-                            
-                            <ol>
-                                <li><strong>Platform bazlı strateji ayrıştırıyor musunuz?</strong> ChatGPT, Perplexity ve Gemini aynı şekilde çalışmaz.</li>
-                                <li><strong>Sektörünüzde somut vakanız var mı?</strong> Sektörünüze yakın bir vaka yoksa danışman sizin alanınızda deneme yapacak demektir.</li>
-                                <li><strong>Zaman çizelgesini nasıl belirliyorsunuz?</strong> LLM önerilme süreci 3 ile 9 ay arasında sinyal birikimi gerektirir.</li>
-                                <li><strong>Başarıyı hangi metriklerle ölçüyorsunuz?</strong> Atıf izleme, entity görünürlük skoru, hangi sorgu kümelerinde referans alındığı vb.</li>
-                                <li><strong>Mevcut SEO ajansımla koordinasyon nasıl işler?</strong> GEO teknik SEO altyapınız güçlüyse daha hızlı sonuç verir.</li>
-                                <li><strong>Entity tutarlılığı denetimi yapıyor musunuz?</strong> Markanızın adı, kurucu bilgileri web genelinde tutarsızsa LLM'ler çelişkili sinyaller alır.</li>
-                            </ol>
-
-
-                        </section>
 
 
 
