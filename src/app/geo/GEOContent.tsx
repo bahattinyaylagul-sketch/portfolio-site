@@ -198,14 +198,14 @@ export default function GEOContent() {
                 </ul>
             </section>
 
-            {/* ── 3. Uzmanlık Alanları ── */}
+            {/* ── 3. Danışmanlık Çıktıları ── */}
             <section id="uzmanlik-alanlari" className="py-16 bg-white border-t border-gray-100 relative overflow-hidden" aria-labelledby="expertise-areas-heading">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-50/50 rounded-full blur-[100px] pointer-events-none"></div>
 
                 <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
                     <div className="text-center mb-16 md:mb-20">
-                        <h2 id="expertise-areas-heading" className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">Uzmanlık Alanlarımız</h2>
-                        <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto">Yapay zekâ motorlarında varlık göstermek ve kaynak olarak listelenmek için gerekli teknik altyapı.</p>
+                        <h2 id="expertise-areas-heading" className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">Danışmanlık Çıktıları</h2>
+                        <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto">Sürecin sonunda markanızın yapay zeka arama ekosisteminde elde edeceği temel varlıklar ve kazanımlar.</p>
                     </div>
 
                     <ul className="grid md:grid-cols-2 gap-6 md:gap-8">
